@@ -1,0 +1,6918 @@
+[
+    {
+        "id": "5ba779ec757e0302",
+        "type": "tab",
+        "label": "流程 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "2d20250c61bc57c7",
+        "type": "tab",
+        "label": "OEE",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "55e2ef49.fc07",
+        "type": "ui_group",
+        "name": "Summary",
+        "tab": "6a4cd376.4c0bbc",
+        "order": 6,
+        "disp": false,
+        "width": "5",
+        "collapse": false
+    },
+    {
+        "id": "d28f030.eb346",
+        "type": "ui_group",
+        "name": "数据分析",
+        "tab": "6a4cd376.4c0bbc",
+        "order": 8,
+        "disp": false,
+        "width": "15",
+        "collapse": false
+    },
+    {
+        "id": "ee59776d.382f58",
+        "type": "modbus-client",
+        "name": "PLCMW2100",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "tcpHost": "192.168.1.1",
+        "tcpPort": "8300",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true
+    },
+    {
+        "id": "d2396538.353658",
+        "type": "ui_group",
+        "name": "oee",
+        "tab": "6a4cd376.4c0bbc",
+        "order": 1,
+        "disp": false,
+        "width": "5",
+        "collapse": false
+    },
+    {
+        "id": "5a9b9852.27f248",
+        "type": "ui_group",
+        "name": "trend",
+        "tab": "6a4cd376.4c0bbc",
+        "order": 5,
+        "disp": false,
+        "width": 20,
+        "collapse": false
+    },
+    {
+        "id": "dd6d70ab.c2259",
+        "type": "ui_group",
+        "name": "1",
+        "tab": "6a4cd376.4c0bbc",
+        "order": 2,
+        "disp": false,
+        "width": 5,
+        "collapse": false
+    },
+    {
+        "id": "6ded87d4.c86c38",
+        "type": "ui_group",
+        "name": "2",
+        "tab": "6a4cd376.4c0bbc",
+        "order": 3,
+        "disp": false,
+        "width": 5,
+        "collapse": false
+    },
+    {
+        "id": "ffc1eb4b.0db7d8",
+        "type": "ui_group",
+        "name": "3",
+        "tab": "6a4cd376.4c0bbc",
+        "order": 4,
+        "disp": false,
+        "width": 5,
+        "collapse": false
+    },
+    {
+        "id": "6a4cd376.4c0bbc",
+        "type": "ui_tab",
+        "name": "设备综合效率",
+        "icon": "wi-wu-sunny",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "daa774c7.3f8e98",
+        "type": "serial-port",
+        "serialport": "COM1",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "1000"
+    },
+    {
+        "id": "75f7a4c.db8055c",
+        "type": "serial-port",
+        "serialport": "COM2",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "1000"
+    },
+    {
+        "id": "271d048b.14283c",
+        "type": "modbus-client",
+        "name": "MW1720",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "tcpHost": "192.168.1.1",
+        "tcpPort": "10003",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true
+    },
+    {
+        "id": "9be3ca85.8cb0e8",
+        "type": "ui_tab",
+        "name": "测试数据",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "5bbee085.eec31",
+        "type": "ui_group",
+        "name": "耐压",
+        "tab": "9be3ca85.8cb0e8",
+        "order": 1,
+        "disp": true,
+        "width": "20",
+        "collapse": false
+    },
+    {
+        "id": "925cfccc.224b",
+        "type": "ui_group",
+        "name": "电阻",
+        "tab": "9be3ca85.8cb0e8",
+        "order": 2,
+        "disp": true,
+        "width": "20",
+        "collapse": false
+    },
+    {
+        "id": "3209096b.8836c6",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#638ac5",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#638ac5",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#638ac5",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#9bb4da",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#638ac5",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "正泰集团",
+            "hideToolbar": "false",
+            "allowSwipe": "true",
+            "lockMenu": "true",
+            "allowTempTheme": "none",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "6fda6ae418d509a1",
+        "type": "modbus-client",
+        "name": "Modbus Switch TCP",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "tcpHost": "127.0.0.1",
+        "tcpPort": "10512",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true
+    },
+    {
+        "id": "d97a77c0601fd827",
+        "type": "modbus-client",
+        "name": "Modbus Flex Server",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "tcpHost": "127.0.0.1",
+        "tcpPort": "15502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "unit_id": 1,
+        "commandDelay": 1,
+        "clientTimeout": 1000,
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": 2000,
+        "parallelUnitIdsAllowed": true
+    },
+    {
+        "id": "f9dd5a8eeb166a54",
+        "type": "modbus-client",
+        "name": "Modbus Server",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "tcpHost": "127.0.0.1",
+        "tcpPort": "14502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true
+    },
+    {
+        "id": "dc5b47090cc40829",
+        "type": "ui_tab",
+        "name": "setting",
+        "icon": "check",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "8dc1c98e4b7f6f10",
+        "type": "ui_group",
+        "name": "De",
+        "tab": "dc5b47090cc40829",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "a197f035369b89ca",
+        "type": "modbus-client",
+        "name": "",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "tcpHost": "127.0.0.1",
+        "tcpPort": "10502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true
+    },
+    {
+        "id": "b4ca4e74c2116a44",
+        "type": "inject",
+        "z": "5ba779ec757e0302",
+        "name": "耐压",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 290,
+        "y": 1600,
+        "wires": [
+            [
+                "194817ac2c478ec8"
+            ]
+        ]
+    },
+    {
+        "id": "fd0b15b8612285ca",
+        "type": "link out",
+        "z": "5ba779ec757e0302",
+        "name": "耐压数据",
+        "links": [
+            "4a5113b869264b22"
+        ],
+        "x": 1525,
+        "y": 2340,
+        "wires": []
+    },
+    {
+        "id": "3e7f253e99b21b8f",
+        "type": "link in",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "links": [
+            "be7dddabb81a1021"
+        ],
+        "x": 835,
+        "y": 2240,
+        "wires": [
+            [
+                "194817ac2c478ec8"
+            ]
+        ]
+    },
+    {
+        "id": "2f379d997c06923a",
+        "type": "serial request",
+        "z": "5ba779ec757e0302",
+        "name": "HIOKI COM2",
+        "serial": "75f7a4c.db8055c",
+        "x": 810,
+        "y": 1400,
+        "wires": [
+            [
+                "15c916699d282655",
+                "ca52ba28666576f3"
+            ]
+        ]
+    },
+    {
+        "id": "c969c1b515d72fb0",
+        "type": "link in",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "links": [
+            "5f4514e0d5ed33a9"
+        ],
+        "x": 1095,
+        "y": 2300,
+        "wires": [
+            [
+                "56c042dcf7d8a82e"
+            ]
+        ]
+    },
+    {
+        "id": "5f4514e0d5ed33a9",
+        "type": "link out",
+        "z": "5ba779ec757e0302",
+        "name": "idn",
+        "mode": "link",
+        "links": [
+            "c969c1b515d72fb0",
+            "1fde02ef6afb4a39"
+        ],
+        "x": 555,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "75502053ef4f9af8",
+        "type": "debug",
+        "z": "5ba779ec757e0302",
+        "name": "耐压串口输出",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1640,
+        "y": 2260,
+        "wires": []
+    },
+    {
+        "id": "32ba92557134f4f4",
+        "type": "switch",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "IDN",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "FETCH",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1450,
+        "y": 2240,
+        "wires": [
+            [
+                "1e1e9392735b7715"
+            ],
+            [
+                "75502053ef4f9af8",
+                "fd0b15b8612285ca"
+            ]
+        ]
+    },
+    {
+        "id": "e00accac23d60c62",
+        "type": "switch",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "IDN",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "FETCH",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1090,
+        "y": 1500,
+        "wires": [
+            [],
+            [
+                "140b508afccd89be"
+            ]
+        ]
+    },
+    {
+        "id": "e881dfa75fd4820b",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "FETCH?LIM",
+        "func": "msg.topic='FETCH'\nmsg.payload='FETCH?LIM\\n';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 490,
+        "y": 1360,
+        "wires": [
+            [
+                "2f379d997c06923a"
+            ]
+        ]
+    },
+    {
+        "id": "2e0ba46736e9d581",
+        "type": "inject",
+        "z": "5ba779ec757e0302",
+        "name": "电阻",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "index",
+                "v": "3",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 290,
+        "y": 1560,
+        "wires": [
+            [
+                "e881dfa75fd4820b"
+            ]
+        ]
+    },
+    {
+        "id": "900db736b49d8901",
+        "type": "modbus-read",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "0",
+        "quantity": "20",
+        "rate": "100",
+        "rateUnit": "ms",
+        "delayOnStart": false,
+        "startDelayTime": "2",
+        "server": "271d048b.14283c",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 110,
+        "y": 600,
+        "wires": [
+            [
+                "a5471aacdb2e06d0",
+                "2bad555370e6b7e1",
+                "fc6004aa92e29b39",
+                "6a9650353f8b3053"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "a5471aacdb2e06d0",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "提取触发信号",
+        "func": "msg.payload=msg.payload[0]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 660,
+        "wires": [
+            [
+                "04927d8d56c6e616"
+            ]
+        ]
+    },
+    {
+        "id": "04927d8d56c6e616",
+        "type": "rbe",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 350,
+        "y": 820,
+        "wires": [
+            [
+                "37e2be57d50e147d"
+            ]
+        ]
+    },
+    {
+        "id": "40984e439a9c5434",
+        "type": "rbe",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 1190,
+        "y": 500,
+        "wires": [
+            [
+                "5c0b84210b5bd98e",
+                "ad8c735bb0362d3b"
+            ]
+        ]
+    },
+    {
+        "id": "5c0b84210b5bd98e",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "上升沿",
+        "func": "if(msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1410,
+        "y": 340,
+        "wires": [
+            [
+                "01c8c023710b6d72"
+            ]
+        ]
+    },
+    {
+        "id": "80ce7caf47d5b988",
+        "type": "change",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "index",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 500,
+        "wires": [
+            [
+                "40984e439a9c5434"
+            ]
+        ]
+    },
+    {
+        "id": "6628c500984dc453",
+        "type": "change",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "index",
+                "pt": "msg",
+                "to": "1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 540,
+        "wires": [
+            [
+                "93b8a02b724033b4"
+            ]
+        ]
+    },
+    {
+        "id": "3af4d560313e5a39",
+        "type": "change",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "index",
+                "pt": "msg",
+                "to": "2",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 580,
+        "wires": [
+            [
+                "fcde3efcc5c653a0"
+            ]
+        ]
+    },
+    {
+        "id": "03d36fc6a3862a98",
+        "type": "change",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "index",
+                "pt": "msg",
+                "to": "3",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 620,
+        "wires": [
+            [
+                "b3a63e9724f6338a"
+            ]
+        ]
+    },
+    {
+        "id": "d84e2ee7ef58ef01",
+        "type": "change",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "index",
+                "pt": "msg",
+                "to": "4",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "923709afedfc7667",
+        "type": "change",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "index",
+                "pt": "msg",
+                "to": "5",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5feec5428a51ed3a",
+        "type": "change",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "index",
+                "pt": "msg",
+                "to": "6",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7d48cbcc16176d29",
+        "type": "change",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "index",
+                "pt": "msg",
+                "to": "7",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4b9bf86abc960899",
+        "type": "change",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "index",
+                "pt": "msg",
+                "to": "8",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 820,
+        "wires": [
+            [
+                "431e0f9d0f66adc6"
+            ]
+        ]
+    },
+    {
+        "id": "11cc5ad1012534b2",
+        "type": "change",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "index",
+                "pt": "msg",
+                "to": "9",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "47ae24891ad36071",
+        "type": "change",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "index",
+                "pt": "msg",
+                "to": "10",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "70463bb70c589bd5",
+        "type": "change",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "index",
+                "pt": "msg",
+                "to": "11",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7f8f8f3e1e22c595",
+        "type": "change",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "index",
+                "pt": "msg",
+                "to": "13",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ae3010e1d7d6b2e2",
+        "type": "change",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "index",
+                "pt": "msg",
+                "to": "14",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 1060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2372277e51364593",
+        "type": "change",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "index",
+                "pt": "msg",
+                "to": "15",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "178905f7f8e74c8f",
+        "type": "change",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "index",
+                "pt": "msg",
+                "to": "12",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2bad555370e6b7e1",
+        "type": "change",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "registers",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 310,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a71526de22107e08",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "分解信息",
+        "func": "output=[];\nlet result=msg.splits[1].indexOf(\"IN\")>=0\nlet value=msg.splits[0];\nmsg.value=Number(value);\nmsg.result=result;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1380,
+        "y": 1460,
+        "wires": [
+            [
+                "e4071f16c321a86e",
+                "7098066c24b4a8f5",
+                "75c55a33b62ae0d7",
+                "c0229fbd38124549"
+            ]
+        ]
+    },
+    {
+        "id": "140b508afccd89be",
+        "type": "string",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "methods": [
+            {
+                "name": "split",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ","
+                    },
+                    {
+                        "type": "num",
+                        "value": "2"
+                    }
+                ]
+            }
+        ],
+        "prop": "payload",
+        "propout": "splits",
+        "object": "msg",
+        "objectout": "msg",
+        "x": 1230,
+        "y": 1420,
+        "wires": [
+            [
+                "6d328da5c3dc4df0",
+                "a71526de22107e08"
+            ]
+        ]
+    },
+    {
+        "id": "6d328da5c3dc4df0",
+        "type": "debug",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "splits",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1380,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "e4071f16c321a86e",
+        "type": "debug",
+        "z": "5ba779ec757e0302",
+        "name": "电阻分解结果",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1580,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "7098066c24b4a8f5",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "设置输出PLC结果",
+        "func": "var wt=flow.get('registers')[1];\nif(!msg.result)\n{\n    wt=wt|(1<<msg.index);\n}\nelse\n{\n    wt=wt&(~(1<<msg.index));\n}\nwt=wt|(1<<8);\nmsg.payload=wt;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 1240,
+        "wires": [
+            [
+                "f0f1714453ea8f98",
+                "f9f7499ab7c9b85d"
+            ]
+        ]
+    },
+    {
+        "id": "f0f1714453ea8f98",
+        "type": "debug",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1810,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "f9f7499ab7c9b85d",
+        "type": "modbus-write",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "24",
+        "quantity": "1",
+        "server": "271d048b.14283c",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "x": 1840,
+        "y": 1320,
+        "wires": [
+            [
+                "88882d056fcc280b"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "266e30c73a7832ec",
+        "type": "inject",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1580,
+        "y": 1300,
+        "wires": [
+            [
+                "f9f7499ab7c9b85d"
+            ]
+        ]
+    },
+    {
+        "id": "88882d056fcc280b",
+        "type": "modbus-response",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "registerShowMax": 20,
+        "x": 1990,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "25096d3211f2f888",
+        "type": "inject",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 440,
+        "y": 560,
+        "wires": [
+            [
+                "37e2be57d50e147d"
+            ]
+        ]
+    },
+    {
+        "id": "b9687a037d10505a",
+        "type": "inject",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 430,
+        "y": 460,
+        "wires": [
+            [
+                "37e2be57d50e147d"
+            ]
+        ]
+    },
+    {
+        "id": "24d401ec83a1313d",
+        "type": "inject",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "4",
+        "payloadType": "num",
+        "x": 410,
+        "y": 600,
+        "wires": [
+            [
+                "37e2be57d50e147d"
+            ]
+        ]
+    },
+    {
+        "id": "37e2be57d50e147d",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "拆分成位",
+        "func": "outputs=[];\nfor(i=0;i<16;i++)\n{\n    outputs[i]=(msg.payload&(1<<i))>0;\n}\nmsg.payload=outputs;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 540,
+        "y": 820,
+        "wires": [
+            [
+                "108c19fd8c8cea7c",
+                "8afda2284dcbaf88",
+                "040255e604879b26",
+                "664c2a16360662e1",
+                "95d8b353b3810fcf",
+                "a52fb47b8c412c59",
+                "c4275c0d5e319708",
+                "6f1d8afc61514ca3",
+                "5c65d024958cef33",
+                "5c897336ab90bd30",
+                "549fff5863800250",
+                "86069c07b5888890",
+                "cd7693ad6e4bb050",
+                "58e785b4466dedbb",
+                "424a83599c35aa9c",
+                "0b7b1ac6a8d59f22",
+                "3b4e5791a28af03c"
+            ]
+        ]
+    },
+    {
+        "id": "108c19fd8c8cea7c",
+        "type": "debug",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 650,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "8afda2284dcbaf88",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "分项提取",
+        "func": "msg.payload=msg.payload[0];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 800,
+        "y": 500,
+        "wires": [
+            [
+                "80ce7caf47d5b988"
+            ]
+        ]
+    },
+    {
+        "id": "040255e604879b26",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "分项提取",
+        "func": "msg.payload=msg.payload[1];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 800,
+        "y": 540,
+        "wires": [
+            [
+                "6628c500984dc453"
+            ]
+        ]
+    },
+    {
+        "id": "664c2a16360662e1",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "分项提取",
+        "func": "msg.payload=msg.payload[2];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 800,
+        "y": 580,
+        "wires": [
+            [
+                "3af4d560313e5a39"
+            ]
+        ]
+    },
+    {
+        "id": "95d8b353b3810fcf",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "分项提取",
+        "func": "msg.payload=msg.payload[3];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 800,
+        "y": 620,
+        "wires": [
+            [
+                "03d36fc6a3862a98"
+            ]
+        ]
+    },
+    {
+        "id": "a52fb47b8c412c59",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "分项提取",
+        "func": "msg.payload=msg.payload[4];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 800,
+        "y": 660,
+        "wires": [
+            [
+                "d84e2ee7ef58ef01"
+            ]
+        ]
+    },
+    {
+        "id": "c4275c0d5e319708",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "分项提取",
+        "func": "msg.payload=msg.payload[5];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 800,
+        "y": 700,
+        "wires": [
+            [
+                "923709afedfc7667"
+            ]
+        ]
+    },
+    {
+        "id": "6f1d8afc61514ca3",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "分项提取",
+        "func": "msg.payload=msg.payload[6];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 800,
+        "y": 740,
+        "wires": [
+            [
+                "5feec5428a51ed3a"
+            ]
+        ]
+    },
+    {
+        "id": "5c65d024958cef33",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "分项提取",
+        "func": "msg.payload=msg.payload[7];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 800,
+        "y": 780,
+        "wires": [
+            [
+                "7d48cbcc16176d29"
+            ]
+        ]
+    },
+    {
+        "id": "5c897336ab90bd30",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "分项提取",
+        "func": "msg.payload=msg.payload[8];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 800,
+        "y": 820,
+        "wires": [
+            [
+                "4b9bf86abc960899"
+            ]
+        ]
+    },
+    {
+        "id": "549fff5863800250",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "分项提取",
+        "func": "msg.payload=msg.payload[1+8];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 800,
+        "y": 860,
+        "wires": [
+            [
+                "11cc5ad1012534b2"
+            ]
+        ]
+    },
+    {
+        "id": "86069c07b5888890",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "分项提取",
+        "func": "msg.payload=msg.payload[2+8];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 800,
+        "y": 900,
+        "wires": [
+            [
+                "47ae24891ad36071"
+            ]
+        ]
+    },
+    {
+        "id": "cd7693ad6e4bb050",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "分项提取",
+        "func": "msg.payload=msg.payload[3+8];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 800,
+        "y": 940,
+        "wires": [
+            [
+                "70463bb70c589bd5"
+            ]
+        ]
+    },
+    {
+        "id": "58e785b4466dedbb",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "分项提取",
+        "func": "msg.payload=msg.payload[4+8];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 800,
+        "y": 980,
+        "wires": [
+            [
+                "178905f7f8e74c8f"
+            ]
+        ]
+    },
+    {
+        "id": "424a83599c35aa9c",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "分项提取",
+        "func": "msg.payload=msg.payload[5+8];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 800,
+        "y": 1020,
+        "wires": [
+            [
+                "7f8f8f3e1e22c595"
+            ]
+        ]
+    },
+    {
+        "id": "0b7b1ac6a8d59f22",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "分项提取",
+        "func": "msg.payload=msg.payload[6+8];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 800,
+        "y": 1060,
+        "wires": [
+            [
+                "ae3010e1d7d6b2e2"
+            ]
+        ]
+    },
+    {
+        "id": "3b4e5791a28af03c",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "分项提取",
+        "func": "msg.payload=msg.payload[7+8];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 800,
+        "y": 1100,
+        "wires": [
+            [
+                "2372277e51364593"
+            ]
+        ]
+    },
+    {
+        "id": "431e0f9d0f66adc6",
+        "type": "rbe",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 1170,
+        "y": 800,
+        "wires": [
+            [
+                "0336d098ec3d2f24",
+                "3cb5c37a5bbff238"
+            ]
+        ]
+    },
+    {
+        "id": "0336d098ec3d2f24",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "上升沿",
+        "func": "if(msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1330,
+        "y": 820,
+        "wires": [
+            [
+                "be7dddabb81a1021"
+            ]
+        ]
+    },
+    {
+        "id": "01c8c023710b6d72",
+        "type": "link out",
+        "z": "5ba779ec757e0302",
+        "name": "ohmtriger",
+        "links": [
+            "e0ac4e061a3c8a49"
+        ],
+        "x": 1415,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "e0ac4e061a3c8a49",
+        "type": "link in",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "links": [
+            "01c8c023710b6d72"
+        ],
+        "x": 275,
+        "y": 1320,
+        "wires": [
+            [
+                "e881dfa75fd4820b"
+            ]
+        ]
+    },
+    {
+        "id": "194817ac2c478ec8",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "FETCh:MCRESult?",
+        "func": "msg.topic='FETCH'\nmsg.payload='FETCh:MCRESult?\\n';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 2220,
+        "wires": [
+            [
+                "56c042dcf7d8a82e"
+            ]
+        ]
+    },
+    {
+        "id": "61a7d3182dd0a923",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "*IDN?\\n",
+        "func": "msg.topic='IDN'\nmsg.payload='*IDN?\\r\\n';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 1560,
+        "wires": [
+            [
+                "5f4514e0d5ed33a9"
+            ]
+        ]
+    },
+    {
+        "id": "56c042dcf7d8a82e",
+        "type": "serial request",
+        "z": "5ba779ec757e0302",
+        "name": "TH2883S8-5 COM1",
+        "serial": "daa774c7.3f8e98",
+        "x": 1240,
+        "y": 2240,
+        "wires": [
+            [
+                "32ba92557134f4f4",
+                "1e1e9392735b7715"
+            ]
+        ]
+    },
+    {
+        "id": "be7dddabb81a1021",
+        "type": "link out",
+        "z": "5ba779ec757e0302",
+        "name": "耐压",
+        "links": [
+            "edd159c6.b720f8",
+            "3e7f253e99b21b8f"
+        ],
+        "x": 1425,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "1fde02ef6afb4a39",
+        "type": "link in",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "links": [
+            "5f4514e0d5ed33a9"
+        ],
+        "x": 695,
+        "y": 1460,
+        "wires": [
+            [
+                "2f379d997c06923a"
+            ]
+        ]
+    },
+    {
+        "id": "1e1e9392735b7715",
+        "type": "debug",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1630,
+        "y": 2220,
+        "wires": []
+    },
+    {
+        "id": "4a5113b869264b22",
+        "type": "link in",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "links": [
+            "fd0b15b8612285ca"
+        ],
+        "x": 755,
+        "y": 1680,
+        "wires": [
+            [
+                "2563f4d3f1ba70c9"
+            ]
+        ]
+    },
+    {
+        "id": "2563f4d3f1ba70c9",
+        "type": "string",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "methods": [
+            {
+                "name": "split",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ";"
+                    },
+                    {
+                        "type": "num",
+                        "value": "4"
+                    }
+                ]
+            }
+        ],
+        "prop": "payload",
+        "propout": "payload",
+        "object": "msg",
+        "objectout": "msg",
+        "x": 880,
+        "y": 1700,
+        "wires": [
+            [
+                "365cd0b7208ff362",
+                "9edb30db9fc6ddf5"
+            ]
+        ]
+    },
+    {
+        "id": "365cd0b7208ff362",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "提取数据",
+        "func": "datas=[];\nfor(i=0;i<msg.payload.length;i++)\n{\n   var data=msg.payload[i];\n   var sps=data.split(',',5);\n   datas[i]={result:Number(sps[0])==0,values:[Number(sps[1]),Number(sps[2]),Number(sps[3]),Number(sps[4])]}\n}\nmsg.datas=datas;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1040,
+        "y": 1700,
+        "wires": [
+            [
+                "77f2741e8419bb19",
+                "0cf9e7943f4424e8",
+                "3ed6631b49f72e36",
+                "1e7edbba29efa469",
+                "0a4ad00c8de4096b",
+                "673d1e625eba1cf8",
+                "e0220a27f1600cb5"
+            ]
+        ]
+    },
+    {
+        "id": "77f2741e8419bb19",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "设置结果",
+        "func": "var wt=flow.get('registers')[2];\nfor(i=0;i<4;i++)\n{\n  if(!msg.datas[i].result){\n    wt=wt|(1<<i);\n    }\n    else{\n    wt=wt&(~(1<<i));\n    }  \n}\nwt=wt|(1<<8);\nmsg.payload=wt;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1240,
+        "y": 1700,
+        "wires": [
+            [
+                "72eb1b0cd618e909"
+            ]
+        ]
+    },
+    {
+        "id": "6ff32fe9a393edcb",
+        "type": "debug",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 2380,
+        "wires": []
+    },
+    {
+        "id": "15c916699d282655",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "判断是否为空数据",
+        "func": "if(msg.payload!==undefined&&msg.payload.indexOf(',')>0)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 930,
+        "y": 1500,
+        "wires": [
+            [
+                "e00accac23d60c62"
+            ]
+        ]
+    },
+    {
+        "id": "ca52ba28666576f3",
+        "type": "debug",
+        "z": "5ba779ec757e0302",
+        "name": "电阻数据",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "c0229fbd38124549",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "设置写入数据",
+        "func": "msg.payload={通道:msg.index+1,电阻:msg.value,结果:msg.result?\"PASS\":\"FAIL\"};\nmsg.path=\"d:\\\\measuredata\\\\resistence\\\\\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 760,
+        "y": 2440,
+        "wires": [
+            [
+                "4217cb2a3f1154ab"
+            ]
+        ]
+    },
+    {
+        "id": "46d7df533a321d85",
+        "type": "split",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 910,
+        "y": 2380,
+        "wires": [
+            [
+                "6ff32fe9a393edcb",
+                "4217cb2a3f1154ab"
+            ]
+        ]
+    },
+    {
+        "id": "ed7367caf8ed3030",
+        "type": "change",
+        "z": "5ba779ec757e0302",
+        "name": "Get file content",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "filecontent",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1580,
+        "y": 2840,
+        "wires": [
+            [
+                "a2c748c3787a67dd"
+            ]
+        ]
+    },
+    {
+        "id": "07eb36aa456102b1",
+        "type": "change",
+        "z": "5ba779ec757e0302",
+        "name": "Get file content",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "filecontent",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1660,
+        "y": 2540,
+        "wires": [
+            [
+                "e3ea1ad78efe1556"
+            ]
+        ]
+    },
+    {
+        "id": "a2c748c3787a67dd",
+        "type": "csv",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": false,
+        "include_null_values": false,
+        "x": 1690,
+        "y": 2720,
+        "wires": [
+            [
+                "1fa0f257d6eddacf"
+            ]
+        ]
+    },
+    {
+        "id": "1fa0f257d6eddacf",
+        "type": "file",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "filename": "",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1850,
+        "y": 2680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e3ea1ad78efe1556",
+        "type": "csv",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "all",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": false,
+        "include_null_values": false,
+        "x": 1690,
+        "y": 2680,
+        "wires": [
+            [
+                "1fa0f257d6eddacf"
+            ]
+        ]
+    },
+    {
+        "id": "6498e48ae1869b99",
+        "type": "switch",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "property": "$count(msg.payload)",
+        "propertyType": "jsonata",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1350,
+        "y": 2700,
+        "wires": [
+            [
+                "4f1cb808d0240a56"
+            ],
+            [
+                "ed7367caf8ed3030"
+            ]
+        ]
+    },
+    {
+        "id": "cdbe45ce17c1c089",
+        "type": "fs-file-lister",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "start": "\\",
+        "pattern": "",
+        "folders": "*",
+        "hidden": true,
+        "lstype": "files",
+        "path": true,
+        "single": true,
+        "depth": 0,
+        "stat": true,
+        "showWarnings": false,
+        "x": 1200,
+        "y": 2700,
+        "wires": [
+            [
+                "6498e48ae1869b99"
+            ]
+        ]
+    },
+    {
+        "id": "12c51eb6c87fd556",
+        "type": "ui_artlessgauge",
+        "z": "5ba779ec757e0302",
+        "group": "925cfccc.224b",
+        "order": 1,
+        "width": "4",
+        "height": "4",
+        "name": "",
+        "icon": "",
+        "label": "",
+        "unit": "",
+        "layout": "radial",
+        "decimals": "3",
+        "differential": false,
+        "minmax": false,
+        "colorTrack": "#555555",
+        "style": "",
+        "colorFromTheme": true,
+        "property": "payload",
+        "sectors": [
+            {
+                "val": -10,
+                "col": "#ff9900",
+                "t": "min",
+                "dot": 0
+            },
+            {
+                "val": 100,
+                "col": "#ff9900",
+                "t": "max",
+                "dot": 0
+            }
+        ],
+        "lineWidth": "13",
+        "bgcolorFromTheme": true,
+        "diffCenter": "",
+        "x": 1856,
+        "y": 1664,
+        "wires": []
+    },
+    {
+        "id": "26b36e42508857ec",
+        "type": "ui_artlessgauge",
+        "z": "5ba779ec757e0302",
+        "group": "925cfccc.224b",
+        "order": 1,
+        "width": "4",
+        "height": "4",
+        "name": "",
+        "icon": "",
+        "label": "",
+        "unit": "",
+        "layout": "radial",
+        "decimals": "3",
+        "differential": false,
+        "minmax": false,
+        "colorTrack": "#555555",
+        "style": "",
+        "colorFromTheme": true,
+        "property": "payload",
+        "sectors": [
+            {
+                "val": -10,
+                "col": "#ff9900",
+                "t": "min",
+                "dot": 0
+            },
+            {
+                "val": 100,
+                "col": "#ff9900",
+                "t": "max",
+                "dot": 0
+            }
+        ],
+        "lineWidth": "13",
+        "bgcolorFromTheme": true,
+        "diffCenter": "",
+        "x": 1878,
+        "y": 1612,
+        "wires": []
+    },
+    {
+        "id": "6120312de7bb2206",
+        "type": "inject",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "*IDN?",
+        "payloadType": "str",
+        "x": 290,
+        "y": 1640,
+        "wires": [
+            [
+                "61a7d3182dd0a923"
+            ]
+        ]
+    },
+    {
+        "id": "0cf9e7943f4424e8",
+        "type": "debug",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1220,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "9edb30db9fc6ddf5",
+        "type": "debug",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "72eb1b0cd618e909",
+        "type": "modbus-write",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "2",
+        "quantity": "1",
+        "server": "271d048b.14283c",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "x": 1500,
+        "y": 1720,
+        "wires": [
+            [
+                "d4d81be686302999"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "d4d81be686302999",
+        "type": "modbus-response",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "registerShowMax": 20,
+        "x": 1930,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "8dce76dcbf9460d1",
+        "type": "ui_artlessgauge",
+        "z": "5ba779ec757e0302",
+        "group": "925cfccc.224b",
+        "order": 1,
+        "width": "4",
+        "height": "4",
+        "name": "",
+        "icon": "",
+        "label": "",
+        "unit": "",
+        "layout": "radial",
+        "decimals": "3",
+        "differential": false,
+        "minmax": false,
+        "colorTrack": "#555555",
+        "style": "",
+        "colorFromTheme": true,
+        "property": "payload",
+        "sectors": [
+            {
+                "val": -10,
+                "col": "#58b14e",
+                "t": "min",
+                "dot": 0
+            },
+            {
+                "val": 100,
+                "col": "#58b14e",
+                "t": "max",
+                "dot": 0
+            }
+        ],
+        "lineWidth": "13",
+        "bgcolorFromTheme": true,
+        "diffCenter": "",
+        "x": 1860,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "9a9dc43da1f3b78c",
+        "type": "ui_artlessgauge",
+        "z": "5ba779ec757e0302",
+        "group": "5bbee085.eec31",
+        "order": 1,
+        "width": "4",
+        "height": "4",
+        "name": "",
+        "icon": "",
+        "label": "",
+        "unit": "",
+        "layout": "radial",
+        "decimals": "3",
+        "differential": false,
+        "minmax": false,
+        "colorTrack": "#555555",
+        "style": "",
+        "colorFromTheme": true,
+        "property": "payload",
+        "sectors": [
+            {
+                "val": -1,
+                "col": "#ff9900",
+                "t": "min",
+                "dot": 0
+            },
+            {
+                "val": 10,
+                "col": "#ff9900",
+                "t": "max",
+                "dot": 0
+            }
+        ],
+        "lineWidth": "13",
+        "bgcolorFromTheme": true,
+        "diffCenter": "",
+        "x": 1320,
+        "y": 1800,
+        "wires": []
+    },
+    {
+        "id": "75c55a33b62ae0d7",
+        "type": "switch",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "property": "index",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 4,
+        "x": 1460,
+        "y": 1560,
+        "wires": [
+            [
+                "03812819ca900598"
+            ],
+            [
+                "8dce76dcbf9460d1"
+            ],
+            [
+                "26b36e42508857ec"
+            ],
+            [
+                "12c51eb6c87fd556"
+            ]
+        ]
+    },
+    {
+        "id": "3ed6631b49f72e36",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "func": "msg.payload=msg.datas[0].values[0];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1130,
+        "y": 1840,
+        "wires": [
+            [
+                "9a9dc43da1f3b78c"
+            ]
+        ]
+    },
+    {
+        "id": "e0220a27f1600cb5",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "设置写入数据",
+        "func": "var datas=msg.datas;\noutput=[];\nfor(i=0;i<datas.length;i++)\n{\n    output[i]={};\n    output[i].通道=i+1;\n    output[i].面积=datas[i].values[0];\n    output[i].面积差=datas[i].values[1];\n    output[i].电晕=datas[i].values[2];\n    output[i].相位差=datas[i].values[3];\n    output[i].结果=!datas[i].result?\"pass\":\"fail\";\n}\nmsg.payload=output;\nmsg.path=\"d:\\\\measuredata\\\\hipot\\\\\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 760,
+        "y": 2380,
+        "wires": [
+            [
+                "46d7df533a321d85"
+            ]
+        ]
+    },
+    {
+        "id": "4217cb2a3f1154ab",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "Set date",
+        "func": "var now = new Date();\nvar yyyy = now.getFullYear();\nvar mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\nvar dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\nvar hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\nvar mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\nvar ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\nmsg.payload.时间=yyyy+\"-\"+mm+\"-\"+dd+\" \"+hh+':'+mmm+\":\"+ss;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1080,
+        "y": 2580,
+        "wires": [
+            [
+                "e33d65520c8d5a71"
+            ]
+        ]
+    },
+    {
+        "id": "bfeb434434138564",
+        "type": "comment",
+        "z": "5ba779ec757e0302",
+        "name": "Auto Logger",
+        "info": "",
+        "x": 950,
+        "y": 2520,
+        "wires": []
+    },
+    {
+        "id": "1e7edbba29efa469",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "func": "msg.payload=msg.datas[1].values[0];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1138,
+        "y": 1891,
+        "wires": [
+            [
+                "e42cee031d379de6"
+            ]
+        ]
+    },
+    {
+        "id": "0a4ad00c8de4096b",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "func": "msg.payload=msg.datas[2].values[0];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1129,
+        "y": 1943,
+        "wires": [
+            [
+                "51fb773b785d85de"
+            ]
+        ]
+    },
+    {
+        "id": "673d1e625eba1cf8",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "func": "msg.payload=msg.datas[3].values[0];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1127,
+        "y": 1980,
+        "wires": [
+            [
+                "17c78a19f60f5e18"
+            ]
+        ]
+    },
+    {
+        "id": "e33d65520c8d5a71",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "Filename generator",
+        "func": "// Get the current time and convert it to text\nvar now = new Date();\nvar yyyy = now.getFullYear();\nvar mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\nvar dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\nvar hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\nvar mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\nvar ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\nlet path=msg.path;\n// Generate out file name pattern\nmsg.fname = \"data_\"+ yyyy + mm + dd + \".csv\";\n// Full filename with path for the file node later\nmsg.filename = path+ msg.fname;\n\n// We save the current payload into a different place on the msg object\nmsg.filecontent = msg.payload;\n\n// We are passing the file name search pattern to fs node to tell us if the file exists or not\nmsg.payload = {\"start\":path,\"pattern\":msg.fname};\n\nnode.status({fill:\"blue\",shape:\"ring\",text:msg.fname});\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1010,
+        "y": 2700,
+        "wires": [
+            [
+                "cdbe45ce17c1c089"
+            ]
+        ]
+    },
+    {
+        "id": "03812819ca900598",
+        "type": "ui_artlessgauge",
+        "z": "5ba779ec757e0302",
+        "group": "925cfccc.224b",
+        "order": 1,
+        "width": "4",
+        "height": "4",
+        "name": "",
+        "icon": "",
+        "label": "",
+        "unit": "",
+        "layout": "radial",
+        "decimals": "3",
+        "differential": false,
+        "minmax": false,
+        "colorTrack": "#555555",
+        "style": "",
+        "colorFromTheme": true,
+        "property": "payload",
+        "inline": false,
+        "animate": true,
+        "sectors": [
+            {
+                "val": -1,
+                "col": "#ff9900",
+                "t": "min",
+                "dot": 0
+            },
+            {
+                "val": 100,
+                "col": "#ff9900",
+                "t": "max",
+                "dot": 0
+            }
+        ],
+        "lineWidth": "13",
+        "bgcolorFromTheme": true,
+        "diffCenter": "",
+        "x": 1880,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "e42cee031d379de6",
+        "type": "ui_artlessgauge",
+        "z": "5ba779ec757e0302",
+        "group": "5bbee085.eec31",
+        "order": 1,
+        "width": "4",
+        "height": "4",
+        "name": "",
+        "icon": "",
+        "label": "",
+        "unit": "",
+        "layout": "radial",
+        "decimals": "3",
+        "differential": false,
+        "minmax": false,
+        "colorTrack": "#555555",
+        "style": "",
+        "colorFromTheme": true,
+        "property": "payload",
+        "sectors": [
+            {
+                "val": -10,
+                "col": "#58b14e",
+                "t": "min",
+                "dot": 0
+            },
+            {
+                "val": 10,
+                "col": "#58b14e",
+                "t": "max",
+                "dot": 0
+            }
+        ],
+        "lineWidth": "13",
+        "bgcolorFromTheme": true,
+        "diffCenter": "",
+        "x": 1300,
+        "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "51fb773b785d85de",
+        "type": "ui_artlessgauge",
+        "z": "5ba779ec757e0302",
+        "group": "5bbee085.eec31",
+        "order": 1,
+        "width": "4",
+        "height": "4",
+        "name": "",
+        "icon": "",
+        "label": "",
+        "unit": "",
+        "layout": "radial",
+        "decimals": "3",
+        "differential": false,
+        "minmax": false,
+        "colorTrack": "#555555",
+        "style": "",
+        "colorFromTheme": true,
+        "property": "payload",
+        "sectors": [
+            {
+                "val": -10,
+                "col": "#ff9900",
+                "t": "min",
+                "dot": 0
+            },
+            {
+                "val": 10,
+                "col": "#ff9900",
+                "t": "max",
+                "dot": 0
+            }
+        ],
+        "lineWidth": "13",
+        "bgcolorFromTheme": true,
+        "diffCenter": "",
+        "x": 1318,
+        "y": 1932,
+        "wires": []
+    },
+    {
+        "id": "17c78a19f60f5e18",
+        "type": "ui_artlessgauge",
+        "z": "5ba779ec757e0302",
+        "group": "5bbee085.eec31",
+        "order": 1,
+        "width": "4",
+        "height": "4",
+        "name": "",
+        "icon": "",
+        "label": "",
+        "unit": "",
+        "layout": "radial",
+        "decimals": "3",
+        "differential": false,
+        "minmax": false,
+        "colorTrack": "#555555",
+        "style": "",
+        "colorFromTheme": true,
+        "property": "payload",
+        "sectors": [
+            {
+                "val": -10,
+                "col": "#ff9900",
+                "t": "min",
+                "dot": 0
+            },
+            {
+                "val": 10,
+                "col": "#ff9900",
+                "t": "max",
+                "dot": 0
+            }
+        ],
+        "lineWidth": "13",
+        "bgcolorFromTheme": true,
+        "diffCenter": "",
+        "x": 1296,
+        "y": 1984,
+        "wires": []
+    },
+    {
+        "id": "4f1cb808d0240a56",
+        "type": "switch",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "property": "filename",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "prev"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1490,
+        "y": 2660,
+        "wires": [
+            [
+                "ed7367caf8ed3030"
+            ],
+            [
+                "07eb36aa456102b1"
+            ]
+        ]
+    },
+    {
+        "id": "fc6004aa92e29b39",
+        "type": "debug",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "4f49322c5e5cfbbf",
+        "type": "modbus-write",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "24",
+        "quantity": "1",
+        "server": "271d048b.14283c",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "x": 1860,
+        "y": 380,
+        "wires": [
+            [
+                "7c79d789b4ce8c32"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "7c79d789b4ce8c32",
+        "type": "modbus-response",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "registerShowMax": 20,
+        "x": 2010,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "84aad558069e9f9c",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "清除输出完成信号",
+        "func": "\nmsg.payload=false;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1590,
+        "y": 560,
+        "wires": [
+            [
+                "4f49322c5e5cfbbf",
+                "dbd0931dcd9d81ba"
+            ]
+        ]
+    },
+    {
+        "id": "7b59e3db0b5d65b9",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "清除输出完成信号",
+        "func": "\nmsg.payload=false;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1470,
+        "y": 740,
+        "wires": [
+            [
+                "48584a4ada43c41b"
+            ]
+        ]
+    },
+    {
+        "id": "ad8c735bb0362d3b",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "下降沿",
+        "func": "if(!msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1390,
+        "y": 660,
+        "wires": [
+            [
+                "84aad558069e9f9c"
+            ]
+        ]
+    },
+    {
+        "id": "3cb5c37a5bbff238",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "下降沿",
+        "func": "if(!msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1290,
+        "y": 740,
+        "wires": [
+            [
+                "7b59e3db0b5d65b9"
+            ]
+        ]
+    },
+    {
+        "id": "48584a4ada43c41b",
+        "type": "modbus-write",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "40",
+        "quantity": "1",
+        "server": "271d048b.14283c",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "x": 1700,
+        "y": 720,
+        "wires": [
+            [
+                "af985613814caeee"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "af985613814caeee",
+        "type": "modbus-response",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "registerShowMax": 20,
+        "x": 1910,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "93b8a02b724033b4",
+        "type": "rbe",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 1190,
+        "y": 540,
+        "wires": [
+            [
+                "5c0b84210b5bd98e",
+                "ad8c735bb0362d3b"
+            ]
+        ]
+    },
+    {
+        "id": "fcde3efcc5c653a0",
+        "type": "rbe",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 1190,
+        "y": 580,
+        "wires": [
+            [
+                "5c0b84210b5bd98e",
+                "ad8c735bb0362d3b"
+            ]
+        ]
+    },
+    {
+        "id": "b3a63e9724f6338a",
+        "type": "rbe",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 1190,
+        "y": 620,
+        "wires": [
+            [
+                "5c0b84210b5bd98e",
+                "ad8c735bb0362d3b"
+            ]
+        ]
+    },
+    {
+        "id": "7b0c2ec569a6915f",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "READ?",
+        "func": "msg.topic='READ'\nmsg.payload='READ?\\n';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 520,
+        "y": 1440,
+        "wires": [
+            [
+                "2f379d997c06923a"
+            ]
+        ]
+    },
+    {
+        "id": "e20715d7456b138e",
+        "type": "inject",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 530,
+        "y": 1400,
+        "wires": [
+            [
+                "7b0c2ec569a6915f"
+            ]
+        ]
+    },
+    {
+        "id": "1e6138a46c5185e8",
+        "type": "inject",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1390,
+        "y": 500,
+        "wires": [
+            [
+                "84aad558069e9f9c"
+            ]
+        ]
+    },
+    {
+        "id": "dbd0931dcd9d81ba",
+        "type": "debug",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1680,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "da86a84ecd765568",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "func": "msg.topic = 'LOAD'\n\nmsg.payload = `MMEM:LOAD:STAT ${msg.payload}\\r\\n`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 2300,
+        "wires": [
+            [
+                "56c042dcf7d8a82e",
+                "6ff32fe9a393edcb"
+            ]
+        ]
+    },
+    {
+        "id": "6a9650353f8b3053",
+        "type": "link out",
+        "z": "5ba779ec757e0302",
+        "name": "plcaddr",
+        "mode": "link",
+        "links": [],
+        "x": 295,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "ef7f9edf7b69d09c",
+        "type": "modbus-read",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "200",
+        "quantity": "1",
+        "rate": "500",
+        "rateUnit": "ms",
+        "delayOnStart": true,
+        "startDelayTime": "2",
+        "server": "ee59776d.382f58",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 370,
+        "y": 2280,
+        "wires": [
+            [
+                "3e45f5e3b17a5d80"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "3e45f5e3b17a5d80",
+        "type": "change",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[0]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 2280,
+        "wires": [
+            [
+                "376ec1c534909d83",
+                "427869cf1a68889d"
+            ]
+        ]
+    },
+    {
+        "id": "376ec1c534909d83",
+        "type": "debug",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "active": false,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 740,
+        "y": 2180,
+        "wires": []
+    },
+    {
+        "id": "427869cf1a68889d",
+        "type": "rbe",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 820,
+        "y": 2320,
+        "wires": [
+            [
+                "da86a84ecd765568"
+            ]
+        ]
+    },
+    {
+        "id": "3911b7ea6769b5fb",
+        "type": "debug",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 390,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "fd33dc9010eb425a",
+        "type": "inject",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 540,
+        "y": 2360,
+        "wires": [
+            [
+                "427869cf1a68889d"
+            ]
+        ]
+    },
+    {
+        "id": "e9e18d8bd5dd15c1",
+        "type": "inject",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "2",
+        "payloadType": "num",
+        "x": 540,
+        "y": 2420,
+        "wires": [
+            [
+                "427869cf1a68889d"
+            ]
+        ]
+    },
+    {
+        "id": "bd3e53c3c1544695",
+        "type": "inject",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "111",
+        "payloadType": "num",
+        "x": 530,
+        "y": 2480,
+        "wires": [
+            [
+                "427869cf1a68889d"
+            ]
+        ]
+    },
+    {
+        "id": "fe99070e9ee61ee0",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "func": "msg.topic = 'SAVE'\n\nmsg.payload = `“MMEM:STOR:STAT 3,HHH\\r\\n`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 2460,
+        "wires": [
+            [
+                "56c042dcf7d8a82e"
+            ]
+        ]
+    },
+    {
+        "id": "cb1438f9148e18c4",
+        "type": "inject",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1060,
+        "y": 2460,
+        "wires": [
+            [
+                "fe99070e9ee61ee0"
+            ]
+        ]
+    },
+    {
+        "id": "806bd30884f67372",
+        "type": "modbus-flex-connector",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "maxReconnectsPerMinute": 4,
+        "emptyQueue": false,
+        "showStatusActivities": false,
+        "showErrors": true,
+        "server": "271d048b.14283c",
+        "x": 390,
+        "y": 1000,
+        "wires": [
+            [
+                "4206fa5e15040b71"
+            ]
+        ]
+    },
+    {
+        "id": "458ef290a92a7685",
+        "type": "inject",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 1040,
+        "wires": [
+            [
+                "9e4e1180c06772c6"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "9e4e1180c06772c6",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "func": "msg.payload = { \n    'connectorType': 'TCP', \n    'tcpHost': '192.168.1.1', \n    'tcpPort': '10003'\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 1040,
+        "wires": [
+            [
+                "806bd30884f67372"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "4206fa5e15040b71",
+        "type": "debug",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 1040,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "71904e2e7db8a073",
+        "type": "ui_button",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "group": "8dc1c98e4b7f6f10",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "PLC重连",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 120,
+        "y": 980,
+        "wires": [
+            [
+                "9e4e1180c06772c6",
+                "c12a2e1ff0c56371"
+            ]
+        ]
+    },
+    {
+        "id": "ab58044cb76c3e65",
+        "type": "modbus-flex-connector",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "maxReconnectsPerMinute": 4,
+        "emptyQueue": false,
+        "showStatusActivities": false,
+        "showErrors": true,
+        "server": "ee59776d.382f58",
+        "x": 390,
+        "y": 940,
+        "wires": [
+            [
+                "4206fa5e15040b71"
+            ]
+        ]
+    },
+    {
+        "id": "c12a2e1ff0c56371",
+        "type": "function",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "func": "msg.payload = { \n    'connectorType': 'TCP', \n    'tcpHost': '192.168.1.1', \n    'tcpPort': '8300'\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 215,
+        "y": 940,
+        "wires": [
+            [
+                "ab58044cb76c3e65"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "b776b6fc342dc444",
+        "type": "modbus-read",
+        "z": "5ba779ec757e0302",
+        "name": "PLC到AGV",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "12",
+        "quantity": "2",
+        "rate": "500",
+        "rateUnit": "ms",
+        "delayOnStart": false,
+        "startDelayTime": "2",
+        "server": "271d048b.14283c",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 150,
+        "y": 240,
+        "wires": [
+            [
+                "b0858d69bc3e06c6"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "b0858d69bc3e06c6",
+        "type": "modbus-write",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "MHoldingRegisters",
+        "adr": "100",
+        "quantity": "2",
+        "server": "a197f035369b89ca",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "x": 360,
+        "y": 220,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "f6f70c78ba29d781",
+        "type": "modbus-read",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "InputRegister",
+        "adr": "102",
+        "quantity": "2",
+        "rate": "500",
+        "rateUnit": "ms",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "a197f035369b89ca",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 160,
+        "y": 300,
+        "wires": [
+            [
+                "e199c6e7b0aa54de"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "e199c6e7b0aa54de",
+        "type": "modbus-write",
+        "z": "5ba779ec757e0302",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "MHoldingRegisters",
+        "adr": "14",
+        "quantity": "2",
+        "server": "271d048b.14283c",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "x": 360,
+        "y": 280,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c66847f27ac57d76",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "休息",
+        "func": "msg.payload=msg.payload.data[10]+msg.payload.data[11]*65536;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 1760,
+        "wires": [
+            [
+                "82dbd4a8c56abd5d"
+            ]
+        ]
+    },
+    {
+        "id": "05e6e0cb7bafa996",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "MTBF",
+        "func": "msg.payload=msg.payload.data[46]+msg.payload.data[47]*65536;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 2660,
+        "wires": [
+            [
+                "903de071bf5f07ae"
+            ]
+        ]
+    },
+    {
+        "id": "89f945544574edc5",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "良品率",
+        "func": "msg.payload=msg.payload.data[44]+msg.payload.data[45]*65536;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 2620,
+        "wires": [
+            [
+                "a40a61a0d21db7c7"
+            ]
+        ]
+    },
+    {
+        "id": "e0660ad6b708a22a",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "性能稼动率",
+        "func": "msg.payload=msg.payload.data[42]+msg.payload.data[43]*65536;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 410,
+        "y": 2560,
+        "wires": [
+            [
+                "f9296dc1a9be7dd4"
+            ]
+        ]
+    },
+    {
+        "id": "b101333793bf5137",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "时间稼动率",
+        "func": "msg.payload=msg.payload.data[40]+msg.payload.data[41]*65536;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 2500,
+        "wires": [
+            [
+                "34e50137dbf30c3a"
+            ]
+        ]
+    },
+    {
+        "id": "f68da681d4aff441",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "OEE",
+        "func": "msg.payload=msg.payload.data[8]+msg.payload.data[9]*65536;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 1700,
+        "wires": [
+            [
+                "45ad0a66fe8b5285"
+            ]
+        ]
+    },
+    {
+        "id": "764a8531ed092234",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "理论周期",
+        "func": "msg.payload=msg.payload.data[4]+msg.payload.data[5]*65536;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 1600,
+        "wires": [
+            [
+                "ba8cb6a348ee5852"
+            ]
+        ]
+    },
+    {
+        "id": "39c4606b55946076",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "良品",
+        "func": "msg.payload=msg.payload.data[2]+msg.payload.data[3]*65536;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 1560,
+        "wires": [
+            [
+                "1b0635bb1f14f60d"
+            ]
+        ]
+    },
+    {
+        "id": "6508ad47e3ed41da",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "总数",
+        "func": "msg.payload=msg.payload.data[0]+msg.payload.data[1]*65536;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 1500,
+        "wires": [
+            [
+                "7de60a0440189afc"
+            ]
+        ]
+    },
+    {
+        "id": "4234a1c8e22e92f2",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "净稼动时间",
+        "func": "msg.payload=msg.payload.data[36]+msg.payload.data[37]*65536;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 2440,
+        "wires": [
+            [
+                "beeb5008ac6be60e"
+            ]
+        ]
+    },
+    {
+        "id": "fda0406bfdf086cd",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "稼动时间",
+        "func": "msg.payload=msg.payload.data[34]+msg.payload.data[35]*65536;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 2380,
+        "wires": [
+            [
+                "bdb06d951aebf340"
+            ]
+        ]
+    },
+    {
+        "id": "4de9b0c1a5f529ad",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "负荷时间",
+        "func": "msg.payload=msg.payload.data[32]+msg.payload.data[33]*65536;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 2320,
+        "wires": [
+            [
+                "398f5a4d6579f15a"
+            ]
+        ]
+    },
+    {
+        "id": "57282b20caa8dd0d",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "总投入时间",
+        "func": "msg.payload=msg.payload.data[30]+msg.payload.data[31]*65536;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 2260,
+        "wires": [
+            [
+                "6f274aa4ee70e802"
+            ]
+        ]
+    },
+    {
+        "id": "b2e63cfa6c23be04",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "故障时间",
+        "func": "msg.payload=msg.payload.data[28]+msg.payload.data[29]*65536;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 2180,
+        "wires": [
+            [
+                "f02140c17e83d90e"
+            ]
+        ]
+    },
+    {
+        "id": "e0702fcb0833500c",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "实际周期",
+        "func": "msg.payload=msg.payload.data[24]+msg.payload.data[25]*65536;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 2060,
+        "wires": [
+            [
+                "437e68d220927187"
+            ]
+        ]
+    },
+    {
+        "id": "95689ba01117e562",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "故障次数",
+        "func": "msg.payload=msg.payload.data[26]+msg.payload.data[27]*65536;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 2120,
+        "wires": [
+            [
+                "d80e89a3e8bcea37"
+            ]
+        ]
+    },
+    {
+        "id": "945324c7fc82c093",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "负荷时间",
+        "func": "msg.payload=msg.payload.data[6]+msg.payload.data[7]*65536;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 420,
+        "y": 1660,
+        "wires": [
+            [
+                "4821ebe9641817e5"
+            ]
+        ]
+    },
+    {
+        "id": "b408d407f6930b83",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "换型",
+        "func": "msg.payload=msg.payload.data[18]+msg.payload.data[19]*65536;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 2000,
+        "wires": [
+            [
+                "6fb737ba6456ce8b"
+            ]
+        ]
+    },
+    {
+        "id": "0c946117b48c49f0",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "开会",
+        "func": "msg.payload=msg.payload.data[16]+msg.payload.data[17]*65536;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 1940,
+        "wires": [
+            [
+                "c7f0464a18bcd962"
+            ]
+        ]
+    },
+    {
+        "id": "2aa0bb27de450d9a",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "待指令",
+        "func": "msg.payload=msg.payload.data[12]+msg.payload.data[13]*65536;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 1820,
+        "wires": [
+            [
+                "98a254a51390d0ff"
+            ]
+        ]
+    },
+    {
+        "id": "e652519a39e15430",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "计划保养",
+        "func": "msg.payload=msg.payload.data[14]+msg.payload.data[15]*65536;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 1880,
+        "wires": [
+            [
+                "6c84f037c8ad3dc2"
+            ]
+        ]
+    },
+    {
+        "id": "bf273475fc4ac83b",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "MTTR",
+        "func": "msg.payload=msg.payload.data[47]+msg.payload.data[48]*65536;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 2720,
+        "wires": [
+            [
+                "cf40d6e98125a375"
+            ]
+        ]
+    },
+    {
+        "id": "dd5710dafbe02f8c",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "速度降低",
+        "func": "msg.payload=msg.payload.data[50]+msg.payload.data[51]*65536;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 2780,
+        "wires": [
+            [
+                "673f06ef999a2827"
+            ]
+        ]
+    },
+    {
+        "id": "6a9e1ca0843f42c0",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "小停顿次数",
+        "func": "msg.payload=msg.payload.data[52]+msg.payload.data[53]*65536;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 2840,
+        "wires": [
+            [
+                "978c280b9c6c6864"
+            ]
+        ]
+    },
+    {
+        "id": "cf2e68764db23347",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "小停顿时间",
+        "func": "msg.payload=msg.payload.data[54]+msg.payload.data[55]*65536;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 2900,
+        "wires": [
+            [
+                "baea739c0512de39"
+            ]
+        ]
+    },
+    {
+        "id": "7de60a0440189afc",
+        "type": "rbe",
+        "z": "2d20250c61bc57c7",
+        "name": "变更",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 590,
+        "y": 1500,
+        "wires": [
+            [
+                "30a8b7356d9551e1",
+                "24e10b1b49a230bc"
+            ]
+        ]
+    },
+    {
+        "id": "1b0635bb1f14f60d",
+        "type": "rbe",
+        "z": "2d20250c61bc57c7",
+        "name": "变更",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 590,
+        "y": 1560,
+        "wires": [
+            [
+                "eb976172f6bf4a57",
+                "9a7392b062a3594a"
+            ]
+        ]
+    },
+    {
+        "id": "ba8cb6a348ee5852",
+        "type": "rbe",
+        "z": "2d20250c61bc57c7",
+        "name": "变更",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 590,
+        "y": 1600,
+        "wires": [
+            [
+                "eec8dba58d64d9c7"
+            ]
+        ]
+    },
+    {
+        "id": "4821ebe9641817e5",
+        "type": "rbe",
+        "z": "2d20250c61bc57c7",
+        "name": "变更",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 590,
+        "y": 1660,
+        "wires": [
+            [
+                "ea2b4c6b817f6f67"
+            ]
+        ]
+    },
+    {
+        "id": "45ad0a66fe8b5285",
+        "type": "rbe",
+        "z": "2d20250c61bc57c7",
+        "name": "变更",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 590,
+        "y": 1700,
+        "wires": [
+            [
+                "a3e72132c6fcb376"
+            ]
+        ]
+    },
+    {
+        "id": "82dbd4a8c56abd5d",
+        "type": "rbe",
+        "z": "2d20250c61bc57c7",
+        "name": "变更",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 590,
+        "y": 1760,
+        "wires": [
+            [
+                "b73170fb9f20a589"
+            ]
+        ]
+    },
+    {
+        "id": "98a254a51390d0ff",
+        "type": "rbe",
+        "z": "2d20250c61bc57c7",
+        "name": "变更",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 590,
+        "y": 1820,
+        "wires": [
+            [
+                "39ada42aed2a4e92"
+            ]
+        ]
+    },
+    {
+        "id": "6c84f037c8ad3dc2",
+        "type": "rbe",
+        "z": "2d20250c61bc57c7",
+        "name": "变更",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 590,
+        "y": 1880,
+        "wires": [
+            [
+                "4fbb2c1285ee71ad"
+            ]
+        ]
+    },
+    {
+        "id": "c7f0464a18bcd962",
+        "type": "rbe",
+        "z": "2d20250c61bc57c7",
+        "name": "变更",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 610,
+        "y": 1940,
+        "wires": [
+            [
+                "376be3c117798262"
+            ]
+        ]
+    },
+    {
+        "id": "6fb737ba6456ce8b",
+        "type": "rbe",
+        "z": "2d20250c61bc57c7",
+        "name": "变更",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 610,
+        "y": 2000,
+        "wires": [
+            [
+                "b68ae9ca130f242e"
+            ]
+        ]
+    },
+    {
+        "id": "437e68d220927187",
+        "type": "rbe",
+        "z": "2d20250c61bc57c7",
+        "name": "变更",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 590,
+        "y": 2060,
+        "wires": [
+            [
+                "825a99a11c53a802"
+            ]
+        ]
+    },
+    {
+        "id": "d80e89a3e8bcea37",
+        "type": "rbe",
+        "z": "2d20250c61bc57c7",
+        "name": "变更",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 610,
+        "y": 2120,
+        "wires": [
+            [
+                "4ca48e0ea70df76a",
+                "c06a08a5e748fc56"
+            ]
+        ]
+    },
+    {
+        "id": "f02140c17e83d90e",
+        "type": "rbe",
+        "z": "2d20250c61bc57c7",
+        "name": "变更",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 610,
+        "y": 2160,
+        "wires": [
+            [
+                "4cb02421a77ba6b1",
+                "5ca10b0f0be72731"
+            ]
+        ]
+    },
+    {
+        "id": "6f274aa4ee70e802",
+        "type": "rbe",
+        "z": "2d20250c61bc57c7",
+        "name": "变更",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 610,
+        "y": 2220,
+        "wires": [
+            [
+                "23f29ebf26409bcf"
+            ]
+        ]
+    },
+    {
+        "id": "398f5a4d6579f15a",
+        "type": "rbe",
+        "z": "2d20250c61bc57c7",
+        "name": "变更",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 590,
+        "y": 2300,
+        "wires": [
+            [
+                "0ec08f59eca6968d"
+            ]
+        ]
+    },
+    {
+        "id": "bdb06d951aebf340",
+        "type": "rbe",
+        "z": "2d20250c61bc57c7",
+        "name": "变更",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 590,
+        "y": 2360,
+        "wires": [
+            [
+                "20ba458a4215980c"
+            ]
+        ]
+    },
+    {
+        "id": "beeb5008ac6be60e",
+        "type": "rbe",
+        "z": "2d20250c61bc57c7",
+        "name": "变更",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 590,
+        "y": 2420,
+        "wires": [
+            [
+                "53ad5f465386b4c6"
+            ]
+        ]
+    },
+    {
+        "id": "34e50137dbf30c3a",
+        "type": "rbe",
+        "z": "2d20250c61bc57c7",
+        "name": "变更",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 590,
+        "y": 2480,
+        "wires": [
+            [
+                "e3e4dbe27d19d3c7"
+            ]
+        ]
+    },
+    {
+        "id": "f9296dc1a9be7dd4",
+        "type": "rbe",
+        "z": "2d20250c61bc57c7",
+        "name": "变更",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 610,
+        "y": 2544,
+        "wires": [
+            [
+                "f06735dbf35b82cb"
+            ]
+        ]
+    },
+    {
+        "id": "a40a61a0d21db7c7",
+        "type": "rbe",
+        "z": "2d20250c61bc57c7",
+        "name": "变更",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 590,
+        "y": 2600,
+        "wires": [
+            [
+                "881081c16d90e469"
+            ]
+        ]
+    },
+    {
+        "id": "903de071bf5f07ae",
+        "type": "rbe",
+        "z": "2d20250c61bc57c7",
+        "name": "变更",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 590,
+        "y": 2660,
+        "wires": [
+            [
+                "ab996826a0ace5bb",
+                "8da1344a136e4ba6"
+            ]
+        ]
+    },
+    {
+        "id": "cf40d6e98125a375",
+        "type": "rbe",
+        "z": "2d20250c61bc57c7",
+        "name": "变更",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 590,
+        "y": 2720,
+        "wires": [
+            [
+                "ec73c723851197f3",
+                "bfd21d93368fb231"
+            ]
+        ]
+    },
+    {
+        "id": "673f06ef999a2827",
+        "type": "rbe",
+        "z": "2d20250c61bc57c7",
+        "name": "变更",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 570,
+        "y": 2780,
+        "wires": [
+            [
+                "2f4297e44672990b",
+                "5b05f3079da8bce5"
+            ]
+        ]
+    },
+    {
+        "id": "978c280b9c6c6864",
+        "type": "rbe",
+        "z": "2d20250c61bc57c7",
+        "name": "变更",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 590,
+        "y": 2840,
+        "wires": [
+            [
+                "cbe6303491382c36",
+                "f9d20e2ec488eeb6"
+            ]
+        ]
+    },
+    {
+        "id": "baea739c0512de39",
+        "type": "rbe",
+        "z": "2d20250c61bc57c7",
+        "name": "变更",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 590,
+        "y": 2900,
+        "wires": [
+            [
+                "6a9ffcb63606af78"
+            ]
+        ]
+    },
+    {
+        "id": "30a8b7356d9551e1",
+        "type": "ui_text",
+        "z": "2d20250c61bc57c7",
+        "group": "55e2ef49.fc07",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "总数",
+        "format": "{{msg.payload}} pcs",
+        "layout": "row-spread",
+        "x": 930,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "eb976172f6bf4a57",
+        "type": "ui_text",
+        "z": "2d20250c61bc57c7",
+        "group": "55e2ef49.fc07",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "良品",
+        "format": "{{msg.payload}} pcs",
+        "layout": "row-spread",
+        "x": 930,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "a35c251a5f954667",
+        "type": "ui_text",
+        "z": "2d20250c61bc57c7",
+        "group": "55e2ef49.fc07",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "理论周期",
+        "format": "{{msg.payload}} sec",
+        "layout": "row-spread",
+        "x": 940,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "236a7fb4de4c7935",
+        "type": "ui_text",
+        "z": "2d20250c61bc57c7",
+        "group": "55e2ef49.fc07",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "负荷时间",
+        "format": "{{msg.payload}} min",
+        "layout": "row-spread",
+        "x": 940,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "46b7da5054757d39",
+        "type": "ui_text",
+        "z": "2d20250c61bc57c7",
+        "group": "d28f030.eb346",
+        "order": 11,
+        "width": "5",
+        "height": 1,
+        "name": "",
+        "label": "实际周期",
+        "format": "{{msg.payload}} s",
+        "layout": "row-spread",
+        "x": 940,
+        "y": 1980,
+        "wires": []
+    },
+    {
+        "id": "4ca48e0ea70df76a",
+        "type": "ui_text",
+        "z": "2d20250c61bc57c7",
+        "group": "d28f030.eb346",
+        "order": 12,
+        "width": "5",
+        "height": 1,
+        "name": "",
+        "label": "故障次数",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 940,
+        "y": 2020,
+        "wires": []
+    },
+    {
+        "id": "aecce0e72577d2c6",
+        "type": "ui_text",
+        "z": "2d20250c61bc57c7",
+        "group": "d28f030.eb346",
+        "order": 13,
+        "width": "5",
+        "height": 1,
+        "name": "",
+        "label": "故障时间",
+        "format": "{{msg.payload}} min",
+        "layout": "row-spread",
+        "x": 940,
+        "y": 2060,
+        "wires": []
+    },
+    {
+        "id": "ed8a5d4b4162d8c6",
+        "type": "ui_text",
+        "z": "2d20250c61bc57c7",
+        "group": "d28f030.eb346",
+        "order": 14,
+        "width": "5",
+        "height": 1,
+        "name": "",
+        "label": "总投入时间",
+        "format": "{{msg.payload}} min",
+        "layout": "row-spread",
+        "x": 950,
+        "y": 2100,
+        "wires": []
+    },
+    {
+        "id": "83cba80e7076ea0a",
+        "type": "ui_text",
+        "z": "2d20250c61bc57c7",
+        "group": "d28f030.eb346",
+        "order": 15,
+        "width": "5",
+        "height": 1,
+        "name": "",
+        "label": "负荷时间",
+        "format": "{{msg.payload}} min",
+        "layout": "row-spread",
+        "x": 940,
+        "y": 2140,
+        "wires": []
+    },
+    {
+        "id": "c2fa6554d3b5f650",
+        "type": "ui_text",
+        "z": "2d20250c61bc57c7",
+        "group": "d28f030.eb346",
+        "order": 16,
+        "width": "5",
+        "height": 1,
+        "name": "",
+        "label": "稼动时间",
+        "format": "{{msg.payload}} min",
+        "layout": "row-spread",
+        "x": 940,
+        "y": 2180,
+        "wires": []
+    },
+    {
+        "id": "b864754a8766ee75",
+        "type": "ui_text",
+        "z": "2d20250c61bc57c7",
+        "group": "d28f030.eb346",
+        "order": 17,
+        "width": "5",
+        "height": 1,
+        "name": "",
+        "label": "净稼动时间",
+        "format": "{{msg.payload}} min",
+        "layout": "row-spread",
+        "x": 950,
+        "y": 2220,
+        "wires": []
+    },
+    {
+        "id": "ec73c723851197f3",
+        "type": "ui_text",
+        "z": "2d20250c61bc57c7",
+        "group": "d28f030.eb346",
+        "order": 18,
+        "width": "5",
+        "height": 1,
+        "name": "",
+        "label": "MTTR",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 930,
+        "y": 2420,
+        "wires": []
+    },
+    {
+        "id": "ab996826a0ace5bb",
+        "type": "ui_text",
+        "z": "2d20250c61bc57c7",
+        "group": "d28f030.eb346",
+        "order": 19,
+        "width": "5",
+        "height": 1,
+        "name": "",
+        "label": "MTBF",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 930,
+        "y": 2380,
+        "wires": []
+    },
+    {
+        "id": "2f4297e44672990b",
+        "type": "ui_text",
+        "z": "2d20250c61bc57c7",
+        "group": "d28f030.eb346",
+        "order": 20,
+        "width": "5",
+        "height": 1,
+        "name": "",
+        "label": "速度降低",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 940,
+        "y": 2460,
+        "wires": []
+    },
+    {
+        "id": "cbe6303491382c36",
+        "type": "ui_text",
+        "z": "2d20250c61bc57c7",
+        "group": "d28f030.eb346",
+        "order": 21,
+        "width": "5",
+        "height": 1,
+        "name": "",
+        "label": "小停顿次数",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 950,
+        "y": 2500,
+        "wires": []
+    },
+    {
+        "id": "7c7e4b40fe27f11d",
+        "type": "ui_text",
+        "z": "2d20250c61bc57c7",
+        "group": "d28f030.eb346",
+        "order": 22,
+        "width": "5",
+        "height": 1,
+        "name": "",
+        "label": "小停顿时间",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 950,
+        "y": 2540,
+        "wires": []
+    },
+    {
+        "id": "d5cbb494f3aeb5e5",
+        "type": "modbus-read",
+        "z": "2d20250c61bc57c7",
+        "name": "PLC",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "0",
+        "quantity": "100",
+        "rate": "1",
+        "rateUnit": "s",
+        "delayOnStart": true,
+        "startDelayTime": "5",
+        "server": "ee59776d.382f58",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 150,
+        "y": 1860,
+        "wires": [
+            [
+                "93bcdc4b5fecb188",
+                "ff6aa523a1dcb5f9"
+            ],
+            [
+                "6508ad47e3ed41da",
+                "39c4606b55946076",
+                "764a8531ed092234",
+                "945324c7fc82c093",
+                "f68da681d4aff441",
+                "c66847f27ac57d76",
+                "2aa0bb27de450d9a",
+                "e652519a39e15430",
+                "0c946117b48c49f0",
+                "b408d407f6930b83",
+                "e0702fcb0833500c",
+                "95689ba01117e562",
+                "b2e63cfa6c23be04",
+                "57282b20caa8dd0d",
+                "4de9b0c1a5f529ad",
+                "fda0406bfdf086cd",
+                "4234a1c8e22e92f2",
+                "b101333793bf5137",
+                "e0660ad6b708a22a",
+                "89f945544574edc5",
+                "05e6e0cb7bafa996",
+                "bf273475fc4ac83b",
+                "dd5710dafbe02f8c",
+                "6a9e1ca0843f42c0",
+                "cf2e68764db23347",
+                "e6b223796f042e80"
+            ]
+        ]
+    },
+    {
+        "id": "a3e72132c6fcb376",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "div10",
+        "func": "msg.payload=msg.payload/10.0\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 710,
+        "y": 1700,
+        "wires": [
+            [
+                "5692f2b05a2d1fbd",
+                "f3c656a8ae72a3f0",
+                "0dfb241a1871e3a8"
+            ]
+        ]
+    },
+    {
+        "id": "e3e4dbe27d19d3c7",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "div10",
+        "func": "msg.payload=msg.payload/10.0\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 710,
+        "y": 2480,
+        "wires": [
+            [
+                "ccce4ac7db1a7ff4",
+                "05e34ce26fcb6a62"
+            ]
+        ]
+    },
+    {
+        "id": "881081c16d90e469",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "div10",
+        "func": "msg.payload=msg.payload/10.0\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 710,
+        "y": 2600,
+        "wires": [
+            [
+                "10a3575cdb08d13f",
+                "7b51f16e2c2e7641"
+            ]
+        ]
+    },
+    {
+        "id": "4cb02421a77ba6b1",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "div10",
+        "func": "msg.payload=msg.payload/10.0\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 730,
+        "y": 2160,
+        "wires": [
+            [
+                "aecce0e72577d2c6"
+            ]
+        ]
+    },
+    {
+        "id": "f06735dbf35b82cb",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "div10",
+        "func": "msg.payload=msg.payload/10.0\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 730,
+        "y": 2540,
+        "wires": [
+            [
+                "054f2479e622a786",
+                "284dae4fd4ba529e"
+            ]
+        ]
+    },
+    {
+        "id": "ea2b4c6b817f6f67",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "div60",
+        "func": "msg.payload=(msg.payload/60.0).toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 710,
+        "y": 1660,
+        "wires": [
+            [
+                "236a7fb4de4c7935",
+                "c68a063e5c12df98"
+            ]
+        ]
+    },
+    {
+        "id": "eec8dba58d64d9c7",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "div10",
+        "func": "msg.payload=msg.payload/10.0\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 710,
+        "y": 1600,
+        "wires": [
+            [
+                "a35c251a5f954667",
+                "62d667bb7dc1cd4f"
+            ]
+        ]
+    },
+    {
+        "id": "825a99a11c53a802",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "div10",
+        "func": "msg.payload=msg.payload/10.0\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 710,
+        "y": 2060,
+        "wires": [
+            [
+                "46b7da5054757d39",
+                "2b6dffd7088ea73b"
+            ]
+        ]
+    },
+    {
+        "id": "e50abee7d15c3ee0",
+        "type": "ui_switch",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "label": "休息",
+        "tooltip": "",
+        "group": "d28f030.eb346",
+        "order": 2,
+        "width": "5",
+        "height": "1",
+        "passthru": false,
+        "decouple": "true",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 1370,
+        "y": 1700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6c286992096724a1",
+        "type": "ui_switch",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "label": "待指令",
+        "tooltip": "",
+        "group": "d28f030.eb346",
+        "order": 4,
+        "width": "5",
+        "height": "1",
+        "passthru": false,
+        "decouple": "true",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 1370,
+        "y": 1760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "59d733c96ea0e5de",
+        "type": "ui_switch",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "label": "计划保养",
+        "tooltip": "",
+        "group": "d28f030.eb346",
+        "order": 6,
+        "width": "5",
+        "height": "1",
+        "passthru": false,
+        "decouple": "true",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 1380,
+        "y": 1820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a59eef41a0b59894",
+        "type": "ui_switch",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "label": "开会",
+        "tooltip": "",
+        "group": "d28f030.eb346",
+        "order": 8,
+        "width": "5",
+        "height": "1",
+        "passthru": false,
+        "decouple": "true",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 1370,
+        "y": 1880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5e30c3e67afbd6b3",
+        "type": "ui_switch",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "label": "换型",
+        "tooltip": "",
+        "group": "d28f030.eb346",
+        "order": 10,
+        "width": "5",
+        "height": "1",
+        "passthru": false,
+        "decouple": "true",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "x": 1370,
+        "y": 1940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5692f2b05a2d1fbd",
+        "type": "ui_gauge",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "group": "d2396538.353658",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "OEE",
+        "label": "",
+        "format": "{{value}}%",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ff0000",
+            "#e6e600",
+            "#00f23d"
+        ],
+        "seg1": "60",
+        "seg2": "80",
+        "x": 930,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "f3c656a8ae72a3f0",
+        "type": "ui_chart",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "group": "5a9b9852.27f248",
+        "order": 1,
+        "width": "20",
+        "height": "4",
+        "label": "设备综合效率",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "1",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "x": 960,
+        "y": 1740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ccce4ac7db1a7ff4",
+        "type": "ui_gauge",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "group": "dd6d70ab.c2259",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "时间稼动率",
+        "label": "",
+        "format": "{{value}}%",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ff0000",
+            "#e6e600",
+            "#00ee00"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 950,
+        "y": 2260,
+        "wires": []
+    },
+    {
+        "id": "054f2479e622a786",
+        "type": "ui_gauge",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "group": "6ded87d4.c86c38",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "性能稼动率",
+        "label": "",
+        "format": "{{value}}%",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ff0000",
+            "#e6e600",
+            "#00ff00"
+        ],
+        "seg1": "60",
+        "seg2": "80",
+        "x": 950,
+        "y": 2300,
+        "wires": []
+    },
+    {
+        "id": "10a3575cdb08d13f",
+        "type": "ui_gauge",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "group": "ffc1eb4b.0db7d8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "良品率",
+        "label": "",
+        "format": "{{value}}%",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ff0000",
+            "#e6e600",
+            "#00ff00"
+        ],
+        "seg1": "60",
+        "seg2": "80",
+        "x": 930,
+        "y": 2340,
+        "wires": []
+    },
+    {
+        "id": "24e10b1b49a230bc",
+        "type": "change",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "data.total",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1570,
+        "y": 1500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9a7392b062a3594a",
+        "type": "change",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "data.pass",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1570,
+        "y": 1540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "62d667bb7dc1cd4f",
+        "type": "change",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "data.targetcircle",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1590,
+        "y": 1580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c68a063e5c12df98",
+        "type": "change",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "data.loadtime",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1590,
+        "y": 1620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0dfb241a1871e3a8",
+        "type": "change",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "data.oee",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1570,
+        "y": 1660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "029cc7ce4f0e9c80",
+        "type": "change",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "data.breaktime",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1590,
+        "y": 1700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2b6dffd7088ea73b",
+        "type": "change",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "data.realcircle",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1590,
+        "y": 1900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c06a08a5e748fc56",
+        "type": "change",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "data.downtimes",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1590,
+        "y": 1940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5ca10b0f0be72731",
+        "type": "change",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "data.downtime",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1590,
+        "y": 1980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c68c6dcc9535a978",
+        "type": "change",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "data.totaltime",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1600,
+        "y": 2020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f7ab27ec87efa411",
+        "type": "change",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "data.loadtime2",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1590,
+        "y": 2060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ec9d19f516e7734d",
+        "type": "change",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "data.jiadongtime",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1590,
+        "y": 2100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "094e842164e38a2d",
+        "type": "change",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "data.jingjiadongtime",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1610,
+        "y": 2140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "20ba458a4215980c",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "div60",
+        "func": "msg.payload=(msg.payload/60.0).toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 710,
+        "y": 2380,
+        "wires": [
+            [
+                "c2fa6554d3b5f650",
+                "ec9d19f516e7734d"
+            ]
+        ]
+    },
+    {
+        "id": "53ad5f465386b4c6",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "div60",
+        "func": "msg.payload=(msg.payload/60.0).toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 710,
+        "y": 2420,
+        "wires": [
+            [
+                "b864754a8766ee75",
+                "094e842164e38a2d"
+            ]
+        ]
+    },
+    {
+        "id": "6a9ffcb63606af78",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "div60",
+        "func": "msg.payload=(msg.payload/60.0).toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 730,
+        "y": 2900,
+        "wires": [
+            [
+                "7c7e4b40fe27f11d",
+                "98bcce16a9f723d3"
+            ]
+        ]
+    },
+    {
+        "id": "23f29ebf26409bcf",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "div60",
+        "func": "msg.payload=(msg.payload/60.0).toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 750,
+        "y": 2220,
+        "wires": [
+            [
+                "ed8a5d4b4162d8c6",
+                "c68c6dcc9535a978"
+            ]
+        ]
+    },
+    {
+        "id": "0ec08f59eca6968d",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "div60",
+        "func": "msg.payload=(msg.payload/60.0).toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 730,
+        "y": 2300,
+        "wires": [
+            [
+                "83cba80e7076ea0a",
+                "f7ab27ec87efa411"
+            ]
+        ]
+    },
+    {
+        "id": "376be3c117798262",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "div60",
+        "func": "msg.payload=(msg.payload/60.0).toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 730,
+        "y": 1940,
+        "wires": [
+            [
+                "46b4ef9240fa0b63",
+                "413425d103d06c4a"
+            ]
+        ]
+    },
+    {
+        "id": "4fbb2c1285ee71ad",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "div60",
+        "func": "msg.payload=(msg.payload/60.0).toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 730,
+        "y": 1880,
+        "wires": [
+            [
+                "52ee4b6039f72f85",
+                "75b94b91637ab1c8"
+            ]
+        ]
+    },
+    {
+        "id": "39ada42aed2a4e92",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "div60",
+        "func": "msg.payload=(msg.payload/60.0).toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 730,
+        "y": 1820,
+        "wires": [
+            [
+                "3c3b16dec3114a3b",
+                "b731148ec1a4a89e"
+            ]
+        ]
+    },
+    {
+        "id": "b73170fb9f20a589",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "div60",
+        "func": "msg.payload=(msg.payload/60.0).toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 730,
+        "y": 1760,
+        "wires": [
+            [
+                "4885d6763b3090dd",
+                "029cc7ce4f0e9c80"
+            ]
+        ]
+    },
+    {
+        "id": "b68ae9ca130f242e",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "div60",
+        "func": "msg.payload=(msg.payload/60.0).toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 730,
+        "y": 2000,
+        "wires": [
+            [
+                "331c3f796c7783f6",
+                "6c23fa29e2399674"
+            ]
+        ]
+    },
+    {
+        "id": "4885d6763b3090dd",
+        "type": "ui_text",
+        "z": "2d20250c61bc57c7",
+        "group": "d28f030.eb346",
+        "order": 1,
+        "width": "5",
+        "height": "1",
+        "name": "",
+        "label": "休息时间",
+        "format": "{{msg.payload}} min",
+        "layout": "row-spread",
+        "x": 940,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "3c3b16dec3114a3b",
+        "type": "ui_text",
+        "z": "2d20250c61bc57c7",
+        "group": "d28f030.eb346",
+        "order": 3,
+        "width": "5",
+        "height": "1",
+        "name": "",
+        "label": "待指令时间",
+        "format": "{{msg.payload}} min",
+        "layout": "row-spread",
+        "x": 950,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "52ee4b6039f72f85",
+        "type": "ui_text",
+        "z": "2d20250c61bc57c7",
+        "group": "d28f030.eb346",
+        "order": 5,
+        "width": "5",
+        "height": "1",
+        "name": "",
+        "label": "计划保养时间",
+        "format": "{{msg.payload}} min",
+        "layout": "row-spread",
+        "x": 960,
+        "y": 1860,
+        "wires": []
+    },
+    {
+        "id": "46b4ef9240fa0b63",
+        "type": "ui_text",
+        "z": "2d20250c61bc57c7",
+        "group": "d28f030.eb346",
+        "order": 7,
+        "width": "5",
+        "height": "1",
+        "name": "",
+        "label": "开会时间",
+        "format": "{{msg.payload}} min",
+        "layout": "row-spread",
+        "x": 940,
+        "y": 1900,
+        "wires": []
+    },
+    {
+        "id": "331c3f796c7783f6",
+        "type": "ui_text",
+        "z": "2d20250c61bc57c7",
+        "group": "d28f030.eb346",
+        "order": 9,
+        "width": "5",
+        "height": "1",
+        "name": "",
+        "label": "换型时间",
+        "format": "{{msg.payload}} min",
+        "layout": "row-spread",
+        "x": 940,
+        "y": 1940,
+        "wires": []
+    },
+    {
+        "id": "e6b223796f042e80",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "计划操作",
+        "func": "msg.payload=msg.payload.data[20]+msg.payload.data[21]*65536;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 1780,
+        "wires": [
+            [
+                "87d0de9f33e44681"
+            ]
+        ]
+    },
+    {
+        "id": "87d0de9f33e44681",
+        "type": "rbe",
+        "z": "2d20250c61bc57c7",
+        "name": "变更",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 590,
+        "y": 1780,
+        "wires": [
+            [
+                "1441f64aea640ef5",
+                "df795a59ce7a0a91",
+                "f7296a457a8e10f3",
+                "994de87ccc69204a",
+                "7b6963a6fc2c67a8"
+            ]
+        ]
+    },
+    {
+        "id": "1441f64aea640ef5",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "getbit0",
+        "func": "msg.payload=((msg.payload&(0x01))>0)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1170,
+        "y": 1700,
+        "wires": [
+            [
+                "e50abee7d15c3ee0"
+            ]
+        ]
+    },
+    {
+        "id": "df795a59ce7a0a91",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "getbit1",
+        "func": "msg.payload=((msg.payload&(0x02))>0)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1170,
+        "y": 1760,
+        "wires": [
+            [
+                "6c286992096724a1"
+            ]
+        ]
+    },
+    {
+        "id": "f7296a457a8e10f3",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "getbit2",
+        "func": "msg.payload=((msg.payload&(0x04))>0)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1170,
+        "y": 1820,
+        "wires": [
+            [
+                "59d733c96ea0e5de"
+            ]
+        ]
+    },
+    {
+        "id": "7b6963a6fc2c67a8",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "getbit4",
+        "func": "msg.payload=((msg.payload&(0x10))>0)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1170,
+        "y": 1940,
+        "wires": [
+            [
+                "5e30c3e67afbd6b3"
+            ]
+        ]
+    },
+    {
+        "id": "994de87ccc69204a",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "getbit3",
+        "func": "msg.payload=((msg.payload&(0x08))>0)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1170,
+        "y": 1880,
+        "wires": [
+            [
+                "a59eef41a0b59894"
+            ]
+        ]
+    },
+    {
+        "id": "05e34ce26fcb6a62",
+        "type": "change",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "data.shijianjiadonglv",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1610,
+        "y": 2180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "284dae4fd4ba529e",
+        "type": "change",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "data.xingnengjiadonglv",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1610,
+        "y": 2220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7b51f16e2c2e7641",
+        "type": "change",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "data.passrate",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1590,
+        "y": 2260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bfd21d93368fb231",
+        "type": "change",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "data.MTTR",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1580,
+        "y": 2340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8da1344a136e4ba6",
+        "type": "change",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "data.MTBF",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1580,
+        "y": 2300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5b05f3079da8bce5",
+        "type": "change",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "data.slowdown",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1590,
+        "y": 2380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f9d20e2ec488eeb6",
+        "type": "change",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "data.xiaotingduncishu",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1610,
+        "y": 2420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "98bcce16a9f723d3",
+        "type": "change",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "data.xiaotingdunshijian",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1610,
+        "y": 2460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b731148ec1a4a89e",
+        "type": "change",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "data.daizhilingshijian",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1610,
+        "y": 1740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "75b94b91637ab1c8",
+        "type": "change",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "data.jihuabaoyangshijian",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1620,
+        "y": 1780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "413425d103d06c4a",
+        "type": "change",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "data.kaihuishijian",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1600,
+        "y": 1820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6c23fa29e2399674",
+        "type": "change",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "data.huanxingshijian",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1610,
+        "y": 1860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a1ea32caa64bec40",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "flow2fileContent",
+        "func": "msg.payload=flow.get('data');\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 280,
+        "y": 3600,
+        "wires": [
+            [
+                "89477d78172bd5ac"
+            ]
+        ]
+    },
+    {
+        "id": "8758f7c593106ca4",
+        "type": "comment",
+        "z": "2d20250c61bc57c7",
+        "name": "Auto Logger",
+        "info": "",
+        "x": 330,
+        "y": 3500,
+        "wires": []
+    },
+    {
+        "id": "89477d78172bd5ac",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "Set date",
+        "func": "var now = new Date();\nvar yyyy = now.getFullYear();\nvar mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\nvar dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\nvar hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\nvar mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\nvar ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\nmsg.payload.time=yyyy+\"-\"+mm+\"-\"+dd+\" \"+hh+':'+mmm+\":\"+ss;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 460,
+        "y": 3600,
+        "wires": [
+            [
+                "6d20d3c45b1c2124"
+            ]
+        ]
+    },
+    {
+        "id": "6d20d3c45b1c2124",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "Filename generator",
+        "func": "// Get the current time and convert it to text\nvar now = new Date();\nvar yyyy = now.getFullYear();\nvar mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\nvar dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\nvar hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\nvar mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\nvar ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\nlet path=\"D:\\\\OEEDATA\\\\\";\n// Generate out file name pattern\nmsg.fname = \"data_\"+ yyyy + mm + dd + \".csv\";\n// Full filename with path for the file node later\nmsg.filename = path+ msg.fname;\n\n// We save the current payload into a different place on the msg object\nmsg.filecontent = msg.payload;\n\n// We are passing the file name search pattern to fs node to tell us if the file exists or not\nmsg.payload = {\"start\":path,\"pattern\":msg.fname};\n\nnode.status({fill:\"blue\",shape:\"ring\",text:msg.fname});\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 390,
+        "y": 3680,
+        "wires": [
+            [
+                "e92d8cecc6afef8f"
+            ]
+        ]
+    },
+    {
+        "id": "e92d8cecc6afef8f",
+        "type": "fs-file-lister",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "start": "\\",
+        "pattern": "",
+        "folders": "*",
+        "hidden": true,
+        "lstype": "files",
+        "path": true,
+        "single": true,
+        "depth": 0,
+        "stat": true,
+        "showWarnings": false,
+        "x": 580,
+        "y": 3680,
+        "wires": [
+            [
+                "4ee6b9d62b3a58a2",
+                "2156f027f6fb1a86"
+            ]
+        ]
+    },
+    {
+        "id": "4ee6b9d62b3a58a2",
+        "type": "debug",
+        "z": "2d20250c61bc57c7",
+        "name": "OEE保存",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 3600,
+        "wires": []
+    },
+    {
+        "id": "2156f027f6fb1a86",
+        "type": "switch",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "property": "$count(msg.payload)",
+        "propertyType": "jsonata",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 730,
+        "y": 3680,
+        "wires": [
+            [
+                "dc8fc9350f228bf6"
+            ],
+            [
+                "2b76e87ef143ed64"
+            ]
+        ]
+    },
+    {
+        "id": "b103185e9c2718a8",
+        "type": "csv",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "all",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": false,
+        "include_null_values": false,
+        "x": 1070,
+        "y": 3660,
+        "wires": [
+            [
+                "ef67104771c23f5c"
+            ]
+        ]
+    },
+    {
+        "id": "ef67104771c23f5c",
+        "type": "file",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "filename": "",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1230,
+        "y": 3660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6d56242ad8f01d57",
+        "type": "csv",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": false,
+        "include_null_values": false,
+        "x": 1070,
+        "y": 3700,
+        "wires": [
+            [
+                "ef67104771c23f5c"
+            ]
+        ]
+    },
+    {
+        "id": "dc8fc9350f228bf6",
+        "type": "change",
+        "z": "2d20250c61bc57c7",
+        "name": "Get file content",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "filecontent",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 900,
+        "y": 3660,
+        "wires": [
+            [
+                "b103185e9c2718a8"
+            ]
+        ]
+    },
+    {
+        "id": "2b76e87ef143ed64",
+        "type": "change",
+        "z": "2d20250c61bc57c7",
+        "name": "Get file content",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "filecontent",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 900,
+        "y": 3700,
+        "wires": [
+            [
+                "6d56242ad8f01d57"
+            ]
+        ]
+    },
+    {
+        "id": "149596608efc5aef",
+        "type": "inject",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 3600,
+        "wires": [
+            [
+                "a1ea32caa64bec40"
+            ]
+        ]
+    },
+    {
+        "id": "93bcdc4b5fecb188",
+        "type": "debug",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 290,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "30bfb7b2b072d1de",
+        "type": "inject",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "onoff",
+        "payloadType": "date",
+        "x": 220,
+        "y": 1300,
+        "wires": [
+            [
+                "be7974500bfec878"
+            ]
+        ]
+    },
+    {
+        "id": "3279462a1fb7e419",
+        "type": "modbus-write",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "160",
+        "quantity": "1",
+        "server": "271d048b.14283c",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "x": 580,
+        "y": 1300,
+        "wires": [
+            [
+                "232990f4853d08cf"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "be7974500bfec878",
+        "type": "function",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "func": "let cnt=context.get(\"cnt\")||0;\ncnt=cnt+1;\ncontext.set('cnt',cnt);\nmsg.payload=cnt%2;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// 部署节点后，此处添加的代码将运行一次。 \ncontext.set(\"cnt\",0);\n",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 1300,
+        "wires": [
+            [
+                "3279462a1fb7e419",
+                "0db83bfef978933e"
+            ]
+        ]
+    },
+    {
+        "id": "0db83bfef978933e",
+        "type": "debug",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 550,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "232990f4853d08cf",
+        "type": "modbus-response",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "registerShowMax": 20,
+        "x": 730,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "ad7022c2a4c9af94",
+        "type": "modbus-server",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "logEnabled": false,
+        "hostname": "0.0.0.0",
+        "serverPort": 10502,
+        "responseDelay": 100,
+        "delayUnit": "ms",
+        "coilsBufferSize": 10000,
+        "holdingBufferSize": 10000,
+        "inputBufferSize": 10000,
+        "discreteBufferSize": 10000,
+        "showErrors": false,
+        "x": 140,
+        "y": 2120,
+        "wires": [
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "ff6aa523a1dcb5f9",
+        "type": "modbus-write",
+        "z": "2d20250c61bc57c7",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "MHoldingRegisters",
+        "adr": "0",
+        "quantity": "100",
+        "server": "a197f035369b89ca",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "x": 400,
+        "y": 1440,
+        "wires": [
+            [],
+            []
+        ]
+    }
+]
