@@ -1,0 +1,4494 @@
+[
+  {
+    "id": "73b0cc82b6f0775d",
+    "type": "tab",
+    "label": "读取plc",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "53e13622d8dca2a3",
+    "type": "tab",
+    "label": "电性测试",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "4d700869e26b0e8c",
+    "type": "tab",
+    "label": "通规止规",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "2f055c6c13e2c8d3",
+    "type": "tab",
+    "label": "位移测试",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "a306fdd68d1bde5e",
+    "type": "tab",
+    "label": "二维码",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "316cc7c73206f46a",
+    "type": "tab",
+    "label": "QUERY",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "988acafdf6812f47",
+    "type": "ui_tab",
+    "name": "测试数据",
+    "icon": "dashboard",
+    "order": 1,
+    "disabled": false,
+    "hidden": false
+  },
+  {
+    "id": "2aa7d5a1301311ec",
+    "type": "ui_base",
+    "theme": {
+      "name": "theme-light",
+      "lightTheme": {
+        "default": "#0094CE",
+        "baseColor": "#0094CE",
+        "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+        "edited": true,
+        "reset": false
+      },
+      "darkTheme": {
+        "default": "#097479",
+        "baseColor": "#097479",
+        "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+        "edited": false
+      },
+      "customTheme": {
+        "name": "Untitled Theme 1",
+        "default": "#4B7930",
+        "baseColor": "#4B7930",
+        "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+      },
+      "themeState": {
+        "base-color": {
+          "default": "#0094CE",
+          "value": "#0094CE",
+          "edited": false
+        },
+        "page-titlebar-backgroundColor": {
+          "value": "#0094CE",
+          "edited": false
+        },
+        "page-backgroundColor": {
+          "value": "#fafafa",
+          "edited": false
+        },
+        "page-sidebar-backgroundColor": {
+          "value": "#ffffff",
+          "edited": false
+        },
+        "group-textColor": {
+          "value": "#1bbfff",
+          "edited": false
+        },
+        "group-borderColor": {
+          "value": "#ffffff",
+          "edited": false
+        },
+        "group-backgroundColor": {
+          "value": "#ffffff",
+          "edited": false
+        },
+        "widget-textColor": {
+          "value": "#111111",
+          "edited": false
+        },
+        "widget-backgroundColor": {
+          "value": "#0094ce",
+          "edited": false
+        },
+        "widget-borderColor": {
+          "value": "#ffffff",
+          "edited": false
+        },
+        "base-font": {
+          "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+        }
+      },
+      "angularTheme": {
+        "primary": "indigo",
+        "accents": "blue",
+        "warn": "red",
+        "background": "grey"
+      }
+    },
+    "site": {
+      "name": "",
+      "hideToolbar": "false",
+      "allowSwipe": "false",
+      "lockMenu": "false",
+      "allowTempTheme": "true",
+      "dateFormat": "DD/MM/YYYY",
+      "sizes": {
+        "sx": 48,
+        "sy": 48,
+        "gx": 6,
+        "gy": 6,
+        "cx": 6,
+        "cy": 6,
+        "px": 0,
+        "py": 0
+      }
+    }
+  },
+  {
+    "id": "164ed4e1fbf71ddc",
+    "type": "ui_group",
+    "name": "xinahao ",
+    "tab": "f177d118be5b7108",
+    "order": 5,
+    "disp": false,
+    "width": "18",
+    "collapse": false
+  },
+  {
+    "id": "0380fb214bafd35a",
+    "type": "ui_group",
+    "name": "电阻",
+    "tab": "988acafdf6812f47",
+    "order": 2,
+    "disp": true,
+    "width": "6",
+    "collapse": false
+  },
+  {
+    "id": "a0a482b438de6112",
+    "type": "MC Protocol Connection",
+    "name": "",
+    "host": "192.168.250.4",
+    "port": "7891",
+    "protocol": "UDP",
+    "frame": "3E",
+    "plcType": "Q",
+    "ascii": false,
+    "PLCStation": "",
+    "PCStation": "",
+    "PLCModuleNo": "",
+    "network": "",
+    "octalInputOutput": false,
+    "timeout": "1000"
+  },
+  {
+    "id": "3d8108abadc5342a",
+    "type": "mongodb",
+    "hostname": "127.0.0.1",
+    "topology": "direct",
+    "connectOptions": "",
+    "port": "27017",
+    "db": "tester",
+    "name": ""
+  },
+  {
+    "id": "ed036c5c92094f19",
+    "type": "ui_group",
+    "name": "匝间",
+    "tab": "988acafdf6812f47",
+    "order": 3,
+    "disp": true,
+    "width": "12",
+    "collapse": false
+  },
+  {
+    "id": "a58d11825a2d8569",
+    "type": "ui_group",
+    "name": "耐压",
+    "tab": "988acafdf6812f47",
+    "order": 4,
+    "disp": true,
+    "width": "6",
+    "collapse": false
+  },
+  {
+    "id": "07de47b0cc50ed9b",
+    "type": "ui_group",
+    "name": "",
+    "tab": "988acafdf6812f47",
+    "order": 1,
+    "disp": false,
+    "width": "30",
+    "collapse": false
+  },
+  {
+    "id": "f177d118be5b7108",
+    "type": "ui_tab",
+    "name": "控制器",
+    "icon": "fa-cubes",
+    "order": 2,
+    "disabled": false,
+    "hidden": false
+  },
+  {
+    "id": "be2eb5bb62efa25c",
+    "type": "ui_link",
+    "name": "关于我们",
+    "link": "http://www.tanac.com.cn",
+    "icon": "whatsapp",
+    "target": "newtab",
+    "order": 3
+  },
+  {
+    "id": "d9da83182f1ac1a7",
+    "type": "debug",
+    "z": "73b0cc82b6f0775d",
+    "name": "",
+    "active": false,
+    "tosidebar": false,
+    "console": false,
+    "tostatus": true,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "payload",
+    "statusType": "auto",
+    "x": 710,
+    "y": 480,
+    "wires": []
+  },
+  {
+    "id": "bbfe4d2ba82c351c",
+    "type": "MC Read",
+    "z": "73b0cc82b6f0775d",
+    "name": "",
+    "topic": "",
+    "connection": "a0a482b438de6112",
+    "address": "D5000,80",
+    "addressType": "str",
+    "outputFormat": "1",
+    "errorHandling": "throw",
+    "outputs": 1,
+    "x": 520,
+    "y": 480,
+    "wires": [["d9da83182f1ac1a7", "d718129076e18b59"]]
+  },
+  {
+    "id": "d718129076e18b59",
+    "type": "buffer-parser",
+    "z": "73b0cc82b6f0775d",
+    "name": "",
+    "data": "payload",
+    "dataType": "msg",
+    "specification": "spec",
+    "specificationType": "ui",
+    "items": [
+      {
+        "type": "int16le",
+        "name": "heartbeat",
+        "offset": 0,
+        "length": 1,
+        "offsetbit": 0,
+        "scale": "1",
+        "mask": ""
+      },
+      {
+        "type": "uint32le",
+        "name": "RM3544_CODE",
+        "offset": 4,
+        "length": 1,
+        "offsetbit": 0,
+        "scale": "1",
+        "mask": ""
+      },
+      {
+        "type": "uint16le",
+        "name": "CHANGE_REQ",
+        "offset": 16,
+        "length": 1,
+        "offsetbit": 0,
+        "scale": "1",
+        "mask": ""
+      },
+      {
+        "type": "uint16le",
+        "name": "PRO_NO",
+        "offset": 18,
+        "length": 1,
+        "offsetbit": 0,
+        "scale": "1",
+        "mask": ""
+      },
+      {
+        "type": "int16le",
+        "name": "ElecAll",
+        "offset": 20,
+        "length": 1,
+        "offsetbit": 0,
+        "scale": "1",
+        "mask": ""
+      },
+      {
+        "type": "int16le",
+        "name": "RM3544",
+        "offset": 22,
+        "length": 1,
+        "offsetbit": 0,
+        "scale": "1",
+        "mask": ""
+      },
+      {
+        "type": "uint16le",
+        "name": "TH2883",
+        "offset": 24,
+        "length": 1,
+        "offsetbit": 0,
+        "scale": "1",
+        "mask": ""
+      },
+      {
+        "type": "uint32le",
+        "name": "TH2883_CODE",
+        "offset": 28,
+        "length": 1,
+        "offsetbit": 0,
+        "scale": "1",
+        "mask": ""
+      },
+      {
+        "type": "uint16le",
+        "name": "TH9310",
+        "offset": 32,
+        "length": 1,
+        "offsetbit": 0,
+        "scale": "1",
+        "mask": ""
+      },
+      {
+        "type": "uint32le",
+        "name": "TH9310_CODE",
+        "offset": 36,
+        "length": 1,
+        "offsetbit": 0,
+        "scale": "1",
+        "mask": ""
+      },
+      {
+        "type": "uint16le",
+        "name": "sizeAll",
+        "offset": 40,
+        "length": 1,
+        "offsetbit": 0,
+        "scale": "1",
+        "mask": ""
+      },
+      {
+        "type": "uint16le",
+        "name": "HX",
+        "offset": 42,
+        "length": 1,
+        "offsetbit": 0,
+        "scale": "1",
+        "mask": ""
+      },
+      {
+        "type": "uint32le",
+        "name": "HX_CODE",
+        "offset": 44,
+        "length": 1,
+        "offsetbit": 0,
+        "scale": "1",
+        "mask": ""
+      },
+      {
+        "type": "uint16le",
+        "name": "GT",
+        "offset": 48,
+        "length": 1,
+        "offsetbit": 0,
+        "scale": "1",
+        "mask": ""
+      },
+      {
+        "type": "uint32le",
+        "name": "GT_CODE",
+        "offset": 50,
+        "length": 1,
+        "offsetbit": 0,
+        "scale": "1",
+        "mask": ""
+      },
+      {
+        "type": "uint16le",
+        "name": "CCD",
+        "offset": 54,
+        "length": 1,
+        "offsetbit": 0,
+        "scale": "1",
+        "mask": ""
+      },
+      {
+        "type": "uint32le",
+        "name": "CCD_CODE",
+        "offset": 56,
+        "length": 1,
+        "offsetbit": 0,
+        "scale": "1",
+        "mask": ""
+      },
+      {
+        "type": "uint16le",
+        "name": "DIAMETERALL",
+        "offset": 60,
+        "length": 1,
+        "offsetbit": 0,
+        "scale": "1",
+        "mask": ""
+      },
+      {
+        "type": "uint16le",
+        "name": "TONGGUI",
+        "offset": 62,
+        "length": 1,
+        "offsetbit": 0,
+        "scale": "1",
+        "mask": ""
+      },
+      {
+        "type": "uint16le",
+        "name": "TONGGUIValue",
+        "offset": 64,
+        "length": 1,
+        "offsetbit": 0,
+        "scale": "1",
+        "mask": ""
+      },
+      {
+        "type": "uint32le",
+        "name": "TONGGUI_CODE",
+        "offset": 66,
+        "length": 1,
+        "offsetbit": 0,
+        "scale": "1",
+        "mask": ""
+      },
+      {
+        "type": "uint16le",
+        "name": "ZHIGUI",
+        "offset": 70,
+        "length": 1,
+        "offsetbit": 0,
+        "scale": "1",
+        "mask": ""
+      },
+      {
+        "type": "int16le",
+        "name": "ZHIGUIValue",
+        "offset": 72,
+        "length": 1,
+        "offsetbit": 0,
+        "scale": "1",
+        "mask": ""
+      },
+      {
+        "type": "uint32le",
+        "name": "ZHIGUI_CODE",
+        "offset": 74,
+        "length": 1,
+        "offsetbit": 0,
+        "scale": "1",
+        "mask": ""
+      },
+      {
+        "type": "uint16le",
+        "name": "CODE_ALL",
+        "offset": 80,
+        "length": 1,
+        "offsetbit": 0,
+        "scale": "1",
+        "mask": ""
+      },
+      {
+        "type": "uint16le",
+        "name": "SCAN",
+        "offset": 88,
+        "length": 1,
+        "offsetbit": 0,
+        "scale": "1",
+        "mask": ""
+      },
+      {
+        "type": "uint32le",
+        "name": "SCAN_CODE",
+        "offset": 90,
+        "length": 1,
+        "offsetbit": 0,
+        "scale": "1",
+        "mask": ""
+      },
+      {
+        "type": "string",
+        "name": "QRCODE",
+        "offset": 110,
+        "length": 30,
+        "offsetbit": 0,
+        "scale": "1",
+        "mask": ""
+      },
+      {
+        "type": "floatle",
+        "name": "leftpin",
+        "offset": 140,
+        "length": 1,
+        "offsetbit": 0,
+        "scale": "1",
+        "mask": ""
+      },
+      {
+        "type": "floatle",
+        "name": "rightpin",
+        "offset": 144,
+        "length": 1,
+        "offsetbit": 0,
+        "scale": "1",
+        "mask": ""
+      }
+    ],
+    "swap1": "swap16",
+    "swap2": "",
+    "swap3": "",
+    "swap1Type": "swap",
+    "swap2Type": "swap",
+    "swap3Type": "swap",
+    "msgProperty": "payload",
+    "msgPropertyType": "str",
+    "resultType": "keyvalue",
+    "resultTypeType": "return",
+    "multipleResult": false,
+    "fanOutMultipleResult": false,
+    "setTopic": true,
+    "outputs": 1,
+    "x": 490,
+    "y": 540,
+    "wires": [
+      [
+        "3a1f01a635b8d54e",
+        "68150e49d7283079",
+        "7bc43990872ed619",
+        "cfc4b8a6185ba8ba",
+        "dce7c0a9d4a6d688",
+        "e970c932da9c1627",
+        "8f0666814c9f2925"
+      ]
+    ]
+  },
+  {
+    "id": "3a1f01a635b8d54e",
+    "type": "change",
+    "z": "73b0cc82b6f0775d",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "plcdata",
+        "pt": "global",
+        "to": "payload",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 730,
+    "y": 540,
+    "wires": [[]]
+  },
+  {
+    "id": "68150e49d7283079",
+    "type": "debug",
+    "z": "73b0cc82b6f0775d",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 710,
+    "y": 580,
+    "wires": []
+  },
+  {
+    "id": "2f74d8075cfa141d",
+    "type": "trigger",
+    "z": "73b0cc82b6f0775d",
+    "name": "",
+    "op1": "1",
+    "op2": "0",
+    "op1type": "str",
+    "op2type": "str",
+    "duration": "-250",
+    "extend": false,
+    "overrideDelay": false,
+    "units": "ms",
+    "reset": "",
+    "bytopic": "all",
+    "topic": "topic",
+    "outputs": 1,
+    "x": 330,
+    "y": 480,
+    "wires": [["bbfe4d2ba82c351c"]]
+  },
+  {
+    "id": "8b7071e9d75423f7",
+    "type": "inject",
+    "z": "73b0cc82b6f0775d",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 140,
+    "y": 480,
+    "wires": [["2f74d8075cfa141d"]]
+  },
+  {
+    "id": "ebc50e8eea00f094",
+    "type": "inject",
+    "z": "73b0cc82b6f0775d",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "1",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": " onoff",
+    "payload": "",
+    "payloadType": "date",
+    "x": 200,
+    "y": 260,
+    "wires": [["6fbb532f76974b81"]]
+  },
+  {
+    "id": "6fbb532f76974b81",
+    "type": "function",
+    "z": "73b0cc82b6f0775d",
+    "name": "",
+    "func": "let cnt=context.get(\"cnt\")||0;\ncnt=cnt+1;\ncontext.set('cnt',cnt);\nmsg.payload=cnt%2;\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 370,
+    "y": 260,
+    "wires": [["bc31d9bbaeabadcb"]]
+  },
+  {
+    "id": "4a555714c1f8fb40",
+    "type": "debug",
+    "z": "73b0cc82b6f0775d",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": true,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "payload",
+    "statusType": "auto",
+    "x": 710,
+    "y": 260,
+    "wires": []
+  },
+  {
+    "id": "bc31d9bbaeabadcb",
+    "type": "MC Write",
+    "z": "73b0cc82b6f0775d",
+    "name": "",
+    "topic": "",
+    "connection": "a0a482b438de6112",
+    "data": "payload",
+    "address": "D5000",
+    "addressType": "str",
+    "dataType": "msg",
+    "errorHandling": "throw",
+    "outputs": 1,
+    "x": 540,
+    "y": 280,
+    "wires": [["4a555714c1f8fb40"]]
+  },
+  {
+    "id": "57fc11043bcc04f2",
+    "type": "function",
+    "z": "73b0cc82b6f0775d",
+    "name": "",
+    "func": "\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 390,
+    "y": 380,
+    "wires": [[]]
+  },
+  {
+    "id": "7bc43990872ed619",
+    "type": "link out",
+    "z": "73b0cc82b6f0775d",
+    "name": "plcdataread",
+    "mode": "link",
+    "links": [
+      "978b1a8cb1dde64d",
+      "1004ef24ea1806f7",
+      "aae9cad0373b367f",
+      "c0933a2183a0e3a1"
+    ],
+    "x": 575,
+    "y": 620,
+    "wires": []
+  },
+  {
+    "id": "50ad3df461f28d3d",
+    "type": "ui_chart",
+    "z": "73b0cc82b6f0775d",
+    "name": "",
+    "group": "164ed4e1fbf71ddc",
+    "order": 1,
+    "width": 18,
+    "height": 5,
+    "label": "",
+    "chartType": "line",
+    "legend": "true",
+    "xformat": "HH:mm:ss",
+    "interpolate": "step",
+    "nodata": "",
+    "dot": true,
+    "ymin": "",
+    "ymax": "",
+    "removeOlder": "5",
+    "removeOlderPoints": "1000",
+    "removeOlderUnit": "60",
+    "cutout": 0,
+    "useOneColor": false,
+    "useUTC": false,
+    "colors": [
+      "#1f77b4",
+      "#aec7e8",
+      "#ff7f0e",
+      "#2ca02c",
+      "#98df8a",
+      "#d62728",
+      "#ff9896",
+      "#9467bd",
+      "#c5b0d5"
+    ],
+    "outputs": 1,
+    "useDifferentColor": false,
+    "x": 870,
+    "y": 640,
+    "wires": [[]]
+  },
+  {
+    "id": "cfc4b8a6185ba8ba",
+    "type": "function",
+    "z": "73b0cc82b6f0775d",
+    "name": "",
+    "func": "let payload=msg.payload;\nlet data;\nmsg.topic =\"ElecAll\"\ndata=context.get(msg.topic);\nif(msg.payload[msg.topic]!=data){\n    msg.payload = payload[msg.topic];\n    node.send(msg);\n    context.set(msg.topic, payload[msg.topic]);\n}\n   \nmsg.topic = \"RM3544\"\ndata = context.get(msg.topic);\nif (msg.payload[msg.topic] != data) {\n    msg.payload = payload[msg.topic];\n    node.send(msg);\n    context.set(msg.topic, payload[msg.topic]);\n}\n\nmsg.topic = \"TH2883\"\ndata = context.get(msg.topic);\nif (msg.payload[msg.topic] != data) {\n    msg.payload = payload[msg.topic];\n    node.send(msg);\n    context.set(msg.topic, payload[msg.topic]);\n}\n\nmsg.topic = \"TH9310\"\ndata = context.get(msg.topic);\nif (msg.payload[msg.topic] != data) {\n    msg.payload = payload[msg.topic];\n    node.send(msg);\n    context.set(msg.topic, payload[msg.topic]);\n}\n\n\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 710,
+    "y": 640,
+    "wires": [["50ad3df461f28d3d"]]
+  },
+  {
+    "id": "34fabc722695615d",
+    "type": "ui_chart",
+    "z": "73b0cc82b6f0775d",
+    "name": "",
+    "group": "164ed4e1fbf71ddc",
+    "order": 1,
+    "width": 18,
+    "height": 5,
+    "label": "",
+    "chartType": "line",
+    "legend": "true",
+    "xformat": "HH:mm:ss",
+    "interpolate": "step",
+    "nodata": "",
+    "dot": true,
+    "ymin": "",
+    "ymax": "",
+    "removeOlder": "5",
+    "removeOlderPoints": "1000",
+    "removeOlderUnit": "60",
+    "cutout": 0,
+    "useOneColor": false,
+    "useUTC": false,
+    "colors": [
+      "#1f77b4",
+      "#aec7e8",
+      "#ff7f0e",
+      "#2ca02c",
+      "#98df8a",
+      "#d62728",
+      "#ff9896",
+      "#9467bd",
+      "#c5b0d5"
+    ],
+    "outputs": 1,
+    "useDifferentColor": false,
+    "x": 870,
+    "y": 680,
+    "wires": [[]]
+  },
+  {
+    "id": "dce7c0a9d4a6d688",
+    "type": "function",
+    "z": "73b0cc82b6f0775d",
+    "name": "",
+    "func": "let payload=msg.payload;\nlet data;\n\nmsg.topic = \"DIAMETERALL\"\ndata = context.get(msg.topic);\nif (msg.payload[msg.topic] != data) {\n    msg.payload = payload[msg.topic];\n    node.send(msg);\n    context.set(msg.topic, payload[msg.topic]);\n}\n\nmsg.topic = \"TONGGUI\"\ndata = context.get(msg.topic);\nif (msg.payload[msg.topic] != data) {\n    msg.payload = payload[msg.topic];\n    node.send(msg);\n    context.set(msg.topic, payload[msg.topic]);\n}\n\nmsg.topic = \"TONGGUIValue\"\ndata = context.get(msg.topic);\nif (msg.payload[msg.topic] != data) {\n    msg.payload = payload[msg.topic];\n    node.send(msg);\n    context.set(msg.topic, payload[msg.topic]);\n}\nmsg.topic = \"ZHIGUI\"\ndata = context.get(msg.topic);\nif (msg.payload[msg.topic] != data) {\n    msg.payload = payload[msg.topic];\n    node.send(msg);\n    context.set(msg.topic, payload[msg.topic]);\n}\n\n\nmsg.topic = \"ZHIGUIValue\"\ndata = context.get(msg.topic);\nif (msg.payload[msg.topic] != data) {\n    msg.payload = payload[msg.topic];\n    node.send(msg);\n    context.set(msg.topic, payload[msg.topic]);\n}\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 700,
+    "y": 680,
+    "wires": [["34fabc722695615d"]]
+  },
+  {
+    "id": "19cb28d165c2db3a",
+    "type": "ui_chart",
+    "z": "73b0cc82b6f0775d",
+    "name": "",
+    "group": "164ed4e1fbf71ddc",
+    "order": 1,
+    "width": 18,
+    "height": 5,
+    "label": "",
+    "chartType": "line",
+    "legend": "true",
+    "xformat": "HH:mm:ss",
+    "interpolate": "step",
+    "nodata": "",
+    "dot": true,
+    "ymin": "",
+    "ymax": "",
+    "removeOlder": "5",
+    "removeOlderPoints": "1000",
+    "removeOlderUnit": "60",
+    "cutout": 0,
+    "useOneColor": false,
+    "useUTC": false,
+    "colors": [
+      "#1f77b4",
+      "#aec7e8",
+      "#ff7f0e",
+      "#2ca02c",
+      "#98df8a",
+      "#d62728",
+      "#ff9896",
+      "#9467bd",
+      "#c5b0d5"
+    ],
+    "outputs": 1,
+    "useDifferentColor": false,
+    "x": 870,
+    "y": 720,
+    "wires": [[]]
+  },
+  {
+    "id": "e970c932da9c1627",
+    "type": "function",
+    "z": "73b0cc82b6f0775d",
+    "name": "",
+    "func": "let payload=msg.payload;\nlet data;\n\nmsg.topic = \"CODE_ALL\"\ndata = context.get(msg.topic);\nif (msg.payload[msg.topic] != data) {\n    msg.payload = payload[msg.topic];\n    node.send(msg);\n    context.set(msg.topic, payload[msg.topic]);\n}\nmsg.topic = \"SCAN\"\ndata = context.get(msg.topic);\nif (msg.payload[msg.topic] != data) {\n    msg.payload = payload[msg.topic];\n    node.send(msg);\n    context.set(msg.topic, payload[msg.topic]);\n}\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 700,
+    "y": 720,
+    "wires": [["19cb28d165c2db3a"]]
+  },
+  {
+    "id": "3bbd3dc0bd4be526",
+    "type": "ui_chart",
+    "z": "73b0cc82b6f0775d",
+    "name": "",
+    "group": "164ed4e1fbf71ddc",
+    "order": 1,
+    "width": 18,
+    "height": 5,
+    "label": "",
+    "chartType": "line",
+    "legend": "true",
+    "xformat": "HH:mm:ss",
+    "interpolate": "step",
+    "nodata": "",
+    "dot": true,
+    "ymin": "",
+    "ymax": "",
+    "removeOlder": "5",
+    "removeOlderPoints": "1000",
+    "removeOlderUnit": "60",
+    "cutout": 0,
+    "useOneColor": false,
+    "useUTC": false,
+    "colors": [
+      "#1f77b4",
+      "#aec7e8",
+      "#ff7f0e",
+      "#2ca02c",
+      "#98df8a",
+      "#d62728",
+      "#ff9896",
+      "#9467bd",
+      "#c5b0d5"
+    ],
+    "outputs": 1,
+    "useDifferentColor": false,
+    "x": 870,
+    "y": 780,
+    "wires": [[]]
+  },
+  {
+    "id": "8f0666814c9f2925",
+    "type": "function",
+    "z": "73b0cc82b6f0775d",
+    "name": "",
+    "func": "let payload=msg.payload;\nlet data;\nmsg.topic = \"HX\"\ndata = context.get(msg.topic);\nif (msg.payload[msg.topic] != data) {\n    msg.payload = payload[msg.topic];\n    node.send(msg);\n    context.set(msg.topic, payload[msg.topic]);\n}\nmsg.topic = \"GT\"\ndata = context.get(msg.topic);\nif (msg.payload[msg.topic] != data) {\n    msg.payload = payload[msg.topic];\n    node.send(msg);\n    context.set(msg.topic, payload[msg.topic]);\n}\n\nmsg.topic = \"CCD\"\ndata = context.get(msg.topic);\nif (msg.payload[msg.topic] != data) {\n    msg.payload = payload[msg.topic];\n    node.send(msg);\n    context.set(msg.topic, payload[msg.topic]);\n}\n\nmsg.topic = \"sizeAll\"\ndata = context.get(msg.topic);\nif (msg.payload[msg.topic] != data) {\n    msg.payload = payload[msg.topic];\n    node.send(msg);\n    context.set(msg.topic, payload[msg.topic]);\n}",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 700,
+    "y": 780,
+    "wires": [["3bbd3dc0bd4be526"]]
+  },
+  {
+    "id": "708cb1d588c2ea27",
+    "type": "inject",
+    "z": "53e13622d8dca2a3",
+    "name": "电阻",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "index",
+        "v": "3",
+        "vt": "num"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 410,
+    "y": 660,
+    "wires": [["908412283bc42faf"]]
+  },
+  {
+    "id": "908412283bc42faf",
+    "type": "function",
+    "z": "53e13622d8dca2a3",
+    "name": "FETCH?LIM",
+    "func": "msg.topic='FETCH'\nmsg.payload='FETCH?LIM\\n';\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 550,
+    "y": 660,
+    "wires": [["085349453afe2a7b"]]
+  },
+  {
+    "id": "2afbcbafe12274ff",
+    "type": "function",
+    "z": "53e13622d8dca2a3",
+    "name": "READ?",
+    "func": "msg.topic='READ'\nmsg.payload='READ?\\n';\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 540,
+    "y": 600,
+    "wires": [["085349453afe2a7b"]]
+  },
+  {
+    "id": "1f2dead93b12dd06",
+    "type": "inject",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 410,
+    "y": 600,
+    "wires": [["2afbcbafe12274ff"]]
+  },
+  {
+    "id": "f2a08c69711ee1fa",
+    "type": "function",
+    "z": "53e13622d8dca2a3",
+    "name": "判断是否为空数据",
+    "func": "if(msg.payload!==undefined&&msg.payload.includes(',')>0)\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 910,
+    "y": 660,
+    "wires": [["4b480fd74c366a61"]]
+  },
+  {
+    "id": "f23087d94fb88115",
+    "type": "debug",
+    "z": "53e13622d8dca2a3",
+    "name": "电阻数据",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 900,
+    "y": 620,
+    "wires": []
+  },
+  {
+    "id": "4b480fd74c366a61",
+    "type": "switch",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "property": "topic",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "IDN",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "FETCH",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 2,
+    "x": 1090,
+    "y": 580,
+    "wires": [[], ["ac66de1c8745dd67"]]
+  },
+  {
+    "id": "ac66de1c8745dd67",
+    "type": "string",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "methods": [
+      {
+        "name": "split",
+        "params": [
+          {
+            "type": "str",
+            "value": " ,"
+          },
+          {
+            "type": "num",
+            "value": "2"
+          }
+        ]
+      }
+    ],
+    "prop": "payload",
+    "propout": "splits",
+    "object": "msg",
+    "objectout": "msg",
+    "x": 1190,
+    "y": 620,
+    "wires": [["69823d8534b7f2f2"]]
+  },
+  {
+    "id": "1e068bee07e7bf1b",
+    "type": "function",
+    "z": "53e13622d8dca2a3",
+    "name": "分解信息",
+    "func": "var output=[];\nlet sps=msg.payload.split(',');\nlet result=sps[1].includes(\"IN\");\nlet value=Number(sps[0]);\nnode.warn(msg.payload);\nmsg.payload={\n    Id:msg.id,\n    Time:new Date(),\n    Instrument:\"RM3544\",\n    Value:value,\n    Judge:result\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1480,
+    "y": 620,
+    "wires": [
+      [
+        "dd8c3f2ac77681a9",
+        "e5f28c400bb08360",
+        "4f918ea3804ef74f",
+        "e9acecfb58138ca8"
+      ]
+    ]
+  },
+  {
+    "id": "dd8c3f2ac77681a9",
+    "type": "debug",
+    "z": "53e13622d8dca2a3",
+    "name": "电阻分解结果",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1620,
+    "y": 580,
+    "wires": []
+  },
+  {
+    "id": "b8ace4b1f9610cb1",
+    "type": "inject",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "*IDN？",
+    "payloadType": "str",
+    "x": 410,
+    "y": 720,
+    "wires": [["d63c13b4076a3736"]]
+  },
+  {
+    "id": "d63c13b4076a3736",
+    "type": "function",
+    "z": "53e13622d8dca2a3",
+    "name": "*IDN?\\n",
+    "func": "msg.topic='IDN'\nmsg.payload='*IDN?\\r\\n';\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 540,
+    "y": 720,
+    "wires": [["085349453afe2a7b"]]
+  },
+  {
+    "id": "085349453afe2a7b",
+    "type": "tcp request",
+    "z": "53e13622d8dca2a3",
+    "name": "RM3544",
+    "server": "192.168.250.31",
+    "port": "4196",
+    "out": "time",
+    "ret": "string",
+    "splitc": "0",
+    "newline": "",
+    "tls": "",
+    "x": 720,
+    "y": 660,
+    "wires": [["f2a08c69711ee1fa", "f23087d94fb88115", "aa30d4490e5bdf77"]]
+  },
+  {
+    "id": "e6922df2a6808d92",
+    "type": "tcp request",
+    "z": "53e13622d8dca2a3",
+    "name": "TH2883",
+    "server": "192.168.250.32",
+    "port": "4196",
+    "out": "char",
+    "ret": "string",
+    "splitc": "\\n",
+    "newline": "",
+    "tls": "",
+    "x": 720,
+    "y": 820,
+    "wires": [["04fb7a0650c691e4", "aa30d4490e5bdf77"]]
+  },
+  {
+    "id": "76fb88aa196fd766",
+    "type": "function",
+    "z": "53e13622d8dca2a3",
+    "name": "*IDN?\\n",
+    "func": "msg.topic='IDN'\nmsg.payload='*IDN?\\r\\n';\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 540,
+    "y": 860,
+    "wires": [["e6922df2a6808d92"]]
+  },
+  {
+    "id": "b0acb434f6001aae",
+    "type": "inject",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 410,
+    "y": 860,
+    "wires": [["76fb88aa196fd766"]]
+  },
+  {
+    "id": "fc42610e25fd486e",
+    "type": "tcp request",
+    "z": "53e13622d8dca2a3",
+    "name": "TH9310",
+    "server": "192.168.250.33",
+    "port": "4196",
+    "out": "time",
+    "ret": "string",
+    "splitc": "0",
+    "newline": "",
+    "tls": "",
+    "x": 700,
+    "y": 1080,
+    "wires": [["03d6a8881ec3384b", "e7eda1248dac2d75", "aa30d4490e5bdf77"]]
+  },
+  {
+    "id": "4b76f57be097ebd7",
+    "type": "rbe",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "func": "rbe",
+    "gap": "",
+    "start": "",
+    "inout": "out",
+    "septopics": true,
+    "property": "payload.CHANGE_REQ",
+    "topi": "topic",
+    "x": 370,
+    "y": 260,
+    "wires": [["782c267ddf116ecd"]]
+  },
+  {
+    "id": "8d19824361077bfd",
+    "type": "function",
+    "z": "53e13622d8dca2a3",
+    "name": "切换程序",
+    "func": "msg.topic='LOAD'\nmsg.payload = `MMEM:LOAD:STAT ${msg.payload.PRO_NO}\\r\\n`;\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 800,
+    "y": 260,
+    "wires": [["d19504b1b9ffa815", "5077d983177e9f50", "0ea22e514b386763"]]
+  },
+  {
+    "id": "ed09717b219c5835",
+    "type": "inject",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 410,
+    "y": 820,
+    "wires": [["9e54fb5175587c1e"]]
+  },
+  {
+    "id": "9e54fb5175587c1e",
+    "type": "function",
+    "z": "53e13622d8dca2a3",
+    "name": "FETCH",
+    "func": "msg.topic = 'FETCH'\nmsg.payload = 'FETCh:CRESult?\\n';\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 540,
+    "y": 820,
+    "wires": [["e6922df2a6808d92"]]
+  },
+  {
+    "id": "04fb7a0650c691e4",
+    "type": "switch",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "property": "topic",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "IDN",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "FETCH",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 2,
+    "x": 870,
+    "y": 820,
+    "wires": [["047ffd45a995339a"], ["a01a36e3d4d442e1", "6bce9438c46b30a7"]]
+  },
+  {
+    "id": "a01a36e3d4d442e1",
+    "type": "debug",
+    "z": "53e13622d8dca2a3",
+    "name": "串口输出",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1020,
+    "y": 880,
+    "wires": []
+  },
+  {
+    "id": "6bce9438c46b30a7",
+    "type": "function",
+    "z": "53e13622d8dca2a3",
+    "name": "提取数据",
+    "func": "let regex  = /\\d@(\\d),([-+\\d\\.E]+),([-+\\d\\.E]+),([-+\\d\\.E]+),([-+\\d\\.E]+)/;\nlet match=msg.payload.match(regex);\nnode.warn(match);\n//AREA SIZE, DIFF ZONE, CORONA and PHASE DIFF\nlet res={\n    Id: msg.plc.TH2883_CODE,\n    Time:new Date(),\n    Instrument:\"TH2883\",\n    Value:{\n        AreaSize: transferToNumber(match[2]),\n        DiffZone: transferToNumber(match[3]),\n        Corona: transferToNumber(match[4]),\n        PhaseDiff: transferToNumber(match[5])\n    }\n    ,\n    Judge: match[1]==1 ? \"OK\" : \"NG\",\n}\nmsg.payload=res;\nreturn msg;\n\nfunction transferToNumber(inputNumber) {\n    if (isNaN(inputNumber)) {\n        return inputNumber\n    }\n    inputNumber = '' + inputNumber\n    inputNumber = parseFloat(inputNumber)\n    let eformat = inputNumber.toExponential() // 转换为标准的科学计数法形式（字符串）\n    let tmpArray = eformat.match(/\\d(?:\\.(\\d*))?e([+-]\\d+)/) // 分离出小数值和指数值\n    let number = inputNumber.toFixed(Math.max(0, (tmpArray[1] || '').length - tmpArray[2]))\n    return number\n}",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1100,
+    "y": 800,
+    "wires": [["4d0cfa86ab67e61b", "cba745101aeb6946"]]
+  },
+  {
+    "id": "5f64a1bf964bdad5",
+    "type": "function",
+    "z": "53e13622d8dca2a3",
+    "name": "*IDN?\\n",
+    "func": "msg.topic='IDN'\nmsg.payload='*IDN?\\r\\n';\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 540,
+    "y": 1080,
+    "wires": [["fc42610e25fd486e"]]
+  },
+  {
+    "id": "fee52070f51f2027",
+    "type": "inject",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 430,
+    "y": 1020,
+    "wires": [["5f64a1bf964bdad5"]]
+  },
+  {
+    "id": "5bbaa735218f35b7",
+    "type": "inject",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "plc",
+        "v": "{\"TH9310_CODE\":11111}",
+        "vt": "json"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 410,
+    "y": 1140,
+    "wires": [["35aa8315c59caef6"]]
+  },
+  {
+    "id": "35aa8315c59caef6",
+    "type": "function",
+    "z": "53e13622d8dca2a3",
+    "name": "FETCH",
+    "func": "msg.topic='FETCH'\nmsg.payload='FETCH?LIM\\n';\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 540,
+    "y": 1140,
+    "wires": [["fc42610e25fd486e"]]
+  },
+  {
+    "id": "03d6a8881ec3384b",
+    "type": "switch",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "property": "topic",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "IDN",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "FETCH",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 2,
+    "x": 870,
+    "y": 1080,
+    "wires": [[], ["e0b10f3645377255"]]
+  },
+  {
+    "id": "e0b10f3645377255",
+    "type": "string",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "methods": [
+      {
+        "name": "trim",
+        "params": []
+      },
+      {
+        "name": "split",
+        "params": [
+          {
+            "type": "str",
+            "value": ";"
+          },
+          {
+            "type": "num",
+            "value": "3"
+          }
+        ]
+      }
+    ],
+    "prop": "payload",
+    "propout": "splits",
+    "object": "msg",
+    "objectout": "msg",
+    "x": 1030,
+    "y": 1080,
+    "wires": [["b2b125113aebf87e"]]
+  },
+  {
+    "id": "b2b125113aebf87e",
+    "type": "function",
+    "z": "53e13622d8dca2a3",
+    "name": "提取数据",
+    "func": "var datas=[];\nvar i;\nlet result=true;\nfor(i=0;i<msg.splits.length;i++)\n{\n    var data=msg.splits[i];\n    node.warn(data);\n    var sps=data.split(',',4);\n    if(!sps[3].includes(\"PASS\")){\n        result=false;\n    }\n    datas.push({\n        item: sps[0],\n        value1:sps[1],\n        value2:sps[2],\n        result:sps[3]\n    })\n}\nlet res = {\n    Id: msg.plc.TH9310_CODE,\n    Time: new Date(),\n    Instrument: \"TH9310\",\n    Value:datas,\n    Judge:result? \"OK\":\"NG\",\n}\nmsg.payload=res;\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1180,
+    "y": 1080,
+    "wires": [["de5eee0dcff716a5", "de96ae0b9db1a75e"]]
+  },
+  {
+    "id": "047ffd45a995339a",
+    "type": "debug",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1030,
+    "y": 740,
+    "wires": []
+  },
+  {
+    "id": "4d0cfa86ab67e61b",
+    "type": "debug",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1330,
+    "y": 800,
+    "wires": []
+  },
+  {
+    "id": "e7eda1248dac2d75",
+    "type": "debug",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1030,
+    "y": 1040,
+    "wires": []
+  },
+  {
+    "id": "6641eafa00249c72",
+    "type": "debug",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "id",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1330,
+    "y": 620,
+    "wires": []
+  },
+  {
+    "id": "de5eee0dcff716a5",
+    "type": "debug",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1350,
+    "y": 1120,
+    "wires": []
+  },
+  {
+    "id": "bf03f7f2c197a2e4",
+    "type": "function",
+    "z": "53e13622d8dca2a3",
+    "name": "获取时间搓",
+    "func": "msg.payload=new Date().getTime()&0xfffffff;\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 630,
+    "y": 1280,
+    "wires": [["e96d90343e69486a"]]
+  },
+  {
+    "id": "926d38ec634247aa",
+    "type": "inject",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 470,
+    "y": 1280,
+    "wires": [["bf03f7f2c197a2e4", "e96d90343e69486a"]]
+  },
+  {
+    "id": "e96d90343e69486a",
+    "type": "debug",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 830,
+    "y": 1380,
+    "wires": []
+  },
+  {
+    "id": "978b1a8cb1dde64d",
+    "type": "link in",
+    "z": "53e13622d8dca2a3",
+    "name": "plcdata",
+    "links": ["7bc43990872ed619"],
+    "x": 105,
+    "y": 900,
+    "wires": [["5c72351f14e25c18", "4b76f57be097ebd7"]]
+  },
+  {
+    "id": "87ec3b10fd23ad49",
+    "type": "function",
+    "z": "53e13622d8dca2a3",
+    "name": "电性测试读取允许",
+    "func": "msg.plc=msg.payload;\nreturn msg;\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 170,
+    "y": 980,
+    "wires": [["64ad24b5c9526957", "93d49331c5470413", "7a1620f16cb9ad26"]]
+  },
+  {
+    "id": "64ad24b5c9526957",
+    "type": "function",
+    "z": "53e13622d8dca2a3",
+    "name": "RM3544",
+    "func": "let key =\"RM3544\";\nif (msg.payload[key]==1){   \n  return msg;\n}\n\n\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 360,
+    "y": 660,
+    "wires": [["908412283bc42faf"]]
+  },
+  {
+    "id": "93d49331c5470413",
+    "type": "function",
+    "z": "53e13622d8dca2a3",
+    "name": "TH2883",
+    "func": "let key =\"TH2883\";\nif (msg.payload[key]==1){   //get rising edge\n   return msg;\n}\n\n\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 360,
+    "y": 780,
+    "wires": [["9e54fb5175587c1e"]]
+  },
+  {
+    "id": "7a1620f16cb9ad26",
+    "type": "function",
+    "z": "53e13622d8dca2a3",
+    "name": "TH9310",
+    "func": "let key =\"TH9310\";\nif (msg.payload[key]==1){   \n    return msg;\n}\n\n\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 220,
+    "y": 1160,
+    "wires": [["35aa8315c59caef6"]]
+  },
+  {
+    "id": "6c91c252697aeb47",
+    "type": "MC Write",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "topic": "",
+    "connection": "a0a482b438de6112",
+    "data": "0",
+    "address": "D5010",
+    "addressType": "str",
+    "dataType": "num",
+    "errorHandling": "throw",
+    "outputs": 1,
+    "x": 1080,
+    "y": 940,
+    "wires": [[]]
+  },
+  {
+    "id": "aa30d4490e5bdf77",
+    "type": "function",
+    "z": "53e13622d8dca2a3",
+    "name": "规则判定",
+    "func": "setTimeout(()=>{\n    node.send(msg);\n},200)",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 900,
+    "y": 940,
+    "wires": [["6c91c252697aeb47"]]
+  },
+  {
+    "id": "e5f28c400bb08360",
+    "type": "mongodb out",
+    "z": "53e13622d8dca2a3",
+    "mongodb": "3d8108abadc5342a",
+    "name": "",
+    "collection": "data",
+    "payonly": true,
+    "upsert": false,
+    "multi": false,
+    "operation": "store",
+    "x": 1660,
+    "y": 680,
+    "wires": []
+  },
+  {
+    "id": "9434e74193620d0e",
+    "type": "MC Write",
+    "z": "53e13622d8dca2a3",
+    "name": "RM3544 code",
+    "topic": "",
+    "connection": "a0a482b438de6112",
+    "data": "id",
+    "address": "DDWORD5002",
+    "addressType": "str",
+    "dataType": "msg",
+    "errorHandling": "msg",
+    "outputs": 1,
+    "x": 1440,
+    "y": 740,
+    "wires": [[]]
+  },
+  {
+    "id": "69823d8534b7f2f2",
+    "type": "function",
+    "z": "53e13622d8dca2a3",
+    "name": "使用时间搓标识",
+    "func": "msg.id=(new Date().getTime()>>>1)&0xffffffff;\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1280,
+    "y": 680,
+    "wires": [["1e068bee07e7bf1b", "9434e74193620d0e", "6641eafa00249c72"]]
+  },
+  {
+    "id": "b40f5f1e19f9e1b3",
+    "type": "csv",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "sep": ",",
+    "hdrin": true,
+    "hdrout": "all",
+    "multi": "one",
+    "ret": "\\r\\n",
+    "temp": "",
+    "skip": "0",
+    "strings": false,
+    "include_empty_strings": "",
+    "include_null_values": "",
+    "x": 1530,
+    "y": 1160,
+    "wires": [["7f00cbc2f34a7aa6", "f9f933d354141549", "0a28e93d3da90299"]]
+  },
+  {
+    "id": "f9f933d354141549",
+    "type": "debug",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1670,
+    "y": 1180,
+    "wires": []
+  },
+  {
+    "id": "de96ae0b9db1a75e",
+    "type": "function",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "func": "let res = {\n    Id: msg.plc.TH9310_CODE,\n    Time: new Date(),\n    Instrument: \"TH9310\",\n}\nfor(let v of msg.payload.Value){\n    res[v.item]=v.value2;\n}\nres.Judge=msg.payload.Judge;\nmsg.payload =res;\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [
+      {
+        "var": "_",
+        "module": "lodash"
+      },
+      {
+        "var": "dayjs",
+        "module": "dayjs"
+      }
+    ],
+    "x": 1210,
+    "y": 1180,
+    "wires": [["861e79e8282f3ee6", "8ac9388895ddc86d", "08e25af6b835183e"]]
+  },
+  {
+    "id": "337bbff2aa8adb83",
+    "type": "inject",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 910,
+    "y": 900,
+    "wires": [["6c91c252697aeb47"]]
+  },
+  {
+    "id": "5c72351f14e25c18",
+    "type": "rbe",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "func": "deadband",
+    "gap": "0",
+    "start": "",
+    "inout": "in",
+    "septopics": true,
+    "property": "payload.ElecAll",
+    "topi": "topic",
+    "x": 180,
+    "y": 940,
+    "wires": [["87ec3b10fd23ad49"]]
+  },
+  {
+    "id": "7f00cbc2f34a7aa6",
+    "type": "function",
+    "z": "53e13622d8dca2a3",
+    "name": "appendcsv",
+    "func": "\nlet filename = `D:/DATA/measuredata/TH9320/TH9320${dayjs().format('YYYY-MM-DD')}.csv` ;\nappendfile(filename,msg.payload);\nreturn msg;\nfunction appendfile(filename, data) {\n    var sps = data.split(\"\\n\");\n    if (sps.length < 2) {\n        node.error(\"format error\");\n        return;\n    }\n    // for (var line in sps) {\n    //     line.replace(/[\\r\\n]/g, \"\");\n    // }\n    if (fs.existsSync(filename)) {\n        fs.appendFile(filename, sps[1] + \"\\n\", (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"数据已被追加到文件\");\n        });\n    } else {\n        var dir = path.dirname(filename);\n        fs.mkdir(dir, { recursive: true }, (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"创建目录\");\n\n            fs.appendFile(filename, data+'\\n', (err) => {\n                if (err) {\n                    throw err;\n                }\n            });\n        });\n    }\n}",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [
+      {
+        "var": "fs",
+        "module": "fs"
+      },
+      {
+        "var": "path",
+        "module": "path"
+      },
+      {
+        "var": "dayjs",
+        "module": "dayjs"
+      }
+    ],
+    "x": 1670,
+    "y": 1240,
+    "wires": [[]]
+  },
+  {
+    "id": "cba745101aeb6946",
+    "type": "function",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "func": "msg.payload={\n\n        Id: msg.plc.TH2883_CODE,\n        Time: new Date(),\n        Instrument: \"TH2883\",\n        AreaSize: msg.payload.Value.AreaSize,\n        DiffZone: msg.payload.Value.DiffZone,\n        Corona: msg.payload.Value.DiffZone,\n        PhaseDiff: msg.payload.Value.PhaseDiff ,\n        Judge: msg.payload.Judge,\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1330,
+    "y": 920,
+    "wires": [
+      [
+        "613c36738bba2415",
+        "20e6308905c8a231",
+        "41afefed5b4a024d",
+        "55fbdbdd2e1cfc4a"
+      ]
+    ]
+  },
+  {
+    "id": "613c36738bba2415",
+    "type": "csv",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "sep": ",",
+    "hdrin": true,
+    "hdrout": "all",
+    "multi": "one",
+    "ret": "\\r\\n",
+    "temp": "",
+    "skip": "0",
+    "strings": false,
+    "include_empty_strings": "",
+    "include_null_values": "",
+    "x": 1470,
+    "y": 920,
+    "wires": [["b55a4971a4cdbeb8", "290becbdf7bbfc6d", "6cb54a3a79bfd1d7"]]
+  },
+  {
+    "id": "290becbdf7bbfc6d",
+    "type": "debug",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1770,
+    "y": 1040,
+    "wires": []
+  },
+  {
+    "id": "b55a4971a4cdbeb8",
+    "type": "function",
+    "z": "53e13622d8dca2a3",
+    "name": "appendcsv",
+    "func": "\nlet filename = `D:/DATA/measuredata/TH2882/TH2882${dayjs().format('YYYY-MM-DD')}.csv` ;\nappendfile(filename,msg.payload);\nreturn msg;\nfunction appendfile(filename, data) {\n    var sps = data.split(\"\\n\");\n    if (sps.length < 2) {\n        node.error(\"format error\");\n        return;\n    }\n    // for (var line in sps) {\n    //     line.replace(/[\\r\\n]/g, \"\");\n    // }\n    if (fs.existsSync(filename)) {\n        fs.appendFile(filename, sps[1] + \"\\n\", (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"数据已被追加到文件\");\n        });\n    } else {\n        var dir = path.dirname(filename);\n        fs.mkdir(dir, { recursive: true }, (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"创建目录\");\n\n            fs.appendFile(filename, data+'\\n', (err) => {\n                if (err) {\n                    throw err;\n                }\n            });\n        });\n    }\n}",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [
+      {
+        "var": "fs",
+        "module": "fs"
+      },
+      {
+        "var": "path",
+        "module": "path"
+      },
+      {
+        "var": "dayjs",
+        "module": "dayjs"
+      }
+    ],
+    "x": 1790,
+    "y": 1080,
+    "wires": [[]]
+  },
+  {
+    "id": "aa6ce03677606648",
+    "type": "function",
+    "z": "53e13622d8dca2a3",
+    "name": "appendcsv",
+    "func": "\nlet filename = `D:/DATA/measuredata/RM3544/RM3544${dayjs().format('YYYY-MM-DD')}.csv` ;\nappendfile(filename,msg.payload);\nreturn msg;\nfunction appendfile(filename, data) {\n    var sps = data.split(\"\\n\");\n    if (sps.length < 2) {\n        node.error(\"format error\");\n        return;\n    }\n    for (var line in sps) {\n        line.replace(/[\\r\\n]/g, \"\");\n    }\n    if (fs.existsSync(filename)) {\n        fs.appendFile(filename, sps[1] + \"\\n\", (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"数据已被追加到文件\");\n        });\n    } else {\n        var dir = path.dirname(filename);\n        fs.mkdir(dir, { recursive: true }, (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"创建目录\");\n\n            fs.appendFile(filename, data+'\\n', (err) => {\n                if (err) {\n                    throw err;\n                }\n            });\n        });\n    }\n}",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [
+      {
+        "var": "fs",
+        "module": "fs"
+      },
+      {
+        "var": "path",
+        "module": "path"
+      },
+      {
+        "var": "dayjs",
+        "module": "dayjs"
+      }
+    ],
+    "x": 1830,
+    "y": 800,
+    "wires": [[]]
+  },
+  {
+    "id": "08da5223be48364a",
+    "type": "csv",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "sep": ",",
+    "hdrin": true,
+    "hdrout": "all",
+    "multi": "one",
+    "ret": "\\r\\n",
+    "temp": "",
+    "skip": "0",
+    "strings": false,
+    "include_empty_strings": "",
+    "include_null_values": "",
+    "x": 1670,
+    "y": 800,
+    "wires": [["aa6ce03677606648", "7350ced1c2ee4ff6"]]
+  },
+  {
+    "id": "c09dd84fe416ec81",
+    "type": "inject",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": " 04.458E+00,IN",
+    "payloadType": "str",
+    "x": 1220,
+    "y": 740,
+    "wires": [["69823d8534b7f2f2"]]
+  },
+  {
+    "id": "4f918ea3804ef74f",
+    "type": "function",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "func": "msg.payload.Time = dayjs().format(\"YYYY-MM—DD HH:mm:ss\")\nmsg.payload.Judge = msg.payload.Judge?\"OK\":\"NG\"\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [
+      {
+        "var": "dayjs",
+        "module": "dayjs"
+      }
+    ],
+    "x": 1530,
+    "y": 800,
+    "wires": [["08da5223be48364a"]]
+  },
+  {
+    "id": "d19504b1b9ffa815",
+    "type": "tcp request",
+    "z": "53e13622d8dca2a3",
+    "name": "TH2883",
+    "server": "192.168.250.32",
+    "port": "4196",
+    "out": "char",
+    "ret": "string",
+    "splitc": "\\n",
+    "newline": "",
+    "tls": "",
+    "x": 1100,
+    "y": 260,
+    "wires": [["56ba1d87d3b8238d"]]
+  },
+  {
+    "id": "5077d983177e9f50",
+    "type": "tcp request",
+    "z": "53e13622d8dca2a3",
+    "name": "TH9310",
+    "server": "192.168.250.33",
+    "port": "4196",
+    "out": "time",
+    "ret": "string",
+    "splitc": "0",
+    "newline": "",
+    "tls": "",
+    "x": 1100,
+    "y": 340,
+    "wires": [["56ba1d87d3b8238d"]]
+  },
+  {
+    "id": "782c267ddf116ecd",
+    "type": "function",
+    "z": "53e13622d8dca2a3",
+    "name": "取上升沿",
+    "func": "if (msg.payload.CHANGE_REQ==1){\n    msg.plc = msg.payload;\n    return msg;\n}\n\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 640,
+    "y": 260,
+    "wires": [["8d19824361077bfd"]]
+  },
+  {
+    "id": "0ea22e514b386763",
+    "type": "debug",
+    "z": "53e13622d8dca2a3",
+    "name": "切换程序号",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 990,
+    "y": 220,
+    "wires": []
+  },
+  {
+    "id": "56ba1d87d3b8238d",
+    "type": "MC Write",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "topic": "",
+    "connection": "a0a482b438de6112",
+    "data": "0",
+    "address": "D5008",
+    "addressType": "str",
+    "dataType": "num",
+    "errorHandling": "throw",
+    "outputs": 1,
+    "x": 1260,
+    "y": 300,
+    "wires": [[]]
+  },
+  {
+    "id": "861e79e8282f3ee6",
+    "type": "mongodb out",
+    "z": "53e13622d8dca2a3",
+    "mongodb": "3d8108abadc5342a",
+    "name": "",
+    "collection": "data",
+    "payonly": true,
+    "upsert": false,
+    "multi": false,
+    "operation": "store",
+    "x": 1400,
+    "y": 1280,
+    "wires": []
+  },
+  {
+    "id": "20e6308905c8a231",
+    "type": "mongodb out",
+    "z": "53e13622d8dca2a3",
+    "mongodb": "3d8108abadc5342a",
+    "name": "",
+    "collection": "data",
+    "payonly": true,
+    "upsert": false,
+    "multi": false,
+    "operation": "store",
+    "x": 1500,
+    "y": 1020,
+    "wires": []
+  },
+  {
+    "id": "7350ced1c2ee4ff6",
+    "type": "function",
+    "z": "53e13622d8dca2a3",
+    "name": "csv",
+    "func": "let code = msg.id;\nlet inst = \"RM3544\";\nlet filename = `D:/DATA/measuredata/${dayjs().format('YYYY-MM-DD')}/${code}/${inst}_${code}_${dayjs().format('YYYYMMDDHHmmss')}.csv`;\nappendfile(filename, msg.payload);\nreturn msg;\nfunction appendfile(filename, data) {\n    var sps = data.split(\"\\n\");\n    if (sps.length < 2) {\n        node.error(\"format error\");\n        return;\n    }\n    for (var line in sps) {\n        line.replace(/[\\r\\n]/g, \"\");\n    }\n    if (fs.existsSync(filename)) {\n        fs.appendFile(filename, sps[1] + \"\\n\", (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"数据已被追加到文件\");\n        });\n    } else {\n        var dir = path.dirname(filename);\n        fs.mkdir(dir, { recursive: true }, (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"创建目录\");\n\n            fs.appendFile(filename, data + '\\n', (err) => {\n                if (err) {\n                    throw err;\n                }\n            });\n        });\n    }\n}",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [
+      {
+        "var": "dayjs",
+        "module": "dayjs"
+      },
+      {
+        "var": "fs",
+        "module": "fs"
+      },
+      {
+        "var": "path",
+        "module": "path"
+      }
+    ],
+    "x": 1830,
+    "y": 840,
+    "wires": [[]]
+  },
+  {
+    "id": "6cb54a3a79bfd1d7",
+    "type": "function",
+    "z": "53e13622d8dca2a3",
+    "name": "csv",
+    "func": "let code = msg.plc.TH2883_CODE;\nlet inst = \"TH2883\";\nlet filename = `D:/DATA/measuredata/${dayjs().format('YYYY-MM-DD')}/${code}/${inst}_${code}_${dayjs().format('YYYYMMDDHHmmss')}.csv`;\nappendfile(filename, msg.payload);\nreturn msg;\nfunction appendfile(filename, data) {\n    var sps = data.split(\"\\n\");\n    if (sps.length < 2) {\n        node.error(\"format error\");\n        return;\n    }\n    // for (var line in sps) {\n    //     line.replace(/[\\r\\n]/g, \"\");\n    // }\n    if (fs.existsSync(filename)) {\n        fs.appendFile(filename, sps[1] + \"\\n\", (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"数据已被追加到文件\");\n        });\n    } else {\n        var dir = path.dirname(filename);\n        fs.mkdir(dir, { recursive: true }, (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"创建目录\");\n\n            fs.appendFile(filename, data + '\\n', (err) => {\n                if (err) {\n                    throw err;\n                }\n            });\n        });\n    }\n}",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [
+      {
+        "var": "dayjs",
+        "module": "dayjs"
+      },
+      {
+        "var": "fs",
+        "module": "fs"
+      },
+      {
+        "var": "path",
+        "module": "path"
+      }
+    ],
+    "x": 1770,
+    "y": 1120,
+    "wires": [[]]
+  },
+  {
+    "id": "0a28e93d3da90299",
+    "type": "function",
+    "z": "53e13622d8dca2a3",
+    "name": "csv",
+    "func": "let code = msg.plc.TH9310_CODE;\nlet inst = \"TH9310\";\nlet filename = `D:/DATA/measuredata/${dayjs().format('YYYY-MM-DD')}/${code}/${inst}_${code}_${dayjs().format('YYYYMMDDHHmmss')}.csv`;\nappendfile(filename, msg.payload);\nreturn msg;\nfunction appendfile(filename, data) {\n    var sps = data.split(\"\\n\");\n    if (sps.length < 2) {\n        node.error(\"format error\");\n        return;\n    }\n    // for (var line in sps) {\n    //     line.replace(/[\\r\\n]/g, \"\");\n    // }\n    if (fs.existsSync(filename)) {\n        fs.appendFile(filename, sps[1] + \"\\n\", (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"数据已被追加到文件\");\n        });\n    } else {\n        var dir = path.dirname(filename);\n        fs.mkdir(dir, { recursive: true }, (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"创建目录\");\n\n            fs.appendFile(filename, data + '\\n', (err) => {\n                if (err) {\n                    throw err;\n                }\n            });\n        });\n    }\n}",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [
+      {
+        "var": "dayjs",
+        "module": "dayjs"
+      },
+      {
+        "var": "fs",
+        "module": "fs"
+      },
+      {
+        "var": "path",
+        "module": "path"
+      }
+    ],
+    "x": 1650,
+    "y": 1300,
+    "wires": [[]]
+  },
+  {
+    "id": "7da08cb8a4399b3f",
+    "type": "ui_chart",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "group": "a58d11825a2d8569",
+    "order": 2,
+    "width": 0,
+    "height": 0,
+    "label": "",
+    "chartType": "line",
+    "legend": "false",
+    "xformat": "HH:mm:ss",
+    "interpolate": "linear",
+    "nodata": "",
+    "dot": false,
+    "ymin": "0",
+    "ymax": "0.15",
+    "removeOlder": "10",
+    "removeOlderPoints": "",
+    "removeOlderUnit": "60",
+    "cutout": 0,
+    "useOneColor": false,
+    "useUTC": false,
+    "colors": [
+      "#1f77b4",
+      "#aec7e8",
+      "#ff7f0e",
+      "#2ca02c",
+      "#98df8a",
+      "#d62728",
+      "#ff9896",
+      "#9467bd",
+      "#c5b0d5"
+    ],
+    "outputs": 1,
+    "useDifferentColor": false,
+    "x": 1270,
+    "y": 1340,
+    "wires": [[]]
+  },
+  {
+    "id": "8ac9388895ddc86d",
+    "type": "change",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "payload.AC",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1130,
+    "y": 1300,
+    "wires": [["7da08cb8a4399b3f", "bbeebf79ad5fc934"]]
+  },
+  {
+    "id": "d6a11b83ef179c9a",
+    "type": "ui_chart",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "group": "0380fb214bafd35a",
+    "order": 2,
+    "width": 0,
+    "height": 0,
+    "label": "",
+    "chartType": "line",
+    "legend": "false",
+    "xformat": "HH:mm:ss",
+    "interpolate": "linear",
+    "nodata": "",
+    "dot": false,
+    "ymin": "",
+    "ymax": "5",
+    "removeOlder": "10",
+    "removeOlderPoints": "",
+    "removeOlderUnit": "60",
+    "cutout": 0,
+    "useOneColor": false,
+    "useUTC": false,
+    "colors": [
+      "#1f77b4",
+      "#aec7e8",
+      "#ff7f0e",
+      "#2ca02c",
+      "#98df8a",
+      "#d62728",
+      "#ff9896",
+      "#9467bd",
+      "#c5b0d5"
+    ],
+    "outputs": 1,
+    "useDifferentColor": false,
+    "x": 1790,
+    "y": 720,
+    "wires": [[]]
+  },
+  {
+    "id": "e9acecfb58138ca8",
+    "type": "change",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "payload.Value",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1630,
+    "y": 720,
+    "wires": [["d6a11b83ef179c9a", "b824c72c79689b2d"]]
+  },
+  {
+    "id": "09552a47aa9d540f",
+    "type": "ui_chart",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "group": "ed036c5c92094f19",
+    "order": 2,
+    "width": "6",
+    "height": "4",
+    "label": "",
+    "chartType": "line",
+    "legend": "false",
+    "xformat": "HH:mm:ss",
+    "interpolate": "linear",
+    "nodata": "",
+    "dot": false,
+    "ymin": "-0.1",
+    "ymax": "0.1",
+    "removeOlder": "10",
+    "removeOlderPoints": "",
+    "removeOlderUnit": "60",
+    "cutout": 0,
+    "useOneColor": false,
+    "useUTC": false,
+    "colors": [
+      "#1f77b4",
+      "#aec7e8",
+      "#ff7f0e",
+      "#2ca02c",
+      "#98df8a",
+      "#d62728",
+      "#ff9896",
+      "#9467bd",
+      "#c5b0d5"
+    ],
+    "outputs": 1,
+    "useDifferentColor": false,
+    "x": 1710,
+    "y": 860,
+    "wires": [[]]
+  },
+  {
+    "id": "41afefed5b4a024d",
+    "type": "change",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "payload.AreaSize",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1510,
+    "y": 860,
+    "wires": [["09552a47aa9d540f", "28e45e669b140f1a"]]
+  },
+  {
+    "id": "bbeebf79ad5fc934",
+    "type": "ui_text",
+    "z": "53e13622d8dca2a3",
+    "group": "a58d11825a2d8569",
+    "order": 1,
+    "width": 0,
+    "height": 0,
+    "name": "",
+    "label": "绝缘电流",
+    "format": "{{msg.payload}}",
+    "layout": "row-left",
+    "x": 1280,
+    "y": 1380,
+    "wires": []
+  },
+  {
+    "id": "28e45e669b140f1a",
+    "type": "ui_text",
+    "z": "53e13622d8dca2a3",
+    "group": "ed036c5c92094f19",
+    "order": 1,
+    "width": "6",
+    "height": "1",
+    "name": "",
+    "label": "面积",
+    "format": "{{msg.payload}}",
+    "layout": "row-left",
+    "x": 1730,
+    "y": 900,
+    "wires": []
+  },
+  {
+    "id": "b824c72c79689b2d",
+    "type": "ui_text",
+    "z": "53e13622d8dca2a3",
+    "group": "0380fb214bafd35a",
+    "order": 1,
+    "width": 0,
+    "height": 0,
+    "name": "",
+    "label": "电阻",
+    "format": "{{msg.payload}}ohm",
+    "layout": "row-left",
+    "x": 1790,
+    "y": 760,
+    "wires": []
+  },
+  {
+    "id": "e09dda7ded52858b",
+    "type": "ui_chart",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "group": "ed036c5c92094f19",
+    "order": 2,
+    "width": "6",
+    "height": "4",
+    "label": "",
+    "chartType": "line",
+    "legend": "false",
+    "xformat": "HH:mm:ss",
+    "interpolate": "linear",
+    "nodata": "",
+    "dot": false,
+    "ymin": "",
+    "ymax": "",
+    "removeOlder": "10",
+    "removeOlderPoints": "",
+    "removeOlderUnit": "60",
+    "cutout": 0,
+    "useOneColor": false,
+    "useUTC": false,
+    "colors": [
+      "#1f77b4",
+      "#aec7e8",
+      "#ff7f0e",
+      "#2ca02c",
+      "#98df8a",
+      "#d62728",
+      "#ff9896",
+      "#9467bd",
+      "#c5b0d5"
+    ],
+    "outputs": 1,
+    "useDifferentColor": false,
+    "x": 1750,
+    "y": 940,
+    "wires": [[]]
+  },
+  {
+    "id": "3ad19595ebd16537",
+    "type": "ui_text",
+    "z": "53e13622d8dca2a3",
+    "group": "ed036c5c92094f19",
+    "order": 1,
+    "width": "6",
+    "height": "1",
+    "name": "",
+    "label": "面积差",
+    "format": "{{msg.payload}}",
+    "layout": "row-left",
+    "x": 1750,
+    "y": 980,
+    "wires": []
+  },
+  {
+    "id": "55fbdbdd2e1cfc4a",
+    "type": "change",
+    "z": "53e13622d8dca2a3",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "payload.DiffZone",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1519,
+    "y": 892,
+    "wires": [["e09dda7ded52858b", "3ad19595ebd16537"]]
+  },
+  {
+    "id": "08e25af6b835183e",
+    "type": "function",
+    "z": "53e13622d8dca2a3",
+    "name": "formatdate",
+    "func": "msg.payload.Time = dayjs().format(\"YYYY-MM—DD HH:mm:ss\")\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [
+      {
+        "var": "dayjs",
+        "module": "dayjs"
+      }
+    ],
+    "x": 1370,
+    "y": 1180,
+    "wires": [["b40f5f1e19f9e1b3"]]
+  },
+  {
+    "id": "1004ef24ea1806f7",
+    "type": "link in",
+    "z": "4d700869e26b0e8c",
+    "name": "plcdata",
+    "links": ["7bc43990872ed619"],
+    "x": 165,
+    "y": 380,
+    "wires": [["15c39807d56e4e34"]]
+  },
+  {
+    "id": "15c39807d56e4e34",
+    "type": "rbe",
+    "z": "4d700869e26b0e8c",
+    "name": "",
+    "func": "rbe",
+    "gap": "0",
+    "start": "",
+    "inout": "in",
+    "septopics": true,
+    "property": "payload.DIAMETERALL",
+    "topi": "topic",
+    "x": 210,
+    "y": 440,
+    "wires": [["26581564325f4834"]]
+  },
+  {
+    "id": "26581564325f4834",
+    "type": "function",
+    "z": "4d700869e26b0e8c",
+    "name": "通止规条件",
+    "func": "if (msg.payload.DIAMETERALL){\n    msg.plc = msg.payload;\n    return msg;\n}\n\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 210,
+    "y": 480,
+    "wires": [["4c4d6bfc461ee27c", "6aa3d4d970cb3f7c"]]
+  },
+  {
+    "id": "4c4d6bfc461ee27c",
+    "type": "function",
+    "z": "4d700869e26b0e8c",
+    "name": "TONGGUI",
+    "func": "let key =\"TONGGUI\";\nif (msg.payload[key]==1){   \n    return msg;\n}\n\n\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 370,
+    "y": 560,
+    "wires": [["cb1b770de5938990"]]
+  },
+  {
+    "id": "6aa3d4d970cb3f7c",
+    "type": "function",
+    "z": "4d700869e26b0e8c",
+    "name": "ZHIGUI",
+    "func": "let key =\"ZHIGUI\";\nif (msg.payload[key]==1){   \n    return msg;\n}\n\n\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 400,
+    "y": 420,
+    "wires": [["860a0a85fa03971f"]]
+  },
+  {
+    "id": "860a0a85fa03971f",
+    "type": "function",
+    "z": "4d700869e26b0e8c",
+    "name": "",
+    "func": "msg.payload={\n    'Id': msg.payload.ZHIGUI_CODE,\n    'Time': new Date(),\n    'Instrument':'zhigui',\n    \"zhigui\": msg.payload.ZHIGUIValue?'OK':'NG',\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [
+      {
+        "var": "dayjs",
+        "module": "dayjs"
+      }
+    ],
+    "x": 590,
+    "y": 420,
+    "wires": [["11598ea7187498b7", "25cd454386eb5a3d"]]
+  },
+  {
+    "id": "cb1b770de5938990",
+    "type": "function",
+    "z": "4d700869e26b0e8c",
+    "name": "",
+    "func": "msg.payload = {\n    'Id': msg.payload.TONGGUI_CODE,\n    'Time': new Date(),\n    'Instrument':'tonggui',\n    \"tongui\": msg.payload.TONGGUIValue ? 'OK' : 'NG',\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [
+      {
+        "var": "dayjs",
+        "module": "dayjs"
+      }
+    ],
+    "x": 470,
+    "y": 560,
+    "wires": [["9e274fb09b09d1a2", "6063677e27c34faf"]]
+  },
+  {
+    "id": "1f138b76e9593fb8",
+    "type": "csv",
+    "z": "4d700869e26b0e8c",
+    "name": "",
+    "sep": ",",
+    "hdrin": "",
+    "hdrout": "all",
+    "multi": "one",
+    "ret": "\\r\\n",
+    "temp": "",
+    "skip": "0",
+    "strings": true,
+    "include_empty_strings": "",
+    "include_null_values": "",
+    "x": 910,
+    "y": 280,
+    "wires": [["3f06c728f4d4461f", "da9f4a6587436c3c", "f58feb12e90f89e8"]]
+  },
+  {
+    "id": "320a47c875d3c4a2",
+    "type": "csv",
+    "z": "4d700869e26b0e8c",
+    "name": "",
+    "sep": ",",
+    "hdrin": "",
+    "hdrout": "all",
+    "multi": "one",
+    "ret": "\\r\\n",
+    "temp": "",
+    "skip": "0",
+    "strings": true,
+    "include_empty_strings": "",
+    "include_null_values": "",
+    "x": 770,
+    "y": 560,
+    "wires": [["e94c68b8990ef204", "12f3ad1fb5d45793", "bb9e224c4a1d7bec"]]
+  },
+  {
+    "id": "e94c68b8990ef204",
+    "type": "function",
+    "z": "4d700869e26b0e8c",
+    "name": "appendcsv",
+    "func": "\nlet filename = `D:/DATA/measuredata/tonggui/tongui${dayjs().format('YYYY-MM-DD')}.csv` ;\nappendfile(filename,msg.payload);\nreturn msg;\nfunction appendfile(filename, data) {\n    var sps = data.split(\"\\n\");\n    if (sps.length < 2) {\n        node.error(\"format error\");\n        return;\n    }\n    // for (var line in sps) {\n    //     line.replace(/[\\r\\n]/g, \"\");\n    // }\n    if (fs.existsSync(filename)) {\n        fs.appendFile(filename, sps[1] + \"\\n\", (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"数据已被追加到文件\");\n        });\n    } else {\n        var dir = path.dirname(filename);\n        fs.mkdir(dir, { recursive: true }, (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"创建目录\");\n\n            fs.appendFile(filename, data+'\\n', (err) => {\n                if (err) {\n                    throw err;\n                }\n            });\n        });\n    }\n}",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [
+      {
+        "var": "fs",
+        "module": "fs"
+      },
+      {
+        "var": "path",
+        "module": "path"
+      },
+      {
+        "var": "dayjs",
+        "module": "dayjs"
+      }
+    ],
+    "x": 950,
+    "y": 560,
+    "wires": [["b8e4e39c9d0e983e"]]
+  },
+  {
+    "id": "3f06c728f4d4461f",
+    "type": "function",
+    "z": "4d700869e26b0e8c",
+    "name": "appendcsv",
+    "func": "\nlet filename = `D:/DATA/measuredata/zhigui/zhigui${dayjs().format('YYYY-MM-DD')}.csv` ;\nappendfile(filename,msg.payload);\nreturn msg;\nfunction appendfile(filename, data) {\n    var sps = data.split(\"\\n\");\n    if (sps.length < 2) {\n        node.error(\"format error\");\n        return;\n    }\n    // for (var line in sps) {\n    //     line.replace(/[\\r\\n]/g, \"\");\n    // }\n    if (fs.existsSync(filename)) {\n        fs.appendFile(filename, sps[1] + \"\\n\", (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"数据已被追加到文件\");\n        });\n    } else {\n        var dir = path.dirname(filename);\n        fs.mkdir(dir, { recursive: true }, (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"创建目录\");\n\n            fs.appendFile(filename, data+'\\n', (err) => {\n                if (err) {\n                    throw err;\n                }\n            });\n        });\n    }\n}",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [
+      {
+        "var": "fs",
+        "module": "fs"
+      },
+      {
+        "var": "path",
+        "module": "path"
+      },
+      {
+        "var": "dayjs",
+        "module": "dayjs"
+      }
+    ],
+    "x": 930,
+    "y": 380,
+    "wires": [["b8e4e39c9d0e983e"]]
+  },
+  {
+    "id": "b8e4e39c9d0e983e",
+    "type": "MC Write",
+    "z": "4d700869e26b0e8c",
+    "name": "",
+    "topic": "",
+    "connection": "a0a482b438de6112",
+    "data": "0",
+    "address": "D5030",
+    "addressType": "str",
+    "dataType": "num",
+    "errorHandling": "throw",
+    "outputs": 1,
+    "x": 1080,
+    "y": 460,
+    "wires": [[]]
+  },
+  {
+    "id": "12f3ad1fb5d45793",
+    "type": "debug",
+    "z": "4d700869e26b0e8c",
+    "name": "tonggui",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 820,
+    "y": 480,
+    "wires": []
+  },
+  {
+    "id": "da9f4a6587436c3c",
+    "type": "debug",
+    "z": "4d700869e26b0e8c",
+    "name": "zhigui",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 824.5625,
+    "y": 432.3333435058594,
+    "wires": []
+  },
+  {
+    "id": "11598ea7187498b7",
+    "type": "mongodb out",
+    "z": "4d700869e26b0e8c",
+    "mongodb": "3d8108abadc5342a",
+    "name": "",
+    "collection": "data",
+    "payonly": true,
+    "upsert": false,
+    "multi": false,
+    "operation": "store",
+    "x": 740,
+    "y": 180,
+    "wires": []
+  },
+  {
+    "id": "9e274fb09b09d1a2",
+    "type": "mongodb out",
+    "z": "4d700869e26b0e8c",
+    "mongodb": "3d8108abadc5342a",
+    "name": "",
+    "collection": "data",
+    "payonly": true,
+    "upsert": false,
+    "multi": false,
+    "operation": "store",
+    "x": 780,
+    "y": 700,
+    "wires": []
+  },
+  {
+    "id": "bb9e224c4a1d7bec",
+    "type": "function",
+    "z": "4d700869e26b0e8c",
+    "name": "csv",
+    "func": "let code = msg.plc.TONGGUI_CODE;\nlet inst = \"TONGGUI\";\nlet filename = `D:/DATA/measuredata/${dayjs().format('YYYY-MM-DD')}/${code}/${inst}_${code}_${dayjs().format('YYYYMMDDHHmmss')}.csv`;\nappendfile(filename, msg.payload);\nreturn msg;\nfunction appendfile(filename, data) {\n    var sps = data.split(\"\\n\");\n    if (sps.length < 2) {\n        node.error(\"format error\");\n        return;\n    }\n    // for (var line in sps) {\n    //     line.replace(/[\\r\\n]/g, \"\");\n    // }\n    if (fs.existsSync(filename)) {\n        fs.appendFile(filename, sps[1] + \"\\n\", (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"数据已被追加到文件\");\n        });\n    } else {\n        var dir = path.dirname(filename);\n        fs.mkdir(dir, { recursive: true }, (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"创建目录\");\n\n            fs.appendFile(filename, data + '\\n', (err) => {\n                if (err) {\n                    throw err;\n                }\n            });\n        });\n    }\n}",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [
+      {
+        "var": "dayjs",
+        "module": "dayjs"
+      },
+      {
+        "var": "fs",
+        "module": "fs"
+      },
+      {
+        "var": "path",
+        "module": "path"
+      }
+    ],
+    "x": 1110,
+    "y": 600,
+    "wires": [[]]
+  },
+  {
+    "id": "f58feb12e90f89e8",
+    "type": "function",
+    "z": "4d700869e26b0e8c",
+    "name": "csv",
+    "func": "let code = msg.plc.ZHIGUI_CODE;\nlet inst = \"ZHIGUI\";\nlet filename = `D:/DATA/measuredata/${dayjs().format('YYYY-MM-DD')}/${code}/${inst}_${code}_${dayjs().format('YYYYMMDDHHmmss')}.csv`;\nappendfile(filename, msg.payload);\nreturn msg;\nfunction appendfile(filename, data) {\n    var sps = data.split(\"\\n\");\n    if (sps.length < 2) {\n        node.error(\"format error\");\n        return;\n    }\n    // for (var line in sps) {\n    //     line.replace(/[\\r\\n]/g, \"\");\n    // }\n    if (fs.existsSync(filename)) {\n        fs.appendFile(filename, sps[1] + \"\\n\", (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"数据已被追加到文件\");\n        });\n    } else {\n        var dir = path.dirname(filename);\n        fs.mkdir(dir, { recursive: true }, (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"创建目录\");\n\n            fs.appendFile(filename, data + '\\n', (err) => {\n                if (err) {\n                    throw err;\n                }\n            });\n        });\n    }\n}",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [
+      {
+        "var": "dayjs",
+        "module": "dayjs"
+      },
+      {
+        "var": "fs",
+        "module": "fs"
+      },
+      {
+        "var": "path",
+        "module": "path"
+      }
+    ],
+    "x": 1090,
+    "y": 320,
+    "wires": [[]]
+  },
+  {
+    "id": "9b44af31130d4f04",
+    "type": "inject",
+    "z": "4d700869e26b0e8c",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 670,
+    "y": 460,
+    "wires": [["b8e4e39c9d0e983e"]]
+  },
+  {
+    "id": "6063677e27c34faf",
+    "type": "function",
+    "z": "4d700869e26b0e8c",
+    "name": "formatdate",
+    "func": "msg.payload.Time = dayjs().format(\"YYYY-MM—DD HH:mm:ss\")\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [
+      {
+        "var": "dayjs",
+        "module": "dayjs"
+      }
+    ],
+    "x": 630,
+    "y": 520,
+    "wires": [["320a47c875d3c4a2"]]
+  },
+  {
+    "id": "25cd454386eb5a3d",
+    "type": "function",
+    "z": "4d700869e26b0e8c",
+    "name": "formatdate",
+    "func": "msg.payload.Time = dayjs().format(\"YYYY-MM—DD HH:mm:ss\")\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [
+      {
+        "var": "dayjs",
+        "module": "dayjs"
+      }
+    ],
+    "x": 770,
+    "y": 280,
+    "wires": [["1f138b76e9593fb8"]]
+  },
+  {
+    "id": "304b59a0b5e821bf",
+    "type": "tcp request",
+    "z": "2f055c6c13e2c8d3",
+    "name": "激光位移",
+    "server": "192.168.250.5",
+    "port": "4196",
+    "out": "time",
+    "ret": "string",
+    "splitc": "0",
+    "newline": "",
+    "tls": "",
+    "x": 660,
+    "y": 260,
+    "wires": [["241fcfa74a29f8fe", "3461b2772bf62b12", "4e274ab6fd204670"]]
+  },
+  {
+    "id": "0b86ed9b66551cd0",
+    "type": "tcp request",
+    "z": "2f055c6c13e2c8d3",
+    "name": "接触位移",
+    "server": "192.168.250.6",
+    "port": "4196",
+    "out": "time",
+    "ret": "string",
+    "splitc": "0",
+    "newline": "",
+    "tls": "",
+    "x": 600,
+    "y": 600,
+    "wires": [["a9fcbb73a0052272"]]
+  },
+  {
+    "id": "001524a25ead1225",
+    "type": "function",
+    "z": "2f055c6c13e2c8d3",
+    "name": "\"M0\\r\\n\"",
+    "func": "msg.topic=\"激光位移\"\nmsg.payload=\"M0\\r\\n\";\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 520,
+    "y": 240,
+    "wires": [["304b59a0b5e821bf"]]
+  },
+  {
+    "id": "c4d10f626b3ea9dc",
+    "type": "debug",
+    "z": "2f055c6c13e2c8d3",
+    "name": "激光位移",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1060,
+    "y": 340,
+    "wires": []
+  },
+  {
+    "id": "7969a8949959cc23",
+    "type": "function",
+    "z": "2f055c6c13e2c8d3",
+    "name": "\"M0\\r\\n\"",
+    "func": "msg.payload=\"M0\\r\\n\";\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 440,
+    "y": 600,
+    "wires": [["0b86ed9b66551cd0"]]
+  },
+  {
+    "id": "aae9cad0373b367f",
+    "type": "link in",
+    "z": "2f055c6c13e2c8d3",
+    "name": "plcdata",
+    "links": ["7bc43990872ed619"],
+    "x": 115,
+    "y": 80,
+    "wires": [["4a1322f2bdfe1b5b"]]
+  },
+  {
+    "id": "4a1322f2bdfe1b5b",
+    "type": "rbe",
+    "z": "2f055c6c13e2c8d3",
+    "name": "",
+    "func": "rbe",
+    "gap": "0",
+    "start": "",
+    "inout": "in",
+    "septopics": true,
+    "property": "payload.sizeAll",
+    "topi": "topic",
+    "x": 160,
+    "y": 140,
+    "wires": [["03d48aa7337a6497"]]
+  },
+  {
+    "id": "03d48aa7337a6497",
+    "type": "function",
+    "z": "2f055c6c13e2c8d3",
+    "name": "尺寸条件",
+    "func": "if (msg.payload.sizeAll){\n    msg.plc = msg.payload;\n    return msg;\n}\n\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 220,
+    "y": 260,
+    "wires": [["be6ed50d97f7cdd9", "f7ecd207c7c92f2b", "f59cb1a11a99f80d"]]
+  },
+  {
+    "id": "d651fc6150e9d108",
+    "type": "inject",
+    "z": "2f055c6c13e2c8d3",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 90,
+    "y": 300,
+    "wires": [["1bfc8b86362214b2"]]
+  },
+  {
+    "id": "be6ed50d97f7cdd9",
+    "type": "function",
+    "z": "2f055c6c13e2c8d3",
+    "name": "压力位移",
+    "func": "let key =\"GT\";\nif (msg.payload[key]==1){   \n    return msg;\n}\n\n\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 380,
+    "y": 380,
+    "wires": [["d36c8faed8b3e6ac"]]
+  },
+  {
+    "id": "f7ecd207c7c92f2b",
+    "type": "function",
+    "z": "2f055c6c13e2c8d3",
+    "name": "激光",
+    "func": "let key =\"HX\";\nif (msg.payload[key]==1){   \n    return msg;\n}\n\n\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 370,
+    "y": 260,
+    "wires": [["001524a25ead1225"]]
+  },
+  {
+    "id": "3461b2772bf62b12",
+    "type": "MC Write",
+    "z": "2f055c6c13e2c8d3",
+    "name": "",
+    "topic": "",
+    "connection": "a0a482b438de6112",
+    "data": "0",
+    "address": "D5020",
+    "addressType": "str",
+    "dataType": "str",
+    "errorHandling": "throw",
+    "outputs": 1,
+    "x": 880,
+    "y": 360,
+    "wires": [[]]
+  },
+  {
+    "id": "241fcfa74a29f8fe",
+    "type": "function",
+    "z": "2f055c6c13e2c8d3",
+    "name": "",
+    "func": "let payload=msg.payload;\nlet sps=payload.split(',');\nmsg.payload={\n    'Id': msg.plc.HX_CODE,\n    'Time': new Date(),\n    'Instrument':\"IX\",\n    \"leftpin\": Number(sps[1]),\n    \"rightpin\": Number(sps[2]) ,\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 840,
+    "y": 260,
+    "wires": [["28d3ef236b0b5a09", "0520b7ad4ac7c2fb"]]
+  },
+  {
+    "id": "d36c8faed8b3e6ac",
+    "type": "function",
+    "z": "2f055c6c13e2c8d3",
+    "name": "",
+    "func": "msg.payload = {\n    'Id': msg.plc.GT_CODE,\n    'Time': new Date(),\n    'Instrument':'GT',\n    \"leftpin\": msg.plc.leftpin,\n    \"rightpin\": msg.plc.rightpin,\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 660,
+    "y": 380,
+    "wires": [["0520b7ad4ac7c2fb", "3461b2772bf62b12", "c29fef77d9eb2d30"]]
+  },
+  {
+    "id": "28d3ef236b0b5a09",
+    "type": "csv",
+    "z": "2f055c6c13e2c8d3",
+    "name": "",
+    "sep": ",",
+    "hdrin": "",
+    "hdrout": "all",
+    "multi": "one",
+    "ret": "\\r\\n",
+    "temp": "",
+    "skip": "0",
+    "strings": true,
+    "include_empty_strings": "",
+    "include_null_values": "",
+    "x": 970,
+    "y": 260,
+    "wires": [["549d36732fd2fcf7", "e9c52420d0968306", "c4d10f626b3ea9dc"]]
+  },
+  {
+    "id": "35e0f47ad112fe30",
+    "type": "csv",
+    "z": "2f055c6c13e2c8d3",
+    "name": "",
+    "sep": ",",
+    "hdrin": "",
+    "hdrout": "all",
+    "multi": "one",
+    "ret": "\\r\\n",
+    "temp": "",
+    "skip": "0",
+    "strings": true,
+    "include_empty_strings": "",
+    "include_null_values": "",
+    "x": 990,
+    "y": 440,
+    "wires": [["d790f8f7606a96fa", "7469343d157a7684"]]
+  },
+  {
+    "id": "d790f8f7606a96fa",
+    "type": "function",
+    "z": "2f055c6c13e2c8d3",
+    "name": "appendcsv",
+    "func": "\nlet filename = `D:/DATA/measuredata/gt/gt${dayjs().format('YYYY-MM-DD')}.csv` ;\nappendfile(filename,msg.payload);\nreturn msg;\nfunction appendfile(filename, data) {\n    var sps = data.split(\"\\n\");\n    if (sps.length < 2) {\n        node.error(\"format error\");\n        return;\n    }\n    for (var line in sps) {\n        line.replace(/[\\r\\n]/g, \"\");\n    }\n    if (fs.existsSync(filename)) {\n        fs.appendFile(filename, sps[1] + \"\\n\", (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"数据已被追加到文件\");\n        });\n    } else {\n        var dir = path.dirname(filename);\n        fs.mkdir(dir, { recursive: true }, (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"创建目录\");\n\n            fs.appendFile(filename, data+'\\n', (err) => {\n                if (err) {\n                    throw err;\n                }\n            });\n        });\n    }\n}",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [
+      {
+        "var": "fs",
+        "module": "fs"
+      },
+      {
+        "var": "path",
+        "module": "path"
+      },
+      {
+        "var": "dayjs",
+        "module": "dayjs"
+      }
+    ],
+    "x": 1170,
+    "y": 420,
+    "wires": [[]]
+  },
+  {
+    "id": "549d36732fd2fcf7",
+    "type": "function",
+    "z": "2f055c6c13e2c8d3",
+    "name": "appendcsv",
+    "func": "\nlet filename = `D:/DATA/measuredata/hx/hx${dayjs().format('YYYY-MM-DD')}.csv` ;\nappendfile(filename,msg.payload);\nreturn msg;\nfunction appendfile(filename, data) {\n    var sps = data.split(\"\\n\");\n    if (sps.length < 2) {\n        node.error(\"format error\");\n        return;\n    }\n    // for (var line in sps) {\n    //     line.replace(/[\\r\\n]/g, \"\");\n    // }\n    if (fs.existsSync(filename)) {\n        fs.appendFile(filename, sps[1] + \"\\n\", (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"数据已被追加到文件\");\n        });\n    } else {\n        var dir = path.dirname(filename);\n        fs.mkdir(dir, { recursive: true }, (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"创建目录\");\n\n            fs.appendFile(filename, data+'\\n', (err) => {\n                if (err) {\n                    throw err;\n                }\n            });\n        });\n    }\n}",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [
+      {
+        "var": "fs",
+        "module": "fs"
+      },
+      {
+        "var": "path",
+        "module": "path"
+      },
+      {
+        "var": "dayjs",
+        "module": "dayjs"
+      }
+    ],
+    "x": 1110,
+    "y": 260,
+    "wires": [[]]
+  },
+  {
+    "id": "0520b7ad4ac7c2fb",
+    "type": "mongodb out",
+    "z": "2f055c6c13e2c8d3",
+    "mongodb": "3d8108abadc5342a",
+    "name": "",
+    "collection": "data",
+    "payonly": true,
+    "upsert": false,
+    "multi": false,
+    "operation": "store",
+    "x": 900,
+    "y": 140,
+    "wires": []
+  },
+  {
+    "id": "7469343d157a7684",
+    "type": "function",
+    "z": "2f055c6c13e2c8d3",
+    "name": "csv",
+    "func": "let code = msg.plc.GT_CODE;\nlet inst = \"GT\";\nlet filename = `D:/DATA/measuredata/${dayjs().format('YYYY-MM-DD')}/${code}/${inst}_${code}_${dayjs().format('YYYYMMDDHHmmss')}.csv`;\nappendfile(filename, msg.payload);\nreturn msg;\nfunction appendfile(filename, data) {\n    var sps = data.split(\"\\n\");\n    if (sps.length < 2) {\n        node.error(\"format error\");\n        return;\n    }\n    for (var line in sps) {\n        line.replace(/[\\r\\n]/g, \"\");\n    }\n    if (fs.existsSync(filename)) {\n        fs.appendFile(filename, sps[1] + \"\\n\", (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"数据已被追加到文件\");\n        });\n    } else {\n        var dir = path.dirname(filename);\n        fs.mkdir(dir, { recursive: true }, (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"创建目录\");\n\n            fs.appendFile(filename, data + '\\n', (err) => {\n                if (err) {\n                    throw err;\n                }\n            });\n        });\n    }\n}",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [
+      {
+        "var": "dayjs",
+        "module": "dayjs"
+      },
+      {
+        "var": "fs",
+        "module": "fs"
+      },
+      {
+        "var": "path",
+        "module": "path"
+      }
+    ],
+    "x": 1170,
+    "y": 460,
+    "wires": [[]]
+  },
+  {
+    "id": "e9c52420d0968306",
+    "type": "function",
+    "z": "2f055c6c13e2c8d3",
+    "name": "csv",
+    "func": "let code = msg.plc.HX_CODE;\nlet inst = \"HX\";\nlet filename = `D:/DATA/measuredata/${dayjs().format('YYYY-MM-DD')}/${code}/${inst}_${code}_${dayjs().format('YYYYMMDDHHmmss')}.csv`;\nappendfile(filename, msg.payload);\nreturn msg;\nfunction appendfile(filename, data) {\n    var sps = data.split(\"\\n\");\n    if (sps.length < 2) {\n        node.error(\"format error\");\n        return;\n    }\n    for (var line in sps) {\n        line.replace(/[\\r\\n]/g, \"\");\n    }\n    if (fs.existsSync(filename)) {\n        fs.appendFile(filename, sps[1] + \"\\n\", (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"数据已被追加到文件\");\n        });\n    } else {\n        var dir = path.dirname(filename);\n        fs.mkdir(dir, { recursive: true }, (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"创建目录\");\n\n            fs.appendFile(filename, data + '\\n', (err) => {\n                if (err) {\n                    throw err;\n                }\n            });\n        });\n    }\n}",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [
+      {
+        "var": "dayjs",
+        "module": "dayjs"
+      },
+      {
+        "var": "fs",
+        "module": "fs"
+      },
+      {
+        "var": "path",
+        "module": "path"
+      }
+    ],
+    "x": 1090,
+    "y": 300,
+    "wires": [[]]
+  },
+  {
+    "id": "f59cb1a11a99f80d",
+    "type": "function",
+    "z": "2f055c6c13e2c8d3",
+    "name": "ccd",
+    "func": "let key = \"CCD\";\nif (msg.payload[key] == 1) {\n    return msg;\n}\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 370,
+    "y": 440,
+    "wires": [["dd07a35d2f7da654"]]
+  },
+  {
+    "id": "dd07a35d2f7da654",
+    "type": "function",
+    "z": "2f055c6c13e2c8d3",
+    "name": "",
+    "func": "\nmsg.payload = {\n    'Id': msg[\"plc\"] == undefined ? \"\" : msg[\"plc\"][\"CCD_CODE\"],\n    'Time': new Date(),\n    'Instrument':'CCD',\n}\ntry{\n    let ccd = flow.get(\"ccd\");\n    for (const obj of ccd) {\n        msg.payload[obj[\"检测类型\"]] = obj[\"值\"];\n        msg.payload[obj[\"检测类型\"] + \"判定\"] = obj[\"判定\"];\n    }\n}catch(e){\n    node.warn(e);\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 680,
+    "y": 500,
+    "wires": [
+      [
+        "4e274ab6fd204670",
+        "3461b2772bf62b12",
+        "0520b7ad4ac7c2fb",
+        "f5751689a52a8d93"
+      ]
+    ]
+  },
+  {
+    "id": "abb0eb5f33611527",
+    "type": "tcp in",
+    "z": "2f055c6c13e2c8d3",
+    "name": "",
+    "server": "server",
+    "host": "",
+    "port": "7758",
+    "datamode": "stream",
+    "datatype": "utf8",
+    "newline": "",
+    "topic": "",
+    "base64": false,
+    "tls": "",
+    "x": 600,
+    "y": 700,
+    "wires": [["4e274ab6fd204670", "1ab1152f8c18750c"]]
+  },
+  {
+    "id": "4e274ab6fd204670",
+    "type": "debug",
+    "z": "2f055c6c13e2c8d3",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 950,
+    "y": 660,
+    "wires": []
+  },
+  {
+    "id": "899a685e42de2024",
+    "type": "csv",
+    "z": "2f055c6c13e2c8d3",
+    "name": "",
+    "sep": ",",
+    "hdrin": "",
+    "hdrout": "all",
+    "multi": "one",
+    "ret": "\\r\\n",
+    "temp": "",
+    "skip": "0",
+    "strings": true,
+    "include_empty_strings": "",
+    "include_null_values": "",
+    "x": 970,
+    "y": 540,
+    "wires": [["6824f8e72bc34cbe", "c7166ffbfeb155e1", "219cf42e6e9f7984"]]
+  },
+  {
+    "id": "6824f8e72bc34cbe",
+    "type": "function",
+    "z": "2f055c6c13e2c8d3",
+    "name": "appendcsv",
+    "func": "\nlet filename = `D:/DATA/measuredata/CCD/CCD${dayjs().format('YYYY-MM-DD')}.csv` ;\nappendfile(filename,msg.payload);\nreturn msg;\nfunction appendfile(filename, data) {\n    var sps = data.split(\"\\n\");\n    if (sps.length < 2) {\n        node.error(\"format error\");\n        return;\n    }\n    for (var line in sps) {\n        line.replace(/[\\r\\n]/g, \"\");\n    }\n    if (fs.existsSync(filename)) {\n        fs.appendFile(filename, sps[1] + \"\\n\", (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"数据已被追加到文件\");\n        });\n    } else {\n        var dir = path.dirname(filename);\n        fs.mkdir(dir, { recursive: true }, (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"创建目录\");\n\n            fs.appendFile(filename, data+'\\n', (err) => {\n                if (err) {\n                    throw err;\n                }\n            });\n        });\n    }\n}",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [
+      {
+        "var": "fs",
+        "module": "fs"
+      },
+      {
+        "var": "path",
+        "module": "path"
+      },
+      {
+        "var": "dayjs",
+        "module": "dayjs"
+      }
+    ],
+    "x": 1170,
+    "y": 560,
+    "wires": [[]]
+  },
+  {
+    "id": "c7166ffbfeb155e1",
+    "type": "function",
+    "z": "2f055c6c13e2c8d3",
+    "name": "csv",
+    "func": "let code = msg.plc == undefined ? \"empty\": msg.plc.CCD;\nlet inst = \"CCD\";\nlet filename = `D:/DATA/measuredata/${dayjs().format('YYYY-MM-DD')}/${code}/${inst}_${code}_${dayjs().format('YYYYMMDDHHmmss')}.csv`;\nappendfile(filename, msg.payload);\nreturn msg;\nfunction appendfile(filename, data) {\n    var sps = data.split(\"\\n\");\n    if (sps.length < 2) {\n        node.error(\"format error\");\n        return;\n    }\n    for (var line in sps) {\n        line.replace(/[\\r\\n]/g, \"\");\n    }\n    if (fs.existsSync(filename)) {\n        fs.appendFile(filename, sps[1] + \"\\n\", (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"数据已被追加到文件\");\n        });\n    } else {\n        var dir = path.dirname(filename);\n        fs.mkdir(dir, { recursive: true }, (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"创建目录\");\n\n            fs.appendFile(filename, data + '\\n', (err) => {\n                if (err) {\n                    throw err;\n                }\n            });\n        });\n    }\n}",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [
+      {
+        "var": "dayjs",
+        "module": "dayjs"
+      },
+      {
+        "var": "fs",
+        "module": "fs"
+      },
+      {
+        "var": "path",
+        "module": "path"
+      }
+    ],
+    "x": 1170,
+    "y": 600,
+    "wires": [[]]
+  },
+  {
+    "id": "1ab1152f8c18750c",
+    "type": "json",
+    "z": "2f055c6c13e2c8d3",
+    "name": "",
+    "property": "payload",
+    "action": "",
+    "pretty": false,
+    "x": 790,
+    "y": 720,
+    "wires": [["a382f9b51d3c3403"]]
+  },
+  {
+    "id": "a382f9b51d3c3403",
+    "type": "change",
+    "z": "2f055c6c13e2c8d3",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "ccd",
+        "pt": "flow",
+        "to": "payload",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 930,
+    "y": 720,
+    "wires": [[]]
+  },
+  {
+    "id": "a1610eb2b2a92432",
+    "type": "inject",
+    "z": "2f055c6c13e2c8d3",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 70,
+    "y": 460,
+    "wires": [["b5ae7aa332d131c5"]]
+  },
+  {
+    "id": "1bfc8b86362214b2",
+    "type": "function",
+    "z": "2f055c6c13e2c8d3",
+    "name": "",
+    "func": "msg.plc=global.get(\"plcdata\");\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 240,
+    "y": 320,
+    "wires": [["001524a25ead1225"]]
+  },
+  {
+    "id": "b5ae7aa332d131c5",
+    "type": "function",
+    "z": "2f055c6c13e2c8d3",
+    "name": "",
+    "func": "msg.plc=global.get(\"plcdata\")\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 220,
+    "y": 460,
+    "wires": [["dd07a35d2f7da654"]]
+  },
+  {
+    "id": "219cf42e6e9f7984",
+    "type": "debug",
+    "z": "2f055c6c13e2c8d3",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1130,
+    "y": 520,
+    "wires": []
+  },
+  {
+    "id": "574dcdfa6ab90dcf",
+    "type": "inject",
+    "z": "2f055c6c13e2c8d3",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 190,
+    "y": 620,
+    "wires": [["7969a8949959cc23"]]
+  },
+  {
+    "id": "a9fcbb73a0052272",
+    "type": "debug",
+    "z": "2f055c6c13e2c8d3",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 790,
+    "y": 580,
+    "wires": []
+  },
+  {
+    "id": "c29fef77d9eb2d30",
+    "type": "function",
+    "z": "2f055c6c13e2c8d3",
+    "name": "formatdate",
+    "func": "msg.payload.Time = dayjs().format(\"YYYY-MM—DD HH:mm:ss\")\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [
+      {
+        "var": "dayjs",
+        "module": "dayjs"
+      }
+    ],
+    "x": 870,
+    "y": 420,
+    "wires": [["35e0f47ad112fe30"]]
+  },
+  {
+    "id": "f5751689a52a8d93",
+    "type": "function",
+    "z": "2f055c6c13e2c8d3",
+    "name": "formatdate",
+    "func": "msg.payload.Time = dayjs().format(\"YYYY-MM—DD HH:mm:ss\")\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [
+      {
+        "var": "dayjs",
+        "module": "dayjs"
+      }
+    ],
+    "x": 850,
+    "y": 520,
+    "wires": [["899a685e42de2024"]]
+  },
+  {
+    "id": "c0933a2183a0e3a1",
+    "type": "link in",
+    "z": "a306fdd68d1bde5e",
+    "name": "plcdata",
+    "links": ["7bc43990872ed619"],
+    "x": 195,
+    "y": 200,
+    "wires": [["49ef2e23125811a2"]]
+  },
+  {
+    "id": "49ef2e23125811a2",
+    "type": "rbe",
+    "z": "a306fdd68d1bde5e",
+    "name": "",
+    "func": "rbe",
+    "gap": "0",
+    "start": "",
+    "inout": "in",
+    "septopics": true,
+    "property": "payload.CODE_ALL",
+    "topi": "topic",
+    "x": 240,
+    "y": 260,
+    "wires": [["83a24f7e613c9a46"]]
+  },
+  {
+    "id": "83a24f7e613c9a46",
+    "type": "function",
+    "z": "a306fdd68d1bde5e",
+    "name": "扫码all rising",
+    "func": "if (msg.payload.CODE_ALL){\n    msg.plc = msg.payload;\n    return msg;\n}\n\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 410,
+    "y": 260,
+    "wires": [["57056792a1de01a1", "d7eda069a22f7642"]]
+  },
+  {
+    "id": "57056792a1de01a1",
+    "type": "function",
+    "z": "a306fdd68d1bde5e",
+    "name": "扫码",
+    "func": "let key =\"SCAN\";\nif (msg.payload[key]==1){   \n    return msg;\n}\n\n\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 570,
+    "y": 260,
+    "wires": [["01979d1fc6dbf985"]]
+  },
+  {
+    "id": "01979d1fc6dbf985",
+    "type": "function",
+    "z": "a306fdd68d1bde5e",
+    "name": "",
+    "func": "msg.payload = {\n    'Id': msg.payload.SCAN_CODE,\n    'Time': new Date(),\n    'Instrument':\"SCANNER\",\n    \"QRCODE\": msg.payload.QRCODE,\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 700,
+    "y": 260,
+    "wires": [["f811873b086f6c70", "898de93b28b07b66"]]
+  },
+  {
+    "id": "2b289b643964f8fc",
+    "type": "csv",
+    "z": "a306fdd68d1bde5e",
+    "name": "",
+    "sep": ",",
+    "hdrin": "",
+    "hdrout": "all",
+    "multi": "one",
+    "ret": "\\r\\n",
+    "temp": "",
+    "skip": "0",
+    "strings": true,
+    "include_empty_strings": "",
+    "include_null_values": "",
+    "x": 890,
+    "y": 120,
+    "wires": [["f0defad20e10f2f0", "9eea9ea1a6507919", "f0bd53b45cfbe74a"]]
+  },
+  {
+    "id": "f0defad20e10f2f0",
+    "type": "function",
+    "z": "a306fdd68d1bde5e",
+    "name": "appendcsv",
+    "func": "\nlet filename = `D:/DATA/measuredata/qrcode/qrcode${dayjs().format('YYYY-MM-DD')}.csv` ;\nappendfile(filename,msg.payload);\nreturn msg;\nfunction appendfile(filename, data) {\n    var sps = data.split(\"\\n\");\n    if (sps.length < 2) {\n        node.error(\"format error\");\n        return;\n    }\n    // for (var line in sps) {\n    //     line.replace(/[\\r\\n]/g, \"\");\n    // }\n    if (fs.existsSync(filename)) {\n        fs.appendFile(filename, sps[1] + \"\\n\", (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"数据已被追加到文件\");\n        });\n    } else {\n        var dir = path.dirname(filename);\n        fs.mkdir(dir, { recursive: true }, (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"创建目录\");\n\n            fs.appendFile(filename, data+'\\n', (err) => {\n                if (err) {\n                    throw err;\n                }\n            });\n        });\n    }\n}",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [
+      {
+        "var": "fs",
+        "module": "fs"
+      },
+      {
+        "var": "path",
+        "module": "path"
+      },
+      {
+        "var": "dayjs",
+        "module": "dayjs"
+      }
+    ],
+    "x": 990,
+    "y": 280,
+    "wires": [[]]
+  },
+  {
+    "id": "9eea9ea1a6507919",
+    "type": "debug",
+    "z": "a306fdd68d1bde5e",
+    "name": "二维码",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 950,
+    "y": 200,
+    "wires": []
+  },
+  {
+    "id": "f811873b086f6c70",
+    "type": "mongodb out",
+    "z": "a306fdd68d1bde5e",
+    "mongodb": "3d8108abadc5342a",
+    "name": "",
+    "collection": "data",
+    "payonly": true,
+    "upsert": false,
+    "multi": false,
+    "operation": "store",
+    "x": 860,
+    "y": 380,
+    "wires": []
+  },
+  {
+    "id": "f0bd53b45cfbe74a",
+    "type": "function",
+    "z": "a306fdd68d1bde5e",
+    "name": "csv",
+    "func": "let code = msg.plc.SCAN_CODE;\nlet inst = \"SCANNER\";\nlet filename = `D:/DATA/measuredata/${dayjs().format('YYYY-MM-DD')}/${code}/${inst}_${code}_${dayjs().format('YYYYMMDDHHmmss')}.csv`;\nappendfile(filename, msg.payload);\nreturn msg;\nfunction appendfile(filename, data) {\n    var sps = data.split(\"\\n\");\n    if (sps.length < 2) {\n        node.error(\"format error\");\n        return;\n    }\n    // for (var line in sps) {\n    //     line.replace(/[\\r\\n]/g, \"\");\n    // }\n    if (fs.existsSync(filename)) {\n        fs.appendFile(filename, sps[1] + \"\\n\", (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"数据已被追加到文件\");\n        });\n    } else {\n        var dir = path.dirname(filename);\n        fs.mkdir(dir, { recursive: true }, (err) => {\n            if (err) {\n                throw err;\n            }\n            console.log(\"创建目录\");\n\n            fs.appendFile(filename, data + '\\n', (err) => {\n                if (err) {\n                    throw err;\n                }\n            });\n        });\n    }\n}",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [
+      {
+        "var": "dayjs",
+        "module": "dayjs"
+      },
+      {
+        "var": "fs",
+        "module": "fs"
+      },
+      {
+        "var": "path",
+        "module": "path"
+      }
+    ],
+    "x": 1030,
+    "y": 340,
+    "wires": [[]]
+  },
+  {
+    "id": "d7eda069a22f7642",
+    "type": "MC Write",
+    "z": "a306fdd68d1bde5e",
+    "name": "",
+    "topic": "",
+    "connection": "a0a482b438de6112",
+    "data": "0",
+    "address": "D5040",
+    "addressType": "str",
+    "dataType": "num",
+    "errorHandling": "throw",
+    "outputs": 1,
+    "x": 640,
+    "y": 360,
+    "wires": [[]]
+  },
+  {
+    "id": "898de93b28b07b66",
+    "type": "function",
+    "z": "a306fdd68d1bde5e",
+    "name": "formatdate",
+    "func": "msg.payload.Time = dayjs().format(\"YYYY-MM—DD HH:mm:ss\")\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [
+      {
+        "var": "dayjs",
+        "module": "dayjs"
+      }
+    ],
+    "x": 750,
+    "y": 120,
+    "wires": [["2b289b643964f8fc"]]
+  },
+  {
+    "id": "58c9fe2ab021516f",
+    "type": "mongodb in",
+    "z": "316cc7c73206f46a",
+    "mongodb": "3d8108abadc5342a",
+    "name": "",
+    "collection": "data",
+    "operation": "find",
+    "x": 540,
+    "y": 180,
+    "wires": [["411d24d6df89477d"]]
+  },
+  {
+    "id": "217cf1b492d8cc64",
+    "type": "inject",
+    "z": "316cc7c73206f46a",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 190,
+    "y": 180,
+    "wires": [["8dc05543ddda1bd2"]]
+  },
+  {
+    "id": "8dc05543ddda1bd2",
+    "type": "function",
+    "z": "316cc7c73206f46a",
+    "name": "",
+    "func": "\nmsg.limit=12;\nmsg.payload={\n   Time:{\n       \"$gt\":new Date(new Date().setHours(0,0,0,0)),\n       \"$lt\":new Date(new Date().setHours(23,59,59,999))\n   } \n};\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 330,
+    "y": 180,
+    "wires": [["58c9fe2ab021516f"]]
+  },
+  {
+    "id": "411d24d6df89477d",
+    "type": "debug",
+    "z": "316cc7c73206f46a",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 790,
+    "y": 180,
+    "wires": []
+  },
+  {
+    "id": "9f3a6fa69e2df97d",
+    "type": "mongodb in",
+    "z": "316cc7c73206f46a",
+    "mongodb": "3d8108abadc5342a",
+    "name": "",
+    "collection": "data",
+    "operation": "aggregate",
+    "x": 540,
+    "y": 360,
+    "wires": [["8a46ce25a3c4d840", "d8c93addcefe474b"]]
+  },
+  {
+    "id": "6d3e23a8d59f16a0",
+    "type": "inject",
+    "z": "316cc7c73206f46a",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "5",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 140,
+    "y": 360,
+    "wires": [["259e980ecbbc6c8e"]]
+  },
+  {
+    "id": "259e980ecbbc6c8e",
+    "type": "function",
+    "z": "316cc7c73206f46a",
+    "name": "查找最近的20个产品",
+    "func": "msg.payload = [\n     {\n   \n          $group: {\n               _id: { Id: \"$Id\" },\n               items: {\n                    $push: \"$$ROOT\"\n               }\n          },\n\n     }\n     , {\n          $sort: {\n               _id: -1\n          }\n     },\n     {\n          $limit: 20\n     }\n     ];\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 320,
+    "y": 360,
+    "wires": [["9f3a6fa69e2df97d"]]
+  },
+  {
+    "id": "bafd5a3fefd92fca",
+    "type": "mongodb in",
+    "z": "316cc7c73206f46a",
+    "mongodb": "3d8108abadc5342a",
+    "name": "",
+    "collection": "data",
+    "operation": "find",
+    "x": 540,
+    "y": 460,
+    "wires": [[]]
+  },
+  {
+    "id": "fd86bd153a085177",
+    "type": "function",
+    "z": "316cc7c73206f46a",
+    "name": "根据ID查询",
+    "func": "\nmsg.payload = {Id:msg.payload};\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 310,
+    "y": 460,
+    "wires": [["bafd5a3fefd92fca"]]
+  },
+  {
+    "id": "34ec8e9ba24d785c",
+    "type": "inject",
+    "z": "316cc7c73206f46a",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "993632594",
+    "payloadType": "num",
+    "x": 160,
+    "y": 460,
+    "wires": [["fd86bd153a085177"]]
+  },
+  {
+    "id": "e1109e9da9922408",
+    "type": "function",
+    "z": "316cc7c73206f46a",
+    "name": "根据code查询",
+    "func": "msg.payload = { QRCODE: msg.payload};\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 300,
+    "y": 540,
+    "wires": [["b7f664840a0df9eb"]]
+  },
+  {
+    "id": "b7f664840a0df9eb",
+    "type": "mongodb in",
+    "z": "316cc7c73206f46a",
+    "mongodb": "3d8108abadc5342a",
+    "name": "",
+    "collection": "data",
+    "operation": "find",
+    "x": 540,
+    "y": 540,
+    "wires": [[]]
+  },
+  {
+    "id": "c76ef03dc4c3203b",
+    "type": "inject",
+    "z": "316cc7c73206f46a",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "993632594",
+    "payloadType": "num",
+    "x": 140,
+    "y": 540,
+    "wires": [["e1109e9da9922408"]]
+  },
+  {
+    "id": "8a46ce25a3c4d840",
+    "type": "function",
+    "z": "316cc7c73206f46a",
+    "name": "",
+    "func": "let array=[];\nfor(let pd of msg.payload){\n\n   //客户数据\n    let data = {\n        \"日期\":\"\",\n        \"时间\":\"\",\n        \"产品编码\": \"\",\n        \"电阻值\": \"\",\n        \"面积值\": \"\",\n        \"面积差\": \"\",\n        \"漏电流值\": \"\",\n        \"左PIN高度\": \"\",\n        \"右PIN高度\": \"\",\n    //     \"左PIN位置度X\": \"\",\n    //   \"左PIN位置度Y\":\"\",\n    //     \"右PIN位置度X\":\"\", \n    //     \"右PIN位置度Y\":\"\",\n    //     \"通规检测\": \"\",\n    //     \"止规检测\": \"\",\n    //     \"二维码\": \"\",\n    };\n    for (const item of pd.items) {\n        switch(item.Instrument){\n            case \"RM3544\":\n                data.日期 = dayjs(item.Time).format(\"YYYY-MM—DD\");\n                data.时间=dayjs(item.Time).format(\"HH:mm:ss\");\n                data.电阻值=item.Value;\n                data.产品编码=item.Id;\n            break;\n            case \"TH2883\":\n                data.面积值 = item.AreaSize;\n                data.面积差 = item.DiffZone;\n            break;\n            case \"TH9310\":\n                data.漏电流值=item.AC;\n            break;\n            case \"GT\":\n                data.左PIN高度 = item[\"leftpin\"]||\"\";\n                data.右PIN高度 = item[\"rightpin\"] || \"\";\n            break;\n            case \"IX\":\n                data.左PIN高度 = item[\"leftpin\"] ;\n                data.右PIN高度 = item[\"rightpin\"];\n                break;\n            case \"CCD\":\n                for (let prop in item) {\n                    if (item.hasOwnProperty(prop)) {\n                        if (prop != \"_id\" && prop != \"Id\" && prop != \"Time\" && prop != \"Instrument\" && !prop.includes(\"单位\") && !prop.includes(\"判定\")) {\n                            data[prop] = item[prop];\n                        }\n                    }\n                }\n            break;\n            case \"tonggui\":\n                data.通规检测 = item[\"tongui\"]||\"\";\n            break;\n            case \"zhigui\":\n                data.止规检测=item[\"zhigui\"]||\"\";\n            break;\n            case \"SCANNER\":\n                data.二维码 = item[\"QRCODE\"]||\"\";\n            break;\n        }\n       \n    }   \n    array.push(data);\n}\nmsg.payload=array;\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [
+      {
+        "var": "dayjs",
+        "module": "dayjs"
+      }
+    ],
+    "x": 850,
+    "y": 340,
+    "wires": [["7eae27f84dae7950", "2151e726e2fd7df8"]]
+  },
+  {
+    "id": "7eae27f84dae7950",
+    "type": "debug",
+    "z": "316cc7c73206f46a",
+    "name": "最近20个数据",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1040,
+    "y": 320,
+    "wires": []
+  },
+  {
+    "id": "2151e726e2fd7df8",
+    "type": "ui_table",
+    "z": "316cc7c73206f46a",
+    "group": "07de47b0cc50ed9b",
+    "name": "",
+    "order": 2,
+    "width": "30",
+    "height": "10",
+    "columns": [],
+    "outputs": 0,
+    "cts": false,
+    "x": 1030,
+    "y": 380,
+    "wires": []
+  },
+  {
+    "id": "d8c93addcefe474b",
+    "type": "debug",
+    "z": "316cc7c73206f46a",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 772,
+    "y": 399,
+    "wires": []
+  },
+  {
+    "id": "3ae75d687d40566c",
+    "type": "inject",
+    "z": "316cc7c73206f46a",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "3600",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 160,
+    "y": 280,
+    "wires": [["742cec27ec897c5f"]]
+  },
+  {
+    "id": "742cec27ec897c5f",
+    "type": "function",
+    "z": "316cc7c73206f46a",
+    "name": "查询当天数据",
+    "func": "\nmsg.payload=[{\n    $match: {\n        Time: {\n            \"$gt\": new Date(new Date().setHours(0, 0, 0, 0)),\n            \"$lt\": new Date(new Date().setHours(23, 59, 59, 999))\n        }}\n}\n    , {\n\n        $group: {\n            _id: { Id: \"$Id\" },\n            items: {\n                $push: \"$$ROOT\"\n            }\n        },\n\n    }\n];\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 320,
+    "y": 280,
+    "wires": [["09213beb8c2d6086"]]
+  },
+  {
+    "id": "09213beb8c2d6086",
+    "type": "mongodb in",
+    "z": "316cc7c73206f46a",
+    "mongodb": "3d8108abadc5342a",
+    "name": "",
+    "collection": "data",
+    "operation": "aggregate",
+    "x": 540,
+    "y": 280,
+    "wires": [["d650abb8f414f9bc"]]
+  },
+  {
+    "id": "a7f3c4e29e814c9e",
+    "type": "csv",
+    "z": "316cc7c73206f46a",
+    "name": "",
+    "sep": ",",
+    "hdrin": "",
+    "hdrout": "all",
+    "multi": "one",
+    "ret": "\\r\\n",
+    "temp": "",
+    "skip": "0",
+    "strings": true,
+    "include_empty_strings": "",
+    "include_null_values": "",
+    "x": 910,
+    "y": 260,
+    "wires": [["78a83b89e915fba8"]]
+  },
+  {
+    "id": "78a83b89e915fba8",
+    "type": "file",
+    "z": "316cc7c73206f46a",
+    "name": "",
+    "filename": "",
+    "appendNewline": true,
+    "createDir": true,
+    "overwriteFile": "true",
+    "encoding": "none",
+    "x": 1060,
+    "y": 260,
+    "wires": [[]]
+  },
+  {
+    "id": "d650abb8f414f9bc",
+    "type": "function",
+    "z": "316cc7c73206f46a",
+    "name": "",
+    "func": "let array=[];\nfor(let pd of msg.payload){\n\n   //客户数据\n    let data = {\n        \"日期\":\"\",\n        \"时间\":\"\",\n        \"产品编码\": \"\",\n        \"电阻值\": \"\",\n        \"面积值\": \"\",\n        \"面积差\": \"\",\n        \"漏电流值\": \"\",\n        \"左PIN高度\": \"\",\n        \"右PIN高度\": \"\",\n    //     \"左PIN位置度X\": \"\",\n    //   \"左PIN位置度Y\":\"\",\n    //     \"右PIN位置度X\":\"\", \n    //     \"右PIN位置度Y\":\"\",\n    //     \"通规检测\": \"\",\n    //     \"止规检测\": \"\",\n    //     \"二维码\": \"\",\n    };\n    for (const item of pd.items) {\n        switch(item.Instrument){\n            case \"RM3544\":\n                data.日期 = dayjs(item.Time).format(\"YYYY-MM—DD\");\n                data.时间=dayjs(item.Time).format(\"HH:mm:ss\");\n                data.电阻值=item.Value;\n                data.产品编码=item.Id;\n            break;\n            case \"TH2883\":\n                data.面积值 = item.AreaSize;\n                data.面积差 = item.DiffZone;\n            break;\n            case \"TH9310\":\n                data.漏电流值=item.AC;\n            break;\n            case \"GT\":\n                data.左PIN高度 = item[\"leftpin\"]||\"\";\n                data.右PIN高度 = item[\"rightpin\"] || \"\";\n            break;\n            case \"IX\":\n                data.左PIN高度 = item[\"leftpin\"] ;\n                data.右PIN高度 = item[\"rightpin\"];\n                break;\n            case \"CCD\":\n                for (let prop in item) {\n                    if (item.hasOwnProperty(prop)) {\n                        if (prop != \"_id\" && prop != \"Id\" && prop != \"Time\" && prop != \"Instrument\" && !prop.includes(\"单位\") && !prop.includes(\"判定\")) {\n                            data[prop] = item[prop];\n                        }\n                    }\n                }\n            break;\n            case \"tonggui\":\n                data.通规检测 = item[\"tongui\"]||\"\";\n            break;\n            case \"zhigui\":\n                data.止规检测=item[\"zhigui\"]||\"\";\n            break;\n            case \"SCANNER\":\n                data.二维码 = item[\"QRCODE\"]||\"\";\n            break;\n        }\n       \n    }   \n    array.push(data);\n}\nmsg.payload=array;\nmsg.filename =`d:\\\\data\\\\`+ dayjs().format(\"YYYY-MM—DD\")+\".csv\";\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [
+      {
+        "var": "dayjs",
+        "module": "dayjs"
+      }
+    ],
+    "x": 750,
+    "y": 240,
+    "wires": [["a7f3c4e29e814c9e"]]
+  }
+]
