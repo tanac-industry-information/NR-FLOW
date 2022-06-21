@@ -1,0 +1,6854 @@
+[
+    {
+        "id": "54415c5754db4b7e",
+        "type": "tab",
+        "label": "生产数据汇总",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e378f3a9610b79ec",
+        "type": "tab",
+        "label": "生产数据汇总-2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "29c7035e6baf85fe",
+        "type": "tab",
+        "label": "流程 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a9063b5b95487afc",
+        "type": "tab",
+        "label": "流程 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3209096b.8836c6",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#638ac5",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#638ac5",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#638ac5",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#9bb4da",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#638ac5",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "嘉益",
+            "hideToolbar": "false",
+            "allowSwipe": "true",
+            "lockMenu": "true",
+            "allowTempTheme": "none",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "6527fe57c39366ec",
+        "type": "MC Protocol Connection",
+        "name": "",
+        "host": "192.168.1.10",
+        "port": "5000",
+        "protocol": "TCP",
+        "frame": "3E",
+        "plcType": "Q",
+        "ascii": false,
+        "PLCStation": "",
+        "PCStation": "",
+        "PLCModuleNo": "",
+        "network": "",
+        "octalInputOutput": false,
+        "timeout": "1000"
+    },
+    {
+        "id": "5ccd16f7d4ea9d02",
+        "type": "ui_group",
+        "name": "脱扣判定标准",
+        "tab": "3a9a73e5cc29f4c3",
+        "order": 1,
+        "disp": true,
+        "width": 24,
+        "collapse": false
+    },
+    {
+        "id": "f69b45cc06c8a211",
+        "type": "ui_tab",
+        "name": "设备运行数据",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "6f5fdceaa4e07425",
+        "type": "ui_group",
+        "name": "生产统计",
+        "tab": "f69b45cc06c8a211",
+        "order": 1,
+        "disp": true,
+        "width": 16,
+        "collapse": false
+    },
+    {
+        "id": "e7e696bde79f0205",
+        "type": "ui_group",
+        "name": "质量统计",
+        "tab": "f69b45cc06c8a211",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "96bbcb9b27ba1c40",
+        "type": "ui_group",
+        "name": "设备运行状态",
+        "tab": "f69b45cc06c8a211",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "2aba20bdf0f8447b",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "6f5fdceaa4e07425",
+        "order": 3,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "61eef5edb10f01c7",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "e7e696bde79f0205",
+        "order": 2,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "219e2d57d485d22d",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "e7e696bde79f0205",
+        "order": 3,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "8658da063d1df58d",
+        "type": "MC Protocol Connection",
+        "name": "",
+        "host": "192.168.1.20",
+        "port": "5000",
+        "protocol": "TCP",
+        "frame": "3E",
+        "plcType": "Q",
+        "ascii": false,
+        "PLCStation": "",
+        "PCStation": "",
+        "PLCModuleNo": "",
+        "network": "",
+        "octalInputOutput": false,
+        "timeout": "1000"
+    },
+    {
+        "id": "a6ea2cb003fec595",
+        "type": "ui_tab",
+        "name": "设备运行数据-2",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "79550e48756631ff",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 5,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "f4329b7616d58797",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 10,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "e95ab44d772ce564",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 15,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "a4ce17da88bda8be",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 20,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "9a095c9a936448d0",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 4,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "410172753b06fc95",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 8,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "390b9618ec9ceabd",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 15,
+        "width": 10,
+        "height": 1
+    },
+    {
+        "id": "06c3b1bd29918922",
+        "type": "ui_group",
+        "name": "生产统计",
+        "tab": "a6ea2cb003fec595",
+        "order": 1,
+        "disp": true,
+        "width": "16",
+        "collapse": false
+    },
+    {
+        "id": "bd9d30497a3bdc57",
+        "type": "ui_group",
+        "name": "质量统计",
+        "tab": "a6ea2cb003fec595",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "39440d5e3008833d",
+        "type": "ui_group",
+        "name": "设备运行状态",
+        "tab": "a6ea2cb003fec595",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "c68666f03ecd9da8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "06c3b1bd29918922",
+        "order": 3,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "f8d959a39f5394a1",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "bd9d30497a3bdc57",
+        "order": 2,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "33bfbe535ef90415",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "bd9d30497a3bdc57",
+        "order": 3,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "3a9a73e5cc29f4c3",
+        "type": "ui_tab",
+        "name": "测试数据",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "0fb9787a892af01f",
+        "type": "ui_group",
+        "name": "磁通电阻上下限",
+        "tab": "3a9a73e5cc29f4c3",
+        "order": 4,
+        "disp": true,
+        "width": 8,
+        "collapse": false
+    },
+    {
+        "id": "c795f486d0c9b990",
+        "type": "ui_group",
+        "name": "微动开关上下限",
+        "tab": "3a9a73e5cc29f4c3",
+        "order": 3,
+        "disp": true,
+        "width": 8,
+        "collapse": false
+    },
+    {
+        "id": "8aeee8d89d872256",
+        "type": "ui_group",
+        "name": "测试数据",
+        "tab": "3a9a73e5cc29f4c3",
+        "order": 5,
+        "disp": false,
+        "width": 24,
+        "collapse": false
+    },
+    {
+        "id": "7225d610a969ddc7",
+        "type": "ui_group",
+        "name": "当天产品数据统计",
+        "tab": "3a9a73e5cc29f4c3",
+        "order": 4,
+        "disp": true,
+        "width": 24,
+        "collapse": false
+    },
+    {
+        "id": "6c02dfb21c50f805",
+        "type": "ui_tab",
+        "name": "测试数据-2",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ee8e5fd4215832b1",
+        "type": "ui_group",
+        "name": "脱扣判定标准",
+        "tab": "6c02dfb21c50f805",
+        "order": 1,
+        "disp": true,
+        "width": 24,
+        "collapse": false
+    },
+    {
+        "id": "5eec1ae40a230115",
+        "type": "ui_group",
+        "name": "微动开关上下限",
+        "tab": "6c02dfb21c50f805",
+        "order": 2,
+        "disp": true,
+        "width": 9,
+        "collapse": false
+    },
+    {
+        "id": "894856fcb20d0847",
+        "type": "ui_group",
+        "name": "磁通电阻上下限",
+        "tab": "6c02dfb21c50f805",
+        "order": 3,
+        "disp": true,
+        "width": 9,
+        "collapse": false
+    },
+    {
+        "id": "8a7139cd29bd218c",
+        "type": "ui_group",
+        "name": "当天产品数据统计",
+        "tab": "6c02dfb21c50f805",
+        "order": 4,
+        "disp": true,
+        "width": 24,
+        "collapse": false
+    },
+    {
+        "id": "9fefbd7904c274f0",
+        "type": "ui_group",
+        "name": "测试数据",
+        "tab": "6c02dfb21c50f805",
+        "order": 5,
+        "disp": true,
+        "width": 18,
+        "collapse": false
+    },
+    {
+        "id": "fa12624ae4e16157",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "ee8e5fd4215832b1",
+        "order": 4,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "1cd1bc20e04cb152",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "ee8e5fd4215832b1",
+        "order": 8,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "6ff91bc1996c89fe",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "5eec1ae40a230115",
+        "order": 3,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "d5cf891f4d242df8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "894856fcb20d0847",
+        "order": 3,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "3f1833b57f6102fa",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "8a7139cd29bd218c",
+        "order": 4,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "8a46ab5d41486c32",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "8a7139cd29bd218c",
+        "order": 5,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "44d864b80a574a62",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "8a7139cd29bd218c",
+        "order": 6,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "708f37c50e05766d",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "8a7139cd29bd218c",
+        "order": 7,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "a9e5433f39751096",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "8a7139cd29bd218c",
+        "order": 8,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "af8f020378491da7",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "8a7139cd29bd218c",
+        "order": 9,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "01da0be81dd10a3b",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "9fefbd7904c274f0",
+        "order": 2,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "4b721b8603765156",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "9fefbd7904c274f0",
+        "order": 5,
+        "width": 10,
+        "height": 1
+    },
+    {
+        "id": "5cb6452e125219a9",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "9fefbd7904c274f0",
+        "order": 8,
+        "width": 10,
+        "height": 1
+    },
+    {
+        "id": "4f0815098b0dc172",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "9fefbd7904c274f0",
+        "order": 11,
+        "width": 10,
+        "height": 1
+    },
+    {
+        "id": "89749fb7.87f01",
+        "type": "ui_group",
+        "name": "Charts",
+        "tab": "d7901f40.2659d",
+        "order": 2,
+        "disp": false,
+        "width": "6"
+    },
+    {
+        "id": "ab397e95.29ebe",
+        "type": "ui_group",
+        "name": "Inputs",
+        "tab": "d7901f40.2659d",
+        "order": 1,
+        "disp": false,
+        "width": "6"
+    },
+    {
+        "id": "4e7edda4.417004",
+        "type": "ui_group",
+        "name": "Group 3",
+        "tab": "d7901f40.2659d",
+        "order": 3,
+        "disp": false,
+        "width": "6"
+    },
+    {
+        "id": "d7901f40.2659d",
+        "type": "ui_tab",
+        "name": "Charts",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": true
+    },
+    {
+        "id": "e23ed541bd91df8b",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "5ccd16f7d4ea9d02",
+        "order": 4,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "125acc117f81487a",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "5ccd16f7d4ea9d02",
+        "order": 8,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "f610366cc532ee9e",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "c795f486d0c9b990",
+        "order": 3,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "4e9484b59d4a4333",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "0fb9787a892af01f",
+        "order": 3,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "be80ec45a445ce4a",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "7225d610a969ddc7",
+        "order": 4,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "1f4edc622793adda",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "7225d610a969ddc7",
+        "order": 5,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "0c825fd2c8536399",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "7225d610a969ddc7",
+        "order": 6,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "2422cc569a28ffbf",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "7225d610a969ddc7",
+        "order": 7,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "23a57c5ef8d776db",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "7225d610a969ddc7",
+        "order": 8,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "83bd0b288a61e140",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "7225d610a969ddc7",
+        "order": 9,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "a9cb05543c2757ea",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "8aeee8d89d872256",
+        "order": 4,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "393d4b0b1e5d34ab",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "8aeee8d89d872256",
+        "order": 5,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "de9175bd2806ca1c",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "8aeee8d89d872256",
+        "order": 8,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "8af8d7d1131b5f83",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "8aeee8d89d872256",
+        "order": 9,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "c5083b673e81d5d4",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "8aeee8d89d872256",
+        "order": 12,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "dc6e34780d85d21a",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "8aeee8d89d872256",
+        "order": 13,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "82cdb06654695598",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "8aeee8d89d872256",
+        "order": 16,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "5abd52167b995cb2",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "8aeee8d89d872256",
+        "order": 20,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "7e1bde4ec752a5c5",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "8aeee8d89d872256",
+        "order": 21,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "7a516a17d3da2d7a",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "8aeee8d89d872256",
+        "order": 22,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "843f04fa0e6e17f0",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "8aeee8d89d872256",
+        "order": 23,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "332245d5e2579256",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "8aeee8d89d872256",
+        "order": 24,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "0d76ceee0894a751",
+        "type": "MC Read",
+        "z": "54415c5754db4b7e",
+        "name": "PLC读数据:汇总数据",
+        "topic": "",
+        "connection": "6527fe57c39366ec",
+        "address": "D400,60",
+        "addressType": "str",
+        "outputFormat": "1",
+        "errorHandling": "throw",
+        "outputs": 1,
+        "x": 440,
+        "y": 180,
+        "wires": [
+            [
+                "0b30351600339468",
+                "61fa5995c3fa248c",
+                "51625bfd277be77d",
+                "64ff025522e0fe16",
+                "5e086308fa58e2dd",
+                "18cf9e3a1a1d4bac",
+                "caaee0530f33c46d",
+                "31ec974502b5d934",
+                "2e4d863ff9ed1a3c",
+                "81791ee9b7b85099"
+            ]
+        ]
+    },
+    {
+        "id": "0b30351600339468",
+        "type": "function",
+        "z": "54415c5754db4b7e",
+        "name": "Array[0]",
+        "func": "var Result_H, Result_L;\nResult_H = msg.payload[1] & 0xffff; //转成无符号16位10进制\nResult_L = msg.payload[0] & 0xffff; //转成无符号16位10进制\nmsg.payload = (Result_L + Result_H * 65536);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 100,
+        "wires": [
+            [
+                "fda15def27b1ccd1"
+            ]
+        ]
+    },
+    {
+        "id": "61fa5995c3fa248c",
+        "type": "function",
+        "z": "54415c5754db4b7e",
+        "name": "Array[1]",
+        "func": "var Result_H, Result_L;\nResult_H = msg.payload[3] & 0xffff; //转成无符号16位10进制\nResult_L = msg.payload[2] & 0xffff;\nmsg.payload = (Result_L + Result_H * 65536);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 140,
+        "wires": [
+            [
+                "1431f529642beeb6"
+            ]
+        ]
+    },
+    {
+        "id": "51625bfd277be77d",
+        "type": "function",
+        "z": "54415c5754db4b7e",
+        "name": "Array[2]",
+        "func": "var Result_H, Result_L;\nResult_H = msg.payload[5] & 0xffff; //转成无符号16位10进制\nResult_L = msg.payload[4] & 0xffff;\nmsg.payload = (Result_L + Result_H * 65536);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 180,
+        "wires": [
+            [
+                "a717c8c92abe135f"
+            ]
+        ]
+    },
+    {
+        "id": "64ff025522e0fe16",
+        "type": "function",
+        "z": "54415c5754db4b7e",
+        "name": "Array[3]",
+        "func": "var Result_H, Result_L;\nResult_H = msg.payload[7] & 0xffff; //转成无符号16位10进制\nResult_L = msg.payload[6] & 0xffff;\nmsg.payload = (Result_L + Result_H * 65536);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 220,
+        "wires": [
+            [
+                "1d6c854110cebb21"
+            ]
+        ]
+    },
+    {
+        "id": "5e086308fa58e2dd",
+        "type": "function",
+        "z": "54415c5754db4b7e",
+        "name": "Array[4]",
+        "func": "var Result_H, Result_L;\nResult_H = msg.payload[11] & 0xffff; //转成无符号16位10进制\nResult_L = msg.payload[10] & 0xffff;\nmsg.payload = (Result_L + Result_H * 65536)/100;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 260,
+        "wires": [
+            [
+                "d316ad23fc81ca41"
+            ]
+        ]
+    },
+    {
+        "id": "fda15def27b1ccd1",
+        "type": "ui_text",
+        "z": "54415c5754db4b7e",
+        "group": "6f5fdceaa4e07425",
+        "order": 1,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "投入数量（PCS）",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 910,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "1431f529642beeb6",
+        "type": "ui_text",
+        "z": "54415c5754db4b7e",
+        "group": "6f5fdceaa4e07425",
+        "order": 2,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "生产数量（PCS）",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 910,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "18cf9e3a1a1d4bac",
+        "type": "function",
+        "z": "54415c5754db4b7e",
+        "name": "Array[5]",
+        "func": "var Result_H, Result_L;\nResult_H = msg.payload[13] & 0xffff; //转成无符号16位10进制\nResult_L = msg.payload[12] & 0xffff;\nmsg.payload = (Result_L + Result_H * 65536)/100;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 300,
+        "wires": [
+            [
+                "cd5d3a449ffa60bc"
+            ]
+        ]
+    },
+    {
+        "id": "bb5b12063fd2347e",
+        "type": "inject",
+        "z": "54415c5754db4b7e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 180,
+        "wires": [
+            [
+                "0d76ceee0894a751"
+            ]
+        ]
+    },
+    {
+        "id": "d316ad23fc81ca41",
+        "type": "ui_gauge",
+        "z": "54415c5754db4b7e",
+        "name": "",
+        "group": "e7e696bde79f0205",
+        "order": 1,
+        "width": 3,
+        "height": 3,
+        "gtype": "donut",
+        "title": "良品 率",
+        "label": "",
+        "format": "{{value | number:2}}%",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 880,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "1d6c854110cebb21",
+        "type": "ui_text",
+        "z": "54415c5754db4b7e",
+        "group": "e7e696bde79f0205",
+        "order": 5,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "良品数量（PCS）",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 910,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "a717c8c92abe135f",
+        "type": "ui_text",
+        "z": "54415c5754db4b7e",
+        "group": "e7e696bde79f0205",
+        "order": 6,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "不良品数量（PCS）",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 920,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "cd5d3a449ffa60bc",
+        "type": "ui_text",
+        "z": "54415c5754db4b7e",
+        "group": "e7e696bde79f0205",
+        "order": 4,
+        "width": 3,
+        "height": 1,
+        "name": "",
+        "label": "不良率",
+        "format": "{{msg.payload}}%",
+        "layout": "row-spread",
+        "x": 870,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "caaee0530f33c46d",
+        "type": "function",
+        "z": "54415c5754db4b7e",
+        "name": "Array[10]",
+        "func": "var Result_H, Result_L;\nResult_H = msg.payload[21] & 0xffff; //转成无符号16位10进制\nResult_L = msg.payload[20] & 0xffff;\nmsg.payload = (Result_L + Result_H * 65536)/100;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 340,
+        "wires": [
+            [
+                "1153b3fb6b4b0a28"
+            ]
+        ]
+    },
+    {
+        "id": "1153b3fb6b4b0a28",
+        "type": "ui_text",
+        "z": "54415c5754db4b7e",
+        "group": "96bbcb9b27ba1c40",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "运行时间",
+        "format": "{{msg.payload}}(Min)",
+        "layout": "row-spread",
+        "x": 880,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "31ec974502b5d934",
+        "type": "function",
+        "z": "54415c5754db4b7e",
+        "name": "Array[11]",
+        "func": "var Result_H, Result_L;\nResult_H = msg.payload[47] & 0xffff; //转成无符号16位10进制\nResult_L = msg.payload[46] & 0xffff;\nmsg.payload = (Result_L + Result_H * 65536)/100;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 380,
+        "wires": [
+            [
+                "9536ccf1ba724d93"
+            ]
+        ]
+    },
+    {
+        "id": "9536ccf1ba724d93",
+        "type": "ui_text",
+        "z": "54415c5754db4b7e",
+        "group": "96bbcb9b27ba1c40",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "待机时间",
+        "format": "{{msg.payload}}(Min)",
+        "layout": "row-spread",
+        "x": 880,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "2e4d863ff9ed1a3c",
+        "type": "function",
+        "z": "54415c5754db4b7e",
+        "name": "Array[12]",
+        "func": "var Result_H, Result_L;\nResult_H = msg.payload[43] & 0xffff; //转成无符号16位10进制\nResult_L = msg.payload[42] & 0xffff;\nmsg.payload = (Result_L + Result_H * 65536)/100;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 420,
+        "wires": [
+            [
+                "10accf629859b4e7"
+            ]
+        ]
+    },
+    {
+        "id": "10accf629859b4e7",
+        "type": "ui_text",
+        "z": "54415c5754db4b7e",
+        "group": "96bbcb9b27ba1c40",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "停机时间",
+        "format": "{{msg.payload}}(Min)",
+        "layout": "row-spread",
+        "x": 880,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "81791ee9b7b85099",
+        "type": "function",
+        "z": "54415c5754db4b7e",
+        "name": "Array[13]",
+        "func": "var Result_H, Result_L;\nResult_H = msg.payload[51] & 0xffff; //转成无符号16位10进制\nResult_L = msg.payload[50] & 0xffff;\nmsg.payload = (Result_L + Result_H * 65536)/100;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 460,
+        "wires": [
+            [
+                "33da679f91d71180"
+            ]
+        ]
+    },
+    {
+        "id": "33da679f91d71180",
+        "type": "ui_text",
+        "z": "54415c5754db4b7e",
+        "group": "96bbcb9b27ba1c40",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "故障时间",
+        "format": "{{msg.payload}}(Min)",
+        "layout": "row-spread",
+        "x": 880,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "34ea0d39c4dcfd74",
+        "type": "MC Read",
+        "z": "e378f3a9610b79ec",
+        "name": "PLC读数据:汇总数据",
+        "topic": "",
+        "connection": "8658da063d1df58d",
+        "address": "D400,60",
+        "addressType": "str",
+        "outputFormat": "1",
+        "errorHandling": "throw",
+        "outputs": 1,
+        "x": 640,
+        "y": 500,
+        "wires": [
+            [
+                "8a3a46824ec00b85",
+                "33db15fc3e88ccbc",
+                "23f2d5c77820970b",
+                "6a68b992ed4a0e41",
+                "6c7b72c84c3214a1",
+                "7f1f8e415cfd7159",
+                "8f7895037d9f6238",
+                "52e442d7949aa3ab",
+                "2241e316b314243b"
+            ]
+        ]
+    },
+    {
+        "id": "8a3a46824ec00b85",
+        "type": "function",
+        "z": "e378f3a9610b79ec",
+        "name": "Array[0]",
+        "func": "var Result_H, Result_L;\nResult_H = msg.payload[1] & 0xffff; //转成无符号16位10进制\nResult_L = msg.payload[0] & 0xffff; //转成无符号16位10进制\nmsg.payload = (Result_L + Result_H * 65536);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1260,
+        "y": 720,
+        "wires": [
+            [
+                "da949d2d1b0341d1"
+            ]
+        ]
+    },
+    {
+        "id": "33db15fc3e88ccbc",
+        "type": "function",
+        "z": "e378f3a9610b79ec",
+        "name": "Array[1]",
+        "func": "var Result_H, Result_L;\nResult_H = msg.payload[3] & 0xffff; //转成无符号16位10进制\nResult_L = msg.payload[2] & 0xffff;\nmsg.payload = (Result_L + Result_H * 65536);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1260,
+        "y": 760,
+        "wires": [
+            [
+                "a22631de7bfc9caf"
+            ]
+        ]
+    },
+    {
+        "id": "23f2d5c77820970b",
+        "type": "function",
+        "z": "e378f3a9610b79ec",
+        "name": "Array[2]",
+        "func": "var Result_H, Result_L;\nResult_H = msg.payload[5] & 0xffff; //转成无符号16位10进制\nResult_L = msg.payload[4] & 0xffff;\nmsg.payload = (Result_L + Result_H * 65536);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1260,
+        "y": 800,
+        "wires": [
+            [
+                "573dac403645e437"
+            ]
+        ]
+    },
+    {
+        "id": "6a68b992ed4a0e41",
+        "type": "function",
+        "z": "e378f3a9610b79ec",
+        "name": "Array[3]",
+        "func": "var Result_H, Result_L;\nResult_H = msg.payload[7] & 0xffff; //转成无符号16位10进制\nResult_L = msg.payload[6] & 0xffff;\nmsg.payload = (Result_L + Result_H * 65536);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1260,
+        "y": 840,
+        "wires": [
+            [
+                "51ca62346aa8262c"
+            ]
+        ]
+    },
+    {
+        "id": "da949d2d1b0341d1",
+        "type": "ui_text",
+        "z": "e378f3a9610b79ec",
+        "group": "06c3b1bd29918922",
+        "order": 1,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "投入数量（PCS）",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 1450,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "a22631de7bfc9caf",
+        "type": "ui_text",
+        "z": "e378f3a9610b79ec",
+        "group": "06c3b1bd29918922",
+        "order": 2,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "生产数量（PCS）",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 1450,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "4005f732f8ecaf78",
+        "type": "inject",
+        "z": "e378f3a9610b79ec",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "0.5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 520,
+        "y": 380,
+        "wires": [
+            [
+                "34ea0d39c4dcfd74"
+            ]
+        ]
+    },
+    {
+        "id": "abd04f1de4826053",
+        "type": "ui_gauge",
+        "z": "e378f3a9610b79ec",
+        "name": "",
+        "group": "bd9d30497a3bdc57",
+        "order": 1,
+        "width": 3,
+        "height": 3,
+        "gtype": "donut",
+        "title": "良品 率",
+        "label": "",
+        "format": "{{value | number:2}}%",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1420,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "51ca62346aa8262c",
+        "type": "ui_text",
+        "z": "e378f3a9610b79ec",
+        "group": "bd9d30497a3bdc57",
+        "order": 6,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "良品数量（PCS）",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1450,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "573dac403645e437",
+        "type": "ui_text",
+        "z": "e378f3a9610b79ec",
+        "group": "bd9d30497a3bdc57",
+        "order": 5,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "不良品数量（PCS）",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1460,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "d81c0b751c479642",
+        "type": "ui_text",
+        "z": "e378f3a9610b79ec",
+        "group": "bd9d30497a3bdc57",
+        "order": 4,
+        "width": 3,
+        "height": 1,
+        "name": "",
+        "label": "不良率",
+        "format": "{{value | number:2}}%",
+        "layout": "row-spread",
+        "x": 1410,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "6c7b72c84c3214a1",
+        "type": "function",
+        "z": "e378f3a9610b79ec",
+        "name": "Array[10]",
+        "func": "var Result_H, Result_L;\nResult_H = msg.payload[21] & 0xffff; //转成无符号16位10进制\nResult_L = msg.payload[20] & 0xffff;\nmsg.payload = (Result_L + Result_H * 65536)/100;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1260,
+        "y": 960,
+        "wires": [
+            [
+                "900806bba6045483"
+            ]
+        ]
+    },
+    {
+        "id": "900806bba6045483",
+        "type": "ui_text",
+        "z": "e378f3a9610b79ec",
+        "group": "39440d5e3008833d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "运行时间",
+        "format": "{{msg.payload}}(Min)",
+        "layout": "row-spread",
+        "x": 1420,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "7f1f8e415cfd7159",
+        "type": "function",
+        "z": "e378f3a9610b79ec",
+        "name": "Array[11]",
+        "func": "var Result_H, Result_L;\nResult_H = msg.payload[47] & 0xffff; //转成无符号16位10进制\nResult_L = msg.payload[46] & 0xffff;\nmsg.payload = (Result_L + Result_H * 65536)/100;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1260,
+        "y": 1000,
+        "wires": [
+            [
+                "897ed0bf6116f4c9"
+            ]
+        ]
+    },
+    {
+        "id": "897ed0bf6116f4c9",
+        "type": "ui_text",
+        "z": "e378f3a9610b79ec",
+        "group": "39440d5e3008833d",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "待机时间",
+        "format": "{{msg.payload}}(Min)",
+        "layout": "row-spread",
+        "x": 1420,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "8f7895037d9f6238",
+        "type": "function",
+        "z": "e378f3a9610b79ec",
+        "name": "Array[12]",
+        "func": "var Result_H, Result_L;\nResult_H = msg.payload[43] & 0xffff; //转成无符号16位10进制\nResult_L = msg.payload[42] & 0xffff;\nmsg.payload = (Result_L + Result_H * 65536)/100;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1260,
+        "y": 1040,
+        "wires": [
+            [
+                "a31a373a062a99a0"
+            ]
+        ]
+    },
+    {
+        "id": "a31a373a062a99a0",
+        "type": "ui_text",
+        "z": "e378f3a9610b79ec",
+        "group": "39440d5e3008833d",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "停机时间",
+        "format": "{{msg.payload}}(Min)",
+        "layout": "row-spread",
+        "x": 1420,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "52e442d7949aa3ab",
+        "type": "function",
+        "z": "e378f3a9610b79ec",
+        "name": "Array[13]",
+        "func": "var Result_H, Result_L;\nResult_H = msg.payload[51] & 0xffff; //转成无符号16位10进制\nResult_L = msg.payload[50] & 0xffff;\nmsg.payload = (Result_L + Result_H * 65536)/100;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1260,
+        "y": 1080,
+        "wires": [
+            [
+                "0d8a37f533e56fbe"
+            ]
+        ]
+    },
+    {
+        "id": "0d8a37f533e56fbe",
+        "type": "ui_text",
+        "z": "e378f3a9610b79ec",
+        "group": "39440d5e3008833d",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "故障时间",
+        "format": "{{msg.payload}}(Min)",
+        "layout": "row-spread",
+        "x": 1420,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "2241e316b314243b",
+        "type": "buffer-parser",
+        "z": "e378f3a9610b79ec",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "type": "floatle",
+                "name": "良品率",
+                "offset": 20,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "floatle",
+                "name": "不良率",
+                "offset": 24,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            }
+        ],
+        "swap1": "swap16",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "resultType": "keyvalue",
+        "resultTypeType": "return",
+        "multipleResult": false,
+        "fanOutMultipleResult": false,
+        "setTopic": true,
+        "outputs": 1,
+        "x": 790,
+        "y": 720,
+        "wires": [
+            [
+                "db1202617d4f0918",
+                "4d25606ed90cb2e1",
+                "a6d25b9dab66e8e5"
+            ]
+        ]
+    },
+    {
+        "id": "db1202617d4f0918",
+        "type": "debug",
+        "z": "e378f3a9610b79ec",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "4d25606ed90cb2e1",
+        "type": "change",
+        "z": "e378f3a9610b79ec",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[\"良品率\"]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1190,
+        "y": 860,
+        "wires": [
+            [
+                "abd04f1de4826053"
+            ]
+        ]
+    },
+    {
+        "id": "a6d25b9dab66e8e5",
+        "type": "change",
+        "z": "e378f3a9610b79ec",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[\"不良率\"]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1250,
+        "y": 920,
+        "wires": [
+            [
+                "d81c0b751c479642"
+            ]
+        ]
+    },
+    {
+        "id": "221117ea89455695",
+        "type": "MC Read",
+        "z": "29c7035e6baf85fe",
+        "name": "readvolsetting",
+        "topic": "",
+        "connection": "6527fe57c39366ec",
+        "address": "D50000,250",
+        "addressType": "str",
+        "outputFormat": "1",
+        "errorHandling": "throw",
+        "outputs": 1,
+        "x": 280,
+        "y": 100,
+        "wires": [
+            [
+                "c3e1694981bb9d5e"
+            ]
+        ]
+    },
+    {
+        "id": "20f050d70bb65319",
+        "type": "inject",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 100,
+        "wires": [
+            [
+                "221117ea89455695"
+            ]
+        ]
+    },
+    {
+        "id": "c3e1694981bb9d5e",
+        "type": "buffer-parser",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "type": "int16le",
+                "name": "测试电压1",
+                "offset": 0,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "/100",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "测试电压2",
+                "offset": 60,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "/100",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "测试电压3",
+                "offset": 120,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "/100",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "测试电压4",
+                "offset": 180,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "/100",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "测试电压5",
+                "offset": 240,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "/100",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "测试电压6",
+                "offset": 300,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "/100",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "测试电压7",
+                "offset": 360,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "/100",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "测试电压8",
+                "offset": 420,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "/100",
+                "mask": ""
+            }
+        ],
+        "swap1": "swap16",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "resultType": "keyvalue",
+        "resultTypeType": "return",
+        "multipleResult": false,
+        "fanOutMultipleResult": false,
+        "setTopic": true,
+        "outputs": 1,
+        "x": 450,
+        "y": 100,
+        "wires": [
+            [
+                "0ed018ad7823ff1b",
+                "747602e46354c869"
+            ]
+        ]
+    },
+    {
+        "id": "0ed018ad7823ff1b",
+        "type": "debug",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "6b90772b5ba28855",
+        "type": "MC Read",
+        "z": "29c7035e6baf85fe",
+        "name": "readstatistics",
+        "topic": "",
+        "connection": "6527fe57c39366ec",
+        "address": "D24000,200",
+        "addressType": "str",
+        "outputFormat": "1",
+        "errorHandling": "throw",
+        "outputs": 1,
+        "x": 270,
+        "y": 240,
+        "wires": [
+            [
+                "32e628b9fe0cd010"
+            ]
+        ]
+    },
+    {
+        "id": "32e628b9fe0cd010",
+        "type": "buffer-parser",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "type": "int16le",
+                "name": "生产总数",
+                "offset": 150,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "合格数量",
+                "offset": 152,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "不合格数量",
+                "offset": 154,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "微动开关不合格",
+                "offset": 156,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "4.5V脱扣数",
+                "offset": 158,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "8V不脱扣数",
+                "offset": 174,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "电阻不合格数",
+                "offset": 176,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "良品统计1",
+                "offset": 160,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "良品统计2",
+                "offset": 162,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "良品统计3",
+                "offset": 164,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "良品统计4",
+                "offset": 166,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "良品统计5",
+                "offset": 168,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "良品统计6",
+                "offset": 170,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "良品统计7",
+                "offset": 172,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "测试结果1",
+                "offset": 140,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "==1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "测试结果2",
+                "offset": 142,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "==1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "测试结果3",
+                "offset": 144,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "==1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "测试结果4",
+                "offset": 146,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "==1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "序号",
+                "offset": 198,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": 0,
+                "mask": ""
+            }
+        ],
+        "swap1": "swap16",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "resultType": "keyvalue",
+        "resultTypeType": "return",
+        "multipleResult": false,
+        "fanOutMultipleResult": false,
+        "setTopic": true,
+        "outputs": 1,
+        "x": 430,
+        "y": 240,
+        "wires": [
+            [
+                "a0386b12ad789d04",
+                "a22dca11b74e6016"
+            ]
+        ]
+    },
+    {
+        "id": "a0386b12ad789d04",
+        "type": "debug",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "37990ef1f25bd7d8",
+        "type": "MC Read",
+        "z": "29c7035e6baf85fe",
+        "name": "readrecord",
+        "topic": "",
+        "connection": "6527fe57c39366ec",
+        "address": "D24100,500",
+        "addressType": "str",
+        "outputFormat": "1",
+        "errorHandling": "throw",
+        "outputs": 1,
+        "x": 250,
+        "y": 380,
+        "wires": [
+            [
+                "39948803b2846b91"
+            ]
+        ]
+    },
+    {
+        "id": "39948803b2846b91",
+        "type": "buffer-parser",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "type": "int16le",
+                "name": "微动开关常闭触点电阻值(0-1)Ω",
+                "offset": 0,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "/1000",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "微动开关常开触点电阻值(0-1)Ω",
+                "offset": 200,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "/1000",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "25℃时磁通线圈电阻(3.96-4.84)Ω",
+                "offset": 400,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "/1000",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "实测脱扣电压值(4.6-8)V",
+                "offset": 600,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "/100",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "判定",
+                "offset": 800,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "==1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "trigger",
+                "offset": 802,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "==1",
+                "mask": ""
+            }
+        ],
+        "swap1": "swap16",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "resultType": "keyvalue",
+        "resultTypeType": "return",
+        "multipleResult": false,
+        "fanOutMultipleResult": false,
+        "setTopic": true,
+        "outputs": 1,
+        "x": 410,
+        "y": 380,
+        "wires": [
+            [
+                "d2dde65ef697f07f",
+                "e290294b078c664a",
+                "001992967fbcf502"
+            ]
+        ]
+    },
+    {
+        "id": "d2dde65ef697f07f",
+        "type": "debug",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "747602e46354c869",
+        "type": "change",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "volsetting",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a22dca11b74e6016",
+        "type": "change",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "statistics",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e290294b078c664a",
+        "type": "change",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "record",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "daaa9270bee7b307",
+        "type": "complete",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "scope": [
+            "747602e46354c869"
+        ],
+        "uncaught": false,
+        "x": 110,
+        "y": 240,
+        "wires": [
+            [
+                "6b90772b5ba28855"
+            ]
+        ]
+    },
+    {
+        "id": "8ee655a380311d89",
+        "type": "complete",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "scope": [
+            "a22dca11b74e6016"
+        ],
+        "uncaught": false,
+        "x": 90,
+        "y": 380,
+        "wires": [
+            [
+                "37990ef1f25bd7d8"
+            ]
+        ]
+    },
+    {
+        "id": "3674fc920fdd9026",
+        "type": "ui_text",
+        "z": "29c7035e6baf85fe",
+        "group": "5ccd16f7d4ea9d02",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "上限电压",
+        "format": "{{msg.payload}} V",
+        "layout": "row-spread",
+        "x": 600,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "fef19a8d03a71238",
+        "type": "ui_text",
+        "z": "29c7035e6baf85fe",
+        "group": "5ccd16f7d4ea9d02",
+        "order": 5,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "下限电压",
+        "format": "{{msg.payload}} V",
+        "layout": "row-spread",
+        "x": 600,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "db60356e1bfbc009",
+        "type": "inject",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 640,
+        "wires": [
+            [
+                "94286cab6c311c9f"
+            ]
+        ]
+    },
+    {
+        "id": "94286cab6c311c9f",
+        "type": "change",
+        "z": "29c7035e6baf85fe",
+        "name": "volsetting",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "volsetting",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 240,
+        "y": 640,
+        "wires": [
+            [
+                "8d35a1bc6b41a5df",
+                "87ff507390613ee1"
+            ]
+        ]
+    },
+    {
+        "id": "ffc7d75f4f95ec54",
+        "type": "ui_template",
+        "z": "29c7035e6baf85fe",
+        "group": "5ccd16f7d4ea9d02",
+        "name": "脱扣OK",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "format": "<div  layout=\"row\" class=\"minheight md-title mt-2 t-center\" layout-align=\"space-around center\">\n    <div flex=\"\">脱扣</div>\n    <div flex=\"\" class=\"ok state\">OK</div>\n</div>\n\n\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 720,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9ab1cacb39d188c1",
+        "type": "MC Read",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "topic": "",
+        "connection": "6527fe57c39366ec",
+        "address": "D23900,100",
+        "addressType": "str",
+        "outputFormat": "1",
+        "errorHandling": "throw",
+        "outputs": 1,
+        "x": 260,
+        "y": 480,
+        "wires": [
+            [
+                "40a0e52267dbcef8"
+            ]
+        ]
+    },
+    {
+        "id": "9562ebc7ff0ab850",
+        "type": "complete",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "scope": [
+            "e290294b078c664a"
+        ],
+        "uncaught": false,
+        "x": 90,
+        "y": 480,
+        "wires": [
+            [
+                "9ab1cacb39d188c1"
+            ]
+        ]
+    },
+    {
+        "id": "40a0e52267dbcef8",
+        "type": "buffer-parser",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "type": "int16le",
+                "name": "微动开关下限",
+                "offset": 190,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "微动开关上限",
+                "offset": 188,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "磁通电阻下限",
+                "offset": 194,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "磁通电阻上限",
+                "offset": 192,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            }
+        ],
+        "swap1": "swap16",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "resultType": "keyvalue",
+        "resultTypeType": "return",
+        "multipleResult": false,
+        "fanOutMultipleResult": false,
+        "setTopic": true,
+        "outputs": 1,
+        "x": 430,
+        "y": 480,
+        "wires": [
+            [
+                "c1c644130eed0bdb",
+                "d05b80563fe17b2c"
+            ]
+        ]
+    },
+    {
+        "id": "4a4df1b3def013b4",
+        "type": "ui_text",
+        "z": "29c7035e6baf85fe",
+        "group": "0fb9787a892af01f",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "name": "磁通电阻上限",
+        "label": "上限",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 700,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "c872eb4ade661da2",
+        "type": "ui_text",
+        "z": "29c7035e6baf85fe",
+        "group": "0fb9787a892af01f",
+        "order": 2,
+        "width": 3,
+        "height": 1,
+        "name": "磁通电阻下限",
+        "label": "下限",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 700,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "815fbb705341af74",
+        "type": "ui_template",
+        "z": "29c7035e6baf85fe",
+        "group": "5ccd16f7d4ea9d02",
+        "name": "全局css",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n.minheight{\n    min-height: 48px;\n}\n.state{\n    color: #fff;\n    border-radius: 5px;\n}\n.ok{\n    background-color: rgb(24 203 34);\n}\n.ng{\nbackground-color: #f00;\n}\n.t-center{\n    text-align:center;\n}\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "global",
+        "x": 520,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "793e63ab5c1e7b0d",
+        "type": "ui_template",
+        "z": "29c7035e6baf85fe",
+        "group": "5ccd16f7d4ea9d02",
+        "name": "脱扣NG",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "format": "<div  layout=\"row\" class=\"minheight md-title mt-2 t-center\" layout-align=\"space-around center\">\n    <div flex=\"\">脱扣</div>\n    <div flex=\"\" class=\"ng state\">KO</div>\n</div>\n\n\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 740,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9e9b7a5c5cc3ef0d",
+        "type": "ui_template",
+        "z": "29c7035e6baf85fe",
+        "group": "5ccd16f7d4ea9d02",
+        "name": "脱扣OK",
+        "order": 7,
+        "width": 6,
+        "height": 1,
+        "format": "<div  layout=\"row\" class=\"minheight md-title mt-2 t-center\" layout-align=\"space-around center\">\n    <div flex=\"\">不脱扣</div>\n    <div flex=\"\" class=\"ok state\">OK</div>\n</div>\n\n\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 580,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "25b3df50b2b7b8c0",
+        "type": "ui_template",
+        "z": "29c7035e6baf85fe",
+        "group": "5ccd16f7d4ea9d02",
+        "name": "脱扣NG",
+        "order": 6,
+        "width": 6,
+        "height": 1,
+        "format": "<div  layout=\"row\" class=\"minheight md-title mt-2 t-center\" layout-align=\"space-around center\">\n    <div flex=\"\">不脱扣</div>\n    <div flex=\"\" class=\"ng state\">KO</div>\n</div>\n\n\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 580,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c1c644130eed0bdb",
+        "type": "debug",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "d05b80563fe17b2c",
+        "type": "change",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "limits",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f3b0bafc5cdb0f35",
+        "type": "inject",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 520,
+        "wires": [
+            [
+                "9ab1cacb39d188c1"
+            ]
+        ]
+    },
+    {
+        "id": "eae9d4ea5fc17dca",
+        "type": "ui_text",
+        "z": "29c7035e6baf85fe",
+        "group": "c795f486d0c9b990",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "name": "微动开关上限",
+        "label": "上限",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 600,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "21a24856670e9fa3",
+        "type": "ui_text",
+        "z": "29c7035e6baf85fe",
+        "group": "c795f486d0c9b990",
+        "order": 2,
+        "width": 3,
+        "height": 1,
+        "name": "微动开关下限",
+        "label": "下限",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 600,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "70f2c96ddbe15f28",
+        "type": "inject",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 60,
+        "y": 1080,
+        "wires": [
+            [
+                "72ba82e8b509934c"
+            ]
+        ]
+    },
+    {
+        "id": "72ba82e8b509934c",
+        "type": "change",
+        "z": "29c7035e6baf85fe",
+        "name": "limits",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "limits",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 210,
+        "y": 1080,
+        "wires": [
+            [
+                "875803c229de4da1",
+                "22ffd771e06aa77a",
+                "a6333eee72a18862",
+                "d60f3ce5116d14f7"
+            ]
+        ]
+    },
+    {
+        "id": "875803c229de4da1",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "磁通电阻上限",
+        "func": "msg.payload = msg.payload[\"磁通电阻上限\"]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 1020,
+        "wires": [
+            [
+                "4a4df1b3def013b4"
+            ]
+        ]
+    },
+    {
+        "id": "22ffd771e06aa77a",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "磁通电阻下限",
+        "func": "msg.payload = msg.payload[\"磁通电阻下限\"]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 1060,
+        "wires": [
+            [
+                "c872eb4ade661da2"
+            ]
+        ]
+    },
+    {
+        "id": "a6333eee72a18862",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "微动开关上限",
+        "func": "msg.payload = msg.payload[\"微动开关上限\"];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 1120,
+        "wires": [
+            [
+                "eae9d4ea5fc17dca"
+            ]
+        ]
+    },
+    {
+        "id": "d60f3ce5116d14f7",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "微动开关下限",
+        "func": "msg.payload = msg.payload[\"微动开关下限\"]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 1160,
+        "wires": [
+            [
+                "21a24856670e9fa3"
+            ]
+        ]
+    },
+    {
+        "id": "41c993e5cd3de0c9",
+        "type": "ui_text",
+        "z": "29c7035e6baf85fe",
+        "group": "8aeee8d89d872256",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "当前产品序号",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 600,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "e36561a2ba7a1a4e",
+        "type": "inject",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 80,
+        "y": 1340,
+        "wires": [
+            [
+                "ef3e6138f1a7e2ee"
+            ]
+        ]
+    },
+    {
+        "id": "ef3e6138f1a7e2ee",
+        "type": "change",
+        "z": "29c7035e6baf85fe",
+        "name": "statistics",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "statistics",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 220,
+        "y": 1340,
+        "wires": [
+            [
+                "143827df6449289d",
+                "5692a9013e105a67"
+            ]
+        ]
+    },
+    {
+        "id": "143827df6449289d",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "序号",
+        "func": "msg.payload = msg.payload[\"序号\"]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 1340,
+        "wires": [
+            [
+                "41c993e5cd3de0c9"
+            ]
+        ]
+    },
+    {
+        "id": "d4192b144e74e07b",
+        "type": "ui_text",
+        "z": "29c7035e6baf85fe",
+        "group": "8aeee8d89d872256",
+        "order": 2,
+        "width": 8,
+        "height": 1,
+        "name": "",
+        "label": "微动开关常闭触点电阻",
+        "format": "{{msg.payload}} Ω",
+        "layout": "row-spread",
+        "x": 700,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "f6eba481cb8af209",
+        "type": "ui_text",
+        "z": "29c7035e6baf85fe",
+        "group": "8aeee8d89d872256",
+        "order": 6,
+        "width": 8,
+        "height": 1,
+        "name": "",
+        "label": "微动开关常开触点电阻",
+        "format": "{{msg.payload}} Ω",
+        "layout": "row-spread",
+        "x": 700,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "44499f43996c7b60",
+        "type": "ui_text",
+        "z": "29c7035e6baf85fe",
+        "group": "8aeee8d89d872256",
+        "order": 10,
+        "width": 8,
+        "height": 1,
+        "name": "",
+        "label": "磁通线圈电阻",
+        "format": "{{msg.payload}} Ω",
+        "layout": "row-spread",
+        "x": 680,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "02d3eba919dc79bb",
+        "type": "ui_text",
+        "z": "29c7035e6baf85fe",
+        "group": "8aeee8d89d872256",
+        "order": 14,
+        "width": 8,
+        "height": 1,
+        "name": "",
+        "label": "脱扣电压",
+        "format": "{{msg.payload}} V",
+        "layout": "row-spread",
+        "x": 660,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "899bcdaa9f90a806",
+        "type": "inject",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 60,
+        "y": 1440,
+        "wires": [
+            [
+                "ea0d45a22ca6f854"
+            ]
+        ]
+    },
+    {
+        "id": "ea0d45a22ca6f854",
+        "type": "change",
+        "z": "29c7035e6baf85fe",
+        "name": "record",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "record",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 190,
+        "y": 1440,
+        "wires": [
+            [
+                "52972b08961625f3",
+                "892a1d983a9a671d",
+                "d7c5acb77f4bfcf0",
+                "3182b37d8aecadd7"
+            ]
+        ]
+    },
+    {
+        "id": "52972b08961625f3",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "微动开关常闭触点电阻值(0-1)Ω",
+        "func": "msg.payload = msg.payload[\"微动开关常闭触点电阻值(0-1)Ω\"]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 1420,
+        "wires": [
+            [
+                "d4192b144e74e07b",
+                "abb24aa5ca4a94c8"
+            ]
+        ]
+    },
+    {
+        "id": "892a1d983a9a671d",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "微动开关常开触点电阻值(0-1)Ω",
+        "func": "msg.payload = msg.payload[\"微动开关常开触点电阻值(0-1)Ω\"]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 1480,
+        "wires": [
+            [
+                "f6eba481cb8af209",
+                "23aacb6176c3a82f"
+            ]
+        ]
+    },
+    {
+        "id": "d7c5acb77f4bfcf0",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "25℃时磁通线圈电阻(3.96-4.84)Ω",
+        "func": "msg.payload = msg.payload[\"25℃时磁通线圈电阻(3.96-4.84)Ω\"]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 1540,
+        "wires": [
+            [
+                "44499f43996c7b60",
+                "6719d435186599e0"
+            ]
+        ]
+    },
+    {
+        "id": "3182b37d8aecadd7",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "实测脱扣电压值(4.6-8)V",
+        "func": "msg.payload = msg.payload[\"实测脱扣电压值(4.6-8)V\"]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 1580,
+        "wires": [
+            [
+                "02d3eba919dc79bb"
+            ]
+        ]
+    },
+    {
+        "id": "f19487b90810bae6",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "测试结果1",
+        "func": "msg.payload = msg.payload[\"测试结果1\"]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 1660,
+        "wires": [
+            [
+                "4d50ce1746767307"
+            ]
+        ]
+    },
+    {
+        "id": "d94416a25498400a",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "测试结果2",
+        "func": "msg.payload = msg.payload[\"测试结果2\"]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 421,
+        "y": 1711,
+        "wires": [
+            [
+                "c8142877917180b2"
+            ]
+        ]
+    },
+    {
+        "id": "144ae98751507c1e",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "测试结果3",
+        "func": "msg.payload = msg.payload[\"测试结果3\"]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 1760,
+        "wires": [
+            [
+                "12b6641ca235e598"
+            ]
+        ]
+    },
+    {
+        "id": "896c6c82c6f3db68",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "测试结果4",
+        "func": "msg.payload = msg.payload[\"测试结果4\"]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 1820,
+        "wires": [
+            [
+                "6ccb7c3451ece3e8"
+            ]
+        ]
+    },
+    {
+        "id": "5692a9013e105a67",
+        "type": "link out",
+        "z": "29c7035e6baf85fe",
+        "name": "statistics",
+        "mode": "link",
+        "links": [
+            "99d88f41de5ccfbe"
+        ],
+        "x": 355,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "99d88f41de5ccfbe",
+        "type": "link in",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "links": [
+            "5692a9013e105a67"
+        ],
+        "x": 185,
+        "y": 1740,
+        "wires": [
+            [
+                "f19487b90810bae6",
+                "d94416a25498400a",
+                "144ae98751507c1e",
+                "896c6c82c6f3db68",
+                "56b22366732c8e9c",
+                "2e8bb72a7ee4f112",
+                "cdc8e881a4fe823f"
+            ]
+        ]
+    },
+    {
+        "id": "661112ec9dea613f",
+        "type": "ui_chart",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "group": "7225d610a969ddc7",
+        "order": 2,
+        "width": 6,
+        "height": 6,
+        "label": "良品统计",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": true,
+        "useUTC": false,
+        "colors": [
+            "#2b9d2b",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 600,
+        "y": 1900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "56b22366732c8e9c",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "良品统计",
+        "func": "\nmsg.payload = [{\n    \"series\": [\"良品统计\"],\n    \"data\": [[msg.payload[\"良品统计1\"],\n             msg.payload[\"良品统计2\"], \n             msg.payload[\"良品统计3\"],\n             msg.payload[\"良品统计4\"],\n             msg.payload[\"良品统计5\"],\n             msg.payload[\"良品统计6\"],\n             msg.payload[\"良品统计7\"]]\n           ],\n    \"labels\": [\"5V\", \"5.5V\", \"6V\", \"6.5V\", \"7.0V\", \"7.5V\", \"8.0V\"]\n}];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 1900,
+        "wires": [
+            [
+                "661112ec9dea613f"
+            ]
+        ]
+    },
+    {
+        "id": "2e8bb72a7ee4f112",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "合格率统计",
+        "func": "var m = [\n  { topic: \"合格数量\", payload: msg.payload[\"合格数量\"]},\n  { topic: \"不合格数量\", payload: msg.payload[\"不合格数量\"] },\n];\nreturn [m];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 2020,
+        "wires": [
+            [
+                "60ab7db0148ad490"
+            ]
+        ]
+    },
+    {
+        "id": "60ab7db0148ad490",
+        "type": "ui_chart",
+        "z": "29c7035e6baf85fe",
+        "name": "良率统计",
+        "group": "7225d610a969ddc7",
+        "order": 1,
+        "width": 6,
+        "height": 6,
+        "label": "良率统计",
+        "chartType": "pie",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": "30",
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#2caa3b",
+            "#e31c1c",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 600,
+        "y": 2020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8d35a1bc6b41a5df",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "测试电压8",
+        "func": "msg.payload = msg.payload[\"测试电压8\"]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 640,
+        "wires": [
+            [
+                "3674fc920fdd9026"
+            ]
+        ]
+    },
+    {
+        "id": "87ff507390613ee1",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "测试电压1",
+        "func": "msg.payload = msg.payload[\"测试电压1\"]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 700,
+        "wires": [
+            [
+                "fef19a8d03a71238"
+            ]
+        ]
+    },
+    {
+        "id": "e5eb4c112bc50d98",
+        "type": "ui_chart",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "group": "7225d610a969ddc7",
+        "order": 3,
+        "width": 6,
+        "height": 6,
+        "label": "不良品统计",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": true,
+        "useUTC": false,
+        "colors": [
+            "#d62728",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 610,
+        "y": 1960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cdc8e881a4fe823f",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "良品统计",
+        "func": "msg.payload = [{\n    \"series\": [\"不良品统计\"],\n  \"data\": [[msg.payload[\"微动开关不合格\"],\n    msg.payload[\"4.5V脱扣数\"],\n    msg.payload[\"8V不脱扣数\"],\n    msg.payload[\"电阻不合格数\"]]\n           ],\n  \"labels\": [\"微动开关\", \"4.5V脱扣\", \"8V不脱扣\", \"电阻\"]\n}];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 1960,
+        "wires": [
+            [
+                "e5eb4c112bc50d98"
+            ]
+        ]
+    },
+    {
+        "id": "fdf171ecc864d88d",
+        "type": "inject",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[]",
+        "payloadType": "json",
+        "x": 210,
+        "y": 1960,
+        "wires": [
+            [
+                "60ab7db0148ad490"
+            ]
+        ]
+    },
+    {
+        "id": "4d50ce1746767307",
+        "type": "ui_template",
+        "z": "29c7035e6baf85fe",
+        "group": "8aeee8d89d872256",
+        "name": "r1",
+        "order": 3,
+        "width": 3,
+        "height": 1,
+        "format": "<div ng-if=\"msg.payload\" layout=\"row\" class=\"minheight md-title mt-2 t-center\" layout-align=\"space-around center\">\n    <div flex=\"\" class=\"ok state\">OK</div>\n</div>\n<div ng-if=\"msg.payload==false\" layout=\"row\" class=\"minheight md-title mt-2 t-center\" layout-align=\"space-around center\">\n    <div flex=\"\" class=\"ng state\">KO</div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 570,
+        "y": 1660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c8142877917180b2",
+        "type": "ui_template",
+        "z": "29c7035e6baf85fe",
+        "group": "8aeee8d89d872256",
+        "name": "r2",
+        "order": 7,
+        "width": 3,
+        "height": 1,
+        "format": "<div layout=\"row\" class=\"minheight md-title mt-2 t-center\" layout-align=\"space-around center\">\n    <div flex=\"\" class=\"ok state\">OK</div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 570,
+        "y": 1700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "12b6641ca235e598",
+        "type": "ui_template",
+        "z": "29c7035e6baf85fe",
+        "group": "8aeee8d89d872256",
+        "name": "r3",
+        "order": 11,
+        "width": 3,
+        "height": 1,
+        "format": "<div layout=\"row\" class=\"minheight md-title mt-2 t-center\" layout-align=\"space-around center\">\n    <div flex=\"\" class=\"ok state\">OK</div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 570,
+        "y": 1760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6ccb7c3451ece3e8",
+        "type": "ui_template",
+        "z": "29c7035e6baf85fe",
+        "group": "8aeee8d89d872256",
+        "name": "r4",
+        "order": 15,
+        "width": 3,
+        "height": 1,
+        "format": "<div layout=\"row\" class=\"minheight md-title mt-2 t-center\" layout-align=\"space-around center\">\n    <div flex=\"\" class=\"ok state\">OK</div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 550,
+        "y": 1820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1c24be99.3dc2f1",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "func": "var m={};\nm.labels = [\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\"];\nm.series = ['Series A', 'Series B', 'Series C'];\nm.data = [\n    [65, 59, 80, 81, 56, 55, 40],\n    [28, 48, 40, 19, 86, 27, 90],\n    [38, 28, 20, 49, 45, 60, 20]\n  ];\nreturn {payload:[m]};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 470,
+        "y": 2360,
+        "wires": [
+            [
+                "80476e4d.6f64a",
+                "f4e610a1.1c381",
+                "fe515729.789e58",
+                "3c681829.4ff7d8"
+            ]
+        ]
+    },
+    {
+        "id": "80476e4d.6f64a",
+        "type": "ui_chart",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "group": "89749fb7.87f01",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "line chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "No Data",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 2,
+        "x": 740,
+        "y": 2100,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "2583d993.df9cb6",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "func": "var chart = [{\n    \"series\":[\"A\",\"B\",\"C\"],\n    \"data\":[[{\"x\":1504029632890,\"y\":5},{\"x\":1504029636001,\"y\":4},{\"x\":1504029638656,\"y\":2}],[{\"x\":1504029633514,\"y\":6},{\"x\":1504029636622,\"y\":7},{\"x\":1504029639539,\"y\":6}],[{\"x\":1504029634400,\"y\":7},{\"x\":1504029637959,\"y\":9},{\"x\":1504029640317,\"y\":7}]],\n    \"labels\":[\"\"]\n}];\nmsg.payload = chart;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 470,
+        "y": 2200,
+        "wires": [
+            [
+                "80476e4d.6f64a"
+            ]
+        ]
+    },
+    {
+        "id": "c4af128e.0eb42",
+        "type": "ui_button",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "group": "ab397e95.29ebe",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Time Line 1",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 330,
+        "y": 2200,
+        "wires": [
+            [
+                "2583d993.df9cb6"
+            ]
+        ]
+    },
+    {
+        "id": "f4e610a1.1c381",
+        "type": "ui_chart",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "group": "89749fb7.87f01",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "bar chart",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "No Data",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 2,
+        "x": 740,
+        "y": 2160,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "ed9dcc7d.422ad",
+        "type": "ui_button",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "group": "ab397e95.29ebe",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "array",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 310,
+        "y": 2360,
+        "wires": [
+            [
+                "1c24be99.3dc2f1"
+            ]
+        ]
+    },
+    {
+        "id": "c6549407.0c1348",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "func": "var m={};\nm.labels = [10,20,30,40,50,60,70];\nm.series = ['Series A', 'Series B', 'Series C', 'Series D'];\nm.data = [\n    [65, 59, 80, 81, 56, 55, 40],\n    [28, 48, 40, 19, 86, 27, 90],\n    [38, 28, 20, 49, 45, 60, 20],\n    [58, 18, 40, 29, 15, 30, 60]\n  ];\nreturn {payload:[m]};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 470,
+        "y": 2400,
+        "wires": [
+            [
+                "80476e4d.6f64a",
+                "f4e610a1.1c381",
+                "fe515729.789e58",
+                "3c681829.4ff7d8"
+            ]
+        ]
+    },
+    {
+        "id": "27cc2706.421b18",
+        "type": "ui_button",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "group": "ab397e95.29ebe",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "array2",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 310,
+        "y": 2400,
+        "wires": [
+            [
+                "c6549407.0c1348"
+            ]
+        ]
+    },
+    {
+        "id": "7bcd06e3.5cbab8",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "func": "var chart = [{\n    \"series\":[\"A\",\"B\",\"C\"],\n        \"data\":[[{\"x\":1,\"y\":5},{\"x\":2,\"y\":4},{\"x\":3,\"y\":2}],[{\"x\":4,\"y\":6},{\"x\":5,\"y\":7},{\"x\":6,\"y\":6}],[{\"x\":7,\"y\":7},{\"x\":8,\"y\":9},{\"x\":9,\"y\":7}]],\n    \"labels\":[\"\"]\n}];\nmsg.payload = chart;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 470,
+        "y": 2240,
+        "wires": [
+            [
+                "80476e4d.6f64a"
+            ]
+        ]
+    },
+    {
+        "id": "219123f5.f1d76c",
+        "type": "ui_button",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "group": "ab397e95.29ebe",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Time Line 2",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 330,
+        "y": 2240,
+        "wires": [
+            [
+                "7bcd06e3.5cbab8"
+            ]
+        ]
+    },
+    {
+        "id": "22caebb3.7cfe94",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "func": "var m = {};\nm.labels = [\"Download\", \"In-Store\", \"Mail-Order\"];\nm.data = [[300, 500, 100]];\nm.series = [\"Sales\"];\nreturn {payload:[m],topic:msg.topic};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 2600,
+        "wires": [
+            [
+                "3c681829.4ff7d8",
+                "f4e610a1.1c381",
+                "80476e4d.6f64a",
+                "f5108a61.91a6b8",
+                "c7f5183f.012728",
+                "fe515729.789e58"
+            ]
+        ]
+    },
+    {
+        "id": "3c681829.4ff7d8",
+        "type": "ui_chart",
+        "z": "29c7035e6baf85fe",
+        "name": "pie chart",
+        "group": "89749fb7.87f01",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "pie chart",
+        "chartType": "pie",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": "30",
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 2,
+        "x": 780,
+        "y": 2340,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "7d0f50b6.398f3",
+        "type": "ui_button",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "group": "ab397e95.29ebe",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "array for pie",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "Pie 4 T",
+        "x": 330,
+        "y": 2600,
+        "wires": [
+            [
+                "22caebb3.7cfe94"
+            ]
+        ]
+    },
+    {
+        "id": "bf37d8d7.9bd558",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "func": "var chart = [{\n    \"series\":[\"A\",\"B\",\"C\"],\n        \"data\":[[{\"x\":1000000,\"y\":5},{\"x\":2000000,\"y\":4},{\"x\":3000000,\"y\":2}],[{\"x\":4000000,\"y\":6},{\"x\":5000000,\"y\":7},{\"x\":6000000,\"y\":6}],[{\"x\":7000000,\"y\":7},{\"x\":8000000,\"y\":9},{\"x\":9000000,\"y\":7}]],\n    \"labels\":[\"\"]\n}];\nmsg.payload = chart;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 470,
+        "y": 2280,
+        "wires": [
+            [
+                "80476e4d.6f64a"
+            ]
+        ]
+    },
+    {
+        "id": "e897b370.e8548",
+        "type": "ui_button",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "group": "ab397e95.29ebe",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Time Line 3",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 330,
+        "y": 2280,
+        "wires": [
+            [
+                "bf37d8d7.9bd558"
+            ]
+        ]
+    },
+    {
+        "id": "f6963e44.a328f",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "func": "var chart = [{\n    \"series\":[\"A\",\"B\",\"C\"],\n        \"data\":[[{\"x\":1000000000,\"y\":5},{\"x\":2000000000,\"y\":4},{\"x\":3000000000,\"y\":2}],[{\"x\":4000000000,\"y\":6},{\"x\":5000000000,\"y\":7},{\"x\":6000000000,\"y\":6}],[{\"x\":7000000000,\"y\":7},{\"x\":8000000000,\"y\":9},{\"x\":9000000000,\"y\":7}]],\n    \"labels\":[\"\"]\n}];\nmsg.payload = chart;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 470,
+        "y": 2320,
+        "wires": [
+            [
+                "80476e4d.6f64a"
+            ]
+        ]
+    },
+    {
+        "id": "9462d11a.374a1",
+        "type": "ui_button",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "group": "ab397e95.29ebe",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Time Line 4",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 330,
+        "y": 2320,
+        "wires": [
+            [
+                "f6963e44.a328f"
+            ]
+        ]
+    },
+    {
+        "id": "62668961.a49728",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "func": "var m={\n    \"series\":[\"X\",\"Y\",\"Z\"],\n    \"data\":[[5,6,9],[3,8,5],[6,7,2]],\n    \"labels\":[\"Jan\",\"Feb\",\"Mar\"]\n};\nreturn {payload:[m]};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 470,
+        "y": 2520,
+        "wires": [
+            [
+                "80476e4d.6f64a",
+                "f4e610a1.1c381",
+                "3c681829.4ff7d8",
+                "f5108a61.91a6b8",
+                "c7f5183f.012728",
+                "fe515729.789e58"
+            ]
+        ]
+    },
+    {
+        "id": "b4c7442f.5481b8",
+        "type": "ui_button",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "group": "ab397e95.29ebe",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "array3c",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 320,
+        "y": 2520,
+        "wires": [
+            [
+                "62668961.a49728"
+            ]
+        ]
+    },
+    {
+        "id": "da3771b3.5a321",
+        "type": "ui_button",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "group": "ab397e95.29ebe",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "array 2 for pie",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "Pie Hole",
+        "x": 340,
+        "y": 2640,
+        "wires": [
+            [
+                "2b9c546c.58865c"
+            ]
+        ]
+    },
+    {
+        "id": "2b9c546c.58865c",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "func": "var m = {};\nm.labels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];\nm.data = [[28, 48, 40, 19, 86, 27, 90]];\nm.series = ['Series A'];\nreturn {payload:[m],topic:msg.topic};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 2640,
+        "wires": [
+            [
+                "3c681829.4ff7d8",
+                "f4e610a1.1c381",
+                "c7f5183f.012728",
+                "f5108a61.91a6b8",
+                "80476e4d.6f64a",
+                "fe515729.789e58"
+            ]
+        ]
+    },
+    {
+        "id": "c0d6a942.dc82f8",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "topic",
+        "func": "var m = [\n    {topic:\"X\", payload:22},\n    {topic:\"Y\", payload:66},\n    {topic:\"Z\", payload:42}\n    ];\nreturn [m];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 2160,
+        "wires": [
+            [
+                "f4e610a1.1c381",
+                "3c681829.4ff7d8",
+                "80476e4d.6f64a",
+                "fe515729.789e58"
+            ]
+        ]
+    },
+    {
+        "id": "b8f011ee.6b874",
+        "type": "inject",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 320,
+        "y": 2160,
+        "wires": [
+            [
+                "c0d6a942.dc82f8"
+            ]
+        ]
+    },
+    {
+        "id": "23311ede.673912",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "label",
+        "func": "var m = [\n    {label:\"A\", payload:22},\n    {label:\"B\", payload:66},\n    {label:\"C\", payload:42},\n    ];\nreturn [m];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 2120,
+        "wires": [
+            [
+                "f4e610a1.1c381",
+                "3c681829.4ff7d8",
+                "80476e4d.6f64a",
+                "fe515729.789e58"
+            ]
+        ]
+    },
+    {
+        "id": "564d1920.d756d8",
+        "type": "inject",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 320,
+        "y": 2120,
+        "wires": [
+            [
+                "23311ede.673912"
+            ]
+        ]
+    },
+    {
+        "id": "437e7323.02763c",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "func": "var m={\n    \"series\":[\"X\",\"Y\",\"Z\"],\n    \"data\":[[5],[3],[6]],\n    \"labels\":[\"Jan\"]\n};\nreturn {payload:[m]};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 470,
+        "y": 2440,
+        "wires": [
+            [
+                "f4e610a1.1c381",
+                "f5108a61.91a6b8",
+                "c7f5183f.012728",
+                "80476e4d.6f64a",
+                "fe515729.789e58",
+                "3c681829.4ff7d8"
+            ]
+        ]
+    },
+    {
+        "id": "e741cd13.7e8da",
+        "type": "ui_button",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "group": "ab397e95.29ebe",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "array3a",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 320,
+        "y": 2440,
+        "wires": [
+            [
+                "437e7323.02763c"
+            ]
+        ]
+    },
+    {
+        "id": "10291d1f.0a5d13",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "func": "var m={\n    \"series\":[\"X\"],\n    \"data\":[[5,3,6]],\n    \"labels\":[\"Jan\",\"Feb\",\"Mar\"]\n};\nreturn {payload:[m]};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 470,
+        "y": 2480,
+        "wires": [
+            [
+                "f4e610a1.1c381",
+                "80476e4d.6f64a",
+                "c7f5183f.012728",
+                "f5108a61.91a6b8",
+                "fe515729.789e58",
+                "3c681829.4ff7d8"
+            ]
+        ]
+    },
+    {
+        "id": "be38d116.6de45",
+        "type": "ui_button",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "group": "ab397e95.29ebe",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "array3b",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 320,
+        "y": 2480,
+        "wires": [
+            [
+                "10291d1f.0a5d13"
+            ]
+        ]
+    },
+    {
+        "id": "fe515729.789e58",
+        "type": "ui_chart",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "group": "4e7edda4.417004",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "horizontal bar",
+        "chartType": "horizontalBar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": "30",
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 760,
+        "y": 2220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f5108a61.91a6b8",
+        "type": "ui_chart",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "group": "4e7edda4.417004",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "polar chart",
+        "chartType": "polar-area",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": "30",
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 2,
+        "x": 790,
+        "y": 2460,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c7f5183f.012728",
+        "type": "ui_chart",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "group": "4e7edda4.417004",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "radar chart",
+        "chartType": "radar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": "30",
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 2,
+        "x": 790,
+        "y": 2520,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "71de4fb7.df017",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "label",
+        "func": "var m = [\n    {label:\"A\", payload:22, series:\"X\"},\n    {label:\"B\", payload:66, series:\"X\"},\n    {label:\"C\", payload:42, series:\"X\"},\n    {label:\"A\", payload:33, series:\"Y\"},\n    {label:\"B\", payload:72, series:\"Y\"},\n    {label:\"C\", payload:12, series:\"Y\"},\n    {label:\"A\", payload:44, series:\"Z\"},\n    {label:\"B\", payload:32, series:\"Z\"},\n    {label:\"C\", payload:80, series:\"Z\"}\n    ];\nreturn [m];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 2080,
+        "wires": [
+            [
+                "3c681829.4ff7d8",
+                "f4e610a1.1c381",
+                "80476e4d.6f64a",
+                "fe515729.789e58"
+            ]
+        ]
+    },
+    {
+        "id": "c2d23159.73b39",
+        "type": "inject",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 320,
+        "y": 2080,
+        "wires": [
+            [
+                "71de4fb7.df017"
+            ]
+        ]
+    },
+    {
+        "id": "29cd8a13.ecade6",
+        "type": "ui_button",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "group": "ab397e95.29ebe",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Clear All",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "[]",
+        "payloadType": "json",
+        "topic": "",
+        "x": 460,
+        "y": 2040,
+        "wires": [
+            [
+                "c7f5183f.012728",
+                "f5108a61.91a6b8",
+                "3c681829.4ff7d8",
+                "fe515729.789e58",
+                "f4e610a1.1c381",
+                "80476e4d.6f64a"
+            ]
+        ]
+    },
+    {
+        "id": "1f568cee693c21cb",
+        "type": "ui_chart",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "group": "8aeee8d89d872256",
+        "order": 17,
+        "width": 6,
+        "height": 5,
+        "label": "微动开关常开",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "No Data",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1100,
+        "y": 1340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e635ce1fde7e3cd1",
+        "type": "ui_chart",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "group": "8aeee8d89d872256",
+        "order": 18,
+        "width": 6,
+        "height": 5,
+        "label": "微动开关常闭",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "No Data",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1100,
+        "y": 1440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5d87fb3df0fc5d3c",
+        "type": "ui_chart",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "group": "8aeee8d89d872256",
+        "order": 19,
+        "width": 6,
+        "height": 5,
+        "label": "磁通线圈电阻",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "No Data",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1100,
+        "y": 1480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1c6f2b7835b70339",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "label",
+        "func": "let limits=global.get(\"limits\");\nlet upper = limits[\"微动开关上限\"];\nlet lower = limits[\"微动开关下限\"];\nvar m = [\n    {label:\"ucl\", payload:upper, series:\"ucl\"},\n    {label:\"value\", payload:msg.payload, series:\"value\"},\n    {label:\"lcl\", payload:lower, series:\"lcl\"},\n    ];\nreturn [m];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 1340,
+        "wires": [
+            [
+                "1f568cee693c21cb"
+            ]
+        ]
+    },
+    {
+        "id": "84b2e31942dd0a1c",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "label",
+        "func": "let limits = global.get(\"limits\");\nlet upper = limits[\"微动开关上限\"];\nlet lower = limits[\"微动开关下限\"];\nvar m = [\n    { label: \"ucl\", payload: upper, series: \"ucl\" },\n    { label: \"value\", payload: msg.payload, series: \"value\" },\n    { label: \"lcl\", payload: lower, series: \"lcl\" },\n];\nreturn [m];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 1440,
+        "wires": [
+            [
+                "e635ce1fde7e3cd1"
+            ]
+        ]
+    },
+    {
+        "id": "41ea281e39e69c64",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "label",
+        "func": "let limits = global.get(\"limits\");\nlet upper = limits[\"磁通电阻上限\"];\nlet lower = limits[\"磁通电阻下限\"];\nvar m = [\n    { label: \"ucl\", payload: upper, series: \"ucl\" },\n    { label: \"value\", payload: msg.payload, series: \"value\" },\n    { label: \"lcl\", payload: lower, series: \"lcl\" },\n];\nreturn [m];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 1480,
+        "wires": [
+            [
+                "5d87fb3df0fc5d3c"
+            ]
+        ]
+    },
+    {
+        "id": "abb24aa5ca4a94c8",
+        "type": "rbe",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 770,
+        "y": 1360,
+        "wires": [
+            [
+                "1c6f2b7835b70339"
+            ]
+        ]
+    },
+    {
+        "id": "23aacb6176c3a82f",
+        "type": "rbe",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 790,
+        "y": 1440,
+        "wires": [
+            [
+                "84b2e31942dd0a1c"
+            ]
+        ]
+    },
+    {
+        "id": "6719d435186599e0",
+        "type": "rbe",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 810,
+        "y": 1520,
+        "wires": [
+            [
+                "41ea281e39e69c64"
+            ]
+        ]
+    },
+    {
+        "id": "6798eb14587b0abc",
+        "type": "inject",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[]",
+        "payloadType": "json",
+        "x": 910,
+        "y": 1560,
+        "wires": [
+            [
+                "e635ce1fde7e3cd1",
+                "5d87fb3df0fc5d3c",
+                "1f568cee693c21cb"
+            ]
+        ]
+    },
+    {
+        "id": "001992967fbcf502",
+        "type": "rbe",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload.trigger",
+        "topi": "topic",
+        "x": 650,
+        "y": 340,
+        "wires": [
+            [
+                "aceed13801fabe2c"
+            ]
+        ]
+    },
+    {
+        "id": "aceed13801fabe2c",
+        "type": "function",
+        "z": "29c7035e6baf85fe",
+        "name": "",
+        "func": "if(msg.payload.trigger){\n    //return msg;\n    let content=\"\";\n    let filePath = \"d:\\\\data\\\\\"\n    await mkdirPath(filePath);\n    let filename = filePath + dayjs().format('DD/MM/YYYY')+\".csv\";\n    if (await isFileExisted(filename)){\n        content += \"上海嘉益电器设备有限公司\\r\\n\";\n        content += \"背包测试数据汇总\\r\\n\";\n        content += \"测试时间,标签编码,微动开关常闭触点电阻值(0-1)Ω,微动开关常开触点电阻值(0-1)Ω,25℃时磁通线圈电阻(3.96-4.84)Ω,实测脱扣电压值(4.6-8)V,判定,备注\\r\\n\"\n    }\n    content += `${dayjs().format('HH:mm:ssZ[Z]')}, ,${msg.payload[\"微动开关常闭触点电阻值(0-1)Ω\"]},${msg.payload[\"微动开关常开触点电阻值(0-1)Ω\"]},${msg.payload[\"25℃时磁通线圈电阻(3.96-4.84)Ω\"]},${msg.payload[\"实测脱扣电压值(4.6-8)V\"]},${msg.payload[\"判定\"]}\\r\\n`;\n    fs.writeFile(filename,content,(e)=>{\n        if(e) throw e\n    });\n}\n/* 用于判断路径是否存在， 如果不存在，则创建一个 */\nasync function mkdirPath(pathStr) {\n    var projectPath = path.join(process.cwd());\n    var tempDirArray = pathStr.split('\\\\');\n    for (var i = 0; i < tempDirArray.length; i++) {\n        projectPath = projectPath + '/' + tempDirArray[i];\n        if (await isFileExisted(projectPath)) {\n            var tempstats = fs.statSync(projectPath);\n            if (!(tempstats.isDirectory())) {\n                fs.unlinkSync(projectPath);\n                fs.mkdirSync(projectPath);\n            }\n        }\n        else {\n            fs.mkdirSync(projectPath);\n        }\n    }\n    return projectPath;\n};\n\n/* 判断文件存在 */\nfunction isFileExisted(path_way) {\n    return new Promise((resolve, reject) => {\n        fs.access(path_way, (err) => {\n            if (err) {\n                reject(false);//\"不存在\"\n            } else {\n                resolve(true);//\"存在\"\n            }\n        })\n    })\n};\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "fs",
+                "module": "fs"
+            },
+            {
+                "var": "path",
+                "module": "path"
+            },
+            {
+                "var": "dayjs",
+                "module": "dayjs"
+            }
+        ],
+        "x": 790,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "debec638eed74ea4",
+        "type": "MC Read",
+        "z": "a9063b5b95487afc",
+        "name": "readvolsetting",
+        "topic": "",
+        "connection": "8658da063d1df58d",
+        "address": "D50000,250",
+        "addressType": "str",
+        "outputFormat": "1",
+        "errorHandling": "throw",
+        "outputs": 1,
+        "x": 420,
+        "y": 320,
+        "wires": [
+            [
+                "23dbde16a8c7dc9a"
+            ]
+        ]
+    },
+    {
+        "id": "08ed533d36c4b79f",
+        "type": "inject",
+        "z": "a9063b5b95487afc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 320,
+        "wires": [
+            [
+                "debec638eed74ea4"
+            ]
+        ]
+    },
+    {
+        "id": "23dbde16a8c7dc9a",
+        "type": "buffer-parser",
+        "z": "a9063b5b95487afc",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "type": "int16le",
+                "name": "测试电压1",
+                "offset": 0,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "/100",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "测试电压2",
+                "offset": 60,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "/100",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "测试电压3",
+                "offset": 120,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "/100",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "测试电压4",
+                "offset": 180,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "/100",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "测试电压5",
+                "offset": 240,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "/100",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "测试电压6",
+                "offset": 300,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "/100",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "测试电压7",
+                "offset": 360,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "/100",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "测试电压8",
+                "offset": 420,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "/100",
+                "mask": ""
+            }
+        ],
+        "swap1": "swap16",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "resultType": "keyvalue",
+        "resultTypeType": "return",
+        "multipleResult": false,
+        "fanOutMultipleResult": false,
+        "setTopic": true,
+        "outputs": 1,
+        "x": 590,
+        "y": 320,
+        "wires": [
+            [
+                "3905d6f7aa8e758e",
+                "341d79647aee10db"
+            ]
+        ]
+    },
+    {
+        "id": "3905d6f7aa8e758e",
+        "type": "debug",
+        "z": "a9063b5b95487afc",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "c74bdc2f83936315",
+        "type": "MC Read",
+        "z": "a9063b5b95487afc",
+        "name": "readstatistics",
+        "topic": "",
+        "connection": "8658da063d1df58d",
+        "address": "D24000,200",
+        "addressType": "str",
+        "outputFormat": "1",
+        "errorHandling": "throw",
+        "outputs": 1,
+        "x": 410,
+        "y": 460,
+        "wires": [
+            [
+                "f930c1a036d0da39"
+            ]
+        ]
+    },
+    {
+        "id": "f930c1a036d0da39",
+        "type": "buffer-parser",
+        "z": "a9063b5b95487afc",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "type": "int16le",
+                "name": "生产总数",
+                "offset": 150,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "合格数量",
+                "offset": 152,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "不合格数量",
+                "offset": 154,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "微动开关不合格",
+                "offset": 156,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "4.5V脱扣数",
+                "offset": 158,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "8V不脱扣数",
+                "offset": 174,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "电阻不合格数",
+                "offset": 176,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "良品统计1",
+                "offset": 160,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "良品统计2",
+                "offset": 162,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "良品统计3",
+                "offset": 164,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "良品统计4",
+                "offset": 166,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "良品统计5",
+                "offset": 168,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "良品统计6",
+                "offset": 170,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "良品统计7",
+                "offset": 172,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "测试结果1",
+                "offset": 140,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "==1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "测试结果2",
+                "offset": 142,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "==1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "测试结果3",
+                "offset": 144,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "==1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "测试结果4",
+                "offset": 146,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "==1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "序号",
+                "offset": 198,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": 0,
+                "mask": ""
+            }
+        ],
+        "swap1": "swap16",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "resultType": "keyvalue",
+        "resultTypeType": "return",
+        "multipleResult": false,
+        "fanOutMultipleResult": false,
+        "setTopic": true,
+        "outputs": 1,
+        "x": 570,
+        "y": 460,
+        "wires": [
+            [
+                "d24ebc6fb533a1b7",
+                "1b3d4fa39f634453"
+            ]
+        ]
+    },
+    {
+        "id": "d24ebc6fb533a1b7",
+        "type": "debug",
+        "z": "a9063b5b95487afc",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "705ac4cc42a3273d",
+        "type": "MC Read",
+        "z": "a9063b5b95487afc",
+        "name": "readrecord",
+        "topic": "",
+        "connection": "8658da063d1df58d",
+        "address": "D24100,500",
+        "addressType": "str",
+        "outputFormat": "1",
+        "errorHandling": "throw",
+        "outputs": 1,
+        "x": 410,
+        "y": 600,
+        "wires": [
+            [
+                "1011fdb1a3d5fe74"
+            ]
+        ]
+    },
+    {
+        "id": "1011fdb1a3d5fe74",
+        "type": "buffer-parser",
+        "z": "a9063b5b95487afc",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "type": "int16le",
+                "name": "微动开关常闭触点电阻值(0-1)Ω",
+                "offset": 0,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "微动开关常开触点电阻值(0-1)Ω",
+                "offset": 200,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "25℃时磁通线圈电阻(3.96-4.84)Ω",
+                "offset": 400,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "实测脱扣电压值(4.6-8)V",
+                "offset": 600,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "判定",
+                "offset": 800,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            }
+        ],
+        "swap1": "swap16",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "resultType": "keyvalue",
+        "resultTypeType": "return",
+        "multipleResult": false,
+        "fanOutMultipleResult": false,
+        "setTopic": true,
+        "outputs": 1,
+        "x": 570,
+        "y": 600,
+        "wires": [
+            [
+                "46ce2da73038c766",
+                "9c8f450674c16d5e"
+            ]
+        ]
+    },
+    {
+        "id": "46ce2da73038c766",
+        "type": "debug",
+        "z": "a9063b5b95487afc",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "341d79647aee10db",
+        "type": "change",
+        "z": "a9063b5b95487afc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "volsetting2",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 800,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1b3d4fa39f634453",
+        "type": "change",
+        "z": "a9063b5b95487afc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "statistics2",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 800,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9c8f450674c16d5e",
+        "type": "change",
+        "z": "a9063b5b95487afc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "record2",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 790,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a5c5e1b9ac41cdc2",
+        "type": "complete",
+        "z": "a9063b5b95487afc",
+        "name": "",
+        "scope": [
+            "341d79647aee10db"
+        ],
+        "uncaught": false,
+        "x": 250,
+        "y": 460,
+        "wires": [
+            [
+                "c74bdc2f83936315"
+            ]
+        ]
+    },
+    {
+        "id": "831760554238e411",
+        "type": "complete",
+        "z": "a9063b5b95487afc",
+        "name": "",
+        "scope": [
+            "1b3d4fa39f634453"
+        ],
+        "uncaught": false,
+        "x": 230,
+        "y": 600,
+        "wires": [
+            [
+                "705ac4cc42a3273d"
+            ]
+        ]
+    },
+    {
+        "id": "0d781ecfc15c0982",
+        "type": "ui_text",
+        "z": "a9063b5b95487afc",
+        "group": "ee8e5fd4215832b1",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "上限电压",
+        "format": "{{msg.payload}} V",
+        "layout": "row-spread",
+        "x": 740,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "6866943609416f9d",
+        "type": "ui_text",
+        "z": "a9063b5b95487afc",
+        "group": "ee8e5fd4215832b1",
+        "order": 5,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "下限电压",
+        "format": "{{msg.payload}} V",
+        "layout": "row-spread",
+        "x": 740,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "8e9160f02f9087ca",
+        "type": "inject",
+        "z": "a9063b5b95487afc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 860,
+        "wires": [
+            [
+                "9ef9bb9967967e13"
+            ]
+        ]
+    },
+    {
+        "id": "9ef9bb9967967e13",
+        "type": "change",
+        "z": "a9063b5b95487afc",
+        "name": "volsetting",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "volsetting2",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 860,
+        "wires": [
+            [
+                "d18c8c0ee725855d",
+                "0d89eaf68e9f4609"
+            ]
+        ]
+    },
+    {
+        "id": "5f772f13b7bb78fc",
+        "type": "ui_template",
+        "z": "a9063b5b95487afc",
+        "group": "ee8e5fd4215832b1",
+        "name": "脱扣OK",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "format": "<div  layout=\"row\" class=\"minheight md-title mt-2 t-center\" layout-align=\"space-around center\">\n    <div flex=\"\">脱扣</div>\n    <div flex=\"\" class=\"ok state\">OK</div>\n</div>\n\n\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 860,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6e6617463aab7621",
+        "type": "MC Read",
+        "z": "a9063b5b95487afc",
+        "name": "",
+        "topic": "",
+        "connection": "8658da063d1df58d",
+        "address": "D23900,100",
+        "addressType": "str",
+        "outputFormat": "1",
+        "errorHandling": "throw",
+        "outputs": 1,
+        "x": 400,
+        "y": 700,
+        "wires": [
+            [
+                "f22c742b83faea85"
+            ]
+        ]
+    },
+    {
+        "id": "e2e063847d62781b",
+        "type": "complete",
+        "z": "a9063b5b95487afc",
+        "name": "",
+        "scope": [
+            "9c8f450674c16d5e"
+        ],
+        "uncaught": false,
+        "x": 230,
+        "y": 700,
+        "wires": [
+            [
+                "6e6617463aab7621"
+            ]
+        ]
+    },
+    {
+        "id": "f22c742b83faea85",
+        "type": "buffer-parser",
+        "z": "a9063b5b95487afc",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "type": "int16le",
+                "name": "微动开关下限",
+                "offset": 190,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "微动开关上限",
+                "offset": 188,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "磁通电阻下限",
+                "offset": 194,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            },
+            {
+                "type": "int16le",
+                "name": "磁通电阻上限",
+                "offset": 192,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            }
+        ],
+        "swap1": "swap16",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "resultType": "keyvalue",
+        "resultTypeType": "return",
+        "multipleResult": false,
+        "fanOutMultipleResult": false,
+        "setTopic": true,
+        "outputs": 1,
+        "x": 570,
+        "y": 700,
+        "wires": [
+            [
+                "92540d6ceb7c9d5e",
+                "dbfcad6b6bbffe95"
+            ]
+        ]
+    },
+    {
+        "id": "feab791684656b19",
+        "type": "ui_text",
+        "z": "a9063b5b95487afc",
+        "group": "894856fcb20d0847",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "name": "磁通电阻上限",
+        "label": "上限",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 840,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "3d2918dcf45d5fca",
+        "type": "ui_text",
+        "z": "a9063b5b95487afc",
+        "group": "894856fcb20d0847",
+        "order": 2,
+        "width": 3,
+        "height": 1,
+        "name": "磁通电阻下限",
+        "label": "下限",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 840,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "84d8c9c188e0cddc",
+        "type": "ui_template",
+        "z": "a9063b5b95487afc",
+        "group": "5ccd16f7d4ea9d02",
+        "name": "全局css",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n.minheight{\n    min-height: 48px;\n}\n.state{\n    color: #fff;\n    border-radius: 5px;\n}\n.ok{\n    background-color: rgb(24 203 34);\n}\n.ng{\nbackground-color: #f00;\n}\n.t-center{\n    text-align:center;\n}\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "global",
+        "x": 660,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "22111f3986bd2404",
+        "type": "ui_template",
+        "z": "a9063b5b95487afc",
+        "group": "ee8e5fd4215832b1",
+        "name": "脱扣NG",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "format": "<div  layout=\"row\" class=\"minheight md-title mt-2 t-center\" layout-align=\"space-around center\">\n    <div flex=\"\">脱扣</div>\n    <div flex=\"\" class=\"ng state\">KO</div>\n</div>\n\n\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 880,
+        "y": 1060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "be1f4d69133e800a",
+        "type": "ui_template",
+        "z": "a9063b5b95487afc",
+        "group": "ee8e5fd4215832b1",
+        "name": "脱扣OK",
+        "order": 6,
+        "width": 6,
+        "height": 1,
+        "format": "<div  layout=\"row\" class=\"minheight md-title mt-2 t-center\" layout-align=\"space-around center\">\n    <div flex=\"\">不脱扣</div>\n    <div flex=\"\" class=\"ok state\">OK</div>\n</div>\n\n\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 720,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "714362d1502d7c81",
+        "type": "ui_template",
+        "z": "a9063b5b95487afc",
+        "group": "ee8e5fd4215832b1",
+        "name": "脱扣NG",
+        "order": 7,
+        "width": 6,
+        "height": 1,
+        "format": "<div  layout=\"row\" class=\"minheight md-title mt-2 t-center\" layout-align=\"space-around center\">\n    <div flex=\"\">不脱扣</div>\n    <div flex=\"\" class=\"ng state\">KO</div>\n</div>\n\n\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 720,
+        "y": 1060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "92540d6ceb7c9d5e",
+        "type": "debug",
+        "z": "a9063b5b95487afc",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "dbfcad6b6bbffe95",
+        "type": "change",
+        "z": "a9063b5b95487afc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "limits2",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 770,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "33c05f4506e7c90b",
+        "type": "inject",
+        "z": "a9063b5b95487afc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 250,
+        "y": 740,
+        "wires": [
+            [
+                "6e6617463aab7621"
+            ]
+        ]
+    },
+    {
+        "id": "927d141a905c3199",
+        "type": "ui_text",
+        "z": "a9063b5b95487afc",
+        "group": "5eec1ae40a230115",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "name": "微动开关上限",
+        "label": "上限",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 740,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "766cb8e09cb3b0f4",
+        "type": "ui_text",
+        "z": "a9063b5b95487afc",
+        "group": "5eec1ae40a230115",
+        "order": 2,
+        "width": 3,
+        "height": 1,
+        "name": "微动开关下限",
+        "label": "下限",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 740,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "15668839c1a5aa44",
+        "type": "inject",
+        "z": "a9063b5b95487afc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 1300,
+        "wires": [
+            [
+                "38540b55a9eee8b0"
+            ]
+        ]
+    },
+    {
+        "id": "38540b55a9eee8b0",
+        "type": "change",
+        "z": "a9063b5b95487afc",
+        "name": "limits",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "limits2",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 1300,
+        "wires": [
+            [
+                "f2d14f50d2439e08",
+                "d3a75de0f16f4b77",
+                "9adca499f86f2624",
+                "3ab89f7f4283d576"
+            ]
+        ]
+    },
+    {
+        "id": "f2d14f50d2439e08",
+        "type": "function",
+        "z": "a9063b5b95487afc",
+        "name": "磁通电阻上限",
+        "func": "msg.payload = msg.payload[\"磁通电阻上限\"]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 1240,
+        "wires": [
+            [
+                "feab791684656b19"
+            ]
+        ]
+    },
+    {
+        "id": "d3a75de0f16f4b77",
+        "type": "function",
+        "z": "a9063b5b95487afc",
+        "name": "磁通电阻下限",
+        "func": "msg.payload = msg.payload[\"磁通电阻下限\"]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 1280,
+        "wires": [
+            [
+                "3d2918dcf45d5fca"
+            ]
+        ]
+    },
+    {
+        "id": "9adca499f86f2624",
+        "type": "function",
+        "z": "a9063b5b95487afc",
+        "name": "微动开关上限",
+        "func": "msg.payload = msg.payload[\"微动开关上限\"];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 1340,
+        "wires": [
+            [
+                "927d141a905c3199"
+            ]
+        ]
+    },
+    {
+        "id": "3ab89f7f4283d576",
+        "type": "function",
+        "z": "a9063b5b95487afc",
+        "name": "微动开关下限",
+        "func": "msg.payload = msg.payload[\"微动开关下限\"]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 1380,
+        "wires": [
+            [
+                "766cb8e09cb3b0f4"
+            ]
+        ]
+    },
+    {
+        "id": "4e7956af38d7b083",
+        "type": "ui_text",
+        "z": "a9063b5b95487afc",
+        "group": "9fefbd7904c274f0",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "当前产品序号",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 740,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "4f7f71d44cf5bff4",
+        "type": "inject",
+        "z": "a9063b5b95487afc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 1560,
+        "wires": [
+            [
+                "66a15bb428025cda"
+            ]
+        ]
+    },
+    {
+        "id": "66a15bb428025cda",
+        "type": "change",
+        "z": "a9063b5b95487afc",
+        "name": "statistics",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "statistics2",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 1560,
+        "wires": [
+            [
+                "2a1f662a931f10e9",
+                "47c1ead706bdad45"
+            ]
+        ]
+    },
+    {
+        "id": "2a1f662a931f10e9",
+        "type": "function",
+        "z": "a9063b5b95487afc",
+        "name": "序号",
+        "func": "msg.payload = msg.payload[\"序号\"]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 1560,
+        "wires": [
+            [
+                "4e7956af38d7b083"
+            ]
+        ]
+    },
+    {
+        "id": "e5e8ddef6ed392b6",
+        "type": "ui_text",
+        "z": "a9063b5b95487afc",
+        "group": "9fefbd7904c274f0",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "name": "微动开关常闭触点电阻",
+        "label": "微动开关常闭触点电阻",
+        "format": "{{msg.payload}} Ω",
+        "layout": "row-spread",
+        "x": 840,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "1640c7d9a639bb27",
+        "type": "ui_text",
+        "z": "a9063b5b95487afc",
+        "group": "9fefbd7904c274f0",
+        "order": 6,
+        "width": 6,
+        "height": 1,
+        "name": "微动开关常开触点电阻",
+        "label": "微动开关常开触点电阻",
+        "format": "{{msg.payload}} Ω",
+        "layout": "row-spread",
+        "x": 840,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "1f362d537ee1bd14",
+        "type": "ui_text",
+        "z": "a9063b5b95487afc",
+        "group": "9fefbd7904c274f0",
+        "order": 9,
+        "width": 6,
+        "height": 1,
+        "name": "磁通线圈电阻",
+        "label": "磁通线圈电阻",
+        "format": "{{msg.payload}} Ω",
+        "layout": "row-spread",
+        "x": 820,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "795fff2efda02523",
+        "type": "ui_text",
+        "z": "a9063b5b95487afc",
+        "group": "9fefbd7904c274f0",
+        "order": 12,
+        "width": 6,
+        "height": 1,
+        "name": "脱扣电压",
+        "label": "脱扣电压",
+        "format": "{{msg.payload}} V",
+        "layout": "row-spread",
+        "x": 800,
+        "y": 1800,
+        "wires": []
+    },
+    {
+        "id": "bf6812784187c671",
+        "type": "inject",
+        "z": "a9063b5b95487afc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 1660,
+        "wires": [
+            [
+                "72a37ab3c716b0d6"
+            ]
+        ]
+    },
+    {
+        "id": "72a37ab3c716b0d6",
+        "type": "change",
+        "z": "a9063b5b95487afc",
+        "name": "record",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "record2",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 1660,
+        "wires": [
+            [
+                "305395f141955fe8",
+                "57e2a8b807eb3787",
+                "6ff0239691054dd2",
+                "d7c50c6352b9cb4a"
+            ]
+        ]
+    },
+    {
+        "id": "305395f141955fe8",
+        "type": "function",
+        "z": "a9063b5b95487afc",
+        "name": "微动开关常闭触点电阻值(0-1)Ω",
+        "func": "msg.payload = msg.payload[\"微动开关常闭触点电阻值(0-1)Ω\"]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 1640,
+        "wires": [
+            [
+                "e5e8ddef6ed392b6"
+            ]
+        ]
+    },
+    {
+        "id": "57e2a8b807eb3787",
+        "type": "function",
+        "z": "a9063b5b95487afc",
+        "name": "微动开关常开触点电阻值(0-1)Ω",
+        "func": "msg.payload = msg.payload[\"微动开关常开触点电阻值(0-1)Ω\"]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 1700,
+        "wires": [
+            [
+                "1640c7d9a639bb27"
+            ]
+        ]
+    },
+    {
+        "id": "6ff0239691054dd2",
+        "type": "function",
+        "z": "a9063b5b95487afc",
+        "name": "25℃时磁通线圈电阻(3.96-4.84)Ω",
+        "func": "msg.payload = msg.payload[\"25℃时磁通线圈电阻(3.96-4.84)Ω\"]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 1760,
+        "wires": [
+            [
+                "1f362d537ee1bd14"
+            ]
+        ]
+    },
+    {
+        "id": "d7c50c6352b9cb4a",
+        "type": "function",
+        "z": "a9063b5b95487afc",
+        "name": "实测脱扣电压值(4.6-8)V",
+        "func": "msg.payload = msg.payload[\"实测脱扣电压值(4.6-8)V\"]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 1800,
+        "wires": [
+            [
+                "795fff2efda02523"
+            ]
+        ]
+    },
+    {
+        "id": "50cb62c8160b472d",
+        "type": "function",
+        "z": "a9063b5b95487afc",
+        "name": "测试结果1",
+        "func": "msg.payload = msg.payload[\"测试结果1\"]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 1880,
+        "wires": [
+            [
+                "d49ff46d9e5e4fa9"
+            ]
+        ]
+    },
+    {
+        "id": "384f87507dc1699e",
+        "type": "function",
+        "z": "a9063b5b95487afc",
+        "name": "测试结果2",
+        "func": "msg.payload = msg.payload[\"测试结果2\"]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 561,
+        "y": 1931,
+        "wires": [
+            [
+                "a42776fec301822c"
+            ]
+        ]
+    },
+    {
+        "id": "bb57cd98ef880304",
+        "type": "function",
+        "z": "a9063b5b95487afc",
+        "name": "测试结果3",
+        "func": "msg.payload = msg.payload[\"测试结果3\"]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 2000,
+        "wires": [
+            [
+                "0dc72929b34d05f0"
+            ]
+        ]
+    },
+    {
+        "id": "c0c817137f7be26b",
+        "type": "function",
+        "z": "a9063b5b95487afc",
+        "name": "测试结果4",
+        "func": "msg.payload = msg.payload[\"测试结果4\"]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 2040,
+        "wires": [
+            [
+                "1997da6e5c4b94a5"
+            ]
+        ]
+    },
+    {
+        "id": "47c1ead706bdad45",
+        "type": "link out",
+        "z": "a9063b5b95487afc",
+        "name": "statistics",
+        "mode": "link",
+        "links": [
+            "85509cdcb36c1fe4"
+        ],
+        "x": 495,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "85509cdcb36c1fe4",
+        "type": "link in",
+        "z": "a9063b5b95487afc",
+        "name": "",
+        "links": [
+            "47c1ead706bdad45"
+        ],
+        "x": 325,
+        "y": 1960,
+        "wires": [
+            [
+                "50cb62c8160b472d",
+                "384f87507dc1699e",
+                "bb57cd98ef880304",
+                "c0c817137f7be26b",
+                "818d90f36c317c7e",
+                "d78960f0e0bbdac8",
+                "2def62dbe20bbc8a"
+            ]
+        ]
+    },
+    {
+        "id": "f3a24adb0581fcb3",
+        "type": "ui_chart",
+        "z": "a9063b5b95487afc",
+        "name": "",
+        "group": "8a7139cd29bd218c",
+        "order": 2,
+        "width": 6,
+        "height": 6,
+        "label": "良品统计",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": true,
+        "useUTC": false,
+        "colors": [
+            "#2b9d2b",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 740,
+        "y": 2120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "818d90f36c317c7e",
+        "type": "function",
+        "z": "a9063b5b95487afc",
+        "name": "良品统计",
+        "func": "\nmsg.payload = [{\n    \"series\": [\"良品统计\"],\n    \"data\": [[msg.payload[\"良品统计1\"],\n             msg.payload[\"良品统计2\"], \n             msg.payload[\"良品统计3\"],\n             msg.payload[\"良品统计4\"],\n             msg.payload[\"良品统计5\"],\n             msg.payload[\"良品统计6\"],\n             msg.payload[\"良品统计7\"]]\n           ],\n    \"labels\": [\"5V\", \"5.5V\", \"6V\", \"6.5V\", \"7.0V\", \"7.5V\", \"8.0V\"]\n}];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 2120,
+        "wires": [
+            [
+                "f3a24adb0581fcb3"
+            ]
+        ]
+    },
+    {
+        "id": "d78960f0e0bbdac8",
+        "type": "function",
+        "z": "a9063b5b95487afc",
+        "name": "合格率统计",
+        "func": "var m = [\n  { topic: \"合格数量\", payload: msg.payload[\"合格数量\"]},\n  { topic: \"不合格数量\", payload: msg.payload[\"不合格数量\"] },\n];\nreturn [m];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 2240,
+        "wires": [
+            [
+                "ca1fdc710b186703"
+            ]
+        ]
+    },
+    {
+        "id": "ca1fdc710b186703",
+        "type": "ui_chart",
+        "z": "a9063b5b95487afc",
+        "name": "良率统计",
+        "group": "8a7139cd29bd218c",
+        "order": 1,
+        "width": 6,
+        "height": 6,
+        "label": "良率统计",
+        "chartType": "pie",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": "30",
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#2caa3b",
+            "#e31c1c",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 740,
+        "y": 2240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d18c8c0ee725855d",
+        "type": "function",
+        "z": "a9063b5b95487afc",
+        "name": "测试电压8",
+        "func": "msg.payload = msg.payload[\"测试电压8\"]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 860,
+        "wires": [
+            [
+                "0d781ecfc15c0982"
+            ]
+        ]
+    },
+    {
+        "id": "0d89eaf68e9f4609",
+        "type": "function",
+        "z": "a9063b5b95487afc",
+        "name": "测试电压1",
+        "func": "msg.payload = msg.payload[\"测试电压1\"]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 920,
+        "wires": [
+            [
+                "6866943609416f9d"
+            ]
+        ]
+    },
+    {
+        "id": "ff3fd8056f06fac1",
+        "type": "ui_chart",
+        "z": "a9063b5b95487afc",
+        "name": "",
+        "group": "8a7139cd29bd218c",
+        "order": 3,
+        "width": 6,
+        "height": 6,
+        "label": "不良品统计",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": true,
+        "useUTC": false,
+        "colors": [
+            "#d62728",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 750,
+        "y": 2180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2def62dbe20bbc8a",
+        "type": "function",
+        "z": "a9063b5b95487afc",
+        "name": "良品统计",
+        "func": "msg.payload = [{\n    \"series\": [\"不良品统计\"],\n  \"data\": [[msg.payload[\"微动开关不合格\"],\n    msg.payload[\"4.5V脱扣数\"],\n    msg.payload[\"8V不脱扣数\"],\n    msg.payload[\"电阻不合格数\"]]\n           ],\n  \"labels\": [\"微动开关\", \"4.5V脱扣\", \"8V不脱扣\", \"电阻\"]\n}];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 2180,
+        "wires": [
+            [
+                "ff3fd8056f06fac1"
+            ]
+        ]
+    },
+    {
+        "id": "d8ee478c50fe2d27",
+        "type": "inject",
+        "z": "a9063b5b95487afc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[]",
+        "payloadType": "json",
+        "x": 350,
+        "y": 2180,
+        "wires": [
+            [
+                "ca1fdc710b186703"
+            ]
+        ]
+    },
+    {
+        "id": "d49ff46d9e5e4fa9",
+        "type": "ui_template",
+        "z": "a9063b5b95487afc",
+        "group": "9fefbd7904c274f0",
+        "name": "r1",
+        "order": 4,
+        "width": 2,
+        "height": 1,
+        "format": "<div ng-if=\"msg.payload\" layout=\"row\" class=\"minheight md-title mt-2 t-center\" layout-align=\"space-around center\">\n    <div flex=\"\" class=\"ok state\">OK</div>\n</div>\n<div ng-if=\"msg.payload==false\" layout=\"row\" class=\"minheight md-title mt-2 t-center\" layout-align=\"space-around center\">\n    <div flex=\"\" class=\"ng state\">KO</div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 750,
+        "y": 1880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a42776fec301822c",
+        "type": "ui_template",
+        "z": "a9063b5b95487afc",
+        "group": "9fefbd7904c274f0",
+        "name": "r2",
+        "order": 7,
+        "width": 2,
+        "height": 1,
+        "format": "<div layout=\"row\" class=\"minheight md-title mt-2 t-center\" layout-align=\"space-around center\">\n    <div flex=\"\" class=\"ok state\">OK</div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 750,
+        "y": 1940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0dc72929b34d05f0",
+        "type": "ui_template",
+        "z": "a9063b5b95487afc",
+        "group": "9fefbd7904c274f0",
+        "name": "r3",
+        "order": 10,
+        "width": 2,
+        "height": 1,
+        "format": "<div layout=\"row\" class=\"minheight md-title mt-2 t-center\" layout-align=\"space-around center\">\n    <div flex=\"\" class=\"ok state\">OK</div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 750,
+        "y": 2000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1997da6e5c4b94a5",
+        "type": "ui_template",
+        "z": "a9063b5b95487afc",
+        "group": "9fefbd7904c274f0",
+        "name": "r4",
+        "order": 13,
+        "width": 2,
+        "height": 1,
+        "format": "<div layout=\"row\" class=\"minheight md-title mt-2 t-center\" layout-align=\"space-around center\">\n    <div flex=\"\" class=\"ok state\">OK</div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 750,
+        "y": 2040,
+        "wires": [
+            []
+        ]
+    }
+]
