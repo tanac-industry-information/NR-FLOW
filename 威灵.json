@@ -1,0 +1,1563 @@
+[
+    {
+        "id": "48f79f1d0e9de5ed",
+        "type": "tab",
+        "label": "TCP",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e2e07620c4e8a2ac",
+        "type": "tab",
+        "label": "流程 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9a5d271b2a778fc1",
+        "type": "junction",
+        "z": "48f79f1d0e9de5ed",
+        "x": 520,
+        "y": 140,
+        "wires": [
+            [
+                "f35b08e032d17002",
+                "289bd3dbf95a67cf"
+            ]
+        ]
+    },
+    {
+        "id": "17c31ed1c7f84ab0",
+        "type": "junction",
+        "z": "48f79f1d0e9de5ed",
+        "x": 1200,
+        "y": 120,
+        "wires": [
+            [
+                "9c6d4690932f1ebb",
+                "4bdc4d58d52ffd0c",
+                "586d2406bcea8d38"
+            ]
+        ]
+    },
+    {
+        "id": "13ebcc70a841b725",
+        "type": "OPCUA-IIoT-Connector",
+        "discoveryUrl": "",
+        "endpoint": " opc.tcp://127.0.0.1:49320",
+        "endpointMustExist": false,
+        "keepSessionAlive": true,
+        "loginEnabled": false,
+        "name": "LOCAL SERVER",
+        "showErrors": false,
+        "securityPolicy": "None",
+        "securityMode": "None",
+        "individualCerts": false,
+        "publicCertificateFile": "",
+        "privateKeyFile": "",
+        "defaultSecureTokenLifetime": "",
+        "autoSelectRightEndpoint": false,
+        "strategyMaxRetry": "",
+        "strategyInitialDelay": "",
+        "strategyMaxDelay": "",
+        "strategyRandomisationFactor": "",
+        "requestedSessionTimeout": "",
+        "connectionStartDelay": "",
+        "reconnectDelay": "",
+        "maxBadSessionRequests": "10"
+    },
+    {
+        "id": "2617e2561e430bcf",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "9ba932bcc86591b7",
+        "type": "tcp out",
+        "z": "48f79f1d0e9de5ed",
+        "name": "",
+        "host": "",
+        "port": "",
+        "beserver": "reply",
+        "base64": false,
+        "end": false,
+        "tls": "",
+        "x": 2050,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "72826557744c19aa",
+        "type": "function",
+        "z": "48f79f1d0e9de5ed",
+        "name": "转换成GB2312",
+        "func": "let str=msg.payload\nlet buf = iconv.encode(str, 'GB2312');\nmsg.payload=buf\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "iconv",
+                "module": "iconv-lite"
+            }
+        ],
+        "x": 1880,
+        "y": 160,
+        "wires": [
+            [
+                "9ba932bcc86591b7"
+            ]
+        ]
+    },
+    {
+        "id": "6eca45b9cd1e8cb0",
+        "type": "inject",
+        "z": "48f79f1d0e9de5ed",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 70,
+        "y": 220,
+        "wires": [
+            [
+                "f884bcaa54a2f20f"
+            ]
+        ]
+    },
+    {
+        "id": "515d50f3895e2495",
+        "type": "tcp in",
+        "z": "48f79f1d0e9de5ed",
+        "name": "",
+        "server": "server",
+        "host": "",
+        "port": "15200",
+        "datamode": "stream",
+        "datatype": "buffer",
+        "newline": "",
+        "topic": "",
+        "trim": false,
+        "base64": false,
+        "tls": "",
+        "x": 120,
+        "y": 140,
+        "wires": [
+            [
+                "c8c63b0fd5c09153"
+            ]
+        ]
+    },
+    {
+        "id": "c8c63b0fd5c09153",
+        "type": "function",
+        "z": "48f79f1d0e9de5ed",
+        "name": "GB2312编码转换",
+        "func": "let str = iconv.decode(msg.payload, \"GB2312\");\nmsg.payload=str;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "iconv",
+                "module": "iconv-lite"
+            }
+        ],
+        "x": 350,
+        "y": 140,
+        "wires": [
+            [
+                "9a5d271b2a778fc1",
+                "b696445961b3351f"
+            ]
+        ]
+    },
+    {
+        "id": "2918fab8a56ecf70",
+        "type": "comment",
+        "z": "48f79f1d0e9de5ed",
+        "name": "TCP 协议转换",
+        "info": "",
+        "x": 150,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "112c13cd769368fb",
+        "type": "comment",
+        "z": "48f79f1d0e9de5ed",
+        "name": "设置fromPLC和toPLC字段到msg",
+        "info": "",
+        "x": 710,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "80b39fdcca8f659e",
+        "type": "comment",
+        "z": "48f79f1d0e9de5ed",
+        "name": "负载均衡",
+        "info": "",
+        "x": 1360,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "a66123778a8b3b7a",
+        "type": "comment",
+        "z": "48f79f1d0e9de5ed",
+        "name": "数据分流",
+        "info": "",
+        "x": 880,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "586d2406bcea8d38",
+        "type": "function",
+        "z": "48f79f1d0e9de5ed",
+        "name": "toPLC",
+        "func": "let result=true;\n// if (msg.payload.StatusCode >= 200 && msg.payload.StatusCode <=300){\n//     result=true\n// }\nif (msg.data[\"方法名\"]==\"数据上传\"){\n    msg.payload = `${msg.data[\"名称\"]},${result ? \"OK\" : \"NG\"},`\n}else{\n    msg.payload = `${msg.data[\"方法名\"]},${result ? \"OK\" : \"NG\"},`\n}\n\nreturn msg\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1670,
+        "y": 160,
+        "wires": [
+            [
+                "b6c83eb809feb594",
+                "72826557744c19aa"
+            ]
+        ]
+    },
+    {
+        "id": "4bdc4d58d52ffd0c",
+        "type": "debug",
+        "z": "48f79f1d0e9de5ed",
+        "name": "HTTP请求内容",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1500,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "f35b08e032d17002",
+        "type": "debug",
+        "z": "48f79f1d0e9de5ed",
+        "name": "TCP数据",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "784d608d8ce429d7",
+        "type": "comment",
+        "z": "48f79f1d0e9de5ed",
+        "name": "msg的columns属性会影响后面的解析",
+        "info": "",
+        "x": 2050,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "b6c83eb809feb594",
+        "type": "debug",
+        "z": "48f79f1d0e9de5ed",
+        "name": "HTTP请求结果",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2120,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "345678181c8ea668",
+        "type": "switch",
+        "z": "48f79f1d0e9de5ed",
+        "name": "",
+        "property": "payload.方法名",
+        "propertyType": "jsonata",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "数据上传",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "二维码绑定",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "生产统计",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "连续报警",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 5,
+        "x": 830,
+        "y": 220,
+        "wires": [
+            [
+                "e1a96a381a0265cd"
+            ],
+            [
+                "601b300d020f769d"
+            ],
+            [
+                "cbab4ab0357936ef",
+                "3ca3779e7aadf29b"
+            ],
+            [
+                "9b982148fdeb584a",
+                "6c976d3c27220bd0"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "289bd3dbf95a67cf",
+        "type": "function",
+        "z": "48f79f1d0e9de5ed",
+        "name": "解析数据",
+        "func": "let sps=msg.payload.split(',').filter(x=>x.includes(\":\"))\nlet obj={}\nfor (const sp of sps) {\n    let kv=sp.split(':')\n    obj[kv[0]]=kv[1]\n}\nmsg.payload=obj\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 160,
+        "wires": [
+            [
+                "345678181c8ea668",
+                "634d5653defcf40f"
+            ]
+        ]
+    },
+    {
+        "id": "634d5653defcf40f",
+        "type": "debug",
+        "z": "48f79f1d0e9de5ed",
+        "name": "debug 53",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "b696445961b3351f",
+        "type": "file",
+        "z": "48f79f1d0e9de5ed",
+        "name": "",
+        "filename": "C:\\ftp\\tcp.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 670,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "601b300d020f769d",
+        "type": "function",
+        "z": "48f79f1d0e9de5ed",
+        "name": "设置HTTP请求内容",
+        "func": "msg.url =\"http://localhost:9001/api/MachineData/BindShellCode\"\nmsg.method=\"POST\"\nmsg.data = msg.payload\nlet payload = {\n    \"ShellCode\": \"\",\n    \"StatorCode\": \"\",\n    \"RotorCode\": \"\"\n}\n\npayload[\"ShellCode\"] = msg.payload[\"壳体二维码\"] || \"\"\npayload[\"StatorCode\"] = msg.payload[\"定子二维码\"] || \"\"\npayload[\"RotorCode\"] = msg.payload[\"转子二维码\"] || \"\"\nmsg.payload = payload\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 160,
+        "wires": [
+            [
+                "17c31ed1c7f84ab0"
+            ]
+        ]
+    },
+    {
+        "id": "8aed6e5c1db18794",
+        "type": "function",
+        "z": "48f79f1d0e9de5ed",
+        "name": "模拟数据接收",
+        "func": " msg.payload = \n `方法名:二维码绑定,壳体二维码:230315MZ000001A,转子二维码:230316CZ000001F,\n `\n//msg.payload =`方法名:数据上传,二维码:NoRead,序号:12,名称:总成螺丝安装高度检测,结果:OK,数据描述:传感器检测,数据内容:无,时间:1634,`\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 240,
+        "wires": [
+            [
+                "289bd3dbf95a67cf"
+            ]
+        ]
+    },
+    {
+        "id": "cbab4ab0357936ef",
+        "type": "debug",
+        "z": "48f79f1d0e9de5ed",
+        "name": "生产统计",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "10d7b8ba5992d18c",
+        "type": "comment",
+        "z": "48f79f1d0e9de5ed",
+        "name": "生产统计",
+        "info": "方法名:生产统计,设备名:总成3#,参数:良品数,上传内容:良品数,数量:1,\n方法名:生产统计,设备名:总成3#,参数:不良数,上传内容:总成螺丝安装高度检测不良,数量:1,\n方法名:生产统计,设备名:总成3#,参数:不良数,上传内容:总成反电动势不良,数量:1,\n方法名:生产统计,设备名:总成3#,参数:不良数,上传内容:总成电机性能不良,数量:1,",
+        "x": 240,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "3ca3779e7aadf29b",
+        "type": "function",
+        "z": "48f79f1d0e9de5ed",
+        "name": "设置HTTP请求内容",
+        "func": "msg.url =\"http://192.168.1.180:9001/api/Statistic/Upload\"\nmsg.method=\"POST\"\nmsg.data = msg.payload\nlet pdtype=0\nif (msg.payload['参数']=='不良数'){\n    pdtype=2\n}\nelse if(msg.payload['参数']=='进料数'){\n    pdtype=0\n}\nelse if(msg.payload['参数']=='良品数'){\n    pdtype=1\n}\n// 方法名:生产统计,设备名:定子4#,参数:进料数,上传内容:进料数,数量:1,\nmsg.payload = {\n    \"Device\": msg.payload[\"设备名\"],\n    \"ProductionType\":pdtype,\n    \"Quantity\": msg.payload[\"数量\"],\n    \"Reason\": msg.payload[\"上传内容\"],\n    \"Count\": msg.payload[\"数量\"]\n}\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 200,
+        "wires": [
+            [
+                "17c31ed1c7f84ab0",
+                "079390a6c1103101"
+            ]
+        ]
+    },
+    {
+        "id": "99e1f290ff261bbe",
+        "type": "function",
+        "z": "48f79f1d0e9de5ed",
+        "name": "模拟数据接收",
+        "func": " msg.payload = \n `方法名:生产统计,设备名:总成2#,参数:进料数,上传内容:进料数,数量:1,`\n//msg.payload =`方法名:数据上传,二维码:NoRead,序号:12,名称:总成螺丝安装高度检测,结果:OK,数据描述:传感器检测,数据内容:无,时间:1634,`\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 280,
+        "wires": [
+            [
+                "289bd3dbf95a67cf"
+            ]
+        ]
+    },
+    {
+        "id": "31b9cf14e587c294",
+        "type": "inject",
+        "z": "48f79f1d0e9de5ed",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "86400",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 600,
+        "y": 500,
+        "wires": [
+            [
+                "e5b7c9df70b4d76a"
+            ]
+        ]
+    },
+    {
+        "id": "e5b7c9df70b4d76a",
+        "type": "file",
+        "z": "48f79f1d0e9de5ed",
+        "name": "",
+        "filename": "C:\\ftp\\tcp.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "delete",
+        "encoding": "none",
+        "x": 810,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c3e769a41e7ab254",
+        "type": "function",
+        "z": "48f79f1d0e9de5ed",
+        "name": "模拟数据接收",
+        "func": " msg.payload = \n `方法名:连续报警,设备名:总成2,上传内容:内径检测连续5次不良报警,`\n//msg.payload =`方法名:数据上传,二维码:NoRead,序号:12,名称:总成螺丝安装高度检测,结果:OK,数据描述:传感器检测,数据内容:无,时间:1634,`\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 340,
+        "wires": [
+            [
+                "289bd3dbf95a67cf"
+            ]
+        ]
+    },
+    {
+        "id": "9b982148fdeb584a",
+        "type": "debug",
+        "z": "48f79f1d0e9de5ed",
+        "name": "连续报警",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "6c976d3c27220bd0",
+        "type": "function",
+        "z": "48f79f1d0e9de5ed",
+        "name": "设置HTTP请求内容",
+        "func": "msg.url =\"http://localhost:9001/api/DeviceRequest/PostDeviceRequest\"\nmsg.method=\"POST\"\nmsg.data = msg.payload\n\n// 方法名:生产统计,设备名:定子4#,参数:进料数,上传内容:进料数,数量:1,\nmsg.payload = {\n    \"DeviceName\": msg.data[\"设备名\"],\n    \"Operator\": \"\",\n    \"RequestMessage\": msg.data[\"上传内容\"]\n}\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 240,
+        "wires": [
+            [
+                "17c31ed1c7f84ab0"
+            ]
+        ]
+    },
+    {
+        "id": "2c529dee3047a655",
+        "type": "inject",
+        "z": "48f79f1d0e9de5ed",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 300,
+        "wires": [
+            [
+                "c3e769a41e7ab254"
+            ]
+        ]
+    },
+    {
+        "id": "e1a96a381a0265cd",
+        "type": "function",
+        "z": "48f79f1d0e9de5ed",
+        "name": "设置HTTP请求内容",
+        "func": "msg.url =\"http://localhost:9001/api/MachineData/BatchUploadData\"\nmsg.method=\"POST\"\nmsg.data=msg.payload\n\nconst content = msg.payload[\"数据内容\"] ?? \"\"\nlet pairs_pattern = /([^=^/]+)=([^/]+)/g;\nlet pairs = [...content.matchAll(pairs_pattern)];\nnode.warn(pairs)\nlet payload=null\nif(pairs.length>0){\n  let data=[]\n  pairs.forEach(function(element) {\n    \n    payload = {\n      \"Code\": msg.payload[\"二维码\"] || \"\",\n      \"Order\": parseInt(msg.payload[\"序号\"]) || \"\",\n      \"Name\": msg.payload[\"名称\"] || \"\",\n      \"Result\": msg.payload[\"结果\"] || \"\",\n      \"Description\": msg.payload[\"数据描述\"]   +\"-\"+ element[1],\n      \"Content\": element[2],\n      \"Time\": parseDate(msg.payload[\"时间\"] || \"0000\")\n    }\n    data.push(payload)\n  });\n  msg.payload=data\n  node.send(msg)\n}else{\n  payload = {\n    \"Code\": msg.payload[\"二维码\"] || \"\",\n    \"Order\": parseInt(msg.payload[\"序号\"]) || \"\",\n    \"Name\": msg.payload[\"名称\"] || \"\",\n    \"Result\": msg.payload[\"结果\"] || \"\",\n    \"Description\": msg.payload[\"数据描述\"] || \"\",\n    \"Content\": msg.payload[\"数据内容\"] || \"\",\n    \"Time\": parseDate(msg.payload[\"时间\"] || \"0000\")\n  }\n  msg.payload =[payload]\n  return msg\n}\n\n\n\nfunction parseDate(timeStr){\n    let hour = parseInt(timeStr.substring(0, 2));\n    let minute = parseInt(timeStr.substring(2));\n    let dateObj = new Date();\n  return  new Date(dateObj.setHours(hour, minute, 0, 0));\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 120,
+        "wires": [
+            [
+                "17c31ed1c7f84ab0"
+            ]
+        ]
+    },
+    {
+        "id": "9c6d4690932f1ebb",
+        "type": "function",
+        "z": "48f79f1d0e9de5ed",
+        "name": "post",
+        "func": "const request = (msg) => {\n    axios.post(msg.url,msg.payload)\n        .then(response => {\n            msg.payload=response.data\n            node.send(msg)\n        })\n        .catch(error => {\n            console.error(error);\n            msg.payload=error\n            node.send(msg)\n        });\n}\nrequest(msg)",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "axios",
+                "module": "axios"
+            }
+        ],
+        "x": 1310,
+        "y": 220,
+        "wires": [
+            [
+                "e52f385d257db9a4"
+            ]
+        ]
+    },
+    {
+        "id": "e52f385d257db9a4",
+        "type": "debug",
+        "z": "48f79f1d0e9de5ed",
+        "name": "debug 58",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1460,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "f884bcaa54a2f20f",
+        "type": "function",
+        "z": "48f79f1d0e9de5ed",
+        "name": "模拟数据接收",
+        "func": "// msg.payload = \n// `方法名:二维码绑定,壳体二维码:230315MZ000001A,转子二维码:230316CZ000001F,\n// `\nconst count=context.get('count')||0\ncontext.set('count',count+1)\nmsg.payload =`方法名:数据上传,二维码:${count},序号:7,名称:转子铁芯压轴压机曲线,结果:OK,数据描述:三段扭力和最终位置,数据内容:1#扭力=4309n/2#扭力=5416n/3#扭力=6422n/最终位置=-75.29000mm,时间:1558,`\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 200,
+        "wires": [
+            [
+                "289bd3dbf95a67cf"
+            ]
+        ]
+    },
+    {
+        "id": "e4b608e5b2348fac",
+        "type": "function",
+        "z": "48f79f1d0e9de5ed",
+        "name": "模拟数据接收",
+        "func": "// msg.payload = \n// `方法名:二维码绑定,壳体二维码:230315MZ000001A,转子二维码:230316CZ000001F,\n// `\nconst count=context.get('count')||0\ncontext.set('count',count+1)\nmsg.payload =`方法名:数据上传,二维码:${count},序号:7,名称:转子铁芯压轴压机曲线,结果:OK,数据描述:三段扭力和最终位置,数据内容:1#扭力=4309n/2#扭力=5416n/3#扭力=6422n/最终位置=-75.29000mm,时间:1558,`\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 620,
+        "wires": [
+            [
+                "911e29494a986455"
+            ]
+        ]
+    },
+    {
+        "id": "2c5555f012a06b59",
+        "type": "tcp in",
+        "z": "48f79f1d0e9de5ed",
+        "name": "",
+        "server": "server",
+        "host": "",
+        "port": "15201",
+        "datamode": "stream",
+        "datatype": "utf8",
+        "newline": "",
+        "topic": "",
+        "trim": false,
+        "base64": false,
+        "tls": "",
+        "x": 438.6666564941406,
+        "y": 80.66666412353516,
+        "wires": [
+            [
+                "289bd3dbf95a67cf",
+                "afa32b33e6025036"
+            ]
+        ]
+    },
+    {
+        "id": "911e29494a986455",
+        "type": "tcp request",
+        "z": "48f79f1d0e9de5ed",
+        "name": "",
+        "server": "localhost",
+        "port": "15201",
+        "out": "sit",
+        "ret": "buffer",
+        "splitc": " ",
+        "newline": "",
+        "trim": false,
+        "tls": "",
+        "x": 830,
+        "y": 620,
+        "wires": [
+            [
+                "eb32568b948d4462"
+            ]
+        ]
+    },
+    {
+        "id": "25e5e76cf9ebb688",
+        "type": "debug",
+        "z": "48f79f1d0e9de5ed",
+        "name": "debug 60",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1280,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "f31bd0953138d5f7",
+        "type": "trigger",
+        "z": "48f79f1d0e9de5ed",
+        "name": "",
+        "op1": "",
+        "op2": "0",
+        "op1type": "date",
+        "op2type": "str",
+        "duration": "-1",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 340,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a60dd5ee9d7bc8d4",
+        "type": "inject",
+        "z": "48f79f1d0e9de5ed",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 620,
+        "wires": [
+            [
+                "f31bd0953138d5f7"
+            ]
+        ]
+    },
+    {
+        "id": "65856aee1c60bff3",
+        "type": "inject",
+        "z": "48f79f1d0e9de5ed",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 390,
+        "y": 560,
+        "wires": [
+            [
+                "e4b608e5b2348fac"
+            ]
+        ]
+    },
+    {
+        "id": "afa32b33e6025036",
+        "type": "debug",
+        "z": "48f79f1d0e9de5ed",
+        "name": "debug 61",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "eb32568b948d4462",
+        "type": "function",
+        "z": "48f79f1d0e9de5ed",
+        "name": "GB2312编码转换",
+        "func": "let str = iconv.decode(msg.payload, \"GB2312\");\nmsg.payload=str;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "iconv",
+                "module": "iconv-lite"
+            }
+        ],
+        "x": 1070,
+        "y": 620,
+        "wires": [
+            [
+                "25e5e76cf9ebb688"
+            ]
+        ]
+    },
+    {
+        "id": "079390a6c1103101",
+        "type": "debug",
+        "z": "48f79f1d0e9de5ed",
+        "name": "debug 70",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1320,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "e160bd6fe726414e",
+        "type": "OPCUA-IIoT-Inject",
+        "z": "e2e07620c4e8a2ac",
+        "injectType": "listen",
+        "payload": "{\"interval\":500,\"queueSize\":4,\"options\":{\"requestedPublishingInterval\":1000,\"requestedLifetimeCount\":60,\"requestedMaxKeepAliveCount\":10,\"maxNotificationsPerPublish\":4,\"publishingEnabled\":true,\"priority\":1}}",
+        "payloadType": "json",
+        "topic": "",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "startDelay": "3",
+        "name": "",
+        "addressSpaceItems": [],
+        "x": 190,
+        "y": 180,
+        "wires": [
+            [
+                "381ba4c796603e49"
+            ]
+        ]
+    },
+    {
+        "id": "381ba4c796603e49",
+        "type": "OPCUA-IIoT-Browser",
+        "z": "e2e07620c4e8a2ac",
+        "nodeId": "",
+        "name": "Recursive Browser",
+        "justValue": false,
+        "sendNodesToRead": false,
+        "sendNodesToBrowser": false,
+        "sendNodesToListener": true,
+        "multipleOutputs": false,
+        "showStatusActivities": false,
+        "showErrors": true,
+        "recursiveBrowse": true,
+        "recursiveDepth": "4",
+        "delayPerMessage": "",
+        "connector": "13ebcc70a841b725",
+        "x": 270,
+        "y": 240,
+        "wires": [
+            [
+                "48cc2c475de3fa3f",
+                "3ffd914c86b4b99b"
+            ]
+        ]
+    },
+    {
+        "id": "f1624fa8f1fe4ab3",
+        "type": "debug",
+        "z": "e2e07620c4e8a2ac",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "c8ad98976cc37de0",
+        "type": "debug",
+        "z": "e2e07620c4e8a2ac",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "cf0c5f8280212b5e",
+        "type": "OPCUA-IIoT-Response",
+        "z": "e2e07620c4e8a2ac",
+        "name": "",
+        "compressStructure": true,
+        "showStatusActivities": false,
+        "showErrors": false,
+        "activateUnsetFilter": false,
+        "activateFilters": false,
+        "negateFilter": false,
+        "filters": [],
+        "x": 850,
+        "y": 260,
+        "wires": [
+            [
+                "c8ad98976cc37de0"
+            ]
+        ]
+    },
+    {
+        "id": "c157a36e0aec35ec",
+        "type": "OPCUA-IIoT-Listener",
+        "z": "e2e07620c4e8a2ac",
+        "connector": "13ebcc70a841b725",
+        "action": "subscribe",
+        "queueSize": "100",
+        "name": "",
+        "topic": "",
+        "justValue": true,
+        "useGroupItems": false,
+        "showStatusActivities": false,
+        "showErrors": false,
+        "x": 620,
+        "y": 240,
+        "wires": [
+            [
+                "f1624fa8f1fe4ab3",
+                "6fa19b198b394668"
+            ]
+        ]
+    },
+    {
+        "id": "6d3fdce6b613fd14",
+        "type": "aedes broker",
+        "z": "e2e07620c4e8a2ac",
+        "name": "",
+        "mqtt_port": 1883,
+        "mqtt_ws_bind": "port",
+        "mqtt_ws_port": "",
+        "mqtt_ws_path": "",
+        "cert": "",
+        "key": "",
+        "certname": "",
+        "keyname": "",
+        "dburl": "",
+        "usetls": false,
+        "x": 230,
+        "y": 820,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "48cc2c475de3fa3f",
+        "type": "debug",
+        "z": "e2e07620c4e8a2ac",
+        "name": "debug 64",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "6fa19b198b394668",
+        "type": "function",
+        "z": "e2e07620c4e8a2ac",
+        "name": "设置全局变量",
+        "func": "let opc=global.get(\"opc\")||{}\nconst regex = /;s=(.*)/;\n\nconst name = msg.payload.nodeId.match(regex)[1];\n\nopc[name]=msg.payload.value\nglobal.set(\"opc\",opc)\nmsg.payload=opc\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 340,
+        "wires": [
+            [
+                "1b355c2b75b078a2"
+            ]
+        ]
+    },
+    {
+        "id": "1b355c2b75b078a2",
+        "type": "function",
+        "z": "e2e07620c4e8a2ac",
+        "name": "groupvalue",
+        "func": "const result = {}\nconst data=msg.payload\nObject.keys(data).forEach(tag => {\n\n    // 分割所有`.` \n    const parts = tag.split('.')\n\n    let namespace = result\n\n    // 遍历分割的名称数组\n    for (let i = 0; i < parts.length - 1; i++) {\n        const name = parts[i]\n\n        // 如果不存在,初始化空对象\n        if (!namespace[name]) {\n            namespace[name] = {}\n        }\n\n        // 设置为下一级命名空间 \n        namespace = namespace[name]\n    }\n\n    // 设置标签名和值\n    const name = parts[parts.length - 1]\n    namespace[name] = data[tag].value.value\n})\nmsg.payload=result\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 380,
+        "wires": [
+            [
+                "f05461a6e3c4f266"
+            ]
+        ]
+    },
+    {
+        "id": "f05461a6e3c4f266",
+        "type": "change",
+        "z": "e2e07620c4e8a2ac",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Tags",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1240,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bbf45428d1cad563",
+        "type": "http in",
+        "z": "e2e07620c4e8a2ac",
+        "name": "",
+        "url": "/map/:key",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 360,
+        "y": 460,
+        "wires": [
+            [
+                "97d26ee00e0d2927"
+            ]
+        ]
+    },
+    {
+        "id": "97d26ee00e0d2927",
+        "type": "function",
+        "z": "e2e07620c4e8a2ac",
+        "name": "function 1",
+        "func": "let {key}=msg.req.params\nlet opc=global.get(\"opc\")\n// 包含关键词的字段\nconst keywords = [key]\n\n// 过滤后的结果\nconst result = {}\n// 遍历原始数据\nObject.keys(opc).forEach(key => {\n\n    // 如果键包含关键词\n    if (keywords.some(kw => key.includes(kw))) {\n\n        // 保存到结果中\n        result[key] = opc[key]\n    }\n})\nmsg.payload=result\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 460,
+        "wires": [
+            [
+                "b11470e54a73bb20"
+            ]
+        ]
+    },
+    {
+        "id": "5d43c7c37f4be49c",
+        "type": "debug",
+        "z": "e2e07620c4e8a2ac",
+        "name": "debug 65",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "b11470e54a73bb20",
+        "type": "http response",
+        "z": "e2e07620c4e8a2ac",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 730,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "551252d904a15e44",
+        "type": "http in",
+        "z": "e2e07620c4e8a2ac",
+        "name": "",
+        "url": "/alarm/:station?",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 330,
+        "y": 520,
+        "wires": [
+            [
+                "4be91235ce5161fa",
+                "089aecc9b837c262"
+            ]
+        ]
+    },
+    {
+        "id": "4be91235ce5161fa",
+        "type": "function",
+        "z": "e2e07620c4e8a2ac",
+        "name": "function 2",
+        "func": "let { station } = msg.req.params\nlet opc = global.get(\"opc\")\nlet keywords = ['报警.']\n// 包含关键词的字段\nif(station){\n    keywords.push(station)\n}\n// 过滤后的结果\nconst result = {}\n// 遍历原始数据\nObject.keys(opc).forEach(key => {\n    // 如果键包含关键词\n    if (keywords.every (kw => key.includes(kw))&&opc[key].value.value===true) {\n        // 保存到结果中\n        result[key] = opc[key]\n    }\n})\nmsg.payload = result\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 520,
+        "wires": [
+            [
+                "81f7f5c98d7dc4d8"
+            ]
+        ]
+    },
+    {
+        "id": "81f7f5c98d7dc4d8",
+        "type": "http response",
+        "z": "e2e07620c4e8a2ac",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 690,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "a4362be1e0b2a2bf",
+        "type": "http in",
+        "z": "e2e07620c4e8a2ac",
+        "name": "",
+        "url": "/productbyhours",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 340,
+        "y": 580,
+        "wires": [
+            [
+                "67f4f9226cf23ffd"
+            ]
+        ]
+    },
+    {
+        "id": "67f4f9226cf23ffd",
+        "type": "function",
+        "z": "e2e07620c4e8a2ac",
+        "name": "function 3",
+        "func": "let target=global.get(\"Tags\")[\"总成\"][\"总成锁螺丝测试\"][\"小时目标产量\"]\nlet product = global.get(\"Tags\")[\"总成\"][\"总成锁螺丝测试\"][\"小时产量\"]\nconst targetArray = Object.entries(target).map(([time, value]) => ({ time: parseInt(time.slice(0, -3)), value }));\nconst productArray = Object.entries(product).map(([time, value]) => ({ time: parseInt(time.slice(0, -3)), value }));\ntargetArray.sort((a, b) => a.time - b.time);\nproductArray.sort((a, b) => a.time - b.time);\nmsg.payload={\n    product:productArray,\n    target: targetArray\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 580,
+        "wires": [
+            [
+                "9898d0ca958d3c5f",
+                "faeb897bb8b61efe"
+            ]
+        ]
+    },
+    {
+        "id": "9898d0ca958d3c5f",
+        "type": "http response",
+        "z": "e2e07620c4e8a2ac",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 690,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "5fd2628b2ba4adda",
+        "type": "http in",
+        "z": "e2e07620c4e8a2ac",
+        "name": "",
+        "url": "/stations",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 310,
+        "y": 660,
+        "wires": [
+            [
+                "54f1de1590444b31"
+            ]
+        ]
+    },
+    {
+        "id": "54f1de1590444b31",
+        "type": "function",
+        "z": "e2e07620c4e8a2ac",
+        "name": "function 4",
+        "func": "const data = global.get(\"Tags\")\n\nconst level2Fields = []\n\n// 递归遍历对象\nfunction traverse(obj, target,fields,level=0) {\n    level++\n    Object.keys(obj).forEach(key => {\n        if (typeof obj[key] === 'object') {\n            traverse(obj[key], target,fields,level)\n        }\n        // 判断是否为三级字段\n        if (level === target) {\n            fields.push(key)\n        }\n    })\n}\ntraverse(data,2,level2Fields)\nmsg.payload=level2Fields\n\n// 打印结果:\n// [\"Tag1\", \"Tag2\", \"Ramp1\", \"Ramp2\", ...]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 660,
+        "wires": [
+            [
+                "4263e7ee0c45f26a",
+                "15e5bbc85af4cd14"
+            ]
+        ]
+    },
+    {
+        "id": "4263e7ee0c45f26a",
+        "type": "http response",
+        "z": "e2e07620c4e8a2ac",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 630,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "15e5bbc85af4cd14",
+        "type": "debug",
+        "z": "e2e07620c4e8a2ac",
+        "name": "debug 66",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "d032e0bfc77ea8eb",
+        "type": "inject",
+        "z": "e2e07620c4e8a2ac",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 330,
+        "y": 720,
+        "wires": [
+            [
+                "54f1de1590444b31"
+            ]
+        ]
+    },
+    {
+        "id": "94ea62807363b6ac",
+        "type": "catch",
+        "z": "e2e07620c4e8a2ac",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 160,
+        "y": 380,
+        "wires": [
+            [
+                "f7a793376117c130"
+            ]
+        ]
+    },
+    {
+        "id": "f7a793376117c130",
+        "type": "debug",
+        "z": "e2e07620c4e8a2ac",
+        "name": "debug 67",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "3ffd914c86b4b99b",
+        "type": "function",
+        "z": "e2e07620c4e8a2ac",
+        "name": "筛选变量",
+        "func": "msg.payload.browserResults = msg.payload.browserResults.filter(x =>(!x.nodeId.includes(\"_\"))&&x.nodeId.includes(\";s=\") &&x.nodeClass == \"Variable\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 260,
+        "wires": [
+            [
+                "c157a36e0aec35ec"
+            ]
+        ]
+    },
+    {
+        "id": "089aecc9b837c262",
+        "type": "debug",
+        "z": "e2e07620c4e8a2ac",
+        "name": "debug 68",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "faeb897bb8b61efe",
+        "type": "debug",
+        "z": "e2e07620c4e8a2ac",
+        "name": "debug 69",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "52e81b3dad8859f1",
+        "type": "inject",
+        "z": "e2e07620c4e8a2ac",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 350,
+        "y": 620,
+        "wires": [
+            [
+                "67f4f9226cf23ffd"
+            ]
+        ]
+    }
+]
