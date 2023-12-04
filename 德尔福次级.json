@@ -1,0 +1,3858 @@
+[
+    {
+        "id": "5b367beb.94d904",
+        "type": "tab",
+        "label": "IIoT OPC UA Grouped Monitoring",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "985e794e41b6964f",
+        "type": "tab",
+        "label": "Alarm_Messages",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5b852fe51720bba6",
+        "type": "junction",
+        "z": "5b367beb.94d904",
+        "x": 820,
+        "y": 640,
+        "wires": [
+            [
+                "413bfd6a9f46dfea"
+            ]
+        ]
+    },
+    {
+        "id": "887841c1277c0f4a",
+        "type": "junction",
+        "z": "5b367beb.94d904",
+        "x": 1020,
+        "y": 620,
+        "wires": [
+            [
+                "19bae3efc94bc104"
+            ]
+        ]
+    },
+    {
+        "id": "2caf1a358d8c6ab4",
+        "type": "junction",
+        "z": "5b367beb.94d904",
+        "x": 780,
+        "y": 800,
+        "wires": [
+            [
+                "2f724eabf823327e"
+            ]
+        ]
+    },
+    {
+        "id": "cc2fd2d6f594ee97",
+        "type": "junction",
+        "z": "5b367beb.94d904",
+        "x": 900,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "45e5c8e9.6795a8",
+        "type": "OPCUA-IIoT-Connector",
+        "z": "5b367beb.94d904",
+        "discoveryUrl": "",
+        "endpoint": "opc.tcp://192.168.1.3:4840",
+        "endpointMustExist": false,
+        "keepSessionAlive": true,
+        "loginEnabled": false,
+        "name": "LOCAL DEMO SERVER",
+        "showErrors": false,
+        "securityPolicy": "None",
+        "securityMode": "None",
+        "individualCerts": false,
+        "publicCertificateFile": "",
+        "privateKeyFile": "",
+        "defaultSecureTokenLifetime": "60000",
+        "autoSelectRightEndpoint": false,
+        "strategyMaxRetry": "",
+        "strategyInitialDelay": "",
+        "strategyMaxDelay": "",
+        "strategyRandomisationFactor": "",
+        "requestedSessionTimeout": "",
+        "connectionStartDelay": "",
+        "reconnectDelay": "",
+        "maxBadSessionRequests": ""
+    },
+    {
+        "id": "2b1ea252237eeddb",
+        "type": "FINS Connection",
+        "name": "",
+        "host": "192.168.1.3",
+        "port": "9600",
+        "MODE": "",
+        "MODEType": "NJ",
+        "protocol": "",
+        "protocolType": "udp",
+        "ICF": "128",
+        "DNA": "",
+        "DA1": "3",
+        "DA2": "",
+        "SNA": "",
+        "SA1": "11",
+        "SA2": "",
+        "autoConnect": true
+    },
+    {
+        "id": "32813aa5086c4a16",
+        "type": "OPCUA-IIoT-Connector",
+        "discoveryUrl": "",
+        "endpoint": "opc.tcp://192.168.1.3:4840",
+        "endpointMustExist": false,
+        "keepSessionAlive": true,
+        "loginEnabled": false,
+        "name": "LOCAL SERVER",
+        "showErrors": false,
+        "securityPolicy": "None",
+        "securityMode": "None",
+        "individualCerts": false,
+        "publicCertificateFile": "",
+        "privateKeyFile": "",
+        "defaultSecureTokenLifetime": "5000",
+        "autoSelectRightEndpoint": false,
+        "strategyMaxRetry": "",
+        "strategyInitialDelay": "",
+        "strategyMaxDelay": "",
+        "strategyRandomisationFactor": "",
+        "requestedSessionTimeout": "",
+        "connectionStartDelay": "",
+        "reconnectDelay": "",
+        "maxBadSessionRequests": "10"
+    },
+    {
+        "id": "7f274f64f1179255",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "001475ceac6776b5",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "964f5b3477c1de84",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "7f274f64f1179255",
+        "order": 1,
+        "disp": true,
+        "width": "24",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ded1a51a49cf2efe",
+        "type": "Opcua-Endpoint-Instance",
+        "endpoint": "opc.tcp://192.168.1.3:4840",
+        "user": "",
+        "password": "",
+        "secpolicy": "None",
+        "secmode": "None"
+    },
+    {
+        "id": "d25d8f5f.8b20f",
+        "type": "OPCUA-IIoT-Inject",
+        "z": "5b367beb.94d904",
+        "injectType": "listen",
+        "payload": "{\"interval\":100,\"queueSize\":10,\"options\":{\"requestedPublishingInterval\":500,\"requestedLifetimeCount\":60,\"requestedMaxKeepAliveCount\":10,\"maxNotificationsPerPublish\":4,\"publishingEnabled\":true,\"priority\":1}}",
+        "payloadType": "json",
+        "topic": "",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "startDelay": "2.4",
+        "name": "sub / unsub",
+        "addressSpaceItems": [],
+        "x": 170,
+        "y": 460,
+        "wires": [
+            [
+                "4eff350.c36cacc"
+            ]
+        ]
+    },
+    {
+        "id": "4eff350.c36cacc",
+        "type": "OPCUA-IIoT-Browser",
+        "z": "5b367beb.94d904",
+        "nodeId": "ns=4;s=NxController.GlobalVars",
+        "name": "Single Browser",
+        "justValue": true,
+        "sendNodesToRead": false,
+        "sendNodesToBrowser": false,
+        "sendNodesToListener": true,
+        "multipleOutputs": false,
+        "showStatusActivities": false,
+        "showErrors": true,
+        "recursiveBrowse": false,
+        "recursiveDepth": "1",
+        "delayPerMessage": "",
+        "connector": "45e5c8e9.6795a8",
+        "x": 380,
+        "y": 460,
+        "wires": [
+            [
+                "2b7dbf9d.4ab478",
+                "4b30ce0b.72511"
+            ]
+        ]
+    },
+    {
+        "id": "41473dea.fda934",
+        "type": "debug",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "2b7dbf9d.4ab478",
+        "type": "debug",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "4b30ce0b.72511",
+        "type": "OPCUA-IIoT-Listener",
+        "z": "5b367beb.94d904",
+        "connector": "45e5c8e9.6795a8",
+        "action": "subscribe",
+        "queueSize": 10,
+        "name": "Grouped Listener",
+        "topic": "",
+        "justValue": true,
+        "useGroupItems": false,
+        "showStatusActivities": false,
+        "showErrors": true,
+        "x": 650,
+        "y": 460,
+        "wires": [
+            [
+                "41473dea.fda934",
+                "3069b25352c5c879"
+            ]
+        ]
+    },
+    {
+        "id": "d5c26764.ecdd98",
+        "type": "catch",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 620,
+        "y": 260,
+        "wires": [
+            [
+                "ce57a0c6.3aa5"
+            ]
+        ]
+    },
+    {
+        "id": "ce57a0c6.3aa5",
+        "type": "debug",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "bc81c5c74691faea",
+        "type": "comment",
+        "z": "5b367beb.94d904",
+        "name": "Use Demo Server Example",
+        "info": "Please use the Demo Server example for this example to work.\nImport that with strg+i -> Examples -> opcuaIIoT -> Server -> Demo Server",
+        "x": 669,
+        "y": 219,
+        "wires": []
+    },
+    {
+        "id": "c0cfd2236a5ea739",
+        "type": "function",
+        "z": "5b367beb.94d904",
+        "name": "设置OPC全局变量",
+        "func": "let opc=global.get(\"OPC\")||{}\nconst regex = /;s=(.*)/;\nconst match = regex.exec(msg.payload.nodeId);\nconst contentAfterS = match[1];//msg.name\n\nif (contentAfterS.includes(\"PC\"))\n{\nopc[contentAfterS]=msg.payload.value.value.value\n//msg.payload\nglobal.set('OPC',opc)\nmsg.topic=contentAfterS;\nreturn msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 190,
+        "y": 680,
+        "wires": [
+            [
+                "e566591c3ec3c2fd",
+                "73fba4720a51b71f"
+            ]
+        ]
+    },
+    {
+        "id": "e566591c3ec3c2fd",
+        "type": "switch",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "PC读取激光打码数据请求",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "PC读取图像数据请求",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "PC切换型号请求",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "PC读取扫码数据请求",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "PC心跳信号",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 5,
+        "x": 370,
+        "y": 740,
+        "wires": [
+            [
+                "5c42513165e763be"
+            ],
+            [
+                "6f3822da3dd394b1"
+            ],
+            [
+                "a6b553eafd36026d"
+            ],
+            [
+                "cbbdd1db36334b34"
+            ],
+            [
+                "743c56d23a6fa635"
+            ]
+        ]
+    },
+    {
+        "id": "73fba4720a51b71f",
+        "type": "debug",
+        "z": "5b367beb.94d904",
+        "name": "debug 7",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "5c42513165e763be",
+        "type": "function",
+        "z": "5b367beb.94d904",
+        "name": "PC读取激光打码数据请求",
+        "func": "if(msg.payload.value.value.value==true)\n//if(msg.payload==true)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 600,
+        "wires": [
+            [
+                "5b852fe51720bba6",
+                "01da2806cec14a40"
+            ]
+        ]
+    },
+    {
+        "id": "6f3822da3dd394b1",
+        "type": "function",
+        "z": "5b367beb.94d904",
+        "name": "PC读取图像数据请求",
+        "func": "if(msg.payload.value.value.value===true)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 680,
+        "wires": [
+            [
+                "5b852fe51720bba6",
+                "ec15b0b01d63e5a8"
+            ]
+        ]
+    },
+    {
+        "id": "a6b553eafd36026d",
+        "type": "function",
+        "z": "5b367beb.94d904",
+        "name": "PC切换型号请求",
+        "func": "if(msg.payload.value.value.value===true)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 800,
+        "wires": [
+            [
+                "5b852fe51720bba6",
+                "04b7d5a0c3243796"
+            ]
+        ]
+    },
+    {
+        "id": "cbbdd1db36334b34",
+        "type": "function",
+        "z": "5b367beb.94d904",
+        "name": "PC读取扫码数据请求",
+        "func": "if(msg.payload.value.value.value===true)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 740,
+        "wires": [
+            [
+                "5b852fe51720bba6",
+                "2caf1a358d8c6ab4"
+            ]
+        ]
+    },
+    {
+        "id": "19bae3efc94bc104",
+        "type": "OPCUA-IIoT-Write",
+        "z": "5b367beb.94d904",
+        "connector": "45e5c8e9.6795a8",
+        "name": "",
+        "justValue": false,
+        "showStatusActivities": false,
+        "showErrors": true,
+        "x": 1110,
+        "y": 620,
+        "wires": [
+            [
+                "776744fe72bbb63c"
+            ]
+        ]
+    },
+    {
+        "id": "776744fe72bbb63c",
+        "type": "OPCUA-IIoT-Response",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "compressStructure": true,
+        "showStatusActivities": false,
+        "showErrors": false,
+        "activateUnsetFilter": false,
+        "activateFilters": false,
+        "negateFilter": false,
+        "filters": [],
+        "x": 1310,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5688168151038e0b",
+        "type": "OPCUA-IIoT-Write",
+        "z": "5b367beb.94d904",
+        "connector": "45e5c8e9.6795a8",
+        "name": "",
+        "justValue": false,
+        "showStatusActivities": false,
+        "showErrors": true,
+        "x": 450,
+        "y": 1640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "88764d977f3a94bf",
+        "type": "inject",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 1640,
+        "wires": [
+            [
+                "7be3b64c357c18bf"
+            ]
+        ]
+    },
+    {
+        "id": "7be3b64c357c18bf",
+        "type": "function",
+        "z": "5b367beb.94d904",
+        "name": "function 6",
+        "func": "let payload = {\n    \"nodetype\": \"node\",\n    \"injectType\": \"write\",\n    \"addressSpaceItems\": [\n        {\n            \"name\": \"PC切换型号请求\",\n            \"nodeId\": \"ns=4;s=PC切换型号请求\",\n            \"datatypeName\": \"Boolean\"\n        }\n    ],\n    \"valuesToWrite\": [\"false\"],\n    \"value\": 1683767267884\n}\nmsg.payload=payload\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 1640,
+        "wires": [
+            [
+                "5688168151038e0b"
+            ]
+        ]
+    },
+    {
+        "id": "fd95bfb006b06013",
+        "type": "function",
+        "z": "5b367beb.94d904",
+        "name": "值复位",
+        "func": "let payload = {\n    \"nodetype\": \"node\",\n    \"injectType\": \"write\",\n    \"addressSpaceItems\": [\n        {\n            \"name\": msg.topic,\n            \"nodeId\": msg.payload.nodeId,//msg.nodeId\n            \"datatypeName\": \"Boolean\"\n        }\n    ],\n    \"valuesToWrite\": [false]\n}\nmsg.payload = payload\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 560,
+        "wires": [
+            [
+                "5e34bd173a54cc48",
+                "887841c1277c0f4a"
+            ]
+        ]
+    },
+    {
+        "id": "5e34bd173a54cc48",
+        "type": "debug",
+        "z": "5b367beb.94d904",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "ec15b0b01d63e5a8",
+        "type": "function",
+        "z": "5b367beb.94d904",
+        "name": "图像数据",
+        "func": "let obj={}\nvar opc=global.get(\"OPC\")\n//obj[\"code\"] = opc[\"PC工位序列号\"][5]\nlet xlh = opc[\"PC工位序列号\"][5]\nobj[\"code\"] = opc[\"PC图像二维码内容\"]\nobj[\"station\"] = \"图像\"\nobj[\"图像检测结果\"] = opc[\"PC图像检测OK\"]?\"OK\":\"NG\"\nobj[\"插针前工装号\"] = xlh[xlh.length-2]\nobj[\"插针后工装号\"] = xlh[xlh.length - 1]\nobj[\"相机1距离1\"] = opc[\"PC相机1距离1\"].toFixed(3)\nobj[\"相机1距离1结果\"] = opc[\"PC工序5图像相机1距离1检测NG\"]==false?\"OK\":\"NG\"\nobj[\"相机1距离2\"] = opc[\"PC相机1距离2\"].toFixed(3)\nobj[\"相机1距离2结果\"] = opc[\"PC工序5图像相机1距离2检测NG\"]==false ? \"OK\" : \"NG\"\nobj[\"相机1距离3\"] = opc[\"PC相机1距离3\"].toFixed(3)\nobj[\"相机1距离3结果\"] = opc[\"PC工序5图像相机1距离3检测NG\"]==false? \"OK\" : \"NG\"\nobj[\"相机2距离1\"] = opc[\"PC相机2距离1\"].toFixed(3)\nobj[\"相机2距离1结果\"] = opc[\"PC工序5图像相机2距离1检测NG\"]==false ? \"OK\" : \"NG\"\nobj[\"相机2距离2\"] = opc[\"PC相机2距离2\"].toFixed(3)\nobj[\"相机2距离2结果\"] = opc[\"PC工序5图像相机2距离2检测NG\"]==false ? \"OK\" : \"NG\"\nobj[\"相机3距离1\"] = opc[\"PC相机3距离1\"].toFixed(3)\nobj[\"相机3距离1结果\"] = opc[\"PC工序5图像相机3距离1检测NG\"]==false  ? \"OK\" : \"NG\"\nobj[\"相机3距离2\"] = opc[\"PC相机3距离2\"].toFixed(3)\nobj[\"相机3距离2结果\"] = opc[\"PC工序5图像相机3距离2检测NG\"]==false ? \"OK\" : \"NG\"\nobj[\"相机3距离3\"] = opc[\"PC相机3距离3\"].toFixed(3)\nobj[\"相机3距离3结果\"] = opc[\"PC工序5图像相机3距离3检测NG\"]==false ? \"OK\" : \"NG\"\nobj[\"相机3距离4\"] = opc[\"PC相机3距离4\"].toFixed(3)\nobj[\"相机3距离4结果\"] = opc[\"PC工序5图像相机3距离4检测NG\"]==false  ? \"OK\" : \"NG\"\nobj[\"相机3距离5\"] = opc[\"PC相机3距离5\"].toFixed(3)\nobj[\"相机3距离5结果\"] = opc[\"PC工序5图像相机3距离5检测NG\"]==false  ? \"OK\" : \"NG\"\nobj[\"RD_来料码信息\"] = opc[\"PC_RD_来料码信息_扫码\"]\nobj[\"RD_二极管码信息\"] = opc[\"PC_RD_二极管码信息_扫码\"]\nobj[\"RD_圆形线码信息\"] = opc[\"PC_RD_圆形线码信息_扫码\"]\nobj[\"RD_骨架码信息\"] = opc[\"PC_RD_骨架码信息_扫码\"]\nmsg.payload=obj\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 720,
+        "wires": [
+            [
+                "448263e6376ee251",
+                "9dcd3a11bf046cef"
+            ]
+        ]
+    },
+    {
+        "id": "01da2806cec14a40",
+        "type": "function",
+        "z": "5b367beb.94d904",
+        "name": "打码内容",
+        "func": "let obj={}\nvar opc=global.get(\"OPC\")\n//let xlh = opc[\"PC工位序列号\"][6]\n\nobj[\"code\"] = opc[\"PC打码二维码内容\"]\nobj[\"station\"] = \"打码\"\nobj[\"打码内容\"] = opc[\"PC打码内容\"]\nobj[\"RD_来料码信息\"] = opc[\"PC_RD_来料码信息_扫码\"]\nobj[\"RD_二极管码信息\"] = opc[\"PC_RD_二极管码信息_扫码\"]\nobj[\"RD_圆形线码信息\"] = opc[\"PC_RD_圆形线码信息_扫码\"]\nobj[\"RD_骨架码信息\"] = opc[\"PC_RD_骨架码信息_扫码\"]\nmsg.payload=obj\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 780,
+        "wires": [
+            [
+                "14bf791ca273a97b"
+            ]
+        ]
+    },
+    {
+        "id": "2f724eabf823327e",
+        "type": "function",
+        "z": "5b367beb.94d904",
+        "name": "扫码内容",
+        "func": "let obj={}\nvar opc=global.get(\"OPC\")\nobj[\"code\"] = opc[\"PC扫码二维码内容\"]\nobj[\"station\"] = \"扫码\"\n\nlet hexString = opc[\"PC扫码数据\"]\n\nlet asciiString = '';\nfor (let i = 0; i < hexString.length; i += 2) {\n    const hexCode = parseInt(hexString.substr(i, 2), 16); // 将每组两个十六进制字符转换成对应的十进制数\n    asciiString += String.fromCharCode(hexCode); // 将每个十进制数转换成对应的 ASCII 字符\n}\n\nobj[\"RD_来料码信息\"] = opc[\"PC_RD_来料码信息_扫码\"]\nobj[\"RD_二极管码信息\"] = opc[\"PC_RD_二极管码信息_扫码\"]\nobj[\"RD_圆形线码信息\"] = opc[\"PC_RD_圆形线码信息_扫码\"]\nobj[\"RD_骨架码信息\"] = opc[\"PC_RD_骨架码信息_扫码\"]\nmsg.payload=obj\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 840,
+        "wires": [
+            [
+                "a4be69ab3a507209"
+            ]
+        ]
+    },
+    {
+        "id": "743c56d23a6fa635",
+        "type": "debug",
+        "z": "5b367beb.94d904",
+        "name": "debug 10",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "0e41d52a58ace31a",
+        "type": "OPCUA-IIoT-Write",
+        "z": "5b367beb.94d904",
+        "connector": "45e5c8e9.6795a8",
+        "name": "",
+        "justValue": false,
+        "showStatusActivities": false,
+        "showErrors": true,
+        "x": 450,
+        "y": 1700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0f93943627d3fb18",
+        "type": "inject",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 1700,
+        "wires": [
+            [
+                "6bddd3b3167eac40"
+            ]
+        ]
+    },
+    {
+        "id": "6bddd3b3167eac40",
+        "type": "function",
+        "z": "5b367beb.94d904",
+        "name": "function 11",
+        "func": "let payload = {\n    \"nodetype\": \"node\",\n    \"injectType\": \"write\",\n    \"addressSpaceItems\": [\n        {\n            \"name\": \"PC切换型号请求\",\n            \"nodeId\": \"ns=4;s=PC切换型号请求\",\n            \"datatypeName\": \"Boolean\"\n        }\n    ],\n    \"valuesToWrite\": [\"false\"],\n    \"value\": 1683767267884\n}\nmsg.payload=payload\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 1700,
+        "wires": [
+            [
+                "0e41d52a58ace31a"
+            ]
+        ]
+    },
+    {
+        "id": "cdcccc87c8e09a23",
+        "type": "function",
+        "z": "5b367beb.94d904",
+        "name": "function 12",
+        "func": "//let data=global.get('OPC')[\"PC心跳信号\"]\nlet data = context.get(\"heart\") || false\ncontext.set(\"heart\", !data)\nmsg.payload = {\n    \"payload\": 0,\n    \"payloadType\": \"num\",\n    \"value\": data ? 0 : 1,\n    \"nodetype\": \"inject\",\n    \"injectType\": \"write\",\n    \"addressSpaceItems\": [{\n        \"name\": \"PC心跳信号\",\n        \"nodeId\": \"ns=4;s=PC心跳信号\",\n        \"datatypeName\": \"Int16\"\n    }], \"manualInject\": true,\n    \"valuesToWrite\": [data ? 0 : 1]\n}\n\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 1020,
+        "wires": [
+            [
+                "5367ef0971036566",
+                "33cc45cb085595da"
+            ]
+        ]
+    },
+    {
+        "id": "5367ef0971036566",
+        "type": "debug",
+        "z": "5b367beb.94d904",
+        "name": "debug 12",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "33cc45cb085595da",
+        "type": "OPCUA-IIoT-Write",
+        "z": "5b367beb.94d904",
+        "connector": "45e5c8e9.6795a8",
+        "name": "",
+        "justValue": false,
+        "showStatusActivities": false,
+        "showErrors": true,
+        "x": 630,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3085b373e67798bf",
+        "type": "inject",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 960,
+        "wires": [
+            [
+                "984164f1ee1752a6"
+            ]
+        ]
+    },
+    {
+        "id": "984164f1ee1752a6",
+        "type": "trigger",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "-1000",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 240,
+        "y": 1020,
+        "wires": [
+            [
+                "cdcccc87c8e09a23"
+            ]
+        ]
+    },
+    {
+        "id": "448263e6376ee251",
+        "type": "http request",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://localhost:5000/api/testData/JSON",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "application/json",
+                "valueValue": ""
+            }
+        ],
+        "x": 1080,
+        "y": 720,
+        "wires": [
+            [
+                "d0b8ee81eadb466b"
+            ]
+        ]
+    },
+    {
+        "id": "14bf791ca273a97b",
+        "type": "http request",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:5000/api/testData/JSON",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "application/json",
+                "valueValue": ""
+            }
+        ],
+        "x": 1080,
+        "y": 780,
+        "wires": [
+            [
+                "d0b8ee81eadb466b"
+            ]
+        ]
+    },
+    {
+        "id": "a4be69ab3a507209",
+        "type": "http request",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:5000/api/testData/JSON",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "application/json",
+                "valueValue": ""
+            }
+        ],
+        "x": 1080,
+        "y": 840,
+        "wires": [
+            [
+                "d0b8ee81eadb466b"
+            ]
+        ]
+    },
+    {
+        "id": "d0b8ee81eadb466b",
+        "type": "debug",
+        "z": "5b367beb.94d904",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1280,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "4a45424be38ceb53",
+        "type": "http request",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:5000/api/CodeRelation/CodeBinding",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "application/json",
+                "valueValue": ""
+            }
+        ],
+        "x": 1080,
+        "y": 900,
+        "wires": [
+            [
+                "d0b8ee81eadb466b"
+            ]
+        ]
+    },
+    {
+        "id": "102296cf8dd671a0",
+        "type": "function",
+        "z": "5b367beb.94d904",
+        "name": "关联code",
+        "func": "let obj={}\nvar opc=global.get(\"OPC\")\nlet hexString = opc[\"PC扫码数据\"]\n\nlet asciiString = '';\nfor (let i = 0; i < hexString.length; i += 2) {\n    const hexCode = parseInt(hexString.substr(i, 2), 16); // 将每组两个十六进制字符转换成对应的十进制数\n    asciiString += String.fromCharCode(hexCode); // 将每个十进制数转换成对应的 ASCII 字符\n}\n\nnode.warn(asciiString);\nmsg.payload = {\n    \"parentCode\": opc[\"PC扫码数据\"],\n    \"childList\": [\n        opc[\"PC扫码二维码内容\"]\n    ]\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 900,
+        "wires": [
+            [
+                "4a45424be38ceb53",
+                "9bfd99a1980fb6a0"
+            ]
+        ]
+    },
+    {
+        "id": "9dcd3a11bf046cef",
+        "type": "debug",
+        "z": "5b367beb.94d904",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1220,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "352de0777d57c6f0",
+        "type": "http request",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://localhost:5000/api/Stations",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 300,
+        "y": 1760,
+        "wires": [
+            [
+                "012a20ecd02b8423"
+            ]
+        ]
+    },
+    {
+        "id": "cd8098d6eabfe141",
+        "type": "inject",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 1760,
+        "wires": [
+            [
+                "352de0777d57c6f0"
+            ]
+        ]
+    },
+    {
+        "id": "012a20ecd02b8423",
+        "type": "debug",
+        "z": "5b367beb.94d904",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "3069b25352c5c879",
+        "type": "link out",
+        "z": "5b367beb.94d904",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "b8a21613954cfb4e",
+            "a0f890c81a549936"
+        ],
+        "x": 835,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "b8a21613954cfb4e",
+        "type": "link in",
+        "z": "5b367beb.94d904",
+        "name": "link in 3",
+        "links": [
+            "3069b25352c5c879"
+        ],
+        "x": 65,
+        "y": 680,
+        "wires": [
+            [
+                "c0cfd2236a5ea739"
+            ]
+        ]
+    },
+    {
+        "id": "86e0e9e3a9ab9944",
+        "type": "function",
+        "z": "5b367beb.94d904",
+        "name": "设置报警全局变量",
+        "func": "let ALARMS = global.get(\"ALARMS\") || {}\nconst regex = /;s=(.*)/;\nconst match = regex.exec(msg.payload.nodeId);\n//node.warn(match);\nconst contentAfterS = match[1];\nif (contentAfterS.includes(\"报警\")) {\n    ALARMS[contentAfterS] = msg.payload.value.value.value\n    global.set('ALARMS', ALARMS)\n    msg.topic = contentAfterS;\n    return msg;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 190,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a0f890c81a549936",
+        "type": "link in",
+        "z": "5b367beb.94d904",
+        "name": "link in 4",
+        "links": [
+            "3069b25352c5c879"
+        ],
+        "x": 65,
+        "y": 800,
+        "wires": [
+            [
+                "86e0e9e3a9ab9944"
+            ]
+        ]
+    },
+    {
+        "id": "8566c9e0d77bc9ba",
+        "type": "inject",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 1200,
+        "wires": [
+            [
+                "7ff63c27a31c0ab1"
+            ]
+        ]
+    },
+    {
+        "id": "7ff63c27a31c0ab1",
+        "type": "change",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "OPC",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 1200,
+        "wires": [
+            [
+                "e1d49da5a914c6d5",
+                "17f0d4c99806e910"
+            ]
+        ]
+    },
+    {
+        "id": "e1d49da5a914c6d5",
+        "type": "debug",
+        "z": "5b367beb.94d904",
+        "name": "debug 25",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "17f0d4c99806e910",
+        "type": "ui_template",
+        "z": "5b367beb.94d904",
+        "group": "964f5b3477c1de84",
+        "name": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "<!DOCTYPE html>\n<html>\n\n<head>\n    <meta charset=\"utf-8\">\n\n</head>\n\n<body>\n    <div style=\"border-collapse: collapse;\n\t\t\t\t  border: 2px solid #000;padding: 5px 5px 10px 5px;margin: 5px 0 10px 0;height: 100%;\">\n\n        <div>\n            <H2>次级PC实时数据</H2>\n            <br>\n            <div>\n                <span style=\"font-weight: 800;\">总电量（千瓦·时）:</span>\n                <span ng-bind=\"msg.payload['PC总电量']\" style=\"font-weight: 800;margin-right:50px;\"></span>\n\n                <span style=\"font-weight: 800;\">当天用电量（千瓦·时）:</span>\n                <span ng-bind=\"msg.payload['PC当天用电量']\" style=\"font-weight: 800;margin-right:50px;\"></span>\n\n                <span style=\"font-weight: 800;\">总气量（m³）：</span>\n                <span ng-bind=\"msg.payload['PC总气量']\" style=\"font-weight: 800;margin-right:50px;\"></span>\n\n                <span style=\"font-weight: 800;\">当天用气量（m³）：</span>\n                <span ng-bind=\"msg.payload['PC当天用气量']\" style=\"font-weight: 800;margin-right:50px;\"></span>\n\n            </div>\n\n            <div style=\"border-collapse: collapse;\n    \t\t\t\t  border: 2px solid #000;padding: 5px 5px 10px 5px;margin: 5px 0 10px 0;height: 100%;\">\n\n                <div>\n                    <div style=\"margin: 5px 0 10px 0;padding: 3px;\">\n                        <span style=\"  border: 1px solid #000;margin: 5px;padding: 3px;\">产品型号</span>\n                        <span style=\"  border: 1px solid #000;margin: 5px;padding: 3px;width: 25%;\" ng-bind=\"msg.payload['PC程序号']\"></span>\n                        <span style=\"  border: 1px solid #000;margin: 5px;padding: 3px;\">骨架</span>\n                        <span style=\"  border: 1px solid #000;margin: 5px;padding: 3px;width: 25%;\"  ng-bind=\"msg.payload['PC_RD_骨架码信息_扫码']\"></span>\n                        <span style=\"  border: 1px solid #000;margin: 5px 0 10px 0;padding: 3px;\">二极管</span>\n                        <span style=\"  border: 1px solid #000;margin: 5px;padding: 3px;width: 25%;\" ng-bind=\"msg.payload['PC_RD_二极管码信息_扫码']\"></span>\n                    </div>\n                    <div>\n                        <span>消息显示：</span>\n                        <div style=\"  border: 1px solid #D83415;margin: 5px;padding: 3px;height: auto;width: 99%;\"\n                            ng-repeat=\"info in msg.payload['PC当前报警']\">\n                            <div>{{info.message}}</div>\n                        </div>\n\n\n\n                        <div>\n                            <h5>图像数据：</h5>\n                            <table style=\"  border: 1px solid #000;margin: 5px;padding: 3px;width: 99%;\">\n                                <tr>\n                                    <td>图像读取标志:</td>\n                                    <td ng-bind=\"msg.payload['PC读取图像数据请求']\"></td>\n                                    <td>图像序列号:</td>\n                                    <td colspan=\"2\" ng-bind=\"msg.payload['PC工位序列号'][5]\"></td>\n                                    <td>PC图像检测NG:</td>\n                                    <td ng-bind=\"msg.payload['PC图像检测NG']\"></td>\n                                    <td>PC图像检测OK:</td>\n                                    <td ng-bind=\"msg.payload['PC图像检测OK']\"></td>\n                                </tr>\n\n                            </table>\n                            <h4>测量值：</h5>\n                                <table style=\"  border: 1px solid #000;margin: 5px;padding: 3px;width: 99%;\">\n\n                                    <tr>\n                                        <td>PC相机1距离1:</td>\n                                        <td style=\"width: 20px;\" ng-bind=\"msg.payload['PC相机1距离1']\"></td>\n                                        <td>\n                                            {{msg.payload[\"PC工序5图像相机1距离1检测NG\"] == 0 ? 'ok' : 'ng'}}\n                                        </td>\n\n                                        <td>PC相机1距离2:</td>\n                                        <td style=\"margin: 5px;padding: 3px;width: 20px;\"\n                                            ng-bind=\"msg.payload['PC相机1距离2']\">\n                                        </td>\n                                        <td>\n                                            {{msg.payload[\"PC工序5图像相机1距离2检测NG\"] == 0 ? 'ok' : 'ng'}}\n                                        </td>\n\n                                        <td>PC相机1距离3:</td>\n                                        <td style=\"margin: 5px;padding: 3px;width: 20px;\"\n                                            ng-bind=\"msg.payload['PC相机1距离3']\">\n                                        </td>\n                                        <td>\n                                            {{msg.payload[\"PC工序5图像相机1距离3检测NG\"] == 0 ? 'ok' : 'ng'}}\n                                        </td>\n                                    </tr>\n                                    <tr>\n\n                                        <td>PC相机2距离1: </td>\n                                        <td style=\"margin: 5px;padding: 3px;width: 20px;\"\n                                            ng-bind=\"msg.payload['PC相机2距离1']\">\n                                        </td>\n                                        <td>\n                                            {{msg.payload[\"PC工序5图像相机2距离1检测NG\"] == 0 ? 'ok' : 'ng'}}\n                                        </td>\n\n                                        <td>PC相机2距离2: </td>\n                                        <td style=\"margin: 5px;padding: 3px;width: 20px;\"\n                                            ng-bind=\"msg.payload['PC相机2距离2']\">\n                                        </td>\n                                        <td>\n                                            {{msg.payload[\"PC工序5图像相机2距离2检测NG\"] == 0 ? 'ok' : 'ng'}}\n                                        </td>\n\n\n                                    </tr>\n\n                                    <tr>\n                                        <td>PC相机3距离1:</td>\n                                        <td style=\"margin: 2px;padding: 3px;width: 20px;\"\n                                            ng-bind=\"msg.payload['PC相机3距离1']\">\n                                        </td>\n                                        <td>\n                                            {{msg.payload[\"PC工序5图像相机3距离1检测NG\"] == 0 ? 'ok' : 'ng'}}\n                                        </td>\n\n                                        <td>PC相机3距离2:</td>\n                                        <td style=\"margin: 2px;padding: 3px;width: 20px;\"\n                                            ng-bind=\"msg.payload['PC相机3距离2']\">\n                                        </td>\n                                        <td>\n                                            {{msg.payload[\"PC工序5图像相机3距离2检测NG\"] == 0 ? 'ok' : 'ng'}}\n                                        </td>\n\n                                        <td>PC相机3距离3:</td>\n                                        <td style=\" margin: 2px;padding: 3px;width: 20px;\"\n                                            ng-bind=\"msg.payload['PC相机3距离3']\">\n                                        </td>\n                                        <td>\n                                            {{msg.payload[\"PC工序5图像相机3距离3检测NG\"] == 0 ? 'ok' : 'ng'}}\n                                        </td>\n                                    </tr>\n                                    <tr>\n                                        <td>PC相机3距离4:</td>\n                                        <td style=\"margin: 2px;padding: 3px;width: 20px;\"\n                                            ng-bind=\"msg.payload['PC相机3距离4']\">\n                                        </td>\n                                        <td>\n                                            {{msg.payload[\"PC工序5图像相机3距离4检测NG\"] == 0 ? 'ok' : 'ng'}}\n                                        </td>\n\n                                        <td>PC相机3距离5:</td>\n                                        <td style=\"margin: 2px;padding: 3px;width: 20px;\"\n                                            ng-bind=\"msg.payload['PC相机3距离5']\">\n                                        </td>\n                                        <td>\n                                            {{msg.payload[\"PC工序5图像相机3距离5检测NG\"] == 0 ? 'ok' : 'ng'}}\n                                        </td>\n                                    </tr>\n                                </table>\n\n                        </div>\n\n                        <table>\n                            <tr>\n                                <td>打码读取标志:</td>\n                                <td ng-bind=\"msg.payload['PC读取激光打码数据请求']\"></td>\n                                <td>打码序列号:</td>\n                                <td colspan=\"2\">\n                                    <span style=\"background-color: #e9eff8;width: 20px\" ng-bind=\"msg.payload['PC工位序列号'][6]\">\n    \t\t\t\t\t\t\t</span>\n                                </td>\n                                <td>打码内容:</td>\n                                <td colspan=\"2\">\n                                    <span style=\"background-color: #e9eff8;width: 70px\" ng-bind=\"msg.payload['PC打码内容']\">\n\n    \t\t\t\t\t\t\t</span>\n                                </td>\n                            </tr>\n                            <tr>\n                                <td>扫码读取标志:</td>\n                                <td ng-bind=\"msg.payload['PC读取扫码数据请求']\"></td>\n                                <td>扫码序列号:</td>\n                                <td colspan=\"2\">\n                                    <span style=\"background-color: #e9eff8;\"  ng-bind=\"msg.payload['PC工位序列号'][7]\">\n\n    \t\t\t\t\t\t\t</span>\n                                </td>\n                                <td>扫码内容:</td>\n                                <td colspan=\"2\">\n                                    <span style=\"background-color: #e9eff8;\"  ng-bind=\"msg.payload['PC扫码数据']\">\n\n    \t\t\t\t\t\t\t</span>\n                                </td>\n                            </tr>\n\n                        </table>\n                    </div>\n                </div>\n            </div>\n\n        </div>\n    </div>\n\n\n    <script src=\"https://cdn.staticfile.org/angular.js/1.4.6/angular.min.js\">\n\n\n    </script>\n\n\n\n    <style>\n        table: {\n            table-layout: fixed;\n            width: 100%;\n            border-collapse: collapse;\n            border: 2px solid #000;\n            margin: 5% 0 1% 0;\n        }\n\n        thead th:nth-child(1) {\n            width: 10%;\n        }\n\n        thead th:nth-child(2) {\n            width: 10%;\n        }\n\n        tr:nth-child(even) {\n            background-color: #f2f2f2;\n        }\n\n\n        th,\n        td {\n            padding: 10px;\n            text-align: left;\n        }\n    </style>\n</body>\n\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 580,
+        "y": 1200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "04b7d5a0c3243796",
+        "type": "function",
+        "z": "5b367beb.94d904",
+        "name": "原材料信息发送",
+        "func": "let obj = {}\nlet opc = global.get(\"OPC\")\nlet productname =opc[\"PC程序号\"]\nnode.warn(productname)\nmsg.url = \"http://localhost:5000/api/AppConfig/GetSection/\" +productname\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 960,
+        "wires": [
+            [
+                "e6525565cebe10df"
+            ]
+        ]
+    },
+    {
+        "id": "e6525565cebe10df",
+        "type": "http request",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1080,
+        "y": 960,
+        "wires": [
+            [
+                "0f49fa547995a2a5",
+                "590851bc9267f1f3",
+                "5827a598df956e6e",
+                "dd2c5d0e6cedd40f"
+            ]
+        ]
+    },
+    {
+        "id": "d380d505f51eb1ac",
+        "type": "debug",
+        "z": "5b367beb.94d904",
+        "name": "骨架信息码",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1410,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "0f49fa547995a2a5",
+        "type": "function",
+        "z": "5b367beb.94d904",
+        "name": "次级线圈_骨架信息码",
+        "func": "msg.topic=Object.keys(msg.payload)\nlet obj = msg.payload\nmsg.payload = obj.次级线圈_骨架信息码\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1080,
+        "y": 1040,
+        "wires": [
+            [
+                "d380d505f51eb1ac",
+                "cb28421dd9418fff"
+            ]
+        ]
+    },
+    {
+        "id": "05afa68c988c9729",
+        "type": "OPCUA-IIoT-Response",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "compressStructure": true,
+        "showStatusActivities": false,
+        "showErrors": false,
+        "activateUnsetFilter": false,
+        "activateFilters": false,
+        "negateFilter": false,
+        "filters": [],
+        "x": 1610,
+        "y": 1060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cb28421dd9418fff",
+        "type": "OPCUA-IIoT-Node",
+        "z": "5b367beb.94d904",
+        "injectType": "write",
+        "nodeId": "ns=4;s=RD骨架信息码_PC给",
+        "datatype": "String",
+        "value": "",
+        "name": "",
+        "topic": "",
+        "showErrors": false,
+        "x": 1350,
+        "y": 1060,
+        "wires": [
+            [
+                "0a8d57d69102620b"
+            ]
+        ]
+    },
+    {
+        "id": "0a8d57d69102620b",
+        "type": "OPCUA-IIoT-Write",
+        "z": "5b367beb.94d904",
+        "connector": "32813aa5086c4a16",
+        "name": "",
+        "justValue": true,
+        "showStatusActivities": false,
+        "showErrors": false,
+        "x": 1470,
+        "y": 1060,
+        "wires": [
+            [
+                "05afa68c988c9729"
+            ]
+        ]
+    },
+    {
+        "id": "590851bc9267f1f3",
+        "type": "function",
+        "z": "5b367beb.94d904",
+        "name": "次级线圈_来料信息码",
+        "func": "let obj = msg.payload\nmsg.payload = obj.次级线圈_来料信息码\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 1120,
+        "wires": [
+            [
+                "cff572faa93a413c",
+                "283e1e041f4f686b"
+            ]
+        ]
+    },
+    {
+        "id": "92ebf4857870df04",
+        "type": "OPCUA-IIoT-Response",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "compressStructure": true,
+        "showStatusActivities": false,
+        "showErrors": false,
+        "activateUnsetFilter": false,
+        "activateFilters": false,
+        "negateFilter": false,
+        "filters": [],
+        "x": 1790,
+        "y": 1180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "283e1e041f4f686b",
+        "type": "OPCUA-IIoT-Node",
+        "z": "5b367beb.94d904",
+        "injectType": "write",
+        "nodeId": "ns=4;s=RD来料信息码_PC给",
+        "datatype": "String",
+        "value": "",
+        "name": "",
+        "topic": "",
+        "showErrors": false,
+        "x": 1330,
+        "y": 1180,
+        "wires": [
+            [
+                "53f9941eab64279e"
+            ]
+        ]
+    },
+    {
+        "id": "53f9941eab64279e",
+        "type": "OPCUA-IIoT-Write",
+        "z": "5b367beb.94d904",
+        "connector": "32813aa5086c4a16",
+        "name": "",
+        "justValue": true,
+        "showStatusActivities": false,
+        "showErrors": false,
+        "x": 1490,
+        "y": 1180,
+        "wires": [
+            [
+                "92ebf4857870df04"
+            ]
+        ]
+    },
+    {
+        "id": "5827a598df956e6e",
+        "type": "function",
+        "z": "5b367beb.94d904",
+        "name": "次级线圈_二极管信息码",
+        "func": "let obj = msg.payload\nmsg.payload = obj.次级线圈_二极管信息码\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 1240,
+        "wires": [
+            [
+                "71edda3ea91e6727",
+                "a24e3b1fdd524187"
+            ]
+        ]
+    },
+    {
+        "id": "39bdab8a2b7f9993",
+        "type": "OPCUA-IIoT-Response",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "compressStructure": true,
+        "showStatusActivities": false,
+        "showErrors": false,
+        "activateUnsetFilter": false,
+        "activateFilters": false,
+        "negateFilter": false,
+        "filters": [],
+        "x": 1610,
+        "y": 1300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "71edda3ea91e6727",
+        "type": "OPCUA-IIoT-Node",
+        "z": "5b367beb.94d904",
+        "injectType": "write",
+        "nodeId": "ns=4;s=RD二极管信息码_PC给",
+        "datatype": "String",
+        "value": "",
+        "name": "",
+        "topic": "",
+        "showErrors": false,
+        "x": 1310,
+        "y": 1300,
+        "wires": [
+            [
+                "a6b22f17f66a1313"
+            ]
+        ]
+    },
+    {
+        "id": "a6b22f17f66a1313",
+        "type": "OPCUA-IIoT-Write",
+        "z": "5b367beb.94d904",
+        "connector": "32813aa5086c4a16",
+        "name": "",
+        "justValue": true,
+        "showStatusActivities": false,
+        "showErrors": false,
+        "x": 1430,
+        "y": 1300,
+        "wires": [
+            [
+                "39bdab8a2b7f9993"
+            ]
+        ]
+    },
+    {
+        "id": "dd2c5d0e6cedd40f",
+        "type": "function",
+        "z": "5b367beb.94d904",
+        "name": "次级线圈_圆形线信息码",
+        "func": "let obj = msg.payload\nmsg.payload = obj.次级线圈_圆形线信息码\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 1360,
+        "wires": [
+            [
+                "5ceea8120567076e",
+                "8113bdb9276952ee"
+            ]
+        ]
+    },
+    {
+        "id": "559d574bb6ad82e5",
+        "type": "OPCUA-IIoT-Response",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "compressStructure": true,
+        "showStatusActivities": false,
+        "showErrors": false,
+        "activateUnsetFilter": false,
+        "activateFilters": false,
+        "negateFilter": false,
+        "filters": [],
+        "x": 1590,
+        "y": 1420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5ceea8120567076e",
+        "type": "OPCUA-IIoT-Node",
+        "z": "5b367beb.94d904",
+        "injectType": "write",
+        "nodeId": "ns=4;s=RD圆形线信息码_PC给",
+        "datatype": "String",
+        "value": "",
+        "name": "",
+        "topic": "",
+        "showErrors": false,
+        "x": 1290,
+        "y": 1420,
+        "wires": [
+            [
+                "c1f31c96ae7f755e"
+            ]
+        ]
+    },
+    {
+        "id": "c1f31c96ae7f755e",
+        "type": "OPCUA-IIoT-Write",
+        "z": "5b367beb.94d904",
+        "connector": "32813aa5086c4a16",
+        "name": "",
+        "justValue": true,
+        "showStatusActivities": false,
+        "showErrors": false,
+        "x": 1430,
+        "y": 1420,
+        "wires": [
+            [
+                "559d574bb6ad82e5"
+            ]
+        ]
+    },
+    {
+        "id": "8a14faf9eb8abf08",
+        "type": "inject",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 690,
+        "y": 920,
+        "wires": [
+            [
+                "102296cf8dd671a0"
+            ]
+        ]
+    },
+    {
+        "id": "9bfd99a1980fb6a0",
+        "type": "debug",
+        "z": "5b367beb.94d904",
+        "name": "debug 26",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1300,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "cff572faa93a413c",
+        "type": "debug",
+        "z": "5b367beb.94d904",
+        "name": "来料信息码",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1410,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "a24e3b1fdd524187",
+        "type": "debug",
+        "z": "5b367beb.94d904",
+        "name": "二极管信息码",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1420,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "8113bdb9276952ee",
+        "type": "debug",
+        "z": "5b367beb.94d904",
+        "name": "圆形线信息码",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1420,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "db7cd0b7c2b6adbc",
+        "type": "inject",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "asdfas",
+        "payloadType": "str",
+        "x": 730,
+        "y": 1080,
+        "wires": [
+            [
+                "7c7807327e592a29"
+            ]
+        ]
+    },
+    {
+        "id": "7c7807327e592a29",
+        "type": "function",
+        "z": "5b367beb.94d904",
+        "name": "function 15",
+        "func": "msg.payload=parseInt(msg.payload+Math.random()*10000)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 1120,
+        "wires": [
+            [
+                "cc2fd2d6f594ee97"
+            ]
+        ]
+    },
+    {
+        "id": "413bfd6a9f46dfea",
+        "type": "delay",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "250",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 870,
+        "y": 560,
+        "wires": [
+            [
+                "fd95bfb006b06013"
+            ]
+        ]
+    },
+    {
+        "id": "85f9bbc9ba749bab",
+        "type": "OPCUA-IIoT-Write",
+        "z": "5b367beb.94d904",
+        "connector": "45e5c8e9.6795a8",
+        "name": "",
+        "justValue": false,
+        "showStatusActivities": false,
+        "showErrors": true,
+        "x": 1170,
+        "y": 1540,
+        "wires": [
+            [
+                "7f7a1833baac08ef"
+            ]
+        ]
+    },
+    {
+        "id": "7f7a1833baac08ef",
+        "type": "OPCUA-IIoT-Response",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "compressStructure": true,
+        "showStatusActivities": false,
+        "showErrors": false,
+        "activateUnsetFilter": false,
+        "activateFilters": false,
+        "negateFilter": false,
+        "filters": [],
+        "x": 1310,
+        "y": 1600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ae5f2df9b82a63e5",
+        "type": "inject",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 460,
+        "y": 1520,
+        "wires": [
+            [
+                "45cc6356c1566543"
+            ]
+        ]
+    },
+    {
+        "id": "b8c4bed6064c9224",
+        "type": "OPCUA-IIoT-Node",
+        "z": "5b367beb.94d904",
+        "injectType": "write",
+        "nodeId": "ns=4;s=PC读取图像数据请求",
+        "datatype": "Boolean",
+        "value": "false",
+        "name": "PC读取图像数据请求",
+        "topic": "",
+        "showErrors": false,
+        "x": 960,
+        "y": 1540,
+        "wires": [
+            [
+                "85f9bbc9ba749bab"
+            ]
+        ]
+    },
+    {
+        "id": "0429adaa00eeab8e",
+        "type": "OPCUA-IIoT-Node",
+        "z": "5b367beb.94d904",
+        "injectType": "write",
+        "nodeId": "ns=4;s=PC读取激光打码数据请求",
+        "datatype": "Boolean",
+        "value": "false",
+        "name": "PC读取激光打码数据请求",
+        "topic": "",
+        "showErrors": false,
+        "x": 950,
+        "y": 1600,
+        "wires": [
+            [
+                "85f9bbc9ba749bab"
+            ]
+        ]
+    },
+    {
+        "id": "657d767f760d1731",
+        "type": "OPCUA-IIoT-Node",
+        "z": "5b367beb.94d904",
+        "injectType": "write",
+        "nodeId": "ns=4;s=PC读取扫码数据请求",
+        "datatype": "Boolean",
+        "value": "false",
+        "name": "PC读取扫码数据请求",
+        "topic": "",
+        "showErrors": false,
+        "x": 960,
+        "y": 1660,
+        "wires": [
+            [
+                "85f9bbc9ba749bab"
+            ]
+        ]
+    },
+    {
+        "id": "a571fad930bf4357",
+        "type": "status",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "scope": [
+            "4eff350.c36cacc"
+        ],
+        "x": 190,
+        "y": 400,
+        "wires": [
+            [
+                "79446135dd204eef"
+            ]
+        ]
+    },
+    {
+        "id": "79446135dd204eef",
+        "type": "debug",
+        "z": "5b367beb.94d904",
+        "name": "debug 27",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "6220dcb89e9fa2b0",
+        "type": "OPCUA-IIoT-Crawler",
+        "z": "5b367beb.94d904",
+        "connector": "45e5c8e9.6795a8",
+        "name": "",
+        "justValue": true,
+        "singleResult": false,
+        "showStatusActivities": false,
+        "showErrors": false,
+        "activateUnsetFilter": false,
+        "activateFilters": false,
+        "negateFilter": false,
+        "filters": [],
+        "delayPerMessage": 0.2,
+        "timeout": 30,
+        "x": 400,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "82451f88ac297cb8",
+        "type": "status",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "scope": [
+            "4eff350.c36cacc"
+        ],
+        "x": 290,
+        "y": 100,
+        "wires": [
+            [
+                "44e1468a7e8647f2",
+                "667e07d5ff5d200e"
+            ]
+        ]
+    },
+    {
+        "id": "927f45eb0cea48be",
+        "type": "status",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "scope": [
+            "4b30ce0b.72511"
+        ],
+        "x": 250,
+        "y": 160,
+        "wires": [
+            [
+                "95b9b9d1ca8f79cc"
+            ]
+        ]
+    },
+    {
+        "id": "44e1468a7e8647f2",
+        "type": "function",
+        "z": "5b367beb.94d904",
+        "name": "function 17",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "667e07d5ff5d200e",
+        "type": "change",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "opcstatus",
+                "pt": "flow",
+                "to": "status.text",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "95b9b9d1ca8f79cc",
+        "type": "change",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "listenstatus",
+                "pt": "flow",
+                "to": "status.text",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f0ab1ebebe4bda2f",
+        "type": "inject",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 770,
+        "y": 120,
+        "wires": [
+            [
+                "1f4472a0402d427b"
+            ]
+        ]
+    },
+    {
+        "id": "1f4472a0402d427b",
+        "type": "function",
+        "z": "5b367beb.94d904",
+        "name": "function 18",
+        "func": "const [listenstatus, opcstatus]=flow.get([\"listenstatus\",\"opcstatus\"])\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 120,
+        "wires": [
+            [
+                "8aa507526bc32ca7"
+            ]
+        ]
+    },
+    {
+        "id": "8aa507526bc32ca7",
+        "type": "debug",
+        "z": "5b367beb.94d904",
+        "name": "debug 28",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "45cc6356c1566543",
+        "type": "function",
+        "z": "5b367beb.94d904",
+        "name": "function 16",
+        "func": "let opc=global.get(\"OPC\")\nif (opc[\"PC读取图像数据请求\"]){\n    msg.topic =\"PC读取图像数据请求\"\n    msg.payload=false\n    node.send([msg,undefined,undefined])\n}\nif (opc[\"PC读取激光打码数据请求\"]) {\n    msg.topic = \"PC读取激光打码数据请求\"\n    msg.payload = false\n    node.send([undefined, msg, undefined])\n}\nif (opc[\"PC读取扫码数据请求\"]) {\n    msg.topic = \"PC读取扫码数据请求\"\n    msg.payload = false\n    node.send([undefined,undefined,msg])\n}\nif (opc[\"PC切换型号请求\"]) {\n    msg.topic = \"PC切换型号请求\"\n    msg.payload = false\n    node.send([undefined, undefined, undefined,msg])\n}\n",
+        "outputs": 4,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 1580,
+        "wires": [
+            [
+                "b8c4bed6064c9224"
+            ],
+            [
+                "0429adaa00eeab8e"
+            ],
+            [
+                "657d767f760d1731"
+            ],
+            [
+                "db66c1e05b9713df"
+            ]
+        ]
+    },
+    {
+        "id": "db66c1e05b9713df",
+        "type": "OPCUA-IIoT-Node",
+        "z": "5b367beb.94d904",
+        "injectType": "write",
+        "nodeId": "ns=4;s=PC切换型号请求",
+        "datatype": "Boolean",
+        "value": "false",
+        "name": "PC切换型号请求",
+        "topic": "",
+        "showErrors": false,
+        "x": 940,
+        "y": 1740,
+        "wires": [
+            [
+                "85f9bbc9ba749bab"
+            ]
+        ]
+    },
+    {
+        "id": "6a38191548ccd4ae",
+        "type": "Opcua-Browse-Subscribe",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "endpoint": "ded1a51a49cf2efe",
+        "topic": "ns=4;s=NxController.GlobalVars",
+        "time": "500",
+        "timeUnit": "ms",
+        "nodeClass": "All",
+        "dataType": "All",
+        "crushResCheckedItems": true,
+        "items": [
+            {
+                "nodeId": "ns=4;s=NxController.GlobalVars",
+                "name": "GlobalVars",
+                "dataType": "Unknown"
+            },
+            {
+                "nodeId": "ns=0;i=40",
+                "name": "Unknown",
+                "dataType": "Unknown"
+            },
+            {
+                "nodeId": "ns=2;i=1005",
+                "name": "FunctionalGroupType",
+                "dataType": "Unknown"
+            },
+            {
+                "nodeId": "ns=0;i=35",
+                "name": "Unknown",
+                "dataType": "Unknown"
+            },
+            {
+                "nodeId": "ns=4;s=PC_RD_二极管码信息_扫码",
+                "name": "PC_RD_二极管码信息_扫码",
+                "dataType": "String"
+            },
+            {
+                "nodeId": "ns=4;s=PC_RD_圆形线码信息_扫码",
+                "name": "PC_RD_圆形线码信息_扫码",
+                "dataType": "String"
+            },
+            {
+                "nodeId": "ns=4;s=PC_RD_来料码信息_扫码",
+                "name": "PC_RD_来料码信息_扫码",
+                "dataType": "String"
+            },
+            {
+                "nodeId": "ns=4;s=PC_RD_骨架码信息_扫码",
+                "name": "PC_RD_骨架码信息_扫码",
+                "dataType": "String"
+            },
+            {
+                "nodeId": "ns=4;s=PC二极管码",
+                "name": "PC二极管码",
+                "dataType": "String"
+            },
+            {
+                "nodeId": "ns=4;s=PC切换型号请求",
+                "name": "PC切换型号请求",
+                "dataType": "Boolean"
+            },
+            {
+                "nodeId": "ns=4;s=PC图像检测NG",
+                "name": "PC图像检测NG",
+                "dataType": "Boolean"
+            },
+            {
+                "nodeId": "ns=4;s=PC图像检测OK",
+                "name": "PC图像检测OK",
+                "dataType": "Boolean"
+            },
+            {
+                "nodeId": "ns=4;s=PC圆形线码",
+                "name": "PC圆形线码",
+                "dataType": "String"
+            },
+            {
+                "nodeId": "ns=4;s=PC工位序列号",
+                "name": "PC工位序列号",
+                "dataType": "String"
+            },
+            {
+                "nodeId": "ns=4;s=PC工序5图像相机1距离1检测NG",
+                "name": "PC工序5图像相机1距离1检测NG",
+                "dataType": "UInt16"
+            },
+            {
+                "nodeId": "ns=4;s=PC工序5图像相机1距离2检测NG",
+                "name": "PC工序5图像相机1距离2检测NG",
+                "dataType": "UInt16"
+            },
+            {
+                "nodeId": "ns=4;s=PC工序5图像相机1距离3检测NG",
+                "name": "PC工序5图像相机1距离3检测NG",
+                "dataType": "UInt16"
+            },
+            {
+                "nodeId": "ns=4;s=PC工序5图像相机2距离1检测NG",
+                "name": "PC工序5图像相机2距离1检测NG",
+                "dataType": "UInt16"
+            },
+            {
+                "nodeId": "ns=4;s=PC工序5图像相机2距离2检测NG",
+                "name": "PC工序5图像相机2距离2检测NG",
+                "dataType": "UInt16"
+            },
+            {
+                "nodeId": "ns=4;s=PC工序5图像相机3距离1检测NG",
+                "name": "PC工序5图像相机3距离1检测NG",
+                "dataType": "UInt16"
+            },
+            {
+                "nodeId": "ns=4;s=PC工序5图像相机3距离2检测NG",
+                "name": "PC工序5图像相机3距离2检测NG",
+                "dataType": "UInt16"
+            },
+            {
+                "nodeId": "ns=4;s=PC工序5图像相机3距离3检测NG",
+                "name": "PC工序5图像相机3距离3检测NG",
+                "dataType": "UInt16"
+            },
+            {
+                "nodeId": "ns=4;s=PC工序5图像相机3距离4检测NG",
+                "name": "PC工序5图像相机3距离4检测NG",
+                "dataType": "UInt16"
+            },
+            {
+                "nodeId": "ns=4;s=PC工序5图像相机3距离5检测NG",
+                "name": "PC工序5图像相机3距离5检测NG",
+                "dataType": "UInt16"
+            },
+            {
+                "nodeId": "ns=4;s=PC当天用气量",
+                "name": "PC当天用气量",
+                "dataType": "Int32"
+            },
+            {
+                "nodeId": "ns=4;s=PC当天用电量",
+                "name": "PC当天用电量",
+                "dataType": "Int32"
+            },
+            {
+                "nodeId": "ns=4;s=PC心跳信号",
+                "name": "PC心跳信号",
+                "dataType": "Int16"
+            },
+            {
+                "nodeId": "ns=4;s=PC总气量",
+                "name": "PC总气量",
+                "dataType": "Int32"
+            },
+            {
+                "nodeId": "ns=4;s=PC总电量",
+                "name": "PC总电量",
+                "dataType": "Int32"
+            },
+            {
+                "nodeId": "ns=4;s=PC打码内容",
+                "name": "PC打码内容",
+                "dataType": "String"
+            },
+            {
+                "nodeId": "ns=4;s=PC打码初次级划分",
+                "name": "PC打码初次级划分",
+                "dataType": "String"
+            },
+            {
+                "nodeId": "ns=4;s=PC打码程序号",
+                "name": "PC打码程序号",
+                "dataType": "String"
+            },
+            {
+                "nodeId": "ns=4;s=PC扫码数据",
+                "name": "PC扫码数据",
+                "dataType": "String"
+            },
+            {
+                "nodeId": "ns=4;s=PC点检序列号",
+                "name": "PC点检序列号",
+                "dataType": "String"
+            },
+            {
+                "nodeId": "ns=4;s=PC相机1距离1",
+                "name": "PC相机1距离1",
+                "dataType": "Float"
+            },
+            {
+                "nodeId": "ns=4;s=PC相机1距离2",
+                "name": "PC相机1距离2",
+                "dataType": "Float"
+            },
+            {
+                "nodeId": "ns=4;s=PC相机1距离3",
+                "name": "PC相机1距离3",
+                "dataType": "Float"
+            },
+            {
+                "nodeId": "ns=4;s=PC相机2距离1",
+                "name": "PC相机2距离1",
+                "dataType": "Float"
+            },
+            {
+                "nodeId": "ns=4;s=PC相机2距离2",
+                "name": "PC相机2距离2",
+                "dataType": "Float"
+            },
+            {
+                "nodeId": "ns=4;s=PC相机3距离1",
+                "name": "PC相机3距离1",
+                "dataType": "Float"
+            },
+            {
+                "nodeId": "ns=4;s=PC相机3距离2",
+                "name": "PC相机3距离2",
+                "dataType": "Float"
+            },
+            {
+                "nodeId": "ns=4;s=PC相机3距离3",
+                "name": "PC相机3距离3",
+                "dataType": "Float"
+            },
+            {
+                "nodeId": "ns=4;s=PC相机3距离4",
+                "name": "PC相机3距离4",
+                "dataType": "Float"
+            },
+            {
+                "nodeId": "ns=4;s=PC相机3距离5",
+                "name": "PC相机3距离5",
+                "dataType": "Float"
+            },
+            {
+                "nodeId": "ns=4;s=PC程序号",
+                "name": "PC程序号",
+                "dataType": "Int16"
+            },
+            {
+                "nodeId": "ns=4;s=PC给PLC二极管码",
+                "name": "PC给PLC二极管码",
+                "dataType": "String"
+            },
+            {
+                "nodeId": "ns=4;s=PC给PLC圆形线码",
+                "name": "PC给PLC圆形线码",
+                "dataType": "String"
+            },
+            {
+                "nodeId": "ns=4;s=PC给PLC骨架码",
+                "name": "PC给PLC骨架码",
+                "dataType": "String"
+            },
+            {
+                "nodeId": "ns=4;s=PC读取图像数据请求",
+                "name": "PC读取图像数据请求",
+                "dataType": "Boolean"
+            },
+            {
+                "nodeId": "ns=4;s=PC读取扫码数据请求",
+                "name": "PC读取扫码数据请求",
+                "dataType": "Boolean"
+            },
+            {
+                "nodeId": "ns=4;s=PC读取激光打码数据请求",
+                "name": "PC读取激光打码数据请求",
+                "dataType": "Boolean"
+            },
+            {
+                "nodeId": "ns=4;s=PC骨架码",
+                "name": "PC骨架码",
+                "dataType": "String"
+            },
+            {
+                "nodeId": "ns=4;s=RD_二极管码信息_扫码",
+                "name": "RD_二极管码信息_扫码",
+                "dataType": "String"
+            },
+            {
+                "nodeId": "ns=4;s=RD_圆形线码信息_扫码",
+                "name": "RD_圆形线码信息_扫码",
+                "dataType": "String"
+            },
+            {
+                "nodeId": "ns=4;s=RD_来料码信息_扫码",
+                "name": "RD_来料码信息_扫码",
+                "dataType": "String"
+            },
+            {
+                "nodeId": "ns=4;s=RD_骨架码信息_扫码",
+                "name": "RD_骨架码信息_扫码",
+                "dataType": "String"
+            },
+            {
+                "nodeId": "ns=4;s=RD二极管信息码_PC给",
+                "name": "RD二极管信息码_PC给",
+                "dataType": "String"
+            },
+            {
+                "nodeId": "ns=4;s=RD圆形线信息码_PC给",
+                "name": "RD圆形线信息码_PC给",
+                "dataType": "String"
+            },
+            {
+                "nodeId": "ns=4;s=RD来料信息码_PC给",
+                "name": "RD来料信息码_PC给",
+                "dataType": "String"
+            },
+            {
+                "nodeId": "ns=4;s=RD骨架信息码_PC给",
+                "name": "RD骨架信息码_PC给",
+                "dataType": "String"
+            },
+            {
+                "nodeId": "ns=0;i=47",
+                "name": "Unknown",
+                "dataType": "Unknown"
+            },
+            {
+                "nodeId": "ns=2;i=6027",
+                "name": "<GroupIdentifier>",
+                "dataType": "Unknown"
+            },
+            {
+                "nodeId": "ns=2;i=6243",
+                "name": "UIElement",
+                "dataType": "BaseDataType"
+            },
+            {
+                "nodeId": "ns=0;i=45",
+                "name": "Unknown",
+                "dataType": "Unknown"
+            },
+            {
+                "nodeId": "ns=0;i=16362",
+                "name": "AlarmGroupMember",
+                "dataType": "Unknown"
+            },
+            {
+                "nodeId": "ns=3;i=4005",
+                "name": "HasExternalVars",
+                "dataType": "Unknown"
+            },
+            {
+                "nodeId": "ns=0;i=63",
+                "name": "BaseDataVariableType",
+                "dataType": "BaseDataType"
+            },
+            {
+                "nodeId": "ns=0;i=49",
+                "name": "HasOrderedComponent",
+                "dataType": "Unknown"
+            },
+            {
+                "nodeId": "ns=0;i=129",
+                "name": "HasArgumentDescription",
+                "dataType": "Unknown"
+            },
+            {
+                "nodeId": "ns=0;i=17604",
+                "name": "HasAddIn",
+                "dataType": "Unknown"
+            },
+            {
+                "nodeId": "ns=0;i=15112",
+                "name": "HasGuard",
+                "dataType": "Unknown"
+            },
+            {
+                "nodeId": "ns=0;i=14476",
+                "name": "HasPubSubConnection",
+                "dataType": "Unknown"
+            },
+            {
+                "nodeId": "ns=0;i=18804",
+                "name": "HasWriterGroup",
+                "dataType": "Unknown"
+            },
+            {
+                "nodeId": "ns=0;i=18805",
+                "name": "HasReaderGroup",
+                "dataType": "Unknown"
+            },
+            {
+                "nodeId": "ns=0;i=15296",
+                "name": "HasDataSetWriter",
+                "dataType": "Unknown"
+            },
+            {
+                "nodeId": "ns=0;i=15297",
+                "name": "HasDataSetReader",
+                "dataType": "Unknown"
+            },
+            {
+                "nodeId": "ns=0;i=16361",
+                "name": "HasAlarmSuppressionGroup",
+                "dataType": "Unknown"
+            },
+            {
+                "nodeId": "ns=3;i=4003",
+                "name": "HasInOutVars",
+                "dataType": "Unknown"
+            },
+            {
+                "nodeId": "ns=3;i=4001",
+                "name": "HasInputVars",
+                "dataType": "Unknown"
+            },
+            {
+                "nodeId": "ns=3;i=4004",
+                "name": "HasLocalVars",
+                "dataType": "Unknown"
+            },
+            {
+                "nodeId": "ns=3;i=4002",
+                "name": "HasOutputVars",
+                "dataType": "Unknown"
+            },
+            {
+                "nodeId": "ns=0;i=37",
+                "name": "Unknown",
+                "dataType": "Unknown"
+            },
+            {
+                "nodeId": "ns=0;i=11508",
+                "name": "OptionalPlaceholder",
+                "dataType": "Unknown"
+            },
+            {
+                "nodeId": "ns=2;i=6242",
+                "name": "UIElement",
+                "dataType": "BaseDataType"
+            },
+            {
+                "nodeId": "ns=2;i=6246",
+                "name": "UIElementType",
+                "dataType": "BaseDataType"
+            },
+            {
+                "nodeId": "ns=0;i=80",
+                "name": "Optional",
+                "dataType": "Unknown"
+            },
+            {
+                "nodeId": "ns=0;i=2137",
+                "name": "ServerVendorCapabilityType",
+                "dataType": "BaseDataType"
+            },
+            {
+                "nodeId": "ns=0;i=72",
+                "name": "DataTypeDictionaryType",
+                "dataType": "ByteString"
+            },
+            {
+                "nodeId": "ns=0;i=69",
+                "name": "DataTypeDescriptionType",
+                "dataType": "String"
+            },
+            {
+                "nodeId": "ns=0;i=2138",
+                "name": "ServerStatusType",
+                "dataType": "BaseDataType"
+            },
+            {
+                "nodeId": "ns=0;i=3051",
+                "name": "BuildInfoType",
+                "dataType": "BuildInfo"
+            },
+            {
+                "nodeId": "ns=0;i=2150",
+                "name": "ServerDiagnosticsSummaryType",
+                "dataType": "BaseDataType"
+            },
+            {
+                "nodeId": "ns=0;i=2165",
+                "name": "SamplingIntervalDiagnosticsType",
+                "dataType": "BaseDataType"
+            },
+            {
+                "nodeId": "ns=0;i=2171",
+                "name": "SubscriptionDiagnosticsArrayType",
+                "dataType": "BaseDataType"
+            },
+            {
+                "nodeId": "ns=0;i=2172",
+                "name": "SubscriptionDiagnosticsType",
+                "dataType": "BaseDataType"
+            },
+            {
+                "nodeId": "ns=0;i=2196",
+                "name": "SessionDiagnosticsArrayType",
+                "dataType": "BaseDataType"
+            },
+            {
+                "nodeId": "ns=0;i=2197",
+                "name": "SessionDiagnosticsVariableType",
+                "dataType": "BaseDataType"
+            },
+            {
+                "nodeId": "ns=0;i=2243",
+                "name": "SessionSecurityDiagnosticsArrayType",
+                "dataType": "BaseDataType"
+            },
+            {
+                "nodeId": "ns=0;i=2244",
+                "name": "SessionSecurityDiagnosticsType",
+                "dataType": "BaseDataType"
+            },
+            {
+                "nodeId": "ns=0;i=131",
+                "name": "HasOptionalInputArgumentDescription",
+                "dataType": "Unknown"
+            }
+        ],
+        "checkedItems": [
+            {
+                "name": "GlobalVars",
+                "nodeId": "ns=4;s=NxController.GlobalVars",
+                "dataType": "Unknown"
+            },
+            {
+                "name": "Unknown",
+                "nodeId": "ns=0;i=40",
+                "dataType": "Unknown"
+            },
+            {
+                "name": "FunctionalGroupType",
+                "nodeId": "ns=2;i=1005",
+                "dataType": "Unknown"
+            },
+            {
+                "name": "Unknown",
+                "nodeId": "ns=0;i=35",
+                "dataType": "Unknown"
+            },
+            {
+                "name": "PC_RD_二极管码信息_扫码",
+                "nodeId": "ns=4;s=PC_RD_二极管码信息_扫码",
+                "dataType": "String"
+            },
+            {
+                "name": "PC_RD_圆形线码信息_扫码",
+                "nodeId": "ns=4;s=PC_RD_圆形线码信息_扫码",
+                "dataType": "String"
+            },
+            {
+                "name": "PC_RD_来料码信息_扫码",
+                "nodeId": "ns=4;s=PC_RD_来料码信息_扫码",
+                "dataType": "String"
+            },
+            {
+                "name": "PC_RD_骨架码信息_扫码",
+                "nodeId": "ns=4;s=PC_RD_骨架码信息_扫码",
+                "dataType": "String"
+            },
+            {
+                "name": "PC二极管码",
+                "nodeId": "ns=4;s=PC二极管码",
+                "dataType": "String"
+            },
+            {
+                "name": "PC切换型号请求",
+                "nodeId": "ns=4;s=PC切换型号请求",
+                "dataType": "Boolean"
+            },
+            {
+                "name": "PC图像检测NG",
+                "nodeId": "ns=4;s=PC图像检测NG",
+                "dataType": "Boolean"
+            },
+            {
+                "name": "PC图像检测OK",
+                "nodeId": "ns=4;s=PC图像检测OK",
+                "dataType": "Boolean"
+            },
+            {
+                "name": "PC圆形线码",
+                "nodeId": "ns=4;s=PC圆形线码",
+                "dataType": "String"
+            },
+            {
+                "name": "PC工位序列号",
+                "nodeId": "ns=4;s=PC工位序列号",
+                "dataType": "String"
+            },
+            {
+                "name": "PC工序5图像相机1距离1检测NG",
+                "nodeId": "ns=4;s=PC工序5图像相机1距离1检测NG",
+                "dataType": "UInt16"
+            },
+            {
+                "name": "PC工序5图像相机1距离2检测NG",
+                "nodeId": "ns=4;s=PC工序5图像相机1距离2检测NG",
+                "dataType": "UInt16"
+            },
+            {
+                "name": "PC工序5图像相机1距离3检测NG",
+                "nodeId": "ns=4;s=PC工序5图像相机1距离3检测NG",
+                "dataType": "UInt16"
+            },
+            {
+                "name": "PC工序5图像相机2距离1检测NG",
+                "nodeId": "ns=4;s=PC工序5图像相机2距离1检测NG",
+                "dataType": "UInt16"
+            },
+            {
+                "name": "PC工序5图像相机2距离2检测NG",
+                "nodeId": "ns=4;s=PC工序5图像相机2距离2检测NG",
+                "dataType": "UInt16"
+            },
+            {
+                "name": "PC工序5图像相机3距离1检测NG",
+                "nodeId": "ns=4;s=PC工序5图像相机3距离1检测NG",
+                "dataType": "UInt16"
+            },
+            {
+                "name": "PC工序5图像相机3距离2检测NG",
+                "nodeId": "ns=4;s=PC工序5图像相机3距离2检测NG",
+                "dataType": "UInt16"
+            },
+            {
+                "name": "PC工序5图像相机3距离3检测NG",
+                "nodeId": "ns=4;s=PC工序5图像相机3距离3检测NG",
+                "dataType": "UInt16"
+            },
+            {
+                "name": "PC工序5图像相机3距离4检测NG",
+                "nodeId": "ns=4;s=PC工序5图像相机3距离4检测NG",
+                "dataType": "UInt16"
+            },
+            {
+                "name": "PC工序5图像相机3距离5检测NG",
+                "nodeId": "ns=4;s=PC工序5图像相机3距离5检测NG",
+                "dataType": "UInt16"
+            },
+            {
+                "name": "PC当天用气量",
+                "nodeId": "ns=4;s=PC当天用气量",
+                "dataType": "Int32"
+            },
+            {
+                "name": "PC当天用电量",
+                "nodeId": "ns=4;s=PC当天用电量",
+                "dataType": "Int32"
+            },
+            {
+                "name": "PC心跳信号",
+                "nodeId": "ns=4;s=PC心跳信号",
+                "dataType": "Int16"
+            },
+            {
+                "name": "PC总气量",
+                "nodeId": "ns=4;s=PC总气量",
+                "dataType": "Int32"
+            },
+            {
+                "name": "PC总电量",
+                "nodeId": "ns=4;s=PC总电量",
+                "dataType": "Int32"
+            },
+            {
+                "name": "PC打码内容",
+                "nodeId": "ns=4;s=PC打码内容",
+                "dataType": "String"
+            },
+            {
+                "name": "PC打码初次级划分",
+                "nodeId": "ns=4;s=PC打码初次级划分",
+                "dataType": "String"
+            },
+            {
+                "name": "PC打码程序号",
+                "nodeId": "ns=4;s=PC打码程序号",
+                "dataType": "String"
+            },
+            {
+                "name": "PC扫码数据",
+                "nodeId": "ns=4;s=PC扫码数据",
+                "dataType": "String"
+            },
+            {
+                "name": "PC点检序列号",
+                "nodeId": "ns=4;s=PC点检序列号",
+                "dataType": "String"
+            },
+            {
+                "name": "PC相机1距离1",
+                "nodeId": "ns=4;s=PC相机1距离1",
+                "dataType": "Float"
+            },
+            {
+                "name": "PC相机1距离2",
+                "nodeId": "ns=4;s=PC相机1距离2",
+                "dataType": "Float"
+            },
+            {
+                "name": "PC相机1距离3",
+                "nodeId": "ns=4;s=PC相机1距离3",
+                "dataType": "Float"
+            },
+            {
+                "name": "PC相机2距离1",
+                "nodeId": "ns=4;s=PC相机2距离1",
+                "dataType": "Float"
+            },
+            {
+                "name": "PC相机2距离2",
+                "nodeId": "ns=4;s=PC相机2距离2",
+                "dataType": "Float"
+            },
+            {
+                "name": "PC相机3距离1",
+                "nodeId": "ns=4;s=PC相机3距离1",
+                "dataType": "Float"
+            },
+            {
+                "name": "PC相机3距离2",
+                "nodeId": "ns=4;s=PC相机3距离2",
+                "dataType": "Float"
+            },
+            {
+                "name": "PC相机3距离3",
+                "nodeId": "ns=4;s=PC相机3距离3",
+                "dataType": "Float"
+            },
+            {
+                "name": "PC相机3距离4",
+                "nodeId": "ns=4;s=PC相机3距离4",
+                "dataType": "Float"
+            },
+            {
+                "name": "PC相机3距离5",
+                "nodeId": "ns=4;s=PC相机3距离5",
+                "dataType": "Float"
+            },
+            {
+                "name": "PC程序号",
+                "nodeId": "ns=4;s=PC程序号",
+                "dataType": "Int16"
+            },
+            {
+                "name": "PC给PLC二极管码",
+                "nodeId": "ns=4;s=PC给PLC二极管码",
+                "dataType": "String"
+            },
+            {
+                "name": "PC给PLC圆形线码",
+                "nodeId": "ns=4;s=PC给PLC圆形线码",
+                "dataType": "String"
+            },
+            {
+                "name": "PC给PLC骨架码",
+                "nodeId": "ns=4;s=PC给PLC骨架码",
+                "dataType": "String"
+            },
+            {
+                "name": "PC读取图像数据请求",
+                "nodeId": "ns=4;s=PC读取图像数据请求",
+                "dataType": "Boolean"
+            },
+            {
+                "name": "PC读取扫码数据请求",
+                "nodeId": "ns=4;s=PC读取扫码数据请求",
+                "dataType": "Boolean"
+            },
+            {
+                "name": "PC读取激光打码数据请求",
+                "nodeId": "ns=4;s=PC读取激光打码数据请求",
+                "dataType": "Boolean"
+            },
+            {
+                "name": "PC骨架码",
+                "nodeId": "ns=4;s=PC骨架码",
+                "dataType": "String"
+            },
+            {
+                "name": "RD_二极管码信息_扫码",
+                "nodeId": "ns=4;s=RD_二极管码信息_扫码",
+                "dataType": "String"
+            },
+            {
+                "name": "RD_圆形线码信息_扫码",
+                "nodeId": "ns=4;s=RD_圆形线码信息_扫码",
+                "dataType": "String"
+            },
+            {
+                "name": "RD_来料码信息_扫码",
+                "nodeId": "ns=4;s=RD_来料码信息_扫码",
+                "dataType": "String"
+            },
+            {
+                "name": "RD_骨架码信息_扫码",
+                "nodeId": "ns=4;s=RD_骨架码信息_扫码",
+                "dataType": "String"
+            },
+            {
+                "name": "RD二极管信息码_PC给",
+                "nodeId": "ns=4;s=RD二极管信息码_PC给",
+                "dataType": "String"
+            },
+            {
+                "name": "RD圆形线信息码_PC给",
+                "nodeId": "ns=4;s=RD圆形线信息码_PC给",
+                "dataType": "String"
+            },
+            {
+                "name": "RD来料信息码_PC给",
+                "nodeId": "ns=4;s=RD来料信息码_PC给",
+                "dataType": "String"
+            },
+            {
+                "name": "RD骨架信息码_PC给",
+                "nodeId": "ns=4;s=RD骨架信息码_PC给",
+                "dataType": "String"
+            },
+            {
+                "name": "Unknown",
+                "nodeId": "ns=0;i=47",
+                "dataType": "Unknown"
+            },
+            {
+                "name": "",
+                "nodeId": "ns=2;i=6027",
+                "dataType": "Unknown"
+            },
+            {
+                "name": "UIElement",
+                "nodeId": "ns=2;i=6243",
+                "dataType": "BaseDataType"
+            },
+            {
+                "name": "Unknown",
+                "nodeId": "ns=0;i=45",
+                "dataType": "Unknown"
+            },
+            {
+                "name": "AlarmGroupMember",
+                "nodeId": "ns=0;i=16362",
+                "dataType": "Unknown"
+            },
+            {
+                "name": "HasExternalVars",
+                "nodeId": "ns=3;i=4005",
+                "dataType": "Unknown"
+            },
+            {
+                "name": "BaseDataVariableType",
+                "nodeId": "ns=0;i=63",
+                "dataType": "BaseDataType"
+            },
+            {
+                "name": "HasOrderedComponent",
+                "nodeId": "ns=0;i=49",
+                "dataType": "Unknown"
+            },
+            {
+                "name": "HasArgumentDescription",
+                "nodeId": "ns=0;i=129",
+                "dataType": "Unknown"
+            },
+            {
+                "name": "HasAddIn",
+                "nodeId": "ns=0;i=17604",
+                "dataType": "Unknown"
+            },
+            {
+                "name": "HasGuard",
+                "nodeId": "ns=0;i=15112",
+                "dataType": "Unknown"
+            },
+            {
+                "name": "HasPubSubConnection",
+                "nodeId": "ns=0;i=14476",
+                "dataType": "Unknown"
+            },
+            {
+                "name": "HasWriterGroup",
+                "nodeId": "ns=0;i=18804",
+                "dataType": "Unknown"
+            },
+            {
+                "name": "HasReaderGroup",
+                "nodeId": "ns=0;i=18805",
+                "dataType": "Unknown"
+            },
+            {
+                "name": "HasDataSetWriter",
+                "nodeId": "ns=0;i=15296",
+                "dataType": "Unknown"
+            },
+            {
+                "name": "HasDataSetReader",
+                "nodeId": "ns=0;i=15297",
+                "dataType": "Unknown"
+            },
+            {
+                "name": "HasAlarmSuppressionGroup",
+                "nodeId": "ns=0;i=16361",
+                "dataType": "Unknown"
+            },
+            {
+                "name": "HasInOutVars",
+                "nodeId": "ns=3;i=4003",
+                "dataType": "Unknown"
+            },
+            {
+                "name": "HasInputVars",
+                "nodeId": "ns=3;i=4001",
+                "dataType": "Unknown"
+            },
+            {
+                "name": "HasLocalVars",
+                "nodeId": "ns=3;i=4004",
+                "dataType": "Unknown"
+            },
+            {
+                "name": "HasOutputVars",
+                "nodeId": "ns=3;i=4002",
+                "dataType": "Unknown"
+            },
+            {
+                "name": "Unknown",
+                "nodeId": "ns=0;i=37",
+                "dataType": "Unknown"
+            },
+            {
+                "name": "OptionalPlaceholder",
+                "nodeId": "ns=0;i=11508",
+                "dataType": "Unknown"
+            },
+            {
+                "name": "UIElement",
+                "nodeId": "ns=2;i=6242",
+                "dataType": "BaseDataType"
+            },
+            {
+                "name": "UIElementType",
+                "nodeId": "ns=2;i=6246",
+                "dataType": "BaseDataType"
+            },
+            {
+                "name": "Optional",
+                "nodeId": "ns=0;i=80",
+                "dataType": "Unknown"
+            },
+            {
+                "name": "ServerVendorCapabilityType",
+                "nodeId": "ns=0;i=2137",
+                "dataType": "BaseDataType"
+            },
+            {
+                "name": "DataTypeDictionaryType",
+                "nodeId": "ns=0;i=72",
+                "dataType": "ByteString"
+            },
+            {
+                "name": "DataTypeDescriptionType",
+                "nodeId": "ns=0;i=69",
+                "dataType": "String"
+            },
+            {
+                "name": "ServerStatusType",
+                "nodeId": "ns=0;i=2138",
+                "dataType": "BaseDataType"
+            },
+            {
+                "name": "BuildInfoType",
+                "nodeId": "ns=0;i=3051",
+                "dataType": "BuildInfo"
+            },
+            {
+                "name": "ServerDiagnosticsSummaryType",
+                "nodeId": "ns=0;i=2150",
+                "dataType": "BaseDataType"
+            },
+            {
+                "name": "SamplingIntervalDiagnosticsType",
+                "nodeId": "ns=0;i=2165",
+                "dataType": "BaseDataType"
+            },
+            {
+                "name": "SubscriptionDiagnosticsArrayType",
+                "nodeId": "ns=0;i=2171",
+                "dataType": "BaseDataType"
+            },
+            {
+                "name": "SubscriptionDiagnosticsType",
+                "nodeId": "ns=0;i=2172",
+                "dataType": "BaseDataType"
+            },
+            {
+                "name": "SessionDiagnosticsArrayType",
+                "nodeId": "ns=0;i=2196",
+                "dataType": "BaseDataType"
+            },
+            {
+                "name": "SessionDiagnosticsVariableType",
+                "nodeId": "ns=0;i=2197",
+                "dataType": "BaseDataType"
+            },
+            {
+                "name": "SessionSecurityDiagnosticsArrayType",
+                "nodeId": "ns=0;i=2243",
+                "dataType": "BaseDataType"
+            },
+            {
+                "name": "SessionSecurityDiagnosticsType",
+                "nodeId": "ns=0;i=2244",
+                "dataType": "BaseDataType"
+            },
+            {
+                "name": "HasOptionalInputArgumentDescription",
+                "nodeId": "ns=0;i=131",
+                "dataType": "Unknown"
+            }
+        ],
+        "isCheckedItemsChanged": false,
+        "x": 120,
+        "y": 560,
+        "wires": [
+            [
+                "aedc77eea9c0a202"
+            ]
+        ]
+    },
+    {
+        "id": "aedc77eea9c0a202",
+        "type": "debug",
+        "z": "5b367beb.94d904",
+        "name": "opcua_Browse输出",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 330,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "d022d65ab792d7e1",
+        "type": "function",
+        "z": "5b367beb.94d904",
+        "name": "能源",
+        "func": "//PC当天用气量  PC当天用电量\nlet obj = {}\nvar opc = global.get(\"OPC\")\nobj[\"station\"] = \"能源\"\n\nobj[\"code\"] = moment(new Date()).format('YYYY年MM月DD日');\nobj[\"当天用气量\"] = opc[\"PC当天用气量\"]\nobj[\"当天用电量\"] = opc[\"PC当天用电量\"]\n//obj[\"当天用电量\"] = 18\nmsg.payload = obj\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "moment",
+                "module": "moment"
+            }
+        ],
+        "x": 890,
+        "y": 1800,
+        "wires": [
+            [
+                "dca723e4bc3a6b18"
+            ]
+        ]
+    },
+    {
+        "id": "dca723e4bc3a6b18",
+        "type": "http request",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://localhost:5000/api/testData/JSON",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "application/json",
+                "valueValue": ""
+            }
+        ],
+        "x": 1040,
+        "y": 1820,
+        "wires": [
+            [
+                "60a2e8618923b5e3"
+            ]
+        ]
+    },
+    {
+        "id": "99a9aa8bec20a02f",
+        "type": "inject",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "20",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 720,
+        "y": 1820,
+        "wires": [
+            [
+                "d022d65ab792d7e1"
+            ]
+        ]
+    },
+    {
+        "id": "60a2e8618923b5e3",
+        "type": "debug",
+        "z": "5b367beb.94d904",
+        "name": "debug 46",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1220,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "27584ac56a1c9084",
+        "type": "inject",
+        "z": "5b367beb.94d904",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 850,
+        "y": 660,
+        "wires": [
+            [
+                "ec15b0b01d63e5a8"
+            ]
+        ]
+    },
+    {
+        "id": "29a1794aed30b280",
+        "type": "http request",
+        "z": "985e794e41b6964f",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:5000/api/AlarmHistory",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "application/json",
+                "valueValue": ""
+            }
+        ],
+        "x": 1020,
+        "y": 300,
+        "wires": [
+            [
+                "1b68d2fa843a6273"
+            ]
+        ]
+    },
+    {
+        "id": "a20b1df4dec4ac3f",
+        "type": "template",
+        "z": "985e794e41b6964f",
+        "name": "报警csv",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "标签,地址,内容\n主程序_GG_报警1,4091.00,工序0-1警报0： PLC异常警报\n主程序_GG_报警1,4091.01,工序0-1警报1：ECT网络故障\n主程序_GG_报警1,4091.02,工序0-1警报2：运动控制器故障\n主程序_GG_报警1,4091.03,工序0-1警报3：气压异常\n主程序_GG_报警1,4091.04,工序0-1警报4：  安全门关异常\n主程序_GG_报警1,4091.05,工序0-1警报5：生产计划完成！\n主程序_GG_报警1,4091.06,工序0-1警报6： 结束模式完成！\n主程序_GG_报警1,4091.07,工序0-1警报7：模式选择不正确 \n主程序_GG_报警1,4091.08,工序0-1警报8：PLC与PC通讯故障 \n主程序_GG_报警1,4091.09,工序0-1警报9：安全继电器故障 或电源为启动\n主程序_GG_报警1,4091.10,工序0-1警报10:骨架码信息不匹配！请重扫！\n主程序_GG_报警1,4091.11,工序0-1警报11：二极管信息不匹配！请重扫！\n主程序_GG_报警1,4091.12,工序0-1警报12：圆形线信息不匹配！请重扫！\n主程序_GG_报警1,4091.13,工序0-1警报14：来料信息不匹配！请重扫！\n主程序_GG_报警1,4091.14,工序0-1警报14:扫码枪TCP连接不成功！\n主程序_GG_报警1,4091.15,工序0-1警报15:整机复位超时！\n主程序_GG_报警2,4097.00,工序0-1警报20:PC切换型号超时！\n主程序_GG_报警2,4097.01,工序0-1警报21:PC读取图像数据超时\n主程序_GG_报警2,4097.02,工序0-1警报22:PC读取打码数据超时\n主程序_GG_报警2,4097.03,工序0-1警报23:PC读取扫码数据超时\n主程序_GG_报警2,4097.04,工序0-1警报24:\n主程序_GG_报警2,4097.05,工序0-1警报25:\n主程序_GG_报警2,4097.06,工序0-1警报26:\n主程序_GG_报警2,4097.07,工序0-1警报27:\n主程序_GG_报警2,4097.08,工序0-1警报28:\n主程序_GG_报警2,4097.09,工序0-1警报29:\n主程序_GG_报警2,4097.10,工序0-1警报30:\n主程序_GG_报警2,4097.11,工序0-1警报31:\n主程序_GG_报警2,4097.12,工序0-1警报32:\n主程序_GG_报警2,4097.13,工序0-1警报34:\n主程序_GG_报警2,4097.14,工序0-1警报34:\n主程序_GG_报警2,4097.15,工序0-1警报35:\n主程序_SM_报警,4092.00,工序0-2警报0： 寿命计数1警报\n主程序_SM_报警,4092.01,工序0-2警报1： 寿命计数2警报\n主程序_SM_报警,4092.02,工序0-2警报2： 寿命计数3警报\n主程序_SM_报警,4092.03,工序0-2警报3： 寿命计数4警报\n主程序_SM_报警,4092.04,工序0-2警报4： 寿命计数5警报\n主程序_SM_报警,4092.05,工序0-2警报5： 寿命计数6警报\n主程序_SM_报警,4092.06,工序0-2警报6： 寿命计数7警报\n主程序_SM_报警,4092.07,工序0-2警报7： 寿命计数8警报\n主程序_SM_报警,4092.08,工序0-2警报8： 寿命计数9警报\n主程序_SM_报警,4092.09,工序0-2警报9： 寿命计数10警报\n主程序_SM_报警,4092.10,工序0-2警报10：寿命计数11警报\n主程序_SM_报警,4092.11,工序0-2警报11：寿命计数12警报\n主程序_SM_报警,4092.12,工序0-2警报12：\n主程序_SM_报警,4092.13,工序0-2警报13：\n主程序_SM_报警,4092.14,工序0-2警报14：\n主程序_SM_报警,4092.15,工序0-2警报15：\n主程序_NG_报警,4093.00,工序0-3警报0:1#连续不良次数已到\n主程序_NG_报警,4093.01,工序0-3警报1:2#连续不良次数已到\n主程序_NG_报警,4093.02,工序0-3警报2:3#连续不良次数已到\n主程序_NG_报警,4093.03,工序0-3警报3:4#连续不良次数已到\n主程序_NG_报警,4093.04,工序0-3警报4:5#连续不良次数已到\n主程序_NG_报警,4093.05,工序0-3警报5:6#连续不良次数已到\n主程序_NG_报警,4093.06,工序0-3警报6:7#连续不良次数已到\n主程序_NG_报警,4093.07,工序0-3警报7:8#连续不良次数已到\n主程序_NG_报警,4093.08,工序0-3警报8:9#连续不良次数已到\n主程序_NG_报警,4093.09,工序0-3警报9:10#连续不良次数已到\n主程序_NG_报警,4093.10,工序0-3警报10:11#连续不良次数已到\n主程序_NG_报警,4093.11,工序0-3警报11:12#连续不良次数已到\n主程序_NG_报警,4093.12,工序0-3警报12:13#连续不良次数已到\n主程序_NG_报警,4093.13,工序0-3警报13:\n主程序_NG_报警,4093.14,工序0-3警报14:\n主程序_NG_报警,4093.15,工序0-3警报15:\n主程序_TestTotal_报警,4094.00,工序0-4警报0:1#统计不良次数已到\n主程序_TestTotal_报警,4094.01,工序0-4警报1:2#统计不良次数已到\n主程序_TestTotal_报警,4094.02,工序0-4警报2:3#统计不良次数已到\n主程序_TestTotal_报警,4094.03,工序0-4警报3:4#统计不良次数已到\n主程序_TestTotal_报警,4094.04,工序0-4警报4:5#统计不良次数已到\n主程序_TestTotal_报警,4094.05,工序0-4警报5:6#统计不良次数已到\n主程序_TestTotal_报警,4094.06,工序0-4警报6:7#统计不良次数已到\n主程序_TestTotal_报警,4094.07,工序0-4警报7:8#统计不良次数已到\n主程序_TestTotal_报警,4094.08,工序0-4警报8:9#统计不良次数已到\n主程序_TestTotal_报警,4094.09,工序0-4警报9:10#统计不良次数已到\n主程序_TestTotal_报警,4094.10,工序0-4警报10:11#统计不良次数已到\n主程序_TestTotal_报警,4094.11,工序0-4警报11:12#统计不良次数已到\n主程序_TestTotal_报警,4094.12,工序0-4警报12:13#统计不良次数已到\n主程序_TestTotal_报警,4094.13,工序0-4警报12:\n主程序_TestTotal_报警,4094.14,工序0-4警报13:\n主程序_TestTotal_报警,4094.15,工序0-4警报14:\n主程序_TurntableTotal_报警,4095.00,工序0-5警报0:转盘1#工装统计不良次数已到\n主程序_TurntableTotal_报警,4095.01,工序0-5警报1:转盘2#工装统计不良次数已到\n主程序_TurntableTotal_报警,4095.02,工序0-5警报2:转盘3#工装统计不良次数已到\n主程序_TurntableTotal_报警,4095.03,工序0-5警报3:转盘4#工装统计不良次数已到\n主程序_TurntableTotal_报警,4095.04,工序0-5警报4:转盘5#工装统计不良次数已到\n主程序_TurntableTotal_报警,4095.05,工序0-5警报5:转盘6#工装统计不良次数已到\n主程序_TurntableTotal_报警,4095.06,工序0-5警报6:转盘7#工装统计不良次数已到\n主程序_TurntableTotal_报警,4095.07,工序0-5警报7:转盘8#工装统计不良次数已到\n主程序_TurntableTotal_报警,4095.08,工序0-5警报8:转盘9#工装统计不良次数已到\n主程序_TurntableTotal_报警,4095.09,工序0-5警报9:转盘10#工装统计不良次数已到\n主程序_TurntableTotal_报警,4095.10,工序0-5警报10:转盘11#工装统计不良次数已到\n主程序_TurntableTotal_报警,4095.11,工序0-5警报11:转盘12#工装统计不良次数已到\n主程序_TurntableTotal_报警,4095.12,工序0-5警报12:转盘13#工装统计不良次数已到\n主程序_TurntableTotal_报警,4095.13,工序0-5警报13:\n主程序_TurntableTotal_报警,4095.14,工序0-5警报14:\n主程序_TurntableTotal_报警,4095.15,工序0-5警报15:\n工序1_1报警,4191.00,工序1-1报警0:上托盘运行超时\n工序1_1报警,4191.01,工序1-1警报1:托盘移动架2轴伺服故障！\n工序1_1报警,4191.02,工序1-1警报2:托盘移动架2轴无原点！\n工序1_1报警,4191.03,工序1-1警报3:满盘锁闭故障1.00\n工序1_1报警,4191.04,工序1-1警报4:满盘锁开故障1.01\n工序1_1报警,4191.05,工序1-1警报5:空盘锁闭故障1.04\n工序1_1报警,4191.06,工序1-1警报6:空盘锁开故障1.05\n工序1_1报警,4191.07,工序1-1警报7:托盘锁紧张开故障1.06\n工序1_1报警,4191.08,工序1-1警报8:托盘锁紧闭合故障1.07/1.08/1.09/1.10\n工序1_1报警,4191.09,工序1-1警报9:接托盘下限故障1.12\n工序1_1报警,4191.10,工序1-1警报10:接托盘上限故障1.13\n工序1_1报警,4191.11,工序1-1警报11:顶托盘下限故障1.14\n工序1_1报警,4191.12,工序1-1警报12:顶托盘上限故障1.15\n工序1_1报警,4191.13,工序1-1警报13:托盘空，请上托盘！\n工序1_1报警,4191.14,工序1-1警报14:\n工序1_1报警,4191.15,工序1-1警报15:\n工序1_2报警,4192.00,工序1-2报警0:下托盘运行超时\n工序1_2报警,4192.01,工序1-2警报1:托盘满，请取托盘！\n工序1_2报警,4192.02,工序1-2警报2:\n工序1_2报警,4192.03,工序1-2警报3:\n工序1_2报警,4192.04,工序1-2警报4:\n工序1_2报警,4192.05,工序1-2警报5:\n工序1_2报警,4192.06,工序1-2警报6:\n工序1_2报警,4192.07,工序1-2警报7:\n工序1_2报警,4192.08,工序1-2警报8:\n工序1_2报警,4192.09,工序1-2警报9:\n工序1_2报警,4192.10,工序1-2警报10:\n工序1_2报警,4192.11,工序1-2警报11:\n工序1_2报警,4192.12,工序1-2警报12:\n工序1_2报警,4192.13,工序1-2警报13:\n工序1_2报警,4192.14,工序1-2警报14:\n工序1_2报警,4192.15,工序1-2警报15:\n工序1_3报警,4193.00,工序1-3报警0:机械手取料运行超时\n工序1_3报警,4193.01,工序1-3警报1:机械手未复位\n工序1_3报警,4193.02,工序1-3警报2:机械手故障\n工序1_3报警,4193.03,工序1-3警报3:机械手网络异常！\n工序1_3报警,4193.04,工序1-3警报4:\n工序1_3报警,4193.05,工序1-3警报5:\n工序1_3报警,4193.06,工序1-3警报6:\n工序1_3报警,4193.07,工序1-3警报7:\n工序1_3报警,4193.08,工序1-3警报8:\n工序1_3报警,4193.09,工序1-3警报9:\n工序1_3报警,4193.10,工序1-3警报10:\n工序1_3报警,4193.11,工序1-3警报11:\n工序1_3报警,4193.12,工序1-3警报12:\n工序1_3报警,4193.13,工序1-3警报13:\n工序1_3报警,4193.14,工序1-3警报14:\n工序1_3报警,4193.15,工序1-3警报15:\n工序1_4报警,4194.00,工序1-4报警0:机械手放料运行超时\n工序1_4报警,4194.01,工序1-4警报1:机械手放料处有料！\n工序1_4报警,4194.02,工序1-4警报2:\n工序1_4报警,4194.03,工序1-4警报3:\n工序1_4报警,4194.04,工序1-4警报4:\n工序1_4报警,4194.05,工序1-4警报5:\n工序1_4报警,4194.06,工序1-4警报6:\n工序1_4报警,4194.07,工序1-4警报7:\n工序1_4报警,4194.08,工序1-4警报8:\n工序1_4报警,4194.09,工序1-4警报9:\n工序1_4报警,4194.10,工序1-4警报10:\n工序1_4报警,4194.11,工序1-4警报11:\n工序1_4报警,4194.12,工序1-4警报12:\n工序1_4报警,4194.13,工序1-4警报13:\n工序1_4报警,4194.14,工序1-4警报14:\n工序1_4报警,4194.15,工序1-4警报15:\n工序1_5报警,4195.00,工序1-5报警0:拨料爪上料运行超时\n工序1_5报警,4195.01,工序1-5警报1:拨料爪下限故障3.00\n工序1_5报警,4195.02,工序1-5警报2:拨料爪上限故障3.01\n工序1_5报警,4195.03,工序1-5警报3:拨料爪后限故障3.02\n工序1_5报警,4195.04,工序1-5警报4:拨料爪前限故障3.03\n工序1_5报警,4195.05,工序1-5警报5:转盘上料处有料，请取出3.04！ \n工序1_5报警,4195.06,工序1-5警报6:拨爪上骨架检测信号故障3.05！\n工序1_5报警,4195.07,工序1-5警报7:拨爪上料完成后3.04无信号\n工序1_5报警,4195.08,工序1-5警报8:\n工序1_5报警,4195.09,工序1-5警报9:\n工序1_5报警,4195.10,工序1-5警报10:\n工序1_5报警,4195.11,工序1-5警报11:\n工序1_5报警,4195.12,工序1-5警报12:\n工序1_5报警,4195.13,工序1-5警报13:\n工序1_5报警,4195.14,工序1-5警报14:\n工序1_5报警,4195.15,工序1-5警报15:\n工序2_1报警,4291.00,工序2-1报警0:送二极管运行超时\n工序2_1报警,4291.01,工序2-1警报1:送料板3轴伺服故障\n工序2_1报警,4291.02,工序2-1警报2:送料板3轴无原点\n工序2_1报警,4291.03,工序2-1警报3:测试针上限故障4.02\n工序2_1报警,4291.04,工序2-1警报4:测试针下限故障4.03\n工序2_1报警,4291.05,工序2-1警报5:送料板上限故障4.06\n工序2_1报警,4291.06,工序2-1警报6:送料板下限故障4.07\n工序2_1报警,4291.07,工序2-1警报7:压脚板上限故障4.08\n工序2_1报警,4291.08,工序2-1警报8:压脚板下限故障4.09\n工序2_1报警,4291.09,工序2-1警报9:二极管料卷已用完提示8.08！\n工序2_1报警,4291.10,工序2-1警报10:二极管已用完4.01！\n工序2_1报警,4291.11,工序2-1警报11:二极管反向，请取出！\n工序2_1报警,4291.12,工序2-1警报12:二极管检测信号故障4.05_切刀处\n工序2_1报警,4291.13,工序2-1警报13:二极管已用完4.01！\n工序2_1报警,4291.14,工序2-1警报14:\n工序2_1报警,4291.15,工序2-1警报15:\n工序2_2报警,4292.00,工序2-2报警0:取二极管运行超时\n工序2_2报警,4292.01,工序2-2警报1:二极管搬运4轴伺服故障\n工序2_2报警,4292.02,工序2-2警报2:二极管搬运4轴无原点\n工序2_2报警,4292.03,工序2-2警报3:搬运取料夹旋转0°限位故障4.12\n工序2_2报警,4292.04,工序2-2警报4:搬运取料夹旋转90°限位故障4.13\n工序2_2报警,4292.05,工序2-2警报5:搬运取料夹后限故障4.14\n工序2_2报警,4292.06,工序2-2警报6:搬运取料夹前限故障4.15\n工序2_2报警,4292.07,工序2-2警报7:搬运取料夹张开故障5.00\n工序2_2报警,4292.08,工序2-2警报8:搬运取料夹闭合故障5.01\n工序2_2报警,4292.09,工序2-2警报9:切刀上限故障4.10\n工序2_2报警,4292.10,工序2-2警报10:切刀下限故障4.11\n工序2_2报警,4292.11,工序2-2警报11:\n工序2_2报警,4292.12,工序2-2警报12:\n工序2_2报警,4292.13,工序2-2警报13:\n工序2_2报警,4292.14,工序2-2警报14:\n工序2_2报警,4292.15,工序2-2警报15:\n工序2_3报警,4293.00,工序2-3报警0:运行超时\n工序2_3报警,4293.01,工序2-3警报1:\n工序2_3报警,4293.02,工序2-3警报2:\n工序2_3报警,4293.03,工序2-3警报3:\n工序2_3报警,4293.04,工序2-3警报4:\n工序2_3报警,4293.05,工序2-3警报5:\n工序2_3报警,4293.06,工序2-3警报6:\n工序2_3报警,4293.07,工序2-3警报7:\n工序2_3报警,4293.08,工序2-3警报8:\n工序2_3报警,4293.09,工序2-3警报9:\n工序2_3报警,4293.10,工序2-3警报10:\n工序2_3报警,4293.11,工序2-3警报11:\n工序2_3报警,4293.12,工序2-3警报12:\n工序2_3报警,4293.13,工序2-3警报13:\n工序2_3报警,4293.14,工序2-3警报14:\n工序2_3报警,4293.15,工序2-3警报15:\n工序2_4报警,4294.00,工序2-4报警0:二极管折弯运行超时\n工序2_4报警,4294.01,工序2-4警报1:二极管折弯5轴伺服故障\n工序2_4报警,4294.02,工序2-4警报2:二极管折弯5轴无原点\n工序2_4报警,4294.03,工序2-4警报3:二极管折弯夹张开故障5.02\n工序2_4报警,4294.04,工序2-4警报4:二极管折弯夹闭合故障5.03\n工序2_4报警,4294.05,工序2-4警报5:二极管折弯夹下限故障5.04\n工序2_4报警,4294.06,工序2-4警报6:二极管折弯夹上限故障5.05\n工序2_4报警,4294.07,工序2-4警报7:顶针板后限故障5.06\n工序2_4报警,4294.08,工序2-4警报8:顶针板前限故障5.07\n工序2_4报警,4294.09,工序2-4警报9:\n工序2_4报警,4294.10,工序2-4警报10:\n工序2_4报警,4294.11,工序2-4警报11:\n工序2_4报警,4294.12,工序2-4警报12:\n工序2_4报警,4294.13,工序2-4警报13:\n工序2_4报警,4294.14,工序2-4警报14:\n工序2_4报警,4294.15,工序2-4警报15:\n工序2_5报警,4295.00,工序2-5报警0:装配取料运行超时\n工序2_5报警,4295.01,工序2-5警报1:二极管推入6轴伺服故障\n工序2_5报警,4295.02,工序2-5警报2:二极管推入6轴无原点\n工序2_5报警,4295.03,工序2-5警报3:装配取料夹旋转0°故障5.08\n工序2_5报警,4295.04,工序2-5警报4:装配取料夹旋转90°故障5.09\n工序2_5报警,4295.05,工序2-5警报5:装配取料夹上限故障5.10\n工序2_5报警,4295.06,工序2-5警报6:装配取料夹下限故障5.11\n工序2_5报警,4295.07,工序2-5警报7:装配取料夹张开故障5.12\n工序2_5报警,4295.08,工序2-5警报8:装配取料夹闭合故障5.13\n工序2_5报警,4295.09,工序2-5警报9:装配定位夹上限故障6.00\n工序2_5报警,4295.10,工序2-5警报10:装配定位夹下限故障6.01\n工序2_5报警,4295.11,工序2-5警报11:装配定位夹张开故障6.02\n工序2_5报警,4295.12,工序2-5警报12:装配定位夹闭合故障6.03\n工序2_5报警,4295.13,工序2-5警报13:\n工序2_5报警,4295.14,工序2-5警报14:\n工序2_5报警,4295.15,工序2-5警报15:\n工序2_6报警,4296.00,工序2-6报警0:运行超时\n工序2_6报警,4296.01,工序2-6警报1:\n工序2_6报警,4296.02,工序2-6警报2:\n工序2_6报警,4296.03,工序2-6警报3:\n工序2_6报警,4296.04,工序2-6警报4:\n工序2_6报警,4296.05,工序2-6警报5:\n工序2_6报警,4296.06,工序2-6警报6:\n工序2_6报警,4296.07,工序2-6警报7:\n工序2_6报警,4296.08,工序2-6警报8:\n工序2_6报警,4296.09,工序2-6警报9:\n工序2_6报警,4296.10,工序2-6警报10:\n工序2_6报警,4296.11,工序2-6警报11:\n工序2_6报警,4296.12,工序2-6警报12:\n工序2_6报警,4296.13,工序2-6警报13:\n工序2_6报警,4296.14,工序2-6警报14:\n工序2_6报警,4296.15,工序2-6警报15:\n工序3_1报警,4391.00,工序3-1报警0:二次折弯运行超时\n工序3_1报警,4391.01,工序3-1警报1:二次折弯定位夹上限故障6.04\n工序3_1报警,4391.02,工序3-1警报2:二次折弯定位夹下限故障6.05\n工序3_1报警,4391.03,工序3-1警报3:二次折弯定位夹张开故障6.06\n工序3_1报警,4391.04,工序3-1警报4:二次折弯定位夹闭合故障6.07\n工序3_1报警,4391.05,工序3-1警报5:二次折弯板后限故障6.08\n工序3_1报警,4391.06,工序3-1警报6:二次折弯板前限故障6.09\n工序3_1报警,4391.07,工序3-1警报7:顶紧板后限故障6.10\n工序3_1报警,4391.08,工序3-1警报8:顶紧板前限故障6.11\n工序3_1报警,4391.09,工序3-1警报9:一次折弯后限故障6.12\n工序3_1报警,4391.10,工序3-1警报10:一次折弯前限故障6.13\n工序3_1报警,4391.11,工序3-1警报11:二次折弯后限故障6.14\n工序3_1报警,4391.12,工序3-1警报12:二次折弯前限故障6.15\n工序3_1报警,4391.13,工序3-1警报13:\n工序3_1报警,4391.14,工序3-1警报14:\n工序3_1报警,4391.15,工序3-1警报15:\n工序4_1报警,4491.00,工序4-1报警0:送线运行超时\n工序4_1报警,4491.01,工序4-1警报1:定长拉线7轴伺服故障\n工序4_1报警,4491.02,工序4-1警报2:定长拉线7轴无原点\n工序4_1报警,4491.03,工序4-1警报3:定长拉线夹张开故障7.02\n工序4_1报警,4491.04,工序4-1警报4:定长拉线夹闭合故障7.03\n工序4_1报警,4491.05,工序4-1警报5:端子线卷已用完提示！\n工序4_1报警,4491.06,工序4-1警报6:端子线卷已用完停机！\n工序4_1报警,4491.07,工序4-1警报7:\n工序4_1报警,4491.08,工序4-1警报8:\n工序4_1报警,4491.09,工序4-1警报9:\n工序4_1报警,4491.10,工序4-1警报10:\n工序4_1报警,4491.11,工序4-1警报11:\n工序4_1报警,4491.12,工序4-1警报12:\n工序4_1报警,4491.13,工序4-1警报13:\n工序4_1报警,4491.14,工序4-1警报14:\n工序4_1报警,4491.15,工序4-1警报15:\n工序4_2报警,4492.00,工序4-2报警0:取端子运行超时\n工序4_2报警,4492.01,工序4-2警报1:定长插针8轴伺服故障\n工序4_2报警,4492.02,工序4-2警报2:定长插针8轴无原点\n工序4_2报警,4492.03,工序4-2警报3:定长插针夹张开故障7.04\n工序4_2报警,4492.04,工序4-2警报4:定长插针夹闭合故障7.05\n工序4_2报警,4492.05,工序4-2警报5:顶骨架后限故障7.06\n工序4_2报警,4492.06,工序4-2警报6:顶骨架前限故障7.07\n工序4_2报警,4492.07,工序4-2警报7:\n工序4_2报警,4492.08,工序4-2警报8:\n工序4_2报警,4492.09,工序4-2警报9:\n工序4_2报警,4492.10,工序4-2警报10:\n工序4_2报警,4492.11,工序4-2警报11:\n工序4_2报警,4492.12,工序4-2警报12:\n工序4_2报警,4492.13,工序4-2警报13:\n工序4_2报警,4492.14,工序4-2警报14:\n工序4_2报警,4492.15,工序4-2警报15:\n工序4_3报警,4493.00,工序4-3报警0:运行超时\n工序4_3报警,4493.01,工序4-3警报1:\n工序4_3报警,4493.02,工序4-3警报2:\n工序4_3报警,4493.03,工序4-3警报3:\n工序4_3报警,4493.04,工序4-3警报4:\n工序4_3报警,4493.05,工序4-3警报5:\n工序4_3报警,4493.06,工序4-3警报6:\n工序4_3报警,4493.07,工序4-3警报7:\n工序4_3报警,4493.08,工序4-3警报8:\n工序4_3报警,4493.09,工序4-3警报9:\n工序4_3报警,4493.10,工序4-3警报10:\n工序4_3报警,4493.11,工序4-3警报11:\n工序4_3报警,4493.12,工序4-3警报12:\n工序4_3报警,4493.13,工序4-3警报13:\n工序4_3报警,4493.14,工序4-3警报14:\n工序4_3报警,4493.15,工序4-3警报15:\n工序4_4报警,4494.00,工序4-4报警0:折弯运行超时\n工序4_4报警,4494.01,工序4-4警报1:勾线板下限故障7.08\n工序4_4报警,4494.02,工序4-4警报2:勾线板上限故障7.09\n工序4_4报警,4494.03,工序4-4警报3:骨架棒左限故障7.10\n工序4_4报警,4494.04,工序4-4警报4:骨架棒右限故障7.11\n工序4_4报警,4494.05,工序4-4警报5:端子成型板后限故障7.12\n工序4_4报警,4494.06,工序4-4警报6:端子成型板前限故障7.13\n工序4_4报警,4494.07,工序4-4警报7:\n工序4_4报警,4494.08,工序4-4警报8:\n工序4_4报警,4494.09,工序4-4警报9:\n工序4_4报警,4494.10,工序4-4警报10:\n工序4_4报警,4494.11,工序4-4警报11:\n工序4_4报警,4494.12,工序4-4警报12:\n工序4_4报警,4494.13,工序4-4警报13:\n工序4_4报警,4494.14,工序4-4警报14:\n工序4_4报警,4494.15,工序4-4警报15:\n工序4_5报警,4495.00,工序4-5报警0:转台上料运行超时\n工序4_5报警,4495.01,工序4-5警报1:转台前后9轴伺服故障\n工序4_5报警,4495.02,工序4-5警报2:转台前后9轴无原点\n工序4_5报警,4495.03,工序4-5警报3:拨爪下限故障8.00\n工序4_5报警,4495.04,工序4-5警报4:拨爪上限故障8.01\n工序4_5报警,4495.05,工序4-5警报5:拨爪旋转0°故障8.02\n工序4_5报警,4495.06,工序4-5警报6:拨爪旋转90°故障8.03\n工序4_5报警,4495.07,工序4-5警报7:\n工序4_5报警,4495.08,工序4-5警报8:\n工序4_5报警,4495.09,工序4-5警报9:\n工序4_5报警,4495.10,工序4-5警报10:\n工序4_5报警,4495.11,工序4-5警报11:\n工序4_5报警,4495.12,工序4-5警报12:\n工序4_5报警,4495.13,工序4-5警报13:\n工序4_5报警,4495.14,工序4-5警报14:\n工序4_5报警,4495.15,工序4-5警报15:\n工序4_6报警,4496.00,工序4-6报警0:运行超时\n工序4_6报警,4496.01,工序4-6警报1:\n工序4_6报警,4496.02,工序4-6警报2:\n工序4_6报警,4496.03,工序4-6警报3:\n工序4_6报警,4496.04,工序4-6警报4:\n工序4_6报警,4496.05,工序4-6警报5:\n工序4_6报警,4496.06,工序4-6警报6:\n工序4_6报警,4496.07,工序4-6警报7:\n工序4_6报警,4496.08,工序4-6警报8:\n工序4_6报警,4496.09,工序4-6警报9:\n工序4_6报警,4496.10,工序4-6警报10:\n工序4_6报警,4496.11,工序4-6警报11:\n工序4_6报警,4496.12,工序4-6警报12:\n工序4_6报警,4496.13,工序4-6警报13:\n工序4_6报警,4496.14,工序4-6警报14:\n工序4_6报警,4496.15,工序4-6警报15:\n工序5_1报警,4591.00,工序5-1报警0:图像检测运行超时\n工序5_1报警,4591.01,工序5-1警报1:图像上位机软件通讯故障！\n工序5_1报警,4591.02,工序5-1警报2:转盘相机1检测超时！\n工序5_1报警,4591.03,工序5-1警报3:图像上位机未准备好！\n工序5_1报警,4591.04,工序5-1警报4:水平相机3掉线！\n工序5_1报警,4591.05,工序5-1警报5:垂直相机2掉线\n工序5_1报警,4591.06,工序5-1警报6:垂直相机1掉线\n工序5_1报警,4591.07,工序5-1警报7:转盘相机故障！\n工序5_1报警,4591.08,工序5-1警报8:\n工序5_1报警,4591.09,工序5-1警报9:\n工序5_1报警,4591.10,工序5-1警报10:\n工序5_1报警,4591.11,工序5-1警报11:\n工序5_1报警,4591.12,工序5-1警报12:\n工序5_1报警,4591.13,工序5-1警报13:\n工序5_1报警,4591.14,工序5-1警报14:\n工序5_1报警,4591.15,工序5-1警报15:\n工序6_1报警,4691.00,工序6-1报警0:激光打印运行超时\n工序6_1报警,4691.01,工序6-1警报1:激光机未准备好\n工序6_1报警,4691.02,工序6-1警报2:激光机故障\n工序6_1报警,4691.03,工序6-1警报3:激光TCP连接不成功！\n工序6_1报警,4691.04,工序6-1警报4:激光TCP连接已断开！\n工序6_1报警,4691.05,工序6-1警报5:\n工序6_1报警,4691.06,工序6-1警报6:\n工序6_1报警,4691.07,工序6-1警报7:\n工序6_1报警,4691.08,工序6-1警报8:\n工序6_1报警,4691.09,工序6-1警报9:\n工序6_1报警,4691.10,工序6-1警报10:\n工序6_1报警,4691.11,工序6-1警报11:\n工序6_1报警,4691.12,工序6-1警报12:\n工序6_1报警,4691.13,工序6-1警报13:\n工序6_1报警,4691.14,工序6-1警报14:\n工序6_1报警,4691.15,工序6-1警报15:\n工序7_1报警,4791.00,工序7-1报警0:扫码运行超时\n工序7_1报警,4791.01,工序7-1警报1:扫码仪故障\n工序7_1报警,4791.02,工序7-1警报2:\n工序7_1报警,4791.03,工序7-1警报3:\n工序7_1报警,4791.04,工序7-1警报4:\n工序7_1报警,4791.05,工序7-1警报5:\n工序7_1报警,4791.06,工序7-1警报6:\n工序7_1报警,4791.07,工序7-1警报7:\n工序7_1报警,4791.08,工序7-1警报8:\n工序7_1报警,4791.09,工序7-1警报9:\n工序7_1报警,4791.10,工序7-1警报10:\n工序7_1报警,4791.11,工序7-1警报11:\n工序7_1报警,4791.12,工序7-1警报12:\n工序7_1报警,4791.13,工序7-1警报13:\n工序7_1报警,4791.14,工序7-1警报14:\n工序7_1报警,4791.15,工序7-1警报15:\n工序8_1报警,4891.00,工序8-1报警0:前段取料运行超时\n工序8_1报警,4891.01,工序8-1警报1:前段取料夹10轴伺服故障\n工序8_1报警,4891.02,工序8-1警报2:前段取料夹10轴无原点\n工序8_1报警,4891.03,工序8-1警报3:前段取料夹张开故障10.02\n工序8_1报警,4891.04,工序8-1警报4:前段取料夹闭合故障10.03\n工序8_1报警,4891.05,工序8-1警报5:前段取料夹旋转0°故障10.04\n工序8_1报警,4891.06,工序8-1警报6:前段取料夹旋转180°故障10.05\n工序8_1报警,4891.07,工序8-1警报7:\n工序8_1报警,4891.08,工序8-1警报8:\n工序8_1报警,4891.09,工序8-1警报9:\n工序8_1报警,4891.10,工序8-1警报10:\n工序8_1报警,4891.11,工序8-1警报11:\n工序8_1报警,4891.12,工序8-1警报12:\n工序8_1报警,4891.13,工序8-1警报13:\n工序8_1报警,4891.14,工序8-1警报14:\n工序8_1报警,4891.15,工序8-1警报15:\n工序8_2报警,4892.00,工序8-2报警0:前段取料夹放料运行超时\n工序8_2报警,4892.01,工序8-2警报1:治具台右限故障10.08\n工序8_2报警,4892.02,工序8-2警报2:治具台左限故障10.09\n工序8_2报警,4892.03,工序8-2警报3:治具台后限故障10.14\n工序8_2报警,4892.04,工序8-2警报4:治具台前限故障10.15\n工序8_2报警,4892.05,工序8-2警报5:治具旋转0°故障10.10/10.12\n工序8_2报警,4892.06,工序8-2警报6:治具旋转90°故障10.11/10.13\n工序8_2报警,4892.07,工序8-2警报7:NG料满，请处理！\n工序8_2报警,4892.08,工序8-2警报8:\n工序8_2报警,4892.09,工序8-2警报9:\n工序8_2报警,4892.10,工序8-2警报10:\n工序8_2报警,4892.11,工序8-2警报11:\n工序8_2报警,4892.12,工序8-2警报12:\n工序8_2报警,4892.13,工序8-2警报13:\n工序8_2报警,4892.14,工序8-2警报14:\n工序8_2报警,4892.15,工序8-2警报15:\n工序8_3报警,4893.00,工序8-3报警0:后段取料运行超时\n工序8_3报警,4893.01,工序8-3警报1:后段取料夹上下11轴伺服故障\n工序8_3报警,4893.02,工序8-3警报2:后段取料夹上下11轴无原点\n工序8_3报警,4893.03,工序8-3警报3:后段取料夹前后12轴伺服故障\n工序8_3报警,4893.04,工序8-3警报4:后段取料夹前后12轴无原点\n工序8_3报警,4893.05,工序8-3警报5:后段取料夹张开故障11.00/11.02\n工序8_3报警,4893.06,工序8-3警报6:后段取料夹闭合故障11.01/11.03\n工序8_3报警,4893.07,工序8-3警报7:\n工序8_3报警,4893.08,工序8-3警报8:\n工序8_3报警,4893.09,工序8-3警报9:\n工序8_3报警,4893.10,工序8-3警报10:\n工序8_3报警,4893.11,工序8-3警报11:\n工序8_3报警,4893.12,工序8-3警报12:\n工序8_3报警,4893.13,工序8-3警报13:\n工序8_3报警,4893.14,工序8-3警报14:\n工序8_3报警,4893.15,工序8-3警报15:\n工序8_4报警,4894.00,工序8-4报警0:后段放料运行超时运行超时\n工序8_4报警,4894.01,工序8-4警报1:\n工序8_4报警,4894.02,工序8-4警报2:\n工序8_4报警,4894.03,工序8-4警报3:\n工序8_4报警,4894.04,工序8-4警报4:\n工序8_4报警,4894.05,工序8-4警报5:\n工序8_4报警,4894.06,工序8-4警报6:\n工序8_4报警,4894.07,工序8-4警报7:\n工序8_4报警,4894.08,工序8-4警报8:\n工序8_4报警,4894.09,工序8-4警报9:\n工序8_4报警,4894.10,工序8-4警报10:\n工序8_4报警,4894.11,工序8-4警报11:\n工序8_4报警,4894.12,工序8-4警报12:\n工序8_4报警,4894.13,工序8-4警报13:\n工序8_4报警,4894.14,工序8-4警报14:\n工序8_4报警,4894.15,工序8-4警报15:\n工序16_1报警,5691.00,工序16-1报警0:转盘复位运行超时\n工序16_1报警,5691.01,工序16-1警报1:转盘旋转轴1伺服故障！\n工序16_1报警,5691.02,工序16-1警报2:转盘旋转轴1未回原点！\n工序16_1报警,5691.03,工序16-1警报3:\n工序16_1报警,5691.04,工序16-1警报4:\n工序16_1报警,5691.05,工序16-1警报5:\n工序16_1报警,5691.06,工序16-1警报6:\n工序16_1报警,5691.07,工序16-1警报7:\n工序16_1报警,5691.08,工序16-1警报8:\n工序16_1报警,5691.09,工序16-1警报9:\n工序16_1报警,5691.10,工序16-1警报10:\n工序16_1报警,5691.11,工序16-1警报11:\n工序16_1报警,5691.12,工序16-1警报12:\n工序16_1报警,5691.13,工序16-1警报13:\n工序16_1报警,5691.14,工序16-1警报14:\n工序16_1报警,5691.15,工序16-1警报15:\n工序16_2报警,5692.00,工序16-2报警0:运行超时\n工序16_2报警,5692.01,工序16-2警报1:\n工序16_2报警,5692.02,工序16-2警报2:\n工序16_2报警,5692.03,工序16-2警报3:\n工序16_2报警,5692.04,工序16-2警报4:\n工序16_2报警,5692.05,工序16-2警报5:\n工序16_2报警,5692.06,工序16-2警报6:\n工序16_2报警,5692.07,工序16-2警报7:\n工序16_2报警,5692.08,工序16-2警报8:\n工序16_2报警,5692.09,工序16-2警报9:\n工序16_2报警,5692.10,工序16-2警报10:\n工序16_2报警,5692.11,工序16-2警报11:\n工序16_2报警,5692.12,工序16-2警报12:\n工序16_2报警,5692.13,工序16-2警报13:\n工序16_2报警,5692.14,工序16-2警报14:\n工序16_2报警,5692.15,工序16-2警报15:\n",
+        "output": "str",
+        "x": 300,
+        "y": 140,
+        "wires": [
+            [
+                "ee17a1254920c449"
+            ]
+        ]
+    },
+    {
+        "id": "22e2258c48799c97",
+        "type": "inject",
+        "z": "985e794e41b6964f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 200,
+        "wires": [
+            [
+                "a20b1df4dec4ac3f",
+                "8753add8937272a1"
+            ]
+        ]
+    },
+    {
+        "id": "ee17a1254920c449",
+        "type": "csv",
+        "z": "985e794e41b6964f",
+        "name": "",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "none",
+        "multi": "mult",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": false,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 470,
+        "y": 140,
+        "wires": [
+            [
+                "3f414f15d50874c2",
+                "47aacef877f4b557"
+            ]
+        ]
+    },
+    {
+        "id": "3f414f15d50874c2",
+        "type": "debug",
+        "z": "985e794e41b6964f",
+        "name": "debug 18",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "8753add8937272a1",
+        "type": "function",
+        "z": "985e794e41b6964f",
+        "name": "提取报警信息，提取数据边缘变化",
+        "func": "\nlet 报警数据 = global.get(\"alarminfo\") || {}\nconst alarms = global.get(\"alarmdata\") ?? {}\nlet entries=Object.entries(alarms)\n//node.warn(entries)\n\nfor (const item of entries) {\n    //  { \"标签\": \"主程序_GG_报警\", \"位号\": 0, \"内容\": \"工序0-1警报0： PLC异常警报\" }\n    const { 标签, 地址, 内容,value } = item[1]\n  //  if(value==1)\n    //    node.warn(item[1])\n   // node.warn(item[1])\n    //node.warn(报警数据[内容]);\n\n    if (报警数据[内容] !== undefined) {\n        if (value !== 报警数据[内容][\"value\"])\n            if (报警数据[内容][\"value\"]) {\n                // 报警触发\n                报警数据[内容][\"value\"] = value\n                报警数据[内容][\"dateTime\"] = new Date()\n                报警数据[内容][\"startTime\"] = new Date()\n                报警数据[内容][\"endTime\"] = null\n                node.send({\n                    \"topic\": \"报警触发\",\n                    \"payload\": 报警数据[内容]\n                })\n            } else {\n                // 报警结束\n                报警数据[内容][\"value\"] = value\n                报警数据[内容][\"dateTime\"] = new Date()\n                报警数据[内容][\"endTime\"] = new Date()\n                node.send({\n                    \"topic\":\"报警结束\",\n                    \"payload\": 报警数据[内容]\n                })\n            }\n\n    } else {\n        报警数据[内容] = {\n            \"dateTime\": new Date(),\n            station: 标签,\n            address: 地址,\n            message: 内容,\n            value: value,\n            \"startTime\": new Date(),\n            \"endTime\": new Date()\n        }\n    }\n}\n\n// 保存到全局变量\nglobal.set(\"alarminfo\", 报警数据)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// 部署节点后，此处添加的代码将运行一次。 \nlet 报警数据 = global.get(\"alarminfo\") \nif (报警数据===undefined){\n    global.set(\"alarminfo\",{})\n}\n",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 300,
+        "wires": [
+            [
+                "7bdf0e4ba9729b73"
+            ]
+        ]
+    },
+    {
+        "id": "7bdf0e4ba9729b73",
+        "type": "switch",
+        "z": "985e794e41b6964f",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "报警结束",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 630,
+        "y": 300,
+        "wires": [
+            [
+                "9ccf0ea691b23487",
+                "83036142a43db3cb"
+            ]
+        ]
+    },
+    {
+        "id": "1b68d2fa843a6273",
+        "type": "debug",
+        "z": "985e794e41b6964f",
+        "name": "debug 19",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "9ccf0ea691b23487",
+        "type": "debug",
+        "z": "985e794e41b6964f",
+        "name": "debug 20",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "83036142a43db3cb",
+        "type": "function",
+        "z": "985e794e41b6964f",
+        "name": "function 11",
+        "func": "msg.payload=[msg.payload]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 300,
+        "wires": [
+            [
+                "29a1794aed30b280"
+            ]
+        ]
+    },
+    {
+        "id": "70665c4ccad84177",
+        "type": "http in",
+        "z": "985e794e41b6964f",
+        "name": "",
+        "url": "/api/currentAlarm",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 320,
+        "y": 560,
+        "wires": [
+            [
+                "92c58a953a4d6095"
+            ]
+        ]
+    },
+    {
+        "id": "92c58a953a4d6095",
+        "type": "function",
+        "z": "985e794e41b6964f",
+        "name": "获取当前的报警信息",
+        "func": "const alarminfo=global.get(\"alarminfo\")||{}\nlet array=[]\nfor (let prop in alarminfo) {\n    if (alarminfo.hasOwnProperty(prop)) {\n    \n        if(alarminfo[prop][\"value\"]===1){\n    \n            array.push(alarminfo[prop])\n        }\n    }\n}\nmsg.payload=array\n\nlet current_alarm = {\n    \"PC当前报警\": array\n}\nglobal.set('OPC', current_alarm)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 560,
+        "wires": [
+            [
+                "8e46d3357cf89fe9"
+            ]
+        ]
+    },
+    {
+        "id": "8e46d3357cf89fe9",
+        "type": "http response",
+        "z": "985e794e41b6964f",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 830,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "47aacef877f4b557",
+        "type": "function",
+        "z": "985e794e41b6964f",
+        "name": "function 12",
+        "func": "const groupedData = msg.payload.reduce((acc, obj) => {\n    const key = obj[\"标签\"].split(/[-_]/)[0] // 获取当前对象的标签属性作为分组键\n\n    if (!acc[key]) { // 如果累加器中不存在该分组键，则创建一个空数组\n        acc[key] = [];\n    }\n    acc[key].push(obj); // 将当前对象添加到对应的分组数组中\n    return acc;\n}, {});\nfor (const prop in groupedData) {\n    if (groupedData.hasOwnProperty(prop)) {\n        const data = groupedData[prop]\n        if (!data[0][\"地址\"].includes(\".00\")) {\n            msg.topic = \"CIO\" + data[0][\"地址\"] + \".00\"\n        } else {\n            msg.topic = \"CIO\" + data[0][\"地址\"]\n        }\n        msg.info = data\n        msg.len = groupedData[prop].length\n        node.send(msg)\n    }\n}\nnode.done()\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 220,
+        "wires": [
+            [
+                "aca044e337719805"
+            ]
+        ]
+    },
+    {
+        "id": "1ece19a03c36b643",
+        "type": "FINS Read",
+        "z": "985e794e41b6964f",
+        "name": "",
+        "connection": "2b1ea252237eeddb",
+        "addressType": "msg",
+        "address": "topic",
+        "countType": "msg",
+        "count": "len",
+        "msgPropertyType": "msg",
+        "msgProperty": "payload",
+        "outputFormatType": "buffer",
+        "outputFormat": "buffer",
+        "x": 850,
+        "y": 160,
+        "wires": [
+            [
+                "8d01aaab53595d77"
+            ]
+        ]
+    },
+    {
+        "id": "aca044e337719805",
+        "type": "delay",
+        "z": "985e794e41b6964f",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "30",
+        "nbRateUnits": "2",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 680,
+        "y": 200,
+        "wires": [
+            [
+                "1ece19a03c36b643"
+            ]
+        ]
+    },
+    {
+        "id": "8d01aaab53595d77",
+        "type": "function",
+        "z": "985e794e41b6964f",
+        "name": "function 13",
+        "func": "\nlet alarmdata = global.get(\"alarmdata\") || {}\nfor (let i = 0; i < msg.len; i++) {\n    msg.info[i][\"value\"] = msg.payload[i]\n    alarmdata[msg.info[i][\"内容\"]] = msg.info[i]\n}\nglobal.set(\"alarmdata\", alarmdata)\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1030,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f82ac49352149494",
+        "type": "FINS Read",
+        "z": "985e794e41b6964f",
+        "name": "",
+        "connection": "2b1ea252237eeddb",
+        "addressType": "str",
+        "address": "CIO4193.0",
+        "countType": "num",
+        "count": "16",
+        "msgPropertyType": "msg",
+        "msgProperty": "payload",
+        "outputFormatType": "buffer",
+        "outputFormat": "buffer",
+        "x": 1130,
+        "y": 500,
+        "wires": [
+            [
+                "1e8e025709dd78d4"
+            ]
+        ]
+    },
+    {
+        "id": "636f528a1372b05d",
+        "type": "inject",
+        "z": "985e794e41b6964f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 890,
+        "y": 480,
+        "wires": [
+            [
+                "f82ac49352149494"
+            ]
+        ]
+    },
+    {
+        "id": "1e8e025709dd78d4",
+        "type": "debug",
+        "z": "985e794e41b6964f",
+        "name": "debug 22",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1400,
+        "y": 520,
+        "wires": []
+    }
+]
