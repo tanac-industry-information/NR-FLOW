@@ -1,1 +1,1062 @@
-[{"id":"9594c1b94bfa2261","type":"tab","label":"Flow 1","disabled":false,"info":"","env":[]},{"id":"7c9ad0b3caae19a6","type":"serial request","z":"9594c1b94bfa2261","name":"","serial":"7e4eb97649eaafeb","x":470,"y":320,"wires":[["e9b87c900ce87c1b","b181dc27d6f46a0b","48fe57cdf3a5ea95"]]},{"id":"adf9045cbd2f7331","type":"inject","z":"9594c1b94bfa2261","name":"","props":[{"p":"payload"},{"p":"topic","vt":"str"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"","payloadType":"date","x":120,"y":280,"wires":[["2cd5fafa401107d2"]]},{"id":"2cd5fafa401107d2","type":"template","z":"9594c1b94bfa2261","name":"fetch?","field":"payload","fieldType":"msg","format":"handlebars","syntax":"mustache","template":"fetch?\n","output":"str","x":290,"y":300,"wires":[["7c9ad0b3caae19a6"]]},{"id":"e9b87c900ce87c1b","type":"debug","z":"9594c1b94bfa2261","name":"debug 1","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","statusVal":"","statusType":"auto","x":660,"y":300,"wires":[]},{"id":"d1b55c9e1b8951d9","type":"tcp in","z":"9594c1b94bfa2261","name":"","server":"server","host":"","port":"23250","datamode":"stream","datatype":"buffer","newline":"","topic":"","trim":false,"base64":false,"tls":"","x":100,"y":180,"wires":[["2cd5fafa401107d2"]]},{"id":"b181dc27d6f46a0b","type":"function","z":"9594c1b94bfa2261","name":"function 1","func":"let splits=msg.payload.split(':');\nlet obj={\n    step:splits[0],\n    func:splits[1],\n    data:[]\n}\nlet items=splits[2].split(';')\nfor (const item of items) {\n    let wds=item.split(',')\n    obj.data.push({\n        unit:wds[0],\n        condition:wds[1],\n        value:wds[2],\n        result:wds[3].trim()\n    })\n}\nmsg.payload=obj\nreturn msg;","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":520,"y":460,"wires":[["ec99c52b7293434f","b61177a0e0bad9da"]]},{"id":"ec99c52b7293434f","type":"debug","z":"9594c1b94bfa2261","name":"debug 2","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","statusVal":"","statusType":"auto","x":440,"y":560,"wires":[]},{"id":"b61177a0e0bad9da","type":"function","z":"9594c1b94bfa2261","name":"function 2","func":"let arr=[]\nfor (const data of msg.payload.data) {\n    let item={\n        Date: dayjs().format('YYYY-MM-DD'),\n        Time: dayjs().format('HH:mm:ss'),\n        Function:msg.payload.func,\n        ...data\n    }\n    arr.push(item)\n}\nmsg.payload=arr;\nreturn msg;","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[{"var":"dayjs","module":"dayjs"}],"x":680,"y":500,"wires":[["2bc576238395790a","9137c4233dde6ead"]]},{"id":"2bc576238395790a","type":"debug","z":"9594c1b94bfa2261","name":"debug 3","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","statusVal":"","statusType":"auto","x":860,"y":380,"wires":[]},{"id":"9137c4233dde6ead","type":"function","z":"9594c1b94bfa2261","name":"writefile","func":"\n\n// 获取当前日期并格式化为年月日\nconst currentDate = new Date();\nconst formattedDate = `${currentDate.getFullYear()}${(currentDate.getMonth() + 1).toString().padStart(2, '0')}${currentDate.getDate().toString().padStart(2, '0')}`;\n\n// 设置你想要检查和创建的文件夹路径\nconst folderPath = path.join('E:\\\\', 'data');\n\n// 根据当前日期生成CSV文件的完整路径\nconst csvFilePath = path.join(folderPath, `data_${formattedDate}.csv`);\n\n// 你的数据对象数组\nconst dataObjects = msg.payload;\nmsg.payload = msg.payload\n// 检查文件夹是否存在，如果不存在，则创建它\nif (!fs.existsSync(folderPath)) {\n    fs.mkdirSync(folderPath, { recursive: true });\n}\n\n// 检查CSV文件是否存在\nfs.access(csvFilePath, fs.constants.F_OK, (err) => {\n    const ws = fs.createWriteStream(csvFilePath, { flags: 'a' });\n    const csvStream = fastcsv.format({ headers: err, includeEndRowDelimiter: true });\n\n    csvStream.pipe(ws).on('finish', () => {\n       // node.warn('Write to CSV successfully!');\n    });\n\n    if (err) {\n        // 文件不存在，将会写入表头和数据\n        dataObjects.forEach(obj => csvStream.write(obj));\n    } else {\n        // 文件存在，只写入数据\n        dataObjects.forEach(obj => csvStream.write(obj));\n    }\n\n    csvStream.end();\n});\nreturn msg\n","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[{"var":"fs","module":"fs"},{"var":"path","module":"path"},{"var":"fastcsv","module":"fast-csv"}],"x":940,"y":480,"wires":[[]]},{"id":"ab5c4f82908e87c4","type":"tcp out","z":"9594c1b94bfa2261","name":"","host":"192.168.250.23","port":"23250","beserver":"client","base64":false,"end":false,"tls":"","x":290,"y":620,"wires":[]},{"id":"ef11a23cc9141b5a","type":"inject","z":"9594c1b94bfa2261","name":"","props":[{"p":"payload"},{"p":"topic","vt":"str"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"","payloadType":"date","x":160,"y":440,"wires":[["ab5c4f82908e87c4"]]},{"id":"48fe57cdf3a5ea95","type":"tcp out","z":"9594c1b94bfa2261","name":"","host":"","port":"","beserver":"reply","base64":false,"end":false,"tls":"","x":630,"y":260,"wires":[]},{"id":"7e4eb97649eaafeb","type":"serial-port","serialport":"COM2","serialbaud":"9600","databits":"8","parity":"none","stopbits":"1","waitfor":"","dtr":"none","rts":"none","cts":"none","dsr":"none","newline":"\\n","bin":"false","out":"char","addchar":"","responsetimeout":"10000"}]
+[
+    {
+        "id": "9594c1b94bfa2261",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7c9ad0b3caae19a6",
+        "type": "serial request",
+        "z": "9594c1b94bfa2261",
+        "name": "",
+        "serial": "7e4eb97649eaafeb",
+        "x": 470,
+        "y": 300,
+        "wires": [
+            [
+                "e9b87c900ce87c1b",
+                "b181dc27d6f46a0b"
+            ]
+        ]
+    },
+    {
+        "id": "adf9045cbd2f7331",
+        "type": "inject",
+        "z": "9594c1b94bfa2261",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 280,
+        "wires": [
+            [
+                "2cd5fafa401107d2"
+            ]
+        ]
+    },
+    {
+        "id": "2cd5fafa401107d2",
+        "type": "template",
+        "z": "9594c1b94bfa2261",
+        "name": "fetch?",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "fetch?\n",
+        "output": "str",
+        "x": 290,
+        "y": 300,
+        "wires": [
+            [
+                "7c9ad0b3caae19a6"
+            ]
+        ]
+    },
+    {
+        "id": "e9b87c900ce87c1b",
+        "type": "debug",
+        "z": "9594c1b94bfa2261",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "b181dc27d6f46a0b",
+        "type": "function",
+        "z": "9594c1b94bfa2261",
+        "name": "function 1",
+        "func": "let splits=msg.payload.split(':');\nlet obj={\n    step:splits[0],\n    func:splits[1],\n    data:[]\n}\nlet items=splits[2].split(';')\nfor (const item of items) {\n    let wds=item.split(',')\n    obj.data.push({\n        unit:wds[0],\n        condition:wds[1],\n        value:wds[2],\n        result:wds[3].trim()\n    })\n}\nmsg.payload=obj\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 440,
+        "wires": [
+            [
+                "ec99c52b7293434f",
+                "b61177a0e0bad9da"
+            ]
+        ]
+    },
+    {
+        "id": "ec99c52b7293434f",
+        "type": "debug",
+        "z": "9594c1b94bfa2261",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "b61177a0e0bad9da",
+        "type": "function",
+        "z": "9594c1b94bfa2261",
+        "name": "function 2",
+        "func": "let arr=[]\nlet info = flow.get('info') || { \"Part Name\": \"B402\", \"LOT Code\": \"123456\", \"Date Code\": \"18/01/2024\", \"GRN Code\": \"123456\", \"Vendor Name\": \"SALCOMP\", \"Emp ID\": \"123456\", \"Sample\": false }\nmsg.info=info\nfor (const data of msg.payload.data) {\n    let item={\n        Index:data.unit,\n        \"Record Info\":dayjs().format('YYYYMMDDHHmmss'),\n        \"SN\": dayjs().format('YYYYMMDDHHmmssSSS'),\n        Date: dayjs().format('YYYY-MM-DD'),\n        Time: dayjs().format('HH:mm:ss'),\n        \"Emp ID\":info[\"Emp ID\"],\n        // \"Model\":info[\"Model\"],\n        \"Part Name\": info[\"Part Name\"],\n        \"Part No\":info[\"Part No\"],\n        \"LOT Code\": info[\"LOT Code\"],\n        \"Date Code\": info[\"Date Code\"],\n        \"GRN Code\": info[\"GRN Code\"],\n        \"Vendor Name\": info[\"Vendor Name\"],\n        \"Leakage CurrentAC(<10mA)\":data.value,\n        \"Result\":data.result\n    }\n    arr.push(item)\n}\nmsg.payload=arr;\nreturn msg;\n\n[{\"unit\":\"1\",\"condition\":\"0.979\",\"value\":\"0.077\",\"result\":\"ARCFAIL\"},{\"unit\":\"2\",\"condition\":\"1.342\",\"value\":\"0.027\",\"result\":\"ARCFAIL\"},{\"unit\":\"3\",\"condition\":\"1.683\",\"value\":\"0.181\",\"result\":\"ARCFAIL\"},{\"unit\":\"4\",\"condition\":\"3.599\",\"value\":\"0.041\",\"result\":\"PASS\"},{\"unit\":\"5\",\"condition\":\"1.702\",\"value\":\"0.123\",\"result\":\"ARCFAIL\"},{\"unit\":\"6\",\"condition\":\"1.700\",\"value\":\"0.203\",\"result\":\"ARCFAIL\"},{\"unit\":\"7\",\"condition\":\"1.705\",\"value\":\"0.181\",\"result\":\"ARCFAIL\"},{\"unit\":\"8\",\"condition\":\"1.712\",\"value\":\"0.231\",\"result\":\"ARCFAIL\"}]",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "dayjs",
+                "module": "dayjs"
+            }
+        ],
+        "x": 680,
+        "y": 500,
+        "wires": [
+            [
+                "2bc576238395790a",
+                "9137c4233dde6ead",
+                "4951ec46ab8feb61"
+            ]
+        ]
+    },
+    {
+        "id": "2bc576238395790a",
+        "type": "debug",
+        "z": "9594c1b94bfa2261",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "9137c4233dde6ead",
+        "type": "function",
+        "z": "9594c1b94bfa2261",
+        "name": "writefile",
+        "func": "function saveCsv(dataObjects, csvFilePath) {\n    // 检查CSV文件是否存在\n    fs.access(csvFilePath, fs.constants.F_OK, (err) => {\n        const ws = fs.createWriteStream(csvFilePath, { flags: 'a' });\n        const csvStream = fastcsv.format({ headers: err, includeEndRowDelimiter: true });\n\n        csvStream.pipe(ws).on('finish', () => {\n            // node.warn('Write to CSV successfully!');\n        });\n\n        if (err) {\n            // 文件不存在，将会写入表头和数据\n            dataObjects.forEach(obj => csvStream.write(obj));\n        } else {\n            // 文件存在，只写入数据\n            dataObjects.forEach(obj => csvStream.write(obj));\n        }\n\n        csvStream.end();\n    });\n}\n\n// 获取当前日期并格式化为年月日\nconst currentDate = new Date();\nconst formattedDate = `${currentDate.getFullYear()}${(currentDate.getMonth() + 1).toString().padStart(2, '0')}${currentDate.getDate().toString().padStart(2, '0')}`;\n\n// 设置你想要检查和创建的文件夹路径\nlet folderPath = path.join('E:\\\\', 'data');\nlet okpath=path.join(folderPath,\"Report\");\nlet ngpath=path.join(folderPath,\"Fail Report\")\nlet mespath=path.join(folderPath,\"MES Report\")\nlet samplepath=path.join(folderPath,\"Golden Sample\")\n\n\n\n\n\n// 你的数据对象数组\nconst dataObjects = msg.payload;\nmsg.payload = msg.payload\n// 检查文件夹是否存在，如果不存在，则创建它\nif (!fs.existsSync(okpath)) {\n    fs.mkdirSync(okpath, { recursive: true });\n}\nif (!fs.existsSync(ngpath)) {\n    fs.mkdirSync(ngpath, { recursive: true });\n}\nif (!fs.existsSync(mespath)) {\n    fs.mkdirSync(mespath, { recursive: true });\n}\nif (!fs.existsSync(samplepath)) {\n    fs.mkdirSync(samplepath, { recursive: true });\n}\n\nif(msg.info.Sample){\n    let    csvFilePath = path.join(samplepath, `data_${formattedDate}.csv`);\n    saveCsv(dataObjects,csvFilePath)\n}\nelse{ \n    \n  //  let okdata =dataObjects.filter(x=>x.Result.includes(\"PASS\"))\n    let allpass=dataObjects.every(x=>x.Result.includes(\"PASS\"))\n    if(allpass){\n        let csvFilePath = path.join(okpath, `data_${formattedDate}.csv`)\n           saveCsv(dataObjects,csvFilePath) \n    }\n    else{\n        let csvFilePath = path.join(ngpath, `data_${formattedDate}.csv`)\n        saveCsv(dataObjects, csvFilePath)  \n    }\n}\n\n// 根据当前日期生成CSV文件的完整路径\n\n\nreturn msg\n\n\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "fs",
+                "module": "fs"
+            },
+            {
+                "var": "path",
+                "module": "path"
+            },
+            {
+                "var": "fastcsv",
+                "module": "fast-csv"
+            }
+        ],
+        "x": 1020,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4d5c0989a4c87f5e",
+        "type": "ui_text_input",
+        "z": "9594c1b94bfa2261",
+        "name": "",
+        "label": "Emp ID",
+        "tooltip": "",
+        "group": "6aa8e2931cbaa49b",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "Emp ID",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 400,
+        "y": 660,
+        "wires": [
+            [
+                "00c030da5bc3f167",
+                "8dc73f5af44279e5"
+            ]
+        ]
+    },
+    {
+        "id": "e2096cd4cbbc7531",
+        "type": "ui_text_input",
+        "z": "9594c1b94bfa2261",
+        "name": "",
+        "label": "Part Name",
+        "tooltip": "",
+        "group": "6aa8e2931cbaa49b",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "Part Name",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 410,
+        "y": 740,
+        "wires": [
+            [
+                "8dc73f5af44279e5"
+            ]
+        ]
+    },
+    {
+        "id": "86e2032721f7b7e2",
+        "type": "ui_text_input",
+        "z": "9594c1b94bfa2261",
+        "name": "",
+        "label": "Part No",
+        "tooltip": "",
+        "group": "6aa8e2931cbaa49b",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "Part No",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 400,
+        "y": 780,
+        "wires": [
+            [
+                "8dc73f5af44279e5"
+            ]
+        ]
+    },
+    {
+        "id": "6821953684101b0b",
+        "type": "ui_text_input",
+        "z": "9594c1b94bfa2261",
+        "name": "",
+        "label": "LOT Code",
+        "tooltip": "",
+        "group": "6aa8e2931cbaa49b",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "LOT Code",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 410,
+        "y": 820,
+        "wires": [
+            [
+                "8dc73f5af44279e5"
+            ]
+        ]
+    },
+    {
+        "id": "a3e359066633b898",
+        "type": "ui_text_input",
+        "z": "9594c1b94bfa2261",
+        "name": "",
+        "label": "Date Code",
+        "tooltip": "",
+        "group": "6aa8e2931cbaa49b",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "Date Code",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 410,
+        "y": 860,
+        "wires": [
+            [
+                "8dc73f5af44279e5"
+            ]
+        ]
+    },
+    {
+        "id": "fd1a76aa0a42ff56",
+        "type": "ui_text_input",
+        "z": "9594c1b94bfa2261",
+        "name": "",
+        "label": "GRN Code",
+        "tooltip": "",
+        "group": "6aa8e2931cbaa49b",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "GRN Code",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 430,
+        "y": 920,
+        "wires": [
+            [
+                "8dc73f5af44279e5"
+            ]
+        ]
+    },
+    {
+        "id": "8abadaaf88f22b74",
+        "type": "ui_text_input",
+        "z": "9594c1b94bfa2261",
+        "name": "",
+        "label": "Vendor Name",
+        "tooltip": "",
+        "group": "6aa8e2931cbaa49b",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "Vendor Name",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 400,
+        "y": 980,
+        "wires": [
+            [
+                "8dc73f5af44279e5"
+            ]
+        ]
+    },
+    {
+        "id": "00c030da5bc3f167",
+        "type": "debug",
+        "z": "9594c1b94bfa2261",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "8dc73f5af44279e5",
+        "type": "function",
+        "z": "9594c1b94bfa2261",
+        "name": "function 3",
+        "func": "let info=flow.get(\"info\")||{}\ninfo[msg.topic]=msg.payload\nflow.set(\"info\",info)\nmsg.payload=info\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 840,
+        "wires": [
+            [
+                "9090e33f99c0a58c"
+            ]
+        ]
+    },
+    {
+        "id": "7576b7ae351c3665",
+        "type": "ui_switch",
+        "z": "9594c1b94bfa2261",
+        "name": "",
+        "label": "Sample",
+        "tooltip": "",
+        "group": "6aa8e2931cbaa49b",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "Sample",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 400,
+        "y": 1060,
+        "wires": [
+            [
+                "8dc73f5af44279e5"
+            ]
+        ]
+    },
+    {
+        "id": "a514cbbb513699f7",
+        "type": "ui_text_input",
+        "z": "9594c1b94bfa2261",
+        "name": "",
+        "label": "Model",
+        "tooltip": "",
+        "group": "6aa8e2931cbaa49b",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "Model",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 390,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "644ae9abe280730b",
+        "type": "switch",
+        "z": "9594c1b94bfa2261",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 270,
+        "y": 240,
+        "wires": [
+            [
+                "2cd5fafa401107d2"
+            ]
+        ]
+    },
+    {
+        "id": "a47840e9ca33b3fc",
+        "type": "udp out",
+        "z": "9594c1b94bfa2261",
+        "name": "",
+        "addr": "192.168.250.1",
+        "iface": "",
+        "port": "21845",
+        "ipv": "udp4",
+        "outport": "",
+        "base64": false,
+        "multicast": "false",
+        "x": 1150,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "d2e77b9ac91df9cd",
+        "type": "function",
+        "z": "9594c1b94bfa2261",
+        "name": "function 4",
+        "func": "//80 00 02 00 01 00 00 0D 00 00 01 01 82 01 2C 00 00 01\n//80 00 02 00 00 00 00 C0 00 00 01 01 82 01 2C 00 00 01\nlet bf= Buffer.from([0x80,0x00,0x02,0x00,0x00,0x00,0x00,0x0D,0x00,0x00,0x01,0x01,0x82,0x01,0x2C,0x00,0x00,0x01])\nmsg.payload=bf\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 80,
+        "wires": [
+            [
+                "a47840e9ca33b3fc",
+                "e839db369c8eeb36"
+            ]
+        ]
+    },
+    {
+        "id": "e27144378f320585",
+        "type": "inject",
+        "z": "9594c1b94bfa2261",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 800,
+        "y": 40,
+        "wires": [
+            [
+                "d2e77b9ac91df9cd"
+            ]
+        ]
+    },
+    {
+        "id": "e839db369c8eeb36",
+        "type": "debug",
+        "z": "9594c1b94bfa2261",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "576c0e64c11cf617",
+        "type": "udp in",
+        "z": "9594c1b94bfa2261",
+        "name": "",
+        "iface": "",
+        "port": "21845",
+        "ipv": "udp4",
+        "multicast": "false",
+        "group": "",
+        "datatype": "buffer",
+        "x": 820,
+        "y": 140,
+        "wires": [
+            [
+                "3286a9c13d1e8880"
+            ]
+        ]
+    },
+    {
+        "id": "3286a9c13d1e8880",
+        "type": "debug",
+        "z": "9594c1b94bfa2261",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "937e83c52613ea15",
+        "type": "FINS Read",
+        "z": "9594c1b94bfa2261",
+        "name": "",
+        "connection": "6aa77bd4cb3dc758",
+        "addressType": "str",
+        "address": "D300",
+        "countType": "num",
+        "count": "2",
+        "msgPropertyType": "msg",
+        "msgProperty": "payload",
+        "outputFormatType": "signed",
+        "outputFormat": "",
+        "x": 390,
+        "y": 80,
+        "wires": [
+            [
+                "d704e8869c3f5f28",
+                "11b715079cc341cf"
+            ]
+        ]
+    },
+    {
+        "id": "11b715079cc341cf",
+        "type": "debug",
+        "z": "9594c1b94bfa2261",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 580,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "f4c8e7d59459d931",
+        "type": "trigger",
+        "z": "9594c1b94bfa2261",
+        "name": "",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "-200",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 180,
+        "y": 80,
+        "wires": [
+            [
+                "937e83c52613ea15"
+            ]
+        ]
+    },
+    {
+        "id": "32291d723579ecc4",
+        "type": "inject",
+        "z": "9594c1b94bfa2261",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 20,
+        "wires": [
+            [
+                "f4c8e7d59459d931"
+            ]
+        ]
+    },
+    {
+        "id": "5809ab44e0cb3a0e",
+        "type": "rbe",
+        "z": "9594c1b94bfa2261",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 290,
+        "y": 180,
+        "wires": [
+            [
+                "644ae9abe280730b",
+                "f0f837b6a15c1adf"
+            ]
+        ]
+    },
+    {
+        "id": "d704e8869c3f5f28",
+        "type": "function",
+        "z": "9594c1b94bfa2261",
+        "name": "function 5",
+        "func": "msg.payload=msg.payload[0]\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 140,
+        "wires": [
+            [
+                "5809ab44e0cb3a0e"
+            ]
+        ]
+    },
+    {
+        "id": "f0f837b6a15c1adf",
+        "type": "FINS Write",
+        "z": "9594c1b94bfa2261",
+        "name": "",
+        "connection": "6aa77bd4cb3dc758",
+        "addressType": "str",
+        "address": "D301",
+        "dataType": "msg",
+        "data": "payload",
+        "msgPropertyType": "str",
+        "msgProperty": "payload",
+        "x": 470,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9090e33f99c0a58c",
+        "type": "file",
+        "z": "9594c1b94bfa2261",
+        "name": "",
+        "filename": "config1.json",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "utf8",
+        "x": 910,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a4ef6a7eab1c9078",
+        "type": "file in",
+        "z": "9594c1b94bfa2261",
+        "name": "",
+        "filename": "config1.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 130,
+        "y": 900,
+        "wires": [
+            [
+                "1d316a12632e11d7"
+            ]
+        ]
+    },
+    {
+        "id": "6d09c0d6636fbdbf",
+        "type": "inject",
+        "z": "9594c1b94bfa2261",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 820,
+        "wires": [
+            [
+                "a4ef6a7eab1c9078"
+            ]
+        ]
+    },
+    {
+        "id": "1d316a12632e11d7",
+        "type": "json",
+        "z": "9594c1b94bfa2261",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 130,
+        "y": 940,
+        "wires": [
+            [
+                "e29a230ac9ac1040"
+            ]
+        ]
+    },
+    {
+        "id": "e29a230ac9ac1040",
+        "type": "split",
+        "z": "9594c1b94bfa2261",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "topic",
+        "x": 130,
+        "y": 1000,
+        "wires": [
+            [
+                "d171439fa97ef9bc"
+            ]
+        ]
+    },
+    {
+        "id": "d171439fa97ef9bc",
+        "type": "switch",
+        "z": "9594c1b94bfa2261",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Emp ID",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Model",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Part Name",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Part No",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "LOT Code",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Date Code",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "GRN Code",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Vendor Name",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Sample",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 9,
+        "x": 150,
+        "y": 660,
+        "wires": [
+            [
+                "4d5c0989a4c87f5e"
+            ],
+            [],
+            [
+                "e2096cd4cbbc7531"
+            ],
+            [
+                "86e2032721f7b7e2"
+            ],
+            [
+                "6821953684101b0b"
+            ],
+            [
+                "a3e359066633b898"
+            ],
+            [
+                "fd1a76aa0a42ff56"
+            ],
+            [
+                "8abadaaf88f22b74"
+            ],
+            [
+                "7576b7ae351c3665"
+            ]
+        ]
+    },
+    {
+        "id": "4951ec46ab8feb61",
+        "type": "ui_table",
+        "z": "9594c1b94bfa2261",
+        "group": "d0b39aa84aad7f11",
+        "name": "",
+        "order": 0,
+        "width": "24",
+        "height": "14",
+        "columns": [],
+        "outputs": 0,
+        "cts": false,
+        "x": 850,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "2027031978cb0bc6",
+        "type": "debug",
+        "z": "9594c1b94bfa2261",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "7e4eb97649eaafeb",
+        "type": "serial-port",
+        "serialport": "COM2",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "6aa8e2931cbaa49b",
+        "type": "ui_group",
+        "name": "user",
+        "tab": "c008ae3e4d6460ba",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6aa77bd4cb3dc758",
+        "type": "FINS Connection",
+        "name": "",
+        "host": "192.168.250.1",
+        "port": "21845",
+        "MODE": "",
+        "MODEType": "CS",
+        "protocol": "",
+        "protocolType": "udp",
+        "ICF": "128",
+        "DNA": "",
+        "DA1": "",
+        "DA2": "",
+        "SNA": "",
+        "SA1": "0x11",
+        "SA2": "",
+        "autoConnect": true
+    },
+    {
+        "id": "d0b39aa84aad7f11",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "c008ae3e4d6460ba",
+        "order": 2,
+        "disp": true,
+        "width": "24",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c008ae3e4d6460ba",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
