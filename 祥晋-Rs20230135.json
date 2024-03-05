@@ -1,0 +1,572 @@
+[
+    {
+        "id": "5164a79cc5a0fb86",
+        "type": "tab",
+        "label": "流程 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "488414d1.cd8a0c",
+        "type": "tab",
+        "label": "祥晋",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "611863eb74333c76",
+        "type": "OPCUA-IIoT-Connector",
+        "discoveryUrl": "",
+        "endpoint": "opc.tcp://192.168.0.20:4840/",
+        "endpointMustExist": false,
+        "keepSessionAlive": true,
+        "loginEnabled": false,
+        "name": "plc",
+        "showErrors": true,
+        "securityPolicy": "None",
+        "securityMode": "None",
+        "individualCerts": false,
+        "publicCertificateFile": "",
+        "privateKeyFile": "",
+        "defaultSecureTokenLifetime": "",
+        "autoSelectRightEndpoint": false,
+        "strategyMaxRetry": "",
+        "strategyInitialDelay": "",
+        "strategyMaxDelay": "",
+        "strategyRandomisationFactor": "",
+        "requestedSessionTimeout": "",
+        "connectionStartDelay": "",
+        "reconnectDelay": "",
+        "maxBadSessionRequests": "10"
+    },
+    {
+        "id": "1db1f09d710af7a1",
+        "type": "Opcua-Endpoint-Instance",
+        "endpoint": "opc.tcp://192.168.0.20:4840/",
+        "user": "",
+        "password": "",
+        "secpolicy": "None",
+        "secmode": "None"
+    },
+    {
+        "id": "1cf5fb292dae743f",
+        "type": "function",
+        "z": "488414d1.cd8a0c",
+        "name": "保存变量",
+        "func": "var plc=global.get(\"plc\")||{}\nconst { nodeId,value}=msg.payload\n\nplc[nodeId]=value.value.value\nglobal.set(\"plc\",plc)\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 740,
+        "wires": [
+            [
+                "7f85a776eec4465d"
+            ]
+        ]
+    },
+    {
+        "id": "7f85a776eec4465d",
+        "type": "function",
+        "z": "488414d1.cd8a0c",
+        "name": "触发数据保存",
+        "func": "if (msg.payload.nodeId == \"ns=4;i=566\" && msg.payload.value.value.value==1){\n    let plc=global.get(\"plc\")\n    let i = plc[\"ns=4;i=565\"]\n    let code=(new Date().getTime()).toString()\n    let station =\"环线检测\"\n    let obj = {code,station, ...plc[\"ns=4;i=5\"][i]\n    , ...plc[\"ns=4;i=228\"][i],\n     ...plc[\"ns=4;i=396\"][i],\n      ...plc[\"ns=4;i=542\"][i]}\n    msg.payload=obj\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 840,
+        "wires": [
+            [
+                "f66cb1a0c60168c8",
+                "1c5c0de6e439ab54"
+            ]
+        ]
+    },
+    {
+        "id": "f66cb1a0c60168c8",
+        "type": "debug",
+        "z": "488414d1.cd8a0c",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "1c5c0de6e439ab54",
+        "type": "http request",
+        "z": "488414d1.cd8a0c",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:5000/api/testData/JSON",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "application/json",
+                "valueValue": ""
+            }
+        ],
+        "x": 1120,
+        "y": 1020,
+        "wires": [
+            [
+                "ad8ec89f5402d86e"
+            ]
+        ]
+    },
+    {
+        "id": "ad8ec89f5402d86e",
+        "type": "debug",
+        "z": "488414d1.cd8a0c",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1200,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "b17cab72b2386581",
+        "type": "OPCUA-IIoT-Read",
+        "z": "488414d1.cd8a0c",
+        "attributeId": 0,
+        "maxAge": 1,
+        "depth": 1,
+        "connector": "611863eb74333c76",
+        "name": "",
+        "justValue": true,
+        "showStatusActivities": false,
+        "showErrors": false,
+        "parseStrings": true,
+        "historyDays": 1,
+        "x": 350,
+        "y": 1060,
+        "wires": [
+            [
+                "8322057f131d89ed",
+                "d4b2c1d599363b40"
+            ]
+        ]
+    },
+    {
+        "id": "279b041ddff60c13",
+        "type": "OPCUA-IIoT-Node",
+        "z": "488414d1.cd8a0c",
+        "injectType": "read",
+        "nodeId": "ns=3;s=\"产品数据传递\".\"测试_下料\"",
+        "datatype": "",
+        "value": "",
+        "name": "",
+        "topic": "",
+        "showErrors": false,
+        "x": 350,
+        "y": 1000,
+        "wires": [
+            [
+                "b17cab72b2386581"
+            ]
+        ]
+    },
+    {
+        "id": "8322057f131d89ed",
+        "type": "debug",
+        "z": "488414d1.cd8a0c",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "1cad90297c257dbd",
+        "type": "http request",
+        "z": "488414d1.cd8a0c",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:5000/api/testData/JSON",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "application/json",
+                "valueValue": ""
+            }
+        ],
+        "x": 800,
+        "y": 1440,
+        "wires": [
+            [
+                "78d0105572582870"
+            ]
+        ]
+    },
+    {
+        "id": "78d0105572582870",
+        "type": "debug",
+        "z": "488414d1.cd8a0c",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "d67a0a5e297b6368",
+        "type": "OPCUA-IIoT-Inject",
+        "z": "488414d1.cd8a0c",
+        "injectType": "read",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "",
+        "repeat": "0.25",
+        "crontab": "",
+        "once": true,
+        "startDelay": "3",
+        "name": "Root",
+        "addressSpaceItems": [
+            {
+                "name": "WorkPos",
+                "nodeId": "ns=4;i=3",
+                "datatypeName": ""
+            }
+        ],
+        "x": 160,
+        "y": 1000,
+        "wires": [
+            [
+                "279b041ddff60c13"
+            ]
+        ]
+    },
+    {
+        "id": "d4b2c1d599363b40",
+        "type": "function",
+        "z": "488414d1.cd8a0c",
+        "name": "function 3",
+        "func": "global.set(\"plcdata\",msg.payload.value[1].value)\nmsg.payload=msg.payload.value[1].value\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 1080,
+        "wires": [
+            [
+                "38c02c5f4e6d1c48"
+            ]
+        ]
+    },
+    {
+        "id": "38c02c5f4e6d1c48",
+        "type": "function",
+        "z": "488414d1.cd8a0c",
+        "name": "apidata",
+        "func": "let code = msg.payload[\"条码\"]\nlet station = \"检测\"\nlet { 条码,...data}=msg.payload\nlet obj = {\n    code, \n    station,\n    ...data\n}\nmsg.payload = obj\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 1180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f115961883cf74ac",
+        "type": "OPCUA-IIoT-Read",
+        "z": "488414d1.cd8a0c",
+        "attributeId": "13",
+        "maxAge": 1,
+        "depth": 1,
+        "connector": "611863eb74333c76",
+        "name": "",
+        "justValue": true,
+        "showStatusActivities": false,
+        "showErrors": false,
+        "parseStrings": false,
+        "historyDays": 1,
+        "x": 210,
+        "y": 1360,
+        "wires": [
+            [
+                "55642adaf03d5a7c"
+            ]
+        ]
+    },
+    {
+        "id": "55642adaf03d5a7c",
+        "type": "change",
+        "z": "488414d1.cd8a0c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.value[0].value.value",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 370,
+        "y": 1360,
+        "wires": [
+            [
+                "6484828de8918013",
+                "a1bbd2987e8d181b"
+            ]
+        ]
+    },
+    {
+        "id": "b5374b674325e799",
+        "type": "delay",
+        "z": "488414d1.cd8a0c",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 490,
+        "y": 1420,
+        "wires": [
+            [
+                "ea0fdcd58424c302",
+                "2a971d2c28621cd5"
+            ]
+        ]
+    },
+    {
+        "id": "6484828de8918013",
+        "type": "switch",
+        "z": "488414d1.cd8a0c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 330,
+        "y": 1420,
+        "wires": [
+            [
+                "b5374b674325e799"
+            ]
+        ]
+    },
+    {
+        "id": "a1bbd2987e8d181b",
+        "type": "debug",
+        "z": "488414d1.cd8a0c",
+        "name": "debug 7",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "msg",
+        "x": 400,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "9435030cf6639a8e",
+        "type": "OPCUA-IIoT-Inject",
+        "z": "488414d1.cd8a0c",
+        "injectType": "read",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "",
+        "repeat": "0.5",
+        "crontab": "",
+        "once": true,
+        "startDelay": "3",
+        "name": "Root",
+        "addressSpaceItems": [
+            {
+                "name": "",
+                "nodeId": "ns=3;s=\"测试PLC_TO_MES\"",
+                "datatypeName": ""
+            }
+        ],
+        "x": 100,
+        "y": 1320,
+        "wires": [
+            [
+                "f115961883cf74ac"
+            ]
+        ]
+    },
+    {
+        "id": "ea0fdcd58424c302",
+        "type": "OPCUA-IIoT-Node",
+        "z": "488414d1.cd8a0c",
+        "injectType": "write",
+        "nodeId": "ns=3;s=\"MES_TO_测试PLC\"",
+        "datatype": "Boolean",
+        "value": "true",
+        "name": "ns=3;s=\"MES_TO_测试PLC\"",
+        "topic": "",
+        "showErrors": false,
+        "x": 500,
+        "y": 1580,
+        "wires": [
+            [
+                "f025ad155751fdbc"
+            ]
+        ]
+    },
+    {
+        "id": "f025ad155751fdbc",
+        "type": "OPCUA-IIoT-Write",
+        "z": "488414d1.cd8a0c",
+        "connector": "611863eb74333c76",
+        "name": "",
+        "justValue": true,
+        "showStatusActivities": false,
+        "showErrors": false,
+        "x": 690,
+        "y": 1580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2a971d2c28621cd5",
+        "type": "function",
+        "z": "488414d1.cd8a0c",
+        "name": "数据上传",
+        "func": "let plcdata=global.get(\"plcdata\")\nlet code = plcdata[\"条码\"]\nlet station = \"检测\"\nlet { 条码, ...data } = plcdata\nlet obj = {\n    code, \n    station,\n    ...data\n}\nmsg.payload=obj\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 1440,
+        "wires": [
+            [
+                "1cad90297c257dbd",
+                "dc481daae834448a"
+            ]
+        ]
+    },
+    {
+        "id": "6358fcf98814fac3",
+        "type": "inject",
+        "z": "488414d1.cd8a0c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 530,
+        "y": 1300,
+        "wires": [
+            [
+                "2a971d2c28621cd5"
+            ]
+        ]
+    },
+    {
+        "id": "dc481daae834448a",
+        "type": "debug",
+        "z": "488414d1.cd8a0c",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 1360,
+        "wires": []
+    }
+]
